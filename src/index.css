@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Schneider Electric 2026 Product Roadmap Playbook Design System */
+
+@layer base {
+  :root {
+    /* Schneider Electric Brand Colors - Dark Theme */
+    --background: 0 0% 10%; /* #1A1A1A */
+    --foreground: 0 0% 98%; /* White text */
+
+    --card: 0 0% 14%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 14%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Primary: Schneider Electric Green #3DCD58 */
+    --primary: 134 60% 52%;
+    --primary-foreground: 0 0% 10%;
+
+    /* Secondary: Dark Green #007F41 */
+    --secondary: 150 100% 25%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 134 60% 52%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 134 60% 52%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens for the playbook */
+    --gradient-primary: linear-gradient(135deg, hsl(134 60% 52%), hsl(150 100% 25%));
+    --glow-primary: 0 0 40px hsl(134 60% 52% / 0.3);
+
+    --sidebar-background: 0 0% 12%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 134 60% 52%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 0 0% 18%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 134 60% 52%;
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 14%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 14%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 134 60% 52%;
+    --primary-foreground: 0 0% 10%;
+    --secondary: 150 100% 25%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 134 60% 52%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 134 60% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-md border border-border/50;
+  }
+
+  .glow-border {
+    box-shadow: 0 0 20px hsl(134 60% 52% / 0.2);
+  }
+
+  .section-fade {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .section-fade.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
