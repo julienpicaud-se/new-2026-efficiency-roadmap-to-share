@@ -956,13 +956,121 @@ export const optionalClientContext = [
 ];
 
 export const existingTools = [
-  { name: "Strategy Module", description: "Emissions goals and action planning", limitation: "ECM integration needed" },
-  { name: "ECM Library", description: "Current documentation and templates", limitation: "Static, not actionable" },
-  { name: "AkitaBox", description: "Building data and asset management", limitation: "Integration required" },
-  { name: "SCADA/IDM", description: "Operational and interval data", limitation: "Data flow design needed" },
-  { name: "Audit Templates", description: "Current PowerPoint-based deliverables", limitation: "Manual, not scalable" },
-  { name: "Customer Portal", description: "Client-facing RA+ interface", limitation: "Efficiency features pending" },
+  { name: "IDM", description: "Interval Data Module: 4800+ meters, ingestion, baselines, M&V, 24/7 emissions, cost allocation", limitation: "Data flows not yet connected to ECM discovery" },
+  { name: "ACT", description: "Action tracking and project management for efficiency measures", limitation: "Disconnected from ECM recommendations" },
+  { name: "CBMS", description: "Cloud-based monitoring and control integration", limitation: "Limited to alerting, no efficiency intelligence" },
+  { name: "RA Classic", description: "Resource Advisor: portfolio reporting, benchmarking, target setting", limitation: "Reporting-focused, no actionable ECM layer" },
+  { name: "IDP / Blair Agent", description: "Intelligent data processing and automated data quality workflows", limitation: "Upstream data gaps limit agent accuracy" },
+  { name: "Variance Check Agent", description: "Automated variance detection between metered and billed consumption", limitation: "Reactive analysis, not predictive" },
 ];
+
+export const idmCapabilities = {
+  tagline: "IDM is not just about features. We build for user experience, outcomes, and efficiency.",
+  stats: [
+    { value: "4,800+", label: "Meters Connected", detail: "Utility, sub-meter, virtual" },
+    { value: "1,600+", label: "Active Users", detail: "Site, regional, portfolio levels" },
+    { value: "243", label: "Alerts Configured", detail: "Sites and systems monitored" },
+    { value: "24/7", label: "Emissions Reporting", detail: "Granular carbon calculations" },
+  ],
+  categories: [
+    {
+      name: "Data Ingestion",
+      capabilities: [
+        "Extensive file formats and schema support",
+        "Multiple stream stitching and reprocessing",
+        "Cumulative to interval conversion",
+        "Data validation routines and bulk editing",
+        "Patch-on-the-fly data quality",
+        "Connectivity monitoring tools",
+      ],
+    },
+    {
+      name: "Analysis & Intelligence",
+      capabilities: [
+        "Modeling and baseline engine (bulk creation in seconds)",
+        "Energy forecasting and scenario models",
+        "Comprehensive weather integration",
+        "Marginal emissions rates and emissions library",
+        "Tag and hierarchy-based aggregation",
+        "Alerting, notification, and smart anomaly detection",
+      ],
+    },
+    {
+      name: "M&V and Outcomes",
+      capabilities: [
+        "IPMVP-compliant baseline creation",
+        "Actual vs. baseline and cumulative savings tracking",
+        "EnPI models for ISO 50001 compliance",
+        "Multiple baselines per data stream",
+        "Performance deviation detection",
+        "Investment protection and verification",
+      ],
+    },
+  ],
+};
+
+export const competitiveLandscape = [
+  {
+    name: "Deepki",
+    scope: "EU focused",
+    description: "ESG data intelligence, energy monitoring, and advisory for commercial real estate",
+    threat: "Segment-focused with AI workflow investments",
+  },
+  {
+    name: "Measurabl",
+    scope: "Global",
+    description: "ESG software for CRE with asset-level data and fault detection. Acquired Hatch (submetering).",
+    threat: "Deepening into action layer via acquisitions",
+  },
+  {
+    name: "METRON",
+    scope: "Global",
+    description: "SaaS energy intelligence for industrial decarbonization and energy optimization (EVA Factory + EMOS)",
+    threat: "Strong industrial AI and optimization capabilities",
+  },
+  {
+    name: "ENTO",
+    scope: "EU focused",
+    description: "Energy monitoring and automated recommendations with optimization focus",
+    threat: "Automated recommendation engine competing with advisory",
+  },
+  {
+    name: "Snowflake / Palantir",
+    scope: "Global",
+    description: "Data services and analytics platforms with increasing energy partnerships",
+    threat: "Commoditizing the data layer underneath energy platforms",
+  },
+];
+
+export const marketTrends = [
+  "AI fueling expectations for intelligent, agentic energy management",
+  "Data access and integrity are now vital, not optional",
+  "Performance projects shifting away from full M&V (except EaaS/IaaS)",
+  "Segment-focused leaders investing in competitor platforms for AI workflows",
+  "Increasing desire for interval data for compliance and reporting (accountability)",
+  "Lack of cost-competitive metering packages limiting growth in US and AUS",
+  "Increasing need for cross-domain expertise: site systems, data analysts, control strategy",
+];
+
+export const intelligenceFlywheel = {
+  title: "Persistent Intelligence Flywheel",
+  subtitle: "From static reporting to efficient action",
+  stages: [
+    { name: "Telemetry", description: "Integrations and data VEE", icon: "Database" },
+    { name: "Context", description: "Knowledge graph, asset summaries, decision tracking", icon: "Brain" },
+    { name: "Enrichment", description: "Baselines, benchmarks, simulations, what-if models", icon: "Settings" },
+    { name: "Observations", description: "Trends, root cause, prioritization, agentic reasoning", icon: "Eye" },
+    { name: "Output", description: "Living reports, dashboards, findings, interrogation", icon: "FileText" },
+    { name: "Action", description: "Workflow integration, prioritization, outcome tracking", icon: "Zap" },
+  ],
+  keyInsight: "As platform intelligence becomes pervasive, the winners will be systems that centralize data, know context, apply domain knowledge at scale, and reliably turn insight into action.",
+  differentiators: [
+    { label: "Data availability", status: "Baseline" },
+    { label: "Agentic intelligence", status: "Expectation" },
+    { label: "Expert context", status: "Essential" },
+    { label: "Customer outcomes", status: "Differentiator" },
+  ],
+};
 
 export const marketConstraints = [
   "Trust is essential: advice must be labeled as guidance, not commitment",

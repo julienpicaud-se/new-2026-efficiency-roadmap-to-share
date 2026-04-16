@@ -24,6 +24,7 @@ const navItems = [
   { id: "key-challenges", label: "Why Now", shortLabel: "Why Now" },
   { id: "strategic-pillars", label: "Strategic Pillars", shortLabel: "Pillars" },
   { id: "initiatives", label: "Journey Domains", shortLabel: "Domains" },
+  { id: "existing-tools", label: "Strategy Landscape", shortLabel: "Landscape" },
   { id: "what-if", label: "What If Tomorrow", shortLabel: "Vision" },
   { id: "out-of-scope", label: "Out of Scope", shortLabel: "Scope" },
   { id: "success-metrics", label: "Success Metrics", shortLabel: "Success" },
