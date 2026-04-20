@@ -8,6 +8,7 @@ import { InitiativesDomain } from "@/components/playbook/InitiativesDomain";
 import { ExistingToolsSection } from "@/components/playbook/ExistingToolsSection";
 import { RegionalJourneyComparison } from "@/components/playbook/RegionalJourneyComparison";
 import { ECMIngestionEngineSection } from "@/components/playbook/ECMIngestionEngineSection";
+import { StrategicContextSection } from "@/components/playbook/StrategicContextSection";
 import { WhatIfSection } from "@/components/playbook/WhatIfSection";
 import { OutOfScopeSection } from "@/components/playbook/OutOfScopeSection";
 import { SuccessMetricsSection } from "@/components/playbook/SuccessMetricsSection";
@@ -41,6 +42,7 @@ const Index = () => {
       <ExistingToolsSection />
       <RegionalJourneyComparison />
       <ECMIngestionEngineSection />
+      <StrategicContextSection />
       <WhatIfSection />
       <OutOfScopeSection />
       <SuccessMetricsSection />

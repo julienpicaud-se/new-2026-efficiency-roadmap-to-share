@@ -1381,3 +1381,95 @@ export const ecmIngestionEngine = {
     "Customer-specific context always wins over portfolio averages.",
   ],
 };
+
+// Strategic Context: deadlines, customer archetypes, regulatory tailwinds
+export const efficiencyStrategicContext = {
+  intro:
+    "Three forces shape why this strategy matters now: a hard internal deadline, a widening gap between customer expectations, and a regulatory tailwind that turns granularity into commercial value.",
+  raClassicSunset: {
+    title: "RA Classic Sunset",
+    badge: "Hard Deadline",
+    timeframe: "2027 - 2028",
+    summary:
+      "RA Classic is being phased out. IDM and the broader efficiency capability must lift over to RA+ before existing customers lose their home.",
+    implications: [
+      {
+        label: "IDM lift-over",
+        detail: "Josh (PM, ex-Digital Energy) is assessing the IDM transition. Scope ranges from light-touch interval ingestion to full tariff and carbon integration.",
+      },
+      {
+        label: "Phased MVP approach",
+        detail: "Start narrow: bring granular data and dashboards across. Layer carbon, tariffs, and analytics in subsequent waves.",
+      },
+      {
+        label: "Customer continuity",
+        detail: "Existing IDM accounts must experience a clean migration, not a forced rebuild.",
+      },
+      {
+        label: "Investment freeze on Classic",
+        detail: "New development on RA Classic is winding down. Every month without a roadmap costs us optionality.",
+      },
+    ],
+  },
+  customerArchetypes: {
+    title: "Two Customer Archetypes",
+    subtitle:
+      "The efficiency team serves two very different buyers. The platform must respect both, not collapse them into one experience.",
+    archetypes: [
+      {
+        name: "Traditional Audit Customer",
+        tagline: "Cold case, fast turnaround, PPT deliverable",
+        share: "~80% of European volume",
+        wants: [
+          "Quick on-site audit, no installs",
+          "Polished recommendation deck",
+          "Expert know-how, not a tool",
+          "In and out, no ongoing platform commitment",
+        ],
+        risk: "If we force them onto a platform, we lose the deal. Self-serve adoption is unrealistic.",
+        fit: "Internal productivity tool only. Auditors use the platform; the customer never sees it.",
+      },
+      {
+        name: "Enterprise Strategic Account",
+        tagline: "Inditex, Amazon and similar global accounts",
+        share: "Highest growth, highest visibility",
+        wants: [
+          "Integrated, always-on platform across sites",
+          "Live dashboards, granular data, audit trail",
+          "Self-serve exploration with expert support",
+          "A reference story they can cite internally",
+        ],
+        risk: "A PPT-only deliverable underwhelms them. Without RA+, they will look at Deepki, Measurabl, or build it themselves.",
+        fit: "Full RA+ deployment with services wrapped around the platform.",
+      },
+    ],
+    tension:
+      "Alex's pushback ('our customers are not on any system') is true for the traditional segment but dangerously wrong for the enterprise segment. The strategy must serve both without forcing convergence.",
+  },
+  ghgTailwind: {
+    title: "GHG Protocol Tailwind",
+    badge: "Regulatory Lever",
+    summary:
+      "The GHG Protocol is tightening data granularity requirements. High-resolution meter data shifts from 'nice to have' to 'commercially required' for serious sustainability reporting.",
+    impacts: [
+      {
+        label: "Interval data becomes table stakes",
+        detail: "Annual or monthly utility totals will not satisfy the next wave of disclosure standards.",
+      },
+      {
+        label: "IDM commercial case strengthens",
+        detail: "Every sustainability customer becomes a credible IDM upsell, well beyond the efficiency use case.",
+      },
+      {
+        label: "Cross-product upsell path",
+        detail: "Sustainability-only RA+ accounts become natural targets for energy and IDM modules.",
+      },
+      {
+        label: "Submeter ROI improves",
+        detail: "When granularity is mandated, the cost-benefit math for installing submeters or BMS feeds tilts in our favor.",
+      },
+    ],
+    soWhat:
+      "Build IDM and the ECM library so they natively serve carbon accounting, not just energy efficiency. The same data spine powers both.",
+  },
+};
