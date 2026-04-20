@@ -63,54 +63,55 @@ export const AppendixSection = () => {
         </div>
 
         {/* ============ Phased Roadmap ============ */}
-        <div className="mb-16">
-          <div className="text-center mb-10">
-            <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 block">
-              Delivery Phases
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
-              Phased Roadmap
-            </h3>
-            <p className="text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto">
-              From foundational research to a stand-alone efficiency product, each phase builds on the last.
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            {phasedRoadmap.map((phase) => (
-              <div key={phase.phase} className="bg-card rounded-xl border border-border/50 overflow-hidden">
-                <div className={`px-6 py-3 border-b border-border/30 flex items-center gap-3`}>
-                  <span className={`px-3 py-1 rounded-full text-xs font-bold border ${phaseColors[phase.color] || phaseColors.primary}`}>
-                    {phase.phase}
-                  </span>
-                  <span className="text-sm text-muted-foreground">{phase.items.length} workstream{phase.items.length > 1 ? "s" : ""}</span>
-                </div>
-                <div className="p-6 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {phase.items.map((item, i) => (
-                    <div key={i} className="bg-muted/30 rounded-lg border border-border/30 p-4">
-                      <h4 className="font-semibold text-foreground text-sm mb-3">{item.title}</h4>
-                      <ul className="space-y-1.5">
-                        {item.details.map((detail, j) => (
-                          <li key={j} className="flex items-start gap-2 text-xs text-muted-foreground">
-                            <span className="w-1 h-1 rounded-full bg-primary shrink-0 mt-1.5" />
-                            {detail}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
+        <Accordion type="single" collapsible className="mb-16">
+          <AccordionItem
+            value="phased-roadmap"
+            className="bg-card rounded-xl border border-border/50 overflow-hidden"
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-primary text-xs font-semibold uppercase tracking-wider block mb-1">
+                  Delivery Phases
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                  Phased Roadmap
+                </h3>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="flex items-center gap-4 my-16">
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-          <div className="w-2 h-2 rounded-full bg-primary/50" />
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-        </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-6 pb-6">
+              <p className="text-sm text-muted-foreground max-w-3xl mb-6">
+                From foundational research to a stand-alone efficiency product, each phase builds on the last.
+              </p>
+              <div className="space-y-6">
+                {phasedRoadmap.map((phase) => (
+                  <div key={phase.phase} className="bg-muted/20 rounded-xl border border-border/50 overflow-hidden">
+                    <div className="px-6 py-3 border-b border-border/30 flex items-center gap-3">
+                      <span className={`px-3 py-1 rounded-full text-xs font-bold border ${phaseColors[phase.color] || phaseColors.primary}`}>
+                        {phase.phase}
+                      </span>
+                      <span className="text-sm text-muted-foreground">{phase.items.length} workstream{phase.items.length > 1 ? "s" : ""}</span>
+                    </div>
+                    <div className="p-6 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {phase.items.map((item, i) => (
+                        <div key={i} className="bg-card rounded-lg border border-border/30 p-4">
+                          <h4 className="font-semibold text-foreground text-sm mb-3">{item.title}</h4>
+                          <ul className="space-y-1.5">
+                            {item.details.map((detail, j) => (
+                              <li key={j} className="flex items-start gap-2 text-xs text-muted-foreground">
+                                <span className="w-1 h-1 rounded-full bg-primary shrink-0 mt-1.5" />
+                                {detail}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
 
         {/* ============ Capability Matrix ============ */}
         <div className="mb-16">
