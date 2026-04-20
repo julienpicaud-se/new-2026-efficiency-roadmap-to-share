@@ -176,7 +176,7 @@ export const StrategicContextSection = () => {
             </Card>
           </div>
 
-          {/* GHG Protocol Tailwind */}
+          {/* Carbon Performance Tailwind */}
           <div>
             <div className="flex items-center gap-3 mb-3">
               <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
