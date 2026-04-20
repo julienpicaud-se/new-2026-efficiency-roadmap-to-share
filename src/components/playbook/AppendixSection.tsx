@@ -63,54 +63,55 @@ export const AppendixSection = () => {
         </div>
 
         {/* ============ Phased Roadmap ============ */}
-        <div className="mb-16">
-          <div className="text-center mb-10">
-            <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 block">
-              Delivery Phases
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
-              Phased Roadmap
-            </h3>
-            <p className="text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto">
-              From foundational research to a stand-alone efficiency product, each phase builds on the last.
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            {phasedRoadmap.map((phase) => (
-              <div key={phase.phase} className="bg-card rounded-xl border border-border/50 overflow-hidden">
-                <div className={`px-6 py-3 border-b border-border/30 flex items-center gap-3`}>
-                  <span className={`px-3 py-1 rounded-full text-xs font-bold border ${phaseColors[phase.color] || phaseColors.primary}`}>
-                    {phase.phase}
-                  </span>
-                  <span className="text-sm text-muted-foreground">{phase.items.length} workstream{phase.items.length > 1 ? "s" : ""}</span>
-                </div>
-                <div className="p-6 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {phase.items.map((item, i) => (
-                    <div key={i} className="bg-muted/30 rounded-lg border border-border/30 p-4">
-                      <h4 className="font-semibold text-foreground text-sm mb-3">{item.title}</h4>
-                      <ul className="space-y-1.5">
-                        {item.details.map((detail, j) => (
-                          <li key={j} className="flex items-start gap-2 text-xs text-muted-foreground">
-                            <span className="w-1 h-1 rounded-full bg-primary shrink-0 mt-1.5" />
-                            {detail}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
+        <Accordion type="single" collapsible className="mb-16">
+          <AccordionItem
+            value="phased-roadmap"
+            className="bg-card rounded-xl border border-border/50 overflow-hidden"
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-primary text-xs font-semibold uppercase tracking-wider block mb-1">
+                  Delivery Phases
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                  Phased Roadmap
+                </h3>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="flex items-center gap-4 my-16">
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-          <div className="w-2 h-2 rounded-full bg-primary/50" />
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-        </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-6 pb-6">
+              <p className="text-sm text-muted-foreground max-w-3xl mb-6">
+                From foundational research to a stand-alone efficiency product, each phase builds on the last.
+              </p>
+              <div className="space-y-6">
+                {phasedRoadmap.map((phase) => (
+                  <div key={phase.phase} className="bg-muted/20 rounded-xl border border-border/50 overflow-hidden">
+                    <div className="px-6 py-3 border-b border-border/30 flex items-center gap-3">
+                      <span className={`px-3 py-1 rounded-full text-xs font-bold border ${phaseColors[phase.color] || phaseColors.primary}`}>
+                        {phase.phase}
+                      </span>
+                      <span className="text-sm text-muted-foreground">{phase.items.length} workstream{phase.items.length > 1 ? "s" : ""}</span>
+                    </div>
+                    <div className="p-6 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {phase.items.map((item, i) => (
+                        <div key={i} className="bg-card rounded-lg border border-border/30 p-4">
+                          <h4 className="font-semibold text-foreground text-sm mb-3">{item.title}</h4>
+                          <ul className="space-y-1.5">
+                            {item.details.map((detail, j) => (
+                              <li key={j} className="flex items-start gap-2 text-xs text-muted-foreground">
+                                <span className="w-1 h-1 rounded-full bg-primary shrink-0 mt-1.5" />
+                                {detail}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
 
         {/* ============ Capability Matrix ============ */}
         <div className="mb-16">
@@ -201,80 +202,78 @@ export const AppendixSection = () => {
         </div>
 
         {/* ============ Quarterly Roadmap ============ */}
-        <div className="mb-16">
-          <div className="text-center mb-10">
-            <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 block">
-              Quarterly Plan
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
-              2026 Delivery Roadmap
-            </h3>
-            <p className="text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto">
-              What we deliver each quarter and what it means for efficiency teams.
-            </p>
-          </div>
+        <Accordion type="single" collapsible className="mb-16">
+          <AccordionItem
+            value="quarterly-roadmap"
+            className="bg-card rounded-xl border border-border/50 overflow-hidden"
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-primary text-xs font-semibold uppercase tracking-wider block mb-1">
+                  Quarterly Plan
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                  2026 Delivery Roadmap
+                </h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-6 pb-6">
+              <p className="text-sm text-muted-foreground max-w-3xl mb-6">
+                What we deliver each quarter and what it means for efficiency teams.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                {quarterlyRoadmap.map((q) => {
+                  const colorClass = quarterColors[q.color] || quarterColors.amber;
+                  return (
+                    <div
+                      key={q.quarter}
+                      className="bg-muted/20 rounded-xl border border-border/50 overflow-hidden"
+                    >
+                      <div className="px-6 py-4 border-b border-border/30">
+                        <span className={`px-3 py-1 rounded-full text-xs font-bold border ${colorClass} inline-block mb-2`}>
+                          {q.quarter}
+                        </span>
+                        <h4 className="text-lg font-bold text-foreground">{q.theme}</h4>
+                      </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {quarterlyRoadmap.map((q) => {
-              const colorClass = quarterColors[q.color] || quarterColors.amber;
-              return (
-                <div
-                  key={q.quarter}
-                  className="bg-card rounded-xl border border-border/50 overflow-hidden"
-                >
-                  {/* Quarter Header */}
-                  <div className="px-6 py-4 border-b border-border/30">
-                    <span className={`px-3 py-1 rounded-full text-xs font-bold border ${colorClass} inline-block mb-2`}>
-                      {q.quarter}
-                    </span>
-                    <h4 className="text-lg font-bold text-foreground">{q.theme}</h4>
-                  </div>
+                      <div className="p-6 space-y-6">
+                        <div>
+                          <h5 className="text-sm font-semibold text-foreground mb-3 flex items-center gap-2">
+                            <Zap className="w-4 h-4 text-primary" />
+                            What we deliver
+                          </h5>
+                          <ul className="space-y-2">
+                            {q.deliverables.map((d, i) => (
+                              <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
+                                <Check className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+                                <span>{d}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
 
-                  <div className="p-6 space-y-6">
-                    {/* Deliverables */}
-                    <div>
-                      <h5 className="text-sm font-semibold text-foreground mb-3 flex items-center gap-2">
-                        <Zap className="w-4 h-4 text-primary" />
-                        What we deliver
-                      </h5>
-                      <ul className="space-y-2">
-                        {q.deliverables.map((d, i) => (
-                          <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
-                            <Check className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
-                            <span>{d}</span>
-                          </li>
-                        ))}
-                      </ul>
+                        <div className="bg-card rounded-lg border border-border/30 p-4">
+                          <h5 className="text-sm font-semibold text-foreground mb-3 flex items-center gap-2">
+                            <Target className="w-4 h-4 text-primary" />
+                            What this means for efficiency teams
+                          </h5>
+                          <ul className="space-y-2">
+                            {q.teamImpact.map((impact, i) => (
+                              <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
+                                <ArrowRight className="w-3 h-3 text-primary/70 shrink-0 mt-0.5" />
+                                <span>{impact}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-
-                    {/* Team Impact */}
-                    <div className="bg-muted/30 rounded-lg border border-border/30 p-4">
-                      <h5 className="text-sm font-semibold text-foreground mb-3 flex items-center gap-2">
-                        <Target className="w-4 h-4 text-primary" />
-                        What this means for efficiency teams
-                      </h5>
-                      <ul className="space-y-2">
-                        {q.teamImpact.map((impact, i) => (
-                          <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
-                            <ArrowRight className="w-3 h-3 text-primary/70 shrink-0 mt-0.5" />
-                            <span>{impact}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="flex items-center gap-4 my-16">
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-          <div className="w-2 h-2 rounded-full bg-primary/50" />
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-        </div>
+                  );
+                })}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
 
         {/* ============ Value Pillar Deep Dive ============ */}
         <div className="mb-16">

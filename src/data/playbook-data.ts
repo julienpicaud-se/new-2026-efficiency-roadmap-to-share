@@ -1447,10 +1447,10 @@ export const efficiencyStrategicContext = {
       "Alex's pushback ('our customers are not on any system') is true for the traditional segment but dangerously wrong for the enterprise segment. The strategy must serve both without forcing convergence.",
   },
   ghgTailwind: {
-    title: "GHG Protocol Tailwind",
+    title: "Carbon Performance Tailwind",
     badge: "Regulatory Lever",
     summary:
-      "The GHG Protocol is tightening data granularity requirements. High-resolution meter data shifts from 'nice to have' to 'commercially required' for serious sustainability reporting.",
+      "Carbon Performance reporting is tightening data granularity requirements. High-resolution meter data shifts from 'nice to have' to 'commercially required' for serious sustainability reporting.",
     impacts: [
       {
         label: "Interval data becomes table stakes",
