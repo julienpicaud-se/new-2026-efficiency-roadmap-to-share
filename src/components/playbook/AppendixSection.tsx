@@ -114,25 +114,32 @@ export const AppendixSection = () => {
         </Accordion>
 
         {/* ============ Capability Matrix ============ */}
-        <div className="mb-16">
-          <div className="text-center mb-10">
-            <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 block">
-              Capability Evolution
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
-              Opportunity × Phase Matrix
-            </h3>
-            <p className="text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto">
-              How each capability evolves across delivery phases, from foundational database work to the full EE product.
-            </p>
-          </div>
+        <Accordion type="single" collapsible className="mb-4">
+          <AccordionItem
+            value="capability-matrix"
+            className="bg-card rounded-xl border border-border/50 overflow-hidden"
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-primary text-xs font-semibold uppercase tracking-wider block mb-1">
+                  Capability Evolution
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                  Opportunity × Phase Matrix
+                </h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-6 pb-6">
+              <p className="text-sm text-muted-foreground max-w-3xl mb-6">
+                How each capability evolves across delivery phases, from foundational database work to the full EE product.
+              </p>
 
-          {/* Desktop table */}
-          <div className="hidden lg:block overflow-x-auto">
+              {/* Desktop table */}
+              <div className="hidden lg:block overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="border-b border-border/50">
-                  <th className="text-left p-3 text-muted-foreground font-semibold w-[200px]">#</th>
+                  <th className="text-left p-3 text-muted-foreground font-semibold w-[60px]">#</th>
                   <th className="text-left p-3 text-muted-foreground font-semibold w-[220px]">Opportunity / Problem</th>
                   {capabilityMatrix.phases.map((phase) => (
                     <th key={phase} className="text-left p-3 text-muted-foreground font-semibold text-xs">{phase}</th>
@@ -156,16 +163,16 @@ export const AppendixSection = () => {
                 ))}
               </tbody>
             </table>
-          </div>
+              </div>
 
-          {/* Mobile cards */}
-          <div className="lg:hidden space-y-4">
+              {/* Mobile cards */}
+              <div className="lg:hidden space-y-4">
             <Accordion type="single" collapsible className="space-y-3">
               {capabilityMatrix.capabilities.map((cap) => (
                 <AccordionItem
                   key={cap.id}
                   value={String(cap.id)}
-                  className="bg-card rounded-lg border border-border/50 overflow-hidden"
+                  className="bg-muted/20 rounded-lg border border-border/50 overflow-hidden"
                 >
                   <AccordionTrigger className="px-4 py-3 hover:no-underline text-left">
                     <div className="flex items-center gap-3">
@@ -176,7 +183,7 @@ export const AppendixSection = () => {
                   <AccordionContent className="px-4 pb-4">
                     <div className="space-y-2 mt-2">
                       {capabilityMatrix.phases.map((phase, i) => (
-                        <div key={phase} className="flex items-start gap-2 bg-muted/30 rounded-lg p-2.5">
+                        <div key={phase} className="flex items-start gap-2 bg-card rounded-lg p-2.5">
                           <StatusIcon status={cap.statuses[i].status} />
                           <div className="flex-1 min-w-0">
                             <span className="text-xs font-semibold text-muted-foreground block mb-0.5">{phase}</span>
@@ -191,15 +198,10 @@ export const AppendixSection = () => {
                 </AccordionItem>
               ))}
             </Accordion>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="flex items-center gap-4 my-16">
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-          <div className="w-2 h-2 rounded-full bg-primary/50" />
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-        </div>
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
 
         {/* ============ Quarterly Roadmap ============ */}
         <Accordion type="single" collapsible className="mb-16">
