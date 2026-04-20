@@ -309,7 +309,7 @@ export const valuePillars = [
   },
 ];
 
-export const efficiencyStrategicContext = {
+export const strategicContext = {
   summary: "Today, efficiency audits rely heavily on manual workflows and PowerPoint deliverables. Client context is fragmented across tools and documents, expertise is delivered late in the cycle and does not scale, and early advice is not productized to generate recurring value.",
   northStar: "Build a unified, intelligence-driven Energy Efficiency capability that transforms expert knowledge into scalable product value, empowering customers and Schneider teams to identify and act on the right ECMs at the right time.",
 };
