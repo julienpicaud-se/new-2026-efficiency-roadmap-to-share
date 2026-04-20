@@ -1294,3 +1294,90 @@ export const regionalJourneys = {
   designPrinciple:
     "Build a flexible journey where customers enter and exit at any step. Shared backend, region-conditional UX. Do not force one umbrella.",
 };
+
+// ECM Ingestion Engine: PPT extraction prototype + Monte Carlo recommendations
+export const ecmIngestionEngine = {
+  intro:
+    "27 TB of historic audit data sits in scattered SharePoints, desktops, and PPT decks across Schneider. The ingestion engine turns that latent IP into a structured, queryable ECM library that powers smart recommendations.",
+  prototype: {
+    title: "PPT Extraction Prototype",
+    subtitle: "Built with the Data Science team, in test starting this week.",
+    flow: [
+      {
+        step: "01",
+        name: "Drop",
+        description: "Auditor drops a past audit PPT (Inditex, Amazon, public-sector deck) into the platform.",
+      },
+      {
+        step: "02",
+        name: "Extract",
+        description: "The engine reads the deck and auto-extracts ~70 fields per ECM: name, savings, unit of measure, payback, baseline, scope.",
+      },
+      {
+        step: "03",
+        name: "Review",
+        description: "Original auditor confirms or edits the extracted data. Human-in-the-loop keeps quality high.",
+      },
+      {
+        step: "04",
+        name: "Ingest",
+        description: "Validated ECMs land in the central library, tagged by client, site type, sector, and geography.",
+      },
+    ],
+    accuracy: "~80% accuracy on first pass during initial testing.",
+  },
+  volumeRamp: {
+    title: "Volume Ramp",
+    subtitle: "From a handful of decks to a 30,000+ ECM library.",
+    milestones: [
+      {
+        phase: "Pilot",
+        target: "200",
+        unit: "ECMs",
+        detail: "First wave of European audit decks ingested for QA and tuning.",
+      },
+      {
+        phase: "Inditex Push",
+        target: "5,000+",
+        unit: "ECMs",
+        detail: "Multi-site Inditex audits processed in batch; one client unlocks orders of magnitude.",
+      },
+      {
+        phase: "European Backlog",
+        target: "15,000+",
+        unit: "ECMs",
+        detail: "Full European audit history, including Amazon and other large enterprise accounts.",
+      },
+      {
+        phase: "US + Public Sector",
+        target: "30,000+",
+        unit: "ECMs",
+        detail: "Once US teams release their 27 TB archive, the library scales globally.",
+      },
+    ],
+  },
+  monteCarlo: {
+    title: "Monte Carlo Top-5 Recommendations",
+    subtitle:
+      "Volume unlocks intelligence. Once we have tens of thousands of historic ECMs, we run probabilistic simulation to surface the right measures for the right client.",
+    inputs: [
+      "Client context: site type, sector, geography, climate zone",
+      "Historic ECM performance distributions (savings, payback, cost ranges)",
+      "Available data quality signals from IDM, BMS, or utility feeds",
+      "Constraints: budget, downtime tolerance, regulatory scope",
+    ],
+    output:
+      "A ranked Top-5 ECM shortlist per client, with probability-weighted savings, payback bands, and confidence intervals — not a pixel-perfect single number.",
+    why: "An ECM might range from 20% to 140% payback depending on context. Monte Carlo embraces that uncertainty rather than hiding it, giving auditors a defensible starting point in seconds.",
+  },
+  enablers: [
+    "Akita Box API (free, expected in 3-4 months) feeds field notes, photos, and floor plans straight into the ECM library.",
+    "ECM library refresh becomes live as more auditors adopt Akita Box on tablets.",
+    "Expert-in-the-loop validation step keeps the library clean as it scales.",
+  ],
+  guardrails: [
+    "Never replace the auditor. Recommendations are a starting point, not the deliverable.",
+    "Probability bands, not false precision. Show ranges and confidence, not single decimals.",
+    "Customer-specific context always wins over portfolio averages.",
+  ],
+};

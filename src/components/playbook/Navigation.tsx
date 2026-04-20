@@ -26,6 +26,7 @@ const navItems = [
   { id: "initiatives", label: "Journey Domains", shortLabel: "Domains" },
   { id: "existing-tools", label: "Strategy Landscape", shortLabel: "Landscape" },
   { id: "regional-journeys", label: "Regional Journeys", shortLabel: "Regions" },
+  { id: "ecm-ingestion-engine", label: "ECM Ingestion", shortLabel: "Ingestion" },
   { id: "what-if", label: "What If Tomorrow", shortLabel: "Vision" },
   { id: "out-of-scope", label: "Out of Scope", shortLabel: "Scope" },
   { id: "success-metrics", label: "Success Metrics", shortLabel: "Success" },
