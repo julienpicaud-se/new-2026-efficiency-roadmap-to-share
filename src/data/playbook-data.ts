@@ -965,7 +965,55 @@ export const existingTools = [
 ];
 
 export const idmCapabilities = {
-  tagline: "IDM is not just about features. We build for user experience, outcomes, and efficiency.",
+  tagline:
+    "IDM is the data spine of the efficiency journey. It is the first step (anomaly-driven entry) or the last step (post-implementation monitoring), never a forced middle.",
+  positioning: {
+    title: "Step Zero or Step Last",
+    subtitle: "IDM is flexible by design. Customers enter or exit at any point.",
+    modes: [
+      {
+        label: "Step Zero",
+        role: "Entry via anomaly detection",
+        description:
+          "Granular interval data surfaces anomalies, benchmarks, and savings gaps. Customers see a problem and pull in the efficiency team to scope an audit.",
+        outcome: "Data-led lead generation for the audit business.",
+      },
+      {
+        label: "Step Last",
+        role: "Exit via post-implementation monitoring",
+        description:
+          "After audits and ECM implementation, IDM tracks actual vs. baseline savings, verifies investment, and feeds M&V evidence back to the customer.",
+        outcome: "Continuous proof that the efficiency program delivers.",
+      },
+    ],
+    principle:
+      "Optional in the middle, essential at the edges. The platform must let customers join or leave the IDM layer without breaking the journey.",
+  },
+  bmsBypass: {
+    title: "BMS Integration: Bypass the Submeter Install",
+    subtitle:
+      "The biggest IDM adoption blocker is the cost and lead time of installing submeters. Many customers refuse upfront. BMS connectivity removes that barrier.",
+    benefits: [
+      {
+        label: "No hardware install",
+        detail: "Pull existing meter data directly from the building management system.",
+      },
+      {
+        label: "Faster time to insight",
+        detail: "Days, not months. No procurement cycle, no electrician on site.",
+      },
+      {
+        label: "Wider addressable base",
+        detail: "Unlocks customers who have BMS but no Schneider submetering footprint.",
+      },
+      {
+        label: "Cross-business synergy",
+        detail: "Direct hook into Schneider Digital Energy BMS estate; reuses existing data flows.",
+      },
+    ],
+    fallback:
+      "Where BMS is absent, utility meter feeds (UK half-hourly, EU 5/15-min) still provide a baseline IDM experience. Submeter install becomes an upsell, not a prerequisite.",
+  },
   stats: [
     { value: "4,800+", label: "Meters Connected", detail: "Utility, sub-meter, virtual" },
     { value: "1,600+", label: "Active Users", detail: "Site, regional, portfolio levels" },

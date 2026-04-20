@@ -27,6 +27,12 @@ import {
   ArrowRight,
   Activity,
   Target,
+  ArrowDownToLine,
+  ArrowUpFromLine,
+  Cable,
+  Building,
+  Clock,
+  Layers,
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -76,11 +82,56 @@ export const ExistingToolsSection = () => {
           <div>
             <h3 className="text-lg font-semibold text-foreground mb-2 flex items-center gap-2">
               <Activity className="w-5 h-5 text-primary" />
-              IDM: The Data Foundation
+              IDM: Step Zero or Step Last
             </h3>
             <p className="text-sm text-muted-foreground mb-6 max-w-2xl">
               {idmCapabilities.tagline}
             </p>
+
+            {/* Positioning: Step Zero / Step Last */}
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
+              {idmCapabilities.positioning.modes.map((mode, i) => {
+                const Icon = i === 0 ? ArrowDownToLine : ArrowUpFromLine;
+                return (
+                  <Card
+                    key={mode.label}
+                    className="bg-primary/5 border-primary/20"
+                  >
+                    <CardContent className="p-5">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <Icon className="w-4 h-4 text-primary" />
+                        </div>
+                        <div>
+                          <div className="text-[10px] uppercase tracking-wider text-primary font-semibold">
+                            {mode.label}
+                          </div>
+                          <h4 className="font-semibold text-foreground text-sm">
+                            {mode.role}
+                          </h4>
+                        </div>
+                      </div>
+                      <p className="text-xs text-muted-foreground leading-relaxed mb-3">
+                        {mode.description}
+                      </p>
+                      <div className="flex items-start gap-1.5 text-xs text-foreground border-t border-border/40 pt-3">
+                        <Target className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+                        <span className="italic">{mode.outcome}</span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+
+            <Card className="bg-card border-border/50 mb-8">
+              <CardContent className="p-4 flex items-start gap-3">
+                <Layers className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <p className="text-sm text-muted-foreground italic">
+                  {idmCapabilities.positioning.principle}
+                </p>
+              </CardContent>
+            </Card>
 
             {/* Stats row */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
@@ -121,6 +172,49 @@ export const ExistingToolsSection = () => {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+
+            {/* BMS Integration: Bypass Submeter Install */}
+            <div className="mt-10">
+              <div className="flex items-center gap-2 mb-2">
+                <Cable className="w-5 h-5 text-primary" />
+                <h4 className="text-base font-semibold text-foreground">
+                  {idmCapabilities.bmsBypass.title}
+                </h4>
+              </div>
+              <p className="text-sm text-muted-foreground mb-5 max-w-3xl">
+                {idmCapabilities.bmsBypass.subtitle}
+              </p>
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
+                {idmCapabilities.bmsBypass.benefits.map((b, i) => {
+                  const icons = [Building, Clock, Target, Cable];
+                  const Icon = icons[i] || Cable;
+                  return (
+                    <Card key={i} className="bg-card border-border/50">
+                      <CardContent className="p-4">
+                        <Icon className="w-4 h-4 text-primary mb-2" />
+                        <div className="text-sm font-semibold text-foreground mb-1">
+                          {b.label}
+                        </div>
+                        <p className="text-xs text-muted-foreground leading-snug">
+                          {b.detail}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
+
+              <Card className="bg-orange-500/5 border-orange-500/20">
+                <CardContent className="p-4 flex items-start gap-3">
+                  <AlertTriangle className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
+                  <p className="text-xs text-muted-foreground">
+                    <span className="font-medium text-foreground">Fallback:</span>{" "}
+                    {idmCapabilities.bmsBypass.fallback}
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
 
