@@ -6,6 +6,7 @@ import { KeyChallengesSection } from "@/components/playbook/KeyChallengesSection
 import { StrategicPillars } from "@/components/playbook/StrategicPillars";
 import { InitiativesDomain } from "@/components/playbook/InitiativesDomain";
 import { ExistingToolsSection } from "@/components/playbook/ExistingToolsSection";
+import { RegionalJourneyComparison } from "@/components/playbook/RegionalJourneyComparison";
 import { WhatIfSection } from "@/components/playbook/WhatIfSection";
 import { OutOfScopeSection } from "@/components/playbook/OutOfScopeSection";
 import { SuccessMetricsSection } from "@/components/playbook/SuccessMetricsSection";
@@ -37,6 +38,7 @@ const Index = () => {
       <StrategicPillars />
       <InitiativesDomain />
       <ExistingToolsSection />
+      <RegionalJourneyComparison />
       <WhatIfSection />
       <OutOfScopeSection />
       <SuccessMetricsSection />

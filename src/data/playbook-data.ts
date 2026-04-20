@@ -1139,3 +1139,110 @@ export const timeline = {
     ],
   },
 };
+
+// Regional Journey Comparison: Europe, US Public, US Private, IDM
+export const regionalJourneys = {
+  intro:
+    "There is no single efficiency journey. Each region and sector enters, delivers, and monetizes differently. The platform must support flexible entry and exit points rather than force one path.",
+  stages: [
+    "Lead Intake",
+    "Data Collection",
+    "On-Site Audit",
+    "Analysis & ECMs",
+    "Recommendations",
+    "Implementation",
+    "Monitoring",
+  ],
+  journeys: [
+    {
+      id: "europe",
+      name: "Europe",
+      tagline: "Knowledge-led on-site audits",
+      revenue: "Strong growth pipeline",
+      sellingPoint: "Expertise, know-how, polished deliverables",
+      coverage: {
+        "Lead Intake": { level: "core", note: "80% are net-new, not in any Schneider system" },
+        "Data Collection": { level: "core", note: "Pre-analysis from utility data; submeters rare" },
+        "On-Site Audit": { level: "core", note: "Auditor visits, notes, photos, floor plans (Akita Box rolling out)" },
+        "Analysis & ECMs": { level: "core", note: "Manual today; ECM Library + ingestion engine in build" },
+        "Recommendations": { level: "core", note: "PPT deliverable is THE selling point" },
+        "Implementation": { level: "none", note: "Out of scope; customer or 3rd party executes" },
+        "Monitoring": { level: "optional", note: "Optional IDM hookup if submeters are installed later" },
+      },
+    },
+    {
+      id: "us-public",
+      name: "US Public Sector",
+      tagline: "Performance contracts, ~$400M revenue",
+      revenue: "Largest single stream for SE Sustainability advisory",
+      sellingPoint: "End-to-end delivery with guaranteed savings",
+      coverage: {
+        "Lead Intake": { level: "core", note: "RFPs, long sales cycles, commercial buildings" },
+        "Data Collection": { level: "core", note: "Often pulled from BMS or utility records" },
+        "On-Site Audit": { level: "core", note: "Fast-track assessments to scope the project" },
+        "Analysis & ECMs": { level: "core", note: "Detailed design phase follows the audit" },
+        "Recommendations": { level: "light", note: "Internal artifact, not the deliverable" },
+        "Implementation": { level: "core", note: "MAIN revenue driver; SE installs the measures" },
+        "Monitoring": { level: "core", note: "Contractual M&V; the natural RA+ meeting point" },
+      },
+    },
+    {
+      id: "us-private",
+      name: "US Private Sector",
+      tagline: "Commercial audits + implementation",
+      revenue: "Significant, paired with public sector",
+      sellingPoint: "Audit + design + build + verify",
+      coverage: {
+        "Lead Intake": { level: "core", note: "Direct enterprise accounts" },
+        "Data Collection": { level: "core", note: "BMS pulls and utility data common" },
+        "On-Site Audit": { level: "core", note: "Field audits feed design phase" },
+        "Analysis & ECMs": { level: "core", note: "27 TB of historic audit data exists, scattered" },
+        "Recommendations": { level: "light", note: "Internal artifact, not the deliverable" },
+        "Implementation": { level: "core", note: "Core delivery model" },
+        "Monitoring": { level: "core", note: "Post-install tracking; RA+ candidate" },
+      },
+    },
+    {
+      id: "idm",
+      name: "IDM (Data-Driven)",
+      tagline: "Step zero or step last",
+      revenue: "Pre-step or post-step to the audit business",
+      sellingPoint: "Granular interval data spots anomalies automatically",
+      coverage: {
+        "Lead Intake": { level: "optional", note: "Existing RA customers with submeters or BMS feeds" },
+        "Data Collection": { level: "core", note: "5/15/30-min interval data; 4,800+ meters today" },
+        "On-Site Audit": { level: "none", note: "No site visits; pure data analysis" },
+        "Analysis & ECMs": { level: "core", note: "Anomaly detection, benchmarks, alerts" },
+        "Recommendations": { level: "light", note: "Triggers next-step audit referral" },
+        "Implementation": { level: "none", note: "Hand-off to efficiency teams" },
+        "Monitoring": { level: "core", note: "Continuous post-implementation verification" },
+      },
+    },
+  ],
+  convergence: {
+    title: "Where journeys converge",
+    point: "Monitoring",
+    description:
+      "All four journeys can meet on the monitoring layer. RA+ becomes the shared backend for interval data, M&V, and continuous insight, regardless of how the customer first arrived.",
+  },
+  divergence: [
+    {
+      title: "Implementation",
+      detail: "US Public and US Private own implementation; Europe and IDM stop at recommendations or hand-off.",
+    },
+    {
+      title: "Deliverable",
+      detail: "Europe sells the polished PPT recommendation. US sells the installed savings. IDM sells the alert.",
+    },
+    {
+      title: "Entry point",
+      detail: "Europe is cold customer-led. US is RFP-led. IDM is data-led from existing accounts.",
+    },
+    {
+      title: "Site visit",
+      detail: "Europe and US require boots on the ground. IDM never does.",
+    },
+  ],
+  designPrinciple:
+    "Build a flexible journey where customers enter and exit at any step. Shared backend, region-conditional UX. Do not force one umbrella.",
+};
