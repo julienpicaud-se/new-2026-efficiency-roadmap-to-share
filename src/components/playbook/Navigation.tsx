@@ -180,7 +180,32 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                 </SheetHeader>
                 
                 <div className="flex flex-col gap-1 py-6">
-                  {navItems.map((item) => (
+                  {/* Appendix at top for quick access */}
+                  {(() => {
+                    const appendix = navItems.find((i) => i.id === "appendix");
+                    if (!appendix) return null;
+                    return (
+                      <button
+                        key={appendix.id}
+                        onClick={() => scrollToSection(appendix.id)}
+                        className={`flex items-center justify-between text-left px-4 py-3 rounded-lg text-sm font-medium transition-all mb-2 border ${
+                          activeSection === appendix.id
+                            ? "bg-primary text-primary-foreground border-primary"
+                            : "bg-muted/30 text-foreground border-border/50 hover:bg-muted"
+                        }`}
+                      >
+                        <span className="flex items-center gap-2">
+                          <Layers className="w-4 h-4" />
+                          {appendix.label}
+                        </span>
+                        <ChevronRight className="w-4 h-4 opacity-50" />
+                      </button>
+                    );
+                  })()}
+
+                  {navItems
+                    .filter((item) => item.id !== "appendix")
+                    .map((item) => (
                     <button
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
