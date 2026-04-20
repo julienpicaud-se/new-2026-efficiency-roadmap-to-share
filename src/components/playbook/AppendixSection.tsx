@@ -278,19 +278,31 @@ export const AppendixSection = () => {
         </Accordion>
 
         {/* ============ Value Pillar Deep Dive ============ */}
-        <div className="mb-16">
-          <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-            <Zap className="w-5 h-5 text-primary" />
-            Value Pillar Deep Dive
-          </h3>
-          <Accordion type="single" collapsible className="space-y-4">
+        <Accordion type="single" collapsible className="mb-4">
+          <AccordionItem
+            value="value-pillar-deep-dive"
+            className="bg-card rounded-xl border border-border/50 overflow-hidden"
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-primary text-xs font-semibold uppercase tracking-wider block mb-1">
+                  Value Proof
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground flex items-center gap-2">
+                  <Zap className="w-4 h-4 text-primary" />
+                  Value Pillar Deep Dive
+                </h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-6 pb-6">
+              <Accordion type="single" collapsible className="space-y-3">
             {appendixPillars.map((pillar) => {
               const Icon = pillarIcons[pillar.pillar] || Layers;
               return (
                 <AccordionItem
                   key={pillar.pillar}
                   value={pillar.pillar}
-                  className="glass-card border border-border/50 rounded-lg overflow-hidden"
+                  className="bg-muted/20 border border-border/50 rounded-lg overflow-hidden"
                 >
                   <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/50">
                     <div className="flex items-center gap-3">
@@ -362,44 +374,48 @@ export const AppendixSection = () => {
                 </AccordionItem>
               );
             })}
-          </Accordion>
-        </div>
-
-        {/* Divider */}
-        <div className="flex items-center gap-4 my-16">
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-          <div className="w-2 h-2 rounded-full bg-primary/50" />
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-        </div>
+              </Accordion>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
 
         {/* ============ Supporting Scorecard ============ */}
-        <div>
-          <div className="text-center mb-10">
-            <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 sm:mb-4 block">
-              Tracking Progress
-            </span>
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-foreground">
-              Supporting Scorecard
-            </h3>
-            <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-              Key metrics that measure our progress toward the Beyond ECM Library vision.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {supportingScorecard.map((item, index) => (
-              <Card
-                key={item.metric}
-                className="glass-card border-border/50"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="p-4">
-                  <h4 className="font-semibold text-primary mb-2">{item.metric}</h4>
-                  <p className="text-sm text-muted-foreground">{item.definition}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+        <Accordion type="single" collapsible>
+          <AccordionItem
+            value="supporting-scorecard"
+            className="bg-card rounded-xl border border-border/50 overflow-hidden"
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-primary text-xs font-semibold uppercase tracking-wider block mb-1">
+                  Tracking Progress
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                  Supporting Scorecard
+                </h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-6 pb-6">
+              <p className="text-sm text-muted-foreground max-w-2xl mb-6">
+                Key metrics that measure our progress toward the Beyond ECM Library vision.
+              </p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {supportingScorecard.map((item, index) => (
+                  <Card
+                    key={item.metric}
+                    className="bg-muted/20 border-border/50"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <CardContent className="p-4">
+                      <h4 className="font-semibold text-primary mb-2">{item.metric}</h4>
+                      <p className="text-sm text-muted-foreground">{item.definition}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
     </section>
   );
