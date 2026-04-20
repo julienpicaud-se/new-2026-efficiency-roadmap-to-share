@@ -10,7 +10,6 @@ import {
   Circle,
   MinusCircle,
   ArrowDownToLine,
-  Sparkles,
   GitBranch,
   Compass,
 } from "lucide-react";
@@ -24,30 +23,30 @@ const journeyIconMap: Record<string, React.ElementType> = {
 
 const levelStyles: Record<
   string,
-  { Icon: React.ElementType; label: string; chipClass: string; iconClass: string }
+  { Icon: React.ElementType; label: string; dotClass: string; iconClass: string }
 > = {
   core: {
     Icon: CheckCircle2,
     label: "Core",
-    chipClass: "bg-primary/10 border-primary/30 text-primary",
+    dotClass: "bg-primary",
     iconClass: "text-primary",
   },
   light: {
     Icon: Circle,
     label: "Light",
-    chipClass: "bg-yellow-500/10 border-yellow-500/30 text-yellow-500",
+    dotClass: "bg-yellow-500",
     iconClass: "text-yellow-500",
   },
   optional: {
     Icon: Circle,
     label: "Optional",
-    chipClass: "bg-muted border-border text-muted-foreground",
+    dotClass: "bg-muted-foreground/40",
     iconClass: "text-muted-foreground",
   },
   none: {
     Icon: MinusCircle,
     label: "Out",
-    chipClass: "bg-orange-500/10 border-orange-500/30 text-orange-400",
+    dotClass: "bg-orange-400/60",
     iconClass: "text-orange-400/60",
   },
 };
@@ -61,22 +60,32 @@ export const RegionalJourneyComparison = () => {
     <section
       id="regional-journeys"
       ref={ref as React.RefObject<HTMLElement>}
-      className={`py-24 section-fade ${isVisible ? "visible" : ""}`}
+      className={`py-16 section-fade ${isVisible ? "visible" : ""}`}
     >
       <div className="container px-4">
-        <div className="text-center mb-12 sm:mb-16">
-          <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 sm:mb-4 block">
+        <div className="text-center mb-8 sm:mb-10">
+          <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-2 sm:mb-3 block">
             Regional Reality Check
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3 text-foreground">
             Regional Journey Comparison
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto">
             {intro}
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto space-y-12">
+        <div className="max-w-6xl mx-auto space-y-6">
+          {/* Legend */}
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-muted-foreground">
+            {Object.entries(levelStyles).map(([key, s]) => (
+              <div key={key} className="flex items-center gap-1.5">
+                <span className={`w-2 h-2 rounded-full ${s.dotClass}`} />
+                <span>{s.label}</span>
+              </div>
+            ))}
+          </div>
+
           {/* Comparison matrix */}
           <Card className="bg-card border-border/50 overflow-hidden">
             <CardContent className="p-0">
@@ -85,7 +94,7 @@ export const RegionalJourneyComparison = () => {
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b border-border/50 bg-muted/30">
-                      <th className="text-left p-4 font-semibold text-foreground w-44">
+                      <th className="text-left px-4 py-3 font-semibold text-foreground w-44">
                         Journey Stage
                       </th>
                       {journeys.map((j) => {
@@ -93,7 +102,7 @@ export const RegionalJourneyComparison = () => {
                         return (
                           <th
                             key={j.id}
-                            className="text-left p-4 font-semibold text-foreground align-top"
+                            className="text-left px-4 py-3 font-semibold text-foreground align-top"
                           >
                             <div className="flex items-center gap-2 mb-1">
                               <Icon className="w-4 h-4 text-primary" />
@@ -115,12 +124,12 @@ export const RegionalJourneyComparison = () => {
                           i % 2 === 0 ? "bg-background" : "bg-muted/10"
                         }`}
                       >
-                        <td className="p-4 font-medium text-foreground align-top">
+                        <td className="px-4 py-2.5 font-medium text-foreground align-top">
                           <div className="flex items-center gap-2">
                             <span className="text-xs text-muted-foreground tabular-nums">
                               {String(i + 1).padStart(2, "0")}
                             </span>
-                            <span>{stage}</span>
+                            <span className="text-xs">{stage}</span>
                           </div>
                         </td>
                         {journeys.map((j) => {
@@ -129,21 +138,14 @@ export const RegionalJourneyComparison = () => {
                           const style = levelStyles[cell.level];
                           const StyleIcon = style.Icon;
                           return (
-                            <td key={j.id} className="p-4 align-top">
+                            <td key={j.id} className="px-4 py-2.5 align-top">
                               <div className="flex items-start gap-2">
                                 <StyleIcon
                                   className={`w-4 h-4 shrink-0 mt-0.5 ${style.iconClass}`}
                                 />
-                                <div className="min-w-0">
-                                  <span
-                                    className={`inline-block text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full border mb-1 ${style.chipClass}`}
-                                  >
-                                    {style.label}
-                                  </span>
-                                  <p className="text-xs text-muted-foreground leading-snug">
-                                    {cell.note}
-                                  </p>
-                                </div>
+                                <p className="text-xs text-muted-foreground leading-snug min-w-0">
+                                  {cell.note}
+                                </p>
                               </div>
                             </td>
                           );
@@ -159,17 +161,17 @@ export const RegionalJourneyComparison = () => {
                 {journeys.map((j) => {
                   const Icon = journeyIconMap[j.id] || Compass;
                   return (
-                    <div key={j.id} className="p-5">
+                    <div key={j.id} className="p-4">
                       <div className="flex items-center gap-2 mb-1">
                         <Icon className="w-4 h-4 text-primary" />
                         <h4 className="font-semibold text-foreground text-sm">
                           {j.name}
                         </h4>
                       </div>
-                      <p className="text-xs text-muted-foreground mb-4">
+                      <p className="text-xs text-muted-foreground mb-3">
                         {j.tagline}
                       </p>
-                      <ul className="space-y-2">
+                      <ul className="space-y-1.5">
                         {stages.map((stage) => {
                           const cell =
                             j.coverage[stage as keyof typeof j.coverage];
@@ -181,16 +183,9 @@ export const RegionalJourneyComparison = () => {
                                 className={`w-3.5 h-3.5 shrink-0 mt-0.5 ${style.iconClass}`}
                               />
                               <div className="min-w-0">
-                                <div className="flex items-center gap-2 mb-0.5">
-                                  <span className="text-xs font-medium text-foreground">
-                                    {stage}
-                                  </span>
-                                  <span
-                                    className={`text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded-full border ${style.chipClass}`}
-                                  >
-                                    {style.label}
-                                  </span>
-                                </div>
+                                <span className="text-xs font-medium text-foreground block mb-0.5">
+                                  {stage}
+                                </span>
                                 <p className="text-[11px] text-muted-foreground leading-snug">
                                   {cell.note}
                                 </p>
@@ -206,23 +201,22 @@ export const RegionalJourneyComparison = () => {
             </CardContent>
           </Card>
 
-          {/* Selling point summary */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {/* Selling point summary - compact */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {journeys.map((j) => {
               const Icon = journeyIconMap[j.id] || Compass;
               return (
                 <Card key={j.id} className="bg-card border-border/50">
-                  <CardContent className="p-5">
-                    <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
-                      <Icon className="w-4 h-4 text-primary" />
+                  <CardContent className="p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                        <Icon className="w-3.5 h-3.5 text-primary" />
+                      </div>
+                      <h4 className="font-semibold text-foreground text-sm leading-tight">
+                        {j.name}
+                      </h4>
                     </div>
-                    <h4 className="font-semibold text-foreground text-sm mb-1">
-                      {j.name}
-                    </h4>
-                    <p className="text-[11px] uppercase tracking-wider text-muted-foreground mb-2">
-                      Selling point
-                    </p>
-                    <p className="text-xs text-foreground mb-3 leading-snug">
+                    <p className="text-xs text-foreground mb-2 leading-snug">
                       {j.sellingPoint}
                     </p>
                     <p className="text-[11px] text-muted-foreground italic">
@@ -234,36 +228,39 @@ export const RegionalJourneyComparison = () => {
             })}
           </div>
 
-          {/* Convergence + Divergence */}
+          {/* Convergence + Divergence + Design Principle */}
           <div className="grid lg:grid-cols-2 gap-4">
             <Card className="bg-primary/5 border-primary/20">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <ArrowDownToLine className="w-5 h-5 text-primary" />
-                  <h3 className="font-semibold text-foreground">
+              <CardContent className="p-5">
+                <div className="flex items-center gap-2 mb-2">
+                  <ArrowDownToLine className="w-4 h-4 text-primary" />
+                  <h3 className="font-semibold text-foreground text-sm">
                     {convergence.title}
                   </h3>
+                  <span className="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-primary/10 border border-primary/30 text-primary">
+                    {convergence.point}
+                  </span>
                 </div>
-                <div className="inline-block text-xs uppercase tracking-wider px-2 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary mb-3">
-                  {convergence.point}
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-xs text-muted-foreground leading-relaxed mb-3">
                   {convergence.description}
+                </p>
+                <p className="text-xs text-foreground italic border-t border-primary/20 pt-3">
+                  "{designPrinciple}"
                 </p>
               </CardContent>
             </Card>
 
             <Card className="bg-card border-border/50">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <GitBranch className="w-5 h-5 text-orange-400" />
-                  <h3 className="font-semibold text-foreground">
+              <CardContent className="p-5">
+                <div className="flex items-center gap-2 mb-3">
+                  <GitBranch className="w-4 h-4 text-orange-400" />
+                  <h3 className="font-semibold text-foreground text-sm">
                     Where they diverge
                   </h3>
                 </div>
-                <ul className="space-y-3">
+                <ul className="space-y-2">
                   {divergence.map((d) => (
-                    <li key={d.title} className="text-sm">
+                    <li key={d.title} className="text-xs">
                       <span className="font-medium text-foreground">
                         {d.title}.
                       </span>{" "}
@@ -274,16 +271,6 @@ export const RegionalJourneyComparison = () => {
               </CardContent>
             </Card>
           </div>
-
-          {/* Design principle */}
-          <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-transparent">
-            <CardContent className="p-6 text-center">
-              <Sparkles className="w-5 h-5 text-primary mx-auto mb-3" />
-              <p className="text-base sm:text-lg text-foreground italic max-w-3xl mx-auto">
-                "{designPrinciple}"
-              </p>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
