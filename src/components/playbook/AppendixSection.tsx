@@ -463,7 +463,9 @@ export const AppendixSection = () => {
         {/* ============ Supporting Scorecard ============ */}
           <AccordionItem
             value="supporting-scorecard"
-            className="bg-card rounded-xl border border-border/50 overflow-hidden"
+            ref={setItemRef("supporting-scorecard")}
+            data-section="supporting-scorecard"
+            className={itemClass("supporting-scorecard")}
           >
             <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
               <div className="text-left">
