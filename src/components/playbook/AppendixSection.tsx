@@ -314,10 +314,8 @@ export const AppendixSection = () => {
               </div>
             </AccordionContent>
           </AccordionItem>
-        </Accordion>
 
         {/* ============ Value Pillar Deep Dive ============ */}
-        <Accordion type="single" collapsible className="mb-4">
           <AccordionItem
             value="value-pillar-deep-dive"
             className="bg-card rounded-xl border border-border/50 overflow-hidden"
