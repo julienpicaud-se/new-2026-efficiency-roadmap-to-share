@@ -361,7 +361,9 @@ export const AppendixSection = () => {
         {/* ============ Value Pillar Deep Dive ============ */}
           <AccordionItem
             value="value-pillar-deep-dive"
-            className="bg-card rounded-xl border border-border/50 overflow-hidden"
+            ref={setItemRef("value-pillar-deep-dive")}
+            data-section="value-pillar-deep-dive"
+            className={itemClass("value-pillar-deep-dive")}
           >
             <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
               <div className="text-left">
