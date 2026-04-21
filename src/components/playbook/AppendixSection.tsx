@@ -3,7 +3,7 @@ import { appendixPillars, supportingScorecard, roadmapSummary, quarterlyRoadmap,
 import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Calendar, Check, Zap, ArrowRight, X, Minus } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronsDownUp, ChevronsUpDown } from "lucide-react";
 import {
   Accordion,
@@ -54,6 +54,43 @@ export const AppendixSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const [openSections, setOpenSections] = useState<string[]>([]);
   const allOpen = openSections.length === APPENDIX_SECTIONS.length;
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+  const itemsRef = useRef<Map<string, HTMLDivElement>>(new Map());
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Pick the entry closest to the top of the viewport (within trigger zone)
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible.length > 0) {
+          const id = visible[0].target.getAttribute("data-section");
+          if (id) setActiveSection(id);
+        }
+      },
+      {
+        // Trigger band: top 20% to 60% of viewport
+        rootMargin: "-20% 0px -40% 0px",
+        threshold: 0,
+      }
+    );
+
+    itemsRef.current.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  const setItemRef = (id: string) => (el: HTMLDivElement | null) => {
+    if (el) itemsRef.current.set(id, el);
+    else itemsRef.current.delete(id);
+  };
+
+  const itemClass = (id: string) =>
+    `bg-card rounded-xl border overflow-hidden transition-all duration-300 ${
+      activeSection === id
+        ? "border-primary/60 shadow-[0_0_0_1px_hsl(var(--primary)/0.4),0_8px_24px_-12px_hsl(var(--primary)/0.4)] bg-primary/[0.03]"
+        : "border-border/50"
+    }`;
 
   return (
     <section
@@ -109,7 +146,9 @@ export const AppendixSection = () => {
         {/* ============ Phased Roadmap ============ */}
           <AccordionItem
             value="phased-roadmap"
-            className="bg-card rounded-xl border border-border/50 overflow-hidden"
+            ref={setItemRef("phased-roadmap")}
+            data-section="phased-roadmap"
+            className={itemClass("phased-roadmap")}
           >
             <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
               <div className="text-left">
@@ -158,7 +197,9 @@ export const AppendixSection = () => {
         {/* ============ Capability Matrix ============ */}
           <AccordionItem
             value="capability-matrix"
-            className="bg-card rounded-xl border border-border/50 overflow-hidden"
+            ref={setItemRef("capability-matrix")}
+            data-section="capability-matrix"
+            className={itemClass("capability-matrix")}
           >
             <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
               <div className="text-left">
@@ -246,7 +287,9 @@ export const AppendixSection = () => {
         {/* ============ Quarterly Roadmap ============ */}
           <AccordionItem
             value="quarterly-roadmap"
-            className="bg-card rounded-xl border border-border/50 overflow-hidden"
+            ref={setItemRef("quarterly-roadmap")}
+            data-section="quarterly-roadmap"
+            className={itemClass("quarterly-roadmap")}
           >
             <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
               <div className="text-left">
@@ -318,7 +361,9 @@ export const AppendixSection = () => {
         {/* ============ Value Pillar Deep Dive ============ */}
           <AccordionItem
             value="value-pillar-deep-dive"
-            className="bg-card rounded-xl border border-border/50 overflow-hidden"
+            ref={setItemRef("value-pillar-deep-dive")}
+            data-section="value-pillar-deep-dive"
+            className={itemClass("value-pillar-deep-dive")}
           >
             <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
               <div className="text-left">
@@ -418,7 +463,9 @@ export const AppendixSection = () => {
         {/* ============ Supporting Scorecard ============ */}
           <AccordionItem
             value="supporting-scorecard"
-            className="bg-card rounded-xl border border-border/50 overflow-hidden"
+            ref={setItemRef("supporting-scorecard")}
+            data-section="supporting-scorecard"
+            className={itemClass("supporting-scorecard")}
           >
             <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
               <div className="text-left">
