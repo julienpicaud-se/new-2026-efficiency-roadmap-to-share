@@ -414,10 +414,8 @@ export const AppendixSection = () => {
               </Accordion>
             </AccordionContent>
           </AccordionItem>
-        </Accordion>
 
         {/* ============ Supporting Scorecard ============ */}
-        <Accordion type="single" collapsible>
           <AccordionItem
             value="supporting-scorecard"
             className="bg-card rounded-xl border border-border/50 overflow-hidden"
