@@ -2,6 +2,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { appendixPillars, supportingScorecard, roadmapSummary, quarterlyRoadmap, capabilityMatrix, phasedRoadmap } from "@/data/playbook-data";
 import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Calendar, Check, Zap, ArrowRight, X, Minus } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { ChevronsDownUp, ChevronsUpDown } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -39,8 +42,18 @@ const StatusIcon = ({ status }: { status: string }) => {
   return <X className="w-4 h-4 text-destructive/60 shrink-0" />;
 };
 
+const APPENDIX_SECTIONS = [
+  "phased-roadmap",
+  "capability-matrix",
+  "quarterly-roadmap",
+  "value-pillar-deep-dive",
+  "supporting-scorecard",
+];
+
 export const AppendixSection = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const [openSections, setOpenSections] = useState<string[]>([]);
+  const allOpen = openSections.length === APPENDIX_SECTIONS.length;
 
   return (
     <section
