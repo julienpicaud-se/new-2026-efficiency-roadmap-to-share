@@ -242,10 +242,8 @@ export const AppendixSection = () => {
               </div>
             </AccordionContent>
           </AccordionItem>
-        </Accordion>
 
         {/* ============ Quarterly Roadmap ============ */}
-        <Accordion type="single" collapsible className="mb-16">
           <AccordionItem
             value="quarterly-roadmap"
             className="bg-card rounded-xl border border-border/50 overflow-hidden"
