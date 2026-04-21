@@ -2,6 +2,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { appendixPillars, supportingScorecard, roadmapSummary, quarterlyRoadmap, capabilityMatrix, phasedRoadmap } from "@/data/playbook-data";
 import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Calendar, Check, Zap, ArrowRight, X, Minus } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { ChevronsDownUp, ChevronsUpDown } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -39,8 +42,18 @@ const StatusIcon = ({ status }: { status: string }) => {
   return <X className="w-4 h-4 text-destructive/60 shrink-0" />;
 };
 
+const APPENDIX_SECTIONS = [
+  "phased-roadmap",
+  "capability-matrix",
+  "quarterly-roadmap",
+  "value-pillar-deep-dive",
+  "supporting-scorecard",
+];
+
 export const AppendixSection = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const [openSections, setOpenSections] = useState<string[]>([]);
+  const allOpen = openSections.length === APPENDIX_SECTIONS.length;
 
   return (
     <section
@@ -62,8 +75,38 @@ export const AppendixSection = () => {
           </p>
         </div>
 
+        {/* Expand / Collapse all controls */}
+        <div className="flex justify-center sm:justify-end mb-4 gap-2">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() =>
+              setOpenSections(allOpen ? [] : [...APPENDIX_SECTIONS])
+            }
+            className="gap-2"
+          >
+            {allOpen ? (
+              <>
+                <ChevronsDownUp className="w-4 h-4" />
+                Collapse all
+              </>
+            ) : (
+              <>
+                <ChevronsUpDown className="w-4 h-4" />
+                Expand all
+              </>
+            )}
+          </Button>
+        </div>
+
+        <Accordion
+          type="multiple"
+          value={openSections}
+          onValueChange={setOpenSections}
+          className="space-y-4"
+        >
+
         {/* ============ Phased Roadmap ============ */}
-        <Accordion type="single" collapsible className="mb-16">
           <AccordionItem
             value="phased-roadmap"
             className="bg-card rounded-xl border border-border/50 overflow-hidden"
@@ -111,10 +154,8 @@ export const AppendixSection = () => {
               </div>
             </AccordionContent>
           </AccordionItem>
-        </Accordion>
 
         {/* ============ Capability Matrix ============ */}
-        <Accordion type="single" collapsible className="mb-4">
           <AccordionItem
             value="capability-matrix"
             className="bg-card rounded-xl border border-border/50 overflow-hidden"
@@ -201,10 +242,8 @@ export const AppendixSection = () => {
               </div>
             </AccordionContent>
           </AccordionItem>
-        </Accordion>
 
         {/* ============ Quarterly Roadmap ============ */}
-        <Accordion type="single" collapsible className="mb-16">
           <AccordionItem
             value="quarterly-roadmap"
             className="bg-card rounded-xl border border-border/50 overflow-hidden"
@@ -275,10 +314,8 @@ export const AppendixSection = () => {
               </div>
             </AccordionContent>
           </AccordionItem>
-        </Accordion>
 
         {/* ============ Value Pillar Deep Dive ============ */}
-        <Accordion type="single" collapsible className="mb-4">
           <AccordionItem
             value="value-pillar-deep-dive"
             className="bg-card rounded-xl border border-border/50 overflow-hidden"
@@ -377,10 +414,8 @@ export const AppendixSection = () => {
               </Accordion>
             </AccordionContent>
           </AccordionItem>
-        </Accordion>
 
         {/* ============ Supporting Scorecard ============ */}
-        <Accordion type="single" collapsible>
           <AccordionItem
             value="supporting-scorecard"
             className="bg-card rounded-xl border border-border/50 overflow-hidden"
