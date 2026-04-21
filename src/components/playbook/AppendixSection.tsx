@@ -287,7 +287,9 @@ export const AppendixSection = () => {
         {/* ============ Quarterly Roadmap ============ */}
           <AccordionItem
             value="quarterly-roadmap"
-            className="bg-card rounded-xl border border-border/50 overflow-hidden"
+            ref={setItemRef("quarterly-roadmap")}
+            data-section="quarterly-roadmap"
+            className={itemClass("quarterly-roadmap")}
           >
             <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
               <div className="text-left">
