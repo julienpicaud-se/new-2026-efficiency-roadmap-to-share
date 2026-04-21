@@ -75,8 +75,38 @@ export const AppendixSection = () => {
           </p>
         </div>
 
+        {/* Expand / Collapse all controls */}
+        <div className="flex justify-center sm:justify-end mb-4 gap-2">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() =>
+              setOpenSections(allOpen ? [] : [...APPENDIX_SECTIONS])
+            }
+            className="gap-2"
+          >
+            {allOpen ? (
+              <>
+                <ChevronsDownUp className="w-4 h-4" />
+                Collapse all
+              </>
+            ) : (
+              <>
+                <ChevronsUpDown className="w-4 h-4" />
+                Expand all
+              </>
+            )}
+          </Button>
+        </div>
+
+        <Accordion
+          type="multiple"
+          value={openSections}
+          onValueChange={setOpenSections}
+          className="space-y-4"
+        >
+
         {/* ============ Phased Roadmap ============ */}
-        <Accordion type="single" collapsible className="mb-16">
           <AccordionItem
             value="phased-roadmap"
             className="bg-card rounded-xl border border-border/50 overflow-hidden"
