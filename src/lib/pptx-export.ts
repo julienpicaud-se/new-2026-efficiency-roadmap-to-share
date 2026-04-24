@@ -20,7 +20,7 @@ export const exportToPptx = async () => {
   const pptx = new PptxGenJS();
   
   pptx.author = "Schneider Electric";
-  pptx.title = "Efficiency Transformation - Vision & Strategy 2026";
+  pptx.title = "Efficiency Transformation with RA+";
   pptx.subject = "Efficiency Transformation with RA+";
   pptx.company = "Schneider Electric";
   
@@ -35,11 +35,11 @@ export const exportToPptx = async () => {
     x: 0.5, y: 1.8, w: 9, h: 0.8,
     fontSize: 18, color: BRAND_GREEN, align: "center",
   });
-  slide1.addText("Energy Efficiency", {
+  slide1.addText("Efficiency Transformation", {
     x: 0.5, y: 2.5, w: 9, h: 0.8,
     fontSize: 40, bold: true, color: BRAND_GREEN, align: "center",
   });
-  slide1.addText("Vision & Strategy", {
+  slide1.addText("with RA+", {
     x: 0.5, y: 3.2, w: 9, h: 0.8,
     fontSize: 40, bold: true, color: TEXT_WHITE, align: "center",
   });
@@ -357,7 +357,7 @@ export const exportToPptx = async () => {
     x: 0.5, y: 2, w: 9, h: 1,
     fontSize: 44, bold: true, color: TEXT_WHITE, align: "center",
   });
-  slideFinal.addText("Efficiency Transformation - Vision & Strategy 2026", {
+  slideFinal.addText("Efficiency Transformation with RA+", {
     x: 0.5, y: 3.2, w: 9, h: 0.5,
     fontSize: 18, color: BRAND_GREEN, align: "center",
   });
@@ -366,5 +366,5 @@ export const exportToPptx = async () => {
     fontSize: 12, color: TEXT_MUTED, align: "center",
   });
 
-  await pptx.writeFile({ fileName: "Beyond-ECM-Library-Vision-Strategy-2026.pptx" });
+  await pptx.writeFile({ fileName: "Efficiency-Transformation-with-RA-Plus.pptx" });
 };
