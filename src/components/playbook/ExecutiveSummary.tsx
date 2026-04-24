@@ -2,14 +2,12 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
   Activity,
   AlertTriangle,
-  ArrowRight,
-  CheckCircle2,
   Compass,
-  FileText,
-  Lightbulb,
+  Wrench,
+  TrendingUp,
   Rocket,
   ShieldAlert,
-  TrendingUp,
+  ArrowRight,
 } from "lucide-react";
 
 type Tone = "primary" | "destructive" | "secondary" | "muted";
@@ -57,8 +55,9 @@ const sections: Section[] = [
     num: "01",
     id: "whats-happening",
     label: "What's Happening",
-    title: "Managed services carry too much manual cost on a fragmented data foundation",
-    icon: FileText,
+    title:
+      "Managed services carry too much manual cost on a fragmented data foundation",
+    icon: Activity,
     tone: "muted",
     body:
       "Our managed services business carries significant operating cost and manual effort because we lack a single, authoritative way to ingest, standardize, and use the data that powers every offer: budgeting, invoice validation, sourcing, risk management, accruals, and PPA advisory. Teams spend outsized time reconciling interval, contract, invoice, tariff, and offer data across thousands of formats and retailer portals.",
@@ -93,7 +92,7 @@ const sections: Section[] = [
     id: "way-to-win",
     label: "A Pragmatic Way to Win",
     title: "Do more with less: pseudo-bills first, reconcile later",
-    icon: Lightbulb,
+    icon: Wrench,
     tone: "muted",
     body:
       "Start with Interval, Contract, and Tariffs to generate pseudo-bills at D+1 (end of month), then reconcile with the retailer's invoice when it arrives. This avoids the D+15 market dependency and eliminates today's brittle tolerance checks. Adding weather (easy) and optional occupancy or production (via portal or API) dramatically reduces false positives. We will also stop mutating invoice data at entry; transformations will only happen downstream, with lineage.",
@@ -146,12 +145,6 @@ const risks: { risk: string; mitigation: string }[] = [
     mitigation:
       "Provide both lightweight portal capture and enterprise APIs into SAP and BMS.",
   },
-];
-
-const nextSteps = [
-  "Approve staffing for SME and senior architect coverage to anchor the platform build",
-  "Approve schema v0.9, identity approach, no-mutation policy, and connector/LOA strategy",
-  "Select pilot cohort and schedule a one-day workshop with cross-functional leads from data ops, risk, sourcing, and analytics",
 ];
 
 const SummaryCard = ({ section }: { section: Section }) => {
@@ -222,7 +215,7 @@ export const ExecutiveSummary = () => {
         <div className="mx-auto max-w-6xl">
           <header className="mb-12 text-center sm:mb-16">
             <div className="mb-4 font-mono text-[11px] font-semibold uppercase tracking-widest text-primary">
-              Steve's Ready Narrative
+              Briefing / Steve's Ready Narrative
             </div>
             <h2 className="text-4xl font-bold leading-tight text-foreground sm:text-5xl">
               Executive Summary
@@ -230,6 +223,11 @@ export const ExecutiveSummary = () => {
             <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               A comprehensive view of the transformation opportunity for executive stakeholders.
             </p>
+            <div className="mt-6 flex flex-col items-center justify-center gap-1 font-mono text-[11px] uppercase tracking-widest text-muted-foreground sm:flex-row sm:gap-5">
+              <span>Distribution / Internal</span>
+              <span>Audience / Executive Committee</span>
+              <span className="text-primary">Status / For decision</span>
+            </div>
           </header>
 
           <div className="space-y-8 sm:space-y-9">
@@ -245,9 +243,14 @@ export const ExecutiveSummary = () => {
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-muted text-muted-foreground">
                   <ShieldAlert className="h-5 w-5" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground sm:text-2xl">
-                  Risks & Mitigations
-                </h3>
+                <div>
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                    07
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground sm:text-2xl">
+                    Risks & Mitigations
+                  </h3>
+                </div>
               </div>
 
               <div className="grid gap-4 md:grid-cols-2">
@@ -271,27 +274,6 @@ export const ExecutiveSummary = () => {
                   </div>
                 ))}
               </div>
-            </article>
-
-            <article className="rounded-lg border border-primary/45 bg-primary/5 p-6 sm:p-8">
-              <div className="mb-5 flex items-center gap-3">
-                <CheckCircle2 className="h-5 w-5 text-primary" />
-                <h3 className="text-xl font-semibold text-foreground sm:text-2xl">
-                  What We Need Now
-                </h3>
-              </div>
-              <ol className="space-y-4">
-                {nextSteps.map((step, index) => (
-                  <li key={step} className="flex items-start gap-3">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/15 font-mono text-xs font-semibold text-primary">
-                      {index + 1}
-                    </span>
-                    <span className="pt-0.5 text-sm font-medium leading-relaxed text-foreground sm:text-base">
-                      {step}
-                    </span>
-                  </li>
-                ))}
-              </ol>
             </article>
           </div>
         </div>
