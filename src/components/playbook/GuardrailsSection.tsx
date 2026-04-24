@@ -38,7 +38,7 @@ const guardrailCategories = [
       "Enforce minimum data checks before showing estimates",
       "Display applicability rules and any blockers or prerequisites",
       "Highlight sensitivity to key inputs and allow customers to adjust sliders for core assumptions",
-      "Use geography, segment, and asset tags to filter ECM visibility",
+      "Use geography, segment, and asset tags to filter recommendation visibility",
     ],
   },
   {
@@ -47,7 +47,7 @@ const guardrailCategories = [
     title: "Risk & Compliance",
     description: "Protecting against liability while maintaining expert credibility",
     guidelines: [
-      "Do not auto-suggest ECMs that require licensed engineering sign-off without a clear path to engage experts",
+      "Do not auto-suggest measures that require licensed engineering sign-off without a clear path to engage experts",
       "Maintain audit trails of advice shown and inputs used",
       "Link to relevant standards and incentives while avoiding legal interpretations",
       "Provide safety notices where physical changes are involved",
