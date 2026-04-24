@@ -30,10 +30,10 @@ export const ECMIngestionEngineSection = () => {
       <div className="container px-4">
         <div className="text-center mb-12 sm:mb-16">
           <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 sm:mb-4 block">
-            Turning Latent IP Into a Library
+            Turning Latent IP Into Strategy
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
-            ECM Ingestion Engine
+            Efficiency Knowledge Engine
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
             {intro}
