@@ -63,7 +63,7 @@ const sections: Section[] = [
       "Today, Energy Efficiency value is still delivered largely through expert-led audits, manual analysis, and bespoke deliverables. That creates high-quality outcomes, but it limits throughput, makes consistency harder, and keeps early efficiency advice outside the recurring RA+ experience.",
     kpis: [
       { value: "Manual", label: "Audit delivery model" },
-      { value: "Fragmented", label: "ECM knowledge base" },
+      { value: "Fragmented", label: "Strategy foundation" },
       { value: "Limited", label: "Recurring advice loop" },
     ],
   },
@@ -75,17 +75,17 @@ const sections: Section[] = [
     icon: AlertTriangle,
     tone: "destructive",
     body:
-      "Customers want clear guidance on what to do next, and our teams have the expertise to answer. The constraint is that ECM logic, assumptions, applicability rules, and customer context are not yet governed as a reusable product foundation across Strategy, Building View, audit workflows, and customer-facing recommendations.",
+      "Customers want clear guidance on what to do next, and our teams have the expertise to answer. The constraint is that opportunity logic, assumptions, applicability rules, and customer context are not yet governed as a reusable product foundation across Strategy, Building View, audit workflows, and customer-facing recommendations.",
   },
   {
     num: "03",
     id: "north-star",
     label: "Our North Star",
-    title: "A governed ECM Library embedded in RA+",
+    title: "A governed Efficiency strategy foundation embedded in RA+",
     icon: Compass,
     tone: "primary",
     body:
-      "The north star is an authoritative ECM Library inside RA+ that standardizes measures, assumptions, confidence levels, applicability logic, and evidence. It should power goal-based Strategy recommendations, site-level Building View discovery, structured audit deliverables, and a clear path from early insight to expert engagement.",
+      "The north star is an authoritative Efficiency strategy foundation inside RA+ that standardizes opportunity types, assumptions, confidence levels, applicability logic, and evidence. It should power goal-based Strategy recommendations, site-level Building View discovery, structured deliverables, and a clear path from early insight to expert engagement.",
   },
   {
     num: "04",
@@ -95,7 +95,7 @@ const sections: Section[] = [
     icon: Wrench,
     tone: "muted",
     body:
-      "The practical sequence is to finalize the unified ECM taxonomy, publish a provisional library with SME review, define clean service boundaries, and connect the library to Strategy first. From there, we can introduce Building View, rule-based opportunity surfacing, customer self-service exploration, and platform-native audit outputs.",
+      "The practical sequence is to finalize the unified efficiency taxonomy, publish a provisional guidance base with SME review, define clean service boundaries, and connect the guidance to Strategy first. From there, we can introduce Building View, rule-based opportunity surfacing, customer self-service exploration, and platform-native audit outputs.",
   },
   {
     num: "05",
@@ -131,7 +131,7 @@ const risks: { risk: string; mitigation: string }[] = [
       "Use confidence labels, ranges, assumptions, and clear escalation paths to expert audits before any commitment is made.",
   },
   {
-    risk: "ECM content becomes inconsistent across teams",
+    risk: "Efficiency guidance becomes inconsistent across teams",
     mitigation:
       "Govern taxonomy, required fields, calculation assumptions, and SME review so the library becomes the single source of truth.",
   },
