@@ -1,4 +1,4 @@
-// Beyond ECM Library - Energy Efficiency Playbook Data
+// Efficiency Transformation - Energy Efficiency Playbook Data
 
 export const strategicPillars = [
   {
@@ -331,7 +331,7 @@ export const roiScorecard = [
 ];
 
 export const executiveTakeaway = {
-  summary: "Beyond ECM Library transforms energy efficiency expertise from static documentation into a scalable product capability that improves team productivity, drives upsell for advanced audits, and generates recurring RA+ platform revenue.",
+  summary: "Efficiency Transformation transforms energy efficiency expertise from static documentation into a scalable product capability that improves team productivity, drives upsell for advanced audits, and generates recurring RA+ platform revenue.",
   conclusion: "By connecting top-down emissions strategy to actionable ECMs, bottom-up building insights to site-specific opportunities, and expert workflows to customer-facing experiences, we establish a shared ECM foundation and a clear path toward a full Energy Efficiency product embedded in the RA+ platform.",
 };
 
@@ -1129,7 +1129,7 @@ export const marketConstraints = [
 ];
 
 export const executiveNarrative = {
-  whatsHappening: "The ECM Library is the foundation, not the end goal. Beyond ECM Library represents a broader ambition: to transform energy efficiency expertise into a scalable product capability that improves efficiency team productivity, drives upsell opportunities for advanced audits, and generates recurring RA+ platform revenues through early, in-product efficiency advice.",
+  whatsHappening: "The ECM Library is the foundation, not the end goal. Efficiency Transformation represents a broader ambition: to transform energy efficiency expertise into a scalable product capability that improves efficiency team productivity, drives upsell opportunities for advanced audits, and generates recurring RA+ platform revenues through early, in-product efficiency advice.",
   trueProblem: "Today, efficiency audits rely heavily on manual workflows and PowerPoint deliverables. Client context is fragmented across tools and documents. Expertise is delivered late in the cycle and does not scale. Early advice is not productized and cannot generate recurring value.",
   northStar: "Go beyond static ECM documentation by turning expert audit knowledge into structured, visual, and actionable capabilities that make the efficiency team more productive and consistent, expose expert advisory inside the platform to create upsell pull for advanced audits, and deliver ongoing customer value that supports recurring RA+ revenues.",
   pragmaticWay: "We will establish the ECM Library as the authoritative foundation, deliver immediate customer value through Strategy integration, and introduce a bottom-up Building View for ECM discovery, all while laying groundwork for a future stand-alone Energy Efficiency product.",

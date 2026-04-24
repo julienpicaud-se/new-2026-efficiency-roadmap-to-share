@@ -107,7 +107,7 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
               <span className="text-primary-foreground font-bold text-sm">EE</span>
             </div>
             <div className="hidden sm:block">
-              <div className="font-semibold text-foreground text-sm">Beyond ECM Library</div>
+              <div className="font-semibold text-foreground text-sm">Efficiency Transformation</div>
               <div className="text-xs text-muted-foreground">Vision & Strategy 2026</div>
             </div>
           </div>
@@ -173,7 +173,7 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                       <span className="text-primary-foreground font-bold text-sm">EE</span>
                     </div>
                     <div>
-                      <SheetTitle className="text-foreground text-sm">Beyond ECM Library</SheetTitle>
+                      <SheetTitle className="text-foreground text-sm">Efficiency Transformation</SheetTitle>
                       <p className="text-xs text-muted-foreground">Vision & Strategy 2026</p>
                     </div>
                   </div>

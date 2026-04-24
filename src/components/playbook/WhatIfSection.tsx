@@ -57,7 +57,7 @@ export const WhatIfSection = () => {
               What if you could, <span className="text-primary">tomorrow</span>...
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Beyond ECM Library transforms how efficiency teams work and how customers experience value
+              Efficiency Transformation transforms how efficiency teams work and how customers experience value
             </p>
           </div>
 
@@ -92,7 +92,7 @@ export const WhatIfSection = () => {
             <CardContent className="p-8 text-center">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
                 <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium text-primary">That is Beyond ECM Library</span>
+                <span className="text-sm font-medium text-primary">That is Efficiency Transformation</span>
               </div>
               <p className="text-lg text-foreground leading-relaxed max-w-2xl mx-auto">
                 From internal productivity to scalable revenue and in-product efficiency advisory:

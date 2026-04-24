@@ -20,8 +20,8 @@ export const exportToPptx = async () => {
   const pptx = new PptxGenJS();
   
   pptx.author = "Schneider Electric";
-  pptx.title = "Beyond ECM Library - Vision & Strategy 2026";
-  pptx.subject = "Energy Efficiency Vision & Strategy";
+  pptx.title = "Efficiency Transformation - Vision & Strategy 2026";
+  pptx.subject = "Efficiency Transformation with RA+";
   pptx.company = "Schneider Electric";
   
   pptx.defineSlideMaster({
@@ -31,7 +31,7 @@ export const exportToPptx = async () => {
 
   // ===== Slide 1: Title =====
   const slide1 = pptx.addSlide({ masterName: "MASTER_SLIDE" });
-  slide1.addText("Beyond ECM Library", {
+  slide1.addText("Efficiency Transformation", {
     x: 0.5, y: 1.8, w: 9, h: 0.8,
     fontSize: 18, color: BRAND_GREEN, align: "center",
   });
@@ -357,7 +357,7 @@ export const exportToPptx = async () => {
     x: 0.5, y: 2, w: 9, h: 1,
     fontSize: 44, bold: true, color: TEXT_WHITE, align: "center",
   });
-  slideFinal.addText("Beyond ECM Library - Vision & Strategy 2026", {
+  slideFinal.addText("Efficiency Transformation - Vision & Strategy 2026", {
     x: 0.5, y: 3.2, w: 9, h: 0.5,
     fontSize: 18, color: BRAND_GREEN, align: "center",
   });
