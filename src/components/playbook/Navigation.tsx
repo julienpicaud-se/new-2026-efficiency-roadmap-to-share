@@ -26,13 +26,13 @@ const navItems = [
   { id: "initiatives", label: "Journey Domains", shortLabel: "Domains" },
   { id: "existing-tools", label: "Strategy Landscape", shortLabel: "Landscape" },
   { id: "regional-journeys", label: "Regional Journeys", shortLabel: "Regions" },
-  { id: "ecm-ingestion-engine", label: "ECM Ingestion", shortLabel: "Ingestion" },
+  { id: "ecm-ingestion-engine", label: "Knowledge Engine", shortLabel: "Engine" },
   { id: "strategic-context", label: "Strategic Context", shortLabel: "Context" },
   { id: "what-if", label: "What If Tomorrow", shortLabel: "Vision" },
   { id: "out-of-scope", label: "Out of Scope", shortLabel: "Scope" },
   { id: "success-metrics", label: "Success Metrics", shortLabel: "Success" },
   { id: "guardrails", label: "Guardrails", shortLabel: "Guardrails" },
-  { id: "ecm-mapping", label: "ECM Mapping", shortLabel: "ECM" },
+  { id: "ecm-mapping", label: "Capability Mapping", shortLabel: "Mapping" },
   { id: "appendix", label: "Appendix", shortLabel: "Appendix" },
 ];
 

@@ -14,7 +14,7 @@ import {
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const iconMap: Record<string, React.ElementType> = {
-  "ECM Taxonomy": Layers,
+  "Efficiency Taxonomy": Layers,
   "Default Assumptions": Sliders,
   "Site Descriptors": Building2,
   "Constraint Inputs": Target,
@@ -41,10 +41,10 @@ export const DataRequirementsSection = () => {
             Data Foundation
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
-            Data Required for ECM Capabilities
+            Data Required for Efficiency Capabilities
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
-            Core data objects needed to power ECM recommendations, enable structured deliverables, 
+            Core data objects needed to power efficiency recommendations, enable structured deliverables, 
             and surface credible efficiency advice across sales, delivery, and customer journeys.
           </p>
         </div>
@@ -112,7 +112,7 @@ export const DataRequirementsSection = () => {
             </div>
           </div>
 
-          {/* ECM Library Capabilities Callout */}
+          {/* Data Foundation Capabilities Callout */}
           <Card className="border-primary/30 bg-primary/5">
             <CardContent className="p-6 sm:p-8">
               <h3 className="text-xl font-semibold gradient-text mb-4">
@@ -121,7 +121,7 @@ export const DataRequirementsSection = () => {
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">Surface site-relevant ECM recommendations</span>
+                  <span className="text-sm text-foreground">Surface site-relevant efficiency recommendations</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
@@ -129,7 +129,7 @@ export const DataRequirementsSection = () => {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">Apply stacking logic for ECM interactions</span>
+                  <span className="text-sm text-foreground">Apply stacking logic for opportunity interactions</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />

@@ -40,7 +40,7 @@ const journeyStages = [
     icon: PenTool,
     primaryUsers: "Solution architects and sales engineers",
     capabilities: [
-      "Parameterized ECM templates with inputs and default assumptions",
+      "Parameterized efficiency templates with inputs and default assumptions",
       "Stacking logic for interactions and saturation effects",
       "Sensitivity analysis and scenario comparison",
       "Export to CPQ with aligned assumptions and notes",
@@ -56,7 +56,7 @@ const journeyStages = [
     primaryUsers: "Sales, finance reviewers, legal reviewers",
     capabilities: [
       "ROM to quote traceability with an assumption registry",
-      "Confidence bands and risk notes per ECM",
+      "Confidence bands and risk notes per recommendation",
       "Incentive and regulatory linkbacks where relevant",
       "Non-binding language blocks and scope notes",
     ],
@@ -70,7 +70,7 @@ const journeyStages = [
     icon: Truck,
     primaryUsers: "Delivery managers and field engineers",
     capabilities: [
-      "Handoff package with selected ECM set, inputs, and rationales",
+      "Handoff package with selected opportunity set, inputs, and rationales",
       "Commissioning and M&V placeholders and data needs",
       "Task list templates and dependencies",
     ],
@@ -85,13 +85,13 @@ const journeyStages = [
     primaryUsers: "Facility managers, sustainability leaders, operators",
     capabilities: [
       "In-product recommendations with impact and effort labels",
-      "Next best ECM suggestions as data evolves",
+      "Next best efficiency suggestions as data evolves",
       "Scenario comparison and prioritization frameworks",
       "Transparent assumptions, DIY inputs, and request help links",
     ],
     value: "Self-service insights that showcase your expertise and create upsell pull for advanced audits",
     kpis: ["Feature adoption", "Actions completed", "Incremental pipeline from in-product prompts", "Realized savings"],
-    foundation: "Goal to ECM recommendations in Strategy and a first Building View for bottom-up discovery are the 2026 pillars that enable this experience.",
+    foundation: "Goal-based guidance in Strategy and a first Building View for bottom-up discovery are the 2026 pillars that enable this experience.",
   },
 ];
 
@@ -111,10 +111,10 @@ export const ECMCapabilityMapping = () => {
             Capability Framework
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
-            ECM Capability Mapping
+            Efficiency Capability Mapping
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
-            Mapping ECM capabilities to sales, pre-sales, delivery, and customer journeys to improve auditor productivity, 
+            Mapping efficiency capabilities to sales, pre-sales, delivery, and customer journeys to improve team productivity, 
             structure deliverables, expose expert advisory for upsell, and centralize client context
           </p>
         </div>
@@ -164,11 +164,11 @@ export const ECMCapabilityMapping = () => {
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-6">
                   <div className="grid md:grid-cols-2 gap-6 mt-4">
-                    {/* ECM Capabilities */}
+                    {/* Efficiency Capabilities */}
                     <div>
                       <h4 className="font-semibold mb-3 flex items-center gap-2">
                         <Zap className="w-4 h-4 text-primary" />
-                        ECM Capabilities
+                        Efficiency Capabilities
                       </h4>
                       <ul className="space-y-2">
                         {stage.capabilities.map((capability, i) => (
