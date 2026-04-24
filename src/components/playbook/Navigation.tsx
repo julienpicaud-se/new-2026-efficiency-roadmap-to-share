@@ -104,7 +104,7 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
           {/* Logo & Title */}
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
-              <span className="text-primary-foreground font-bold text-sm">EE</span>
+              <span className="text-primary-foreground font-bold text-sm">SE</span>
             </div>
             <div className="hidden sm:block">
               <div className="font-semibold text-foreground text-sm">Efficiency Transformation</div>
@@ -170,7 +170,7 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                 <SheetHeader className="text-left pb-6 border-b border-border/50">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                      <span className="text-primary-foreground font-bold text-sm">EE</span>
+                      <span className="text-primary-foreground font-bold text-sm">SE</span>
                     </div>
                     <div>
                       <SheetTitle className="text-foreground text-sm">Efficiency Transformation</SheetTitle>
