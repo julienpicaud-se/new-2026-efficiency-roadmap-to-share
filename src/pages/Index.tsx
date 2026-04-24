@@ -4,7 +4,6 @@ import { HeroSection } from "@/components/playbook/HeroSection";
 import { ExecutiveSummary } from "@/components/playbook/ExecutiveSummary";
 import { KeyChallengesSection } from "@/components/playbook/KeyChallengesSection";
 import { StrategicPillars } from "@/components/playbook/StrategicPillars";
-import { InitiativesDomain } from "@/components/playbook/InitiativesDomain";
 import { ExistingToolsSection } from "@/components/playbook/ExistingToolsSection";
 import { RegionalJourneyComparison } from "@/components/playbook/RegionalJourneyComparison";
 import { ECMIngestionEngineSection } from "@/components/playbook/ECMIngestionEngineSection";
@@ -38,7 +37,6 @@ const Index = () => {
       <ExecutiveSummary />
       <KeyChallengesSection />
       <StrategicPillars />
-      <InitiativesDomain />
       <ExistingToolsSection />
       <RegionalJourneyComparison />
       <ECMIngestionEngineSection />
