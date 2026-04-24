@@ -28,7 +28,7 @@ export const domainRoadmaps: DomainRoadmap[] = [
     id: "sales-discovery",
     domain: "Sales Discovery",
     icon: "Search",
-    description: "Faster qualification with early ECM insights and data-light ROM ranges",
+    description: "Faster qualification with early efficiency insights and data-light ranges",
     overview: "Enable account executives and SDRs to spot opportunities from minimal site facts, provide data-light ROM ranges with confidence labels, and build credibility with evidence snippets and case patterns. Primary users: Account executives, SDRs, Solution consultants.",
     initiatives: [
       {
@@ -104,13 +104,13 @@ export const domainRoadmaps: DomainRoadmap[] = [
     domain: "Pre-sales Scoping",
     icon: "Settings",
     description: "Consistent scoping with parameterized templates and scenario analysis",
-    overview: "Support solution architects and sales engineers with parameterized ECM templates, stacking logic for interactions and saturation effects, sensitivity analysis, and seamless CPQ export. Primary users: Solution architects, Sales engineers.",
+    overview: "Support solution architects and sales engineers with parameterized efficiency templates, stacking logic for interactions and saturation effects, sensitivity analysis, and seamless CPQ export. Primary users: Solution architects, Sales engineers.",
     initiatives: [
       {
         horizon: "Now",
         pillars: ["Productivity"],
         valueDriver: "Consistency",
-        initiative: "Parameterized ECM templates with inputs and default assumptions",
+        initiative: "Parameterized efficiency templates with inputs and default assumptions",
         objective: "O1",
         primaryKR: "KR1",
         proofMetric: "Template coverage %",
@@ -196,7 +196,7 @@ export const domainRoadmaps: DomainRoadmap[] = [
         horizon: "Now",
         pillars: ["Upsell Engine"],
         valueDriver: "Risk transparency",
-        initiative: "Confidence bands and risk notes per ECM",
+        initiative: "Confidence bands and risk notes per recommendation",
         objective: "O2",
         primaryKR: "KR5",
         proofMetric: "Risk documentation coverage",
@@ -254,13 +254,13 @@ export const domainRoadmaps: DomainRoadmap[] = [
     domain: "Delivery Handoff",
     icon: "Package",
     description: "Smooth handoff with complete packages and clear M&V needs",
-    overview: "Provide delivery managers and field engineers with complete handoff packages including selected ECM sets, inputs, rationales, commissioning placeholders, and M&V data needs. Primary users: Delivery managers, Field engineers.",
+    overview: "Provide delivery managers and field engineers with complete handoff packages including selected opportunity sets, inputs, rationales, commissioning placeholders, and M&V data needs. Primary users: Delivery managers, Field engineers.",
     initiatives: [
       {
         horizon: "Now",
         pillars: ["Productivity"],
         valueDriver: "Handoff quality",
-        initiative: "Handoff package with selected ECM set, inputs, and rationales",
+        initiative: "Handoff package with selected opportunity set, inputs, and rationales",
         objective: "O1",
         primaryKR: "KR2",
         proofMetric: "Handoff completeness score",
@@ -315,7 +315,7 @@ export const domainRoadmaps: DomainRoadmap[] = [
         horizon: "Later",
         pillars: ["Recurring Revenue"],
         valueDriver: "Feedback loop",
-        initiative: "Delivery outcomes feeding back to ECM Library",
+        initiative: "Delivery outcomes feeding back to the strategy foundation",
         objective: "O1",
         primaryKR: "KR1",
         proofMetric: "Feedback integration rate",
@@ -346,7 +346,7 @@ export const domainRoadmaps: DomainRoadmap[] = [
         horizon: "Now",
         pillars: ["Recurring Revenue"],
         valueDriver: "Continuous value",
-        initiative: "Next-best ECM suggestions as data evolves",
+        initiative: "Next-best efficiency suggestions as data evolves",
         objective: "O2",
         primaryKR: "KR5",
         proofMetric: "Suggestion relevance score",
@@ -404,7 +404,7 @@ export const domainRoadmaps: DomainRoadmap[] = [
     domain: "Guardrails & Trust",
     icon: "Shield",
     description: "Protecting trust while exposing expert content for upsell",
-    overview: "Implement transparency standards, data quality checks, risk compliance, commercial separation, and user experience guardrails to protect trust while enabling customer-facing advisory. Foundation for all customer-facing ECM content.",
+    overview: "Implement transparency standards, data quality checks, risk compliance, commercial separation, and user experience guardrails to protect trust while enabling customer-facing advisory. Foundation for all customer-facing efficiency guidance.",
     initiatives: [
       {
         horizon: "Now",
@@ -443,7 +443,7 @@ export const domainRoadmaps: DomainRoadmap[] = [
         horizon: "Next",
         pillars: ["Upsell Engine"],
         valueDriver: "Expert routing",
-        initiative: "Do not auto-suggest ECMs requiring licensed engineering without expert path",
+        initiative: "Do not auto-suggest complex measures requiring licensed engineering without an expert path",
         objective: "O2",
         primaryKR: "KR4",
         proofMetric: "Expert routing accuracy",
@@ -487,16 +487,16 @@ export const domainRoadmaps: DomainRoadmap[] = [
   },
   {
     id: "ecm-foundation",
-    domain: "ECM Foundation",
+    domain: "Strategy Foundation",
     icon: "Database",
-    description: "The authoritative ECM Library with governed taxonomy and quality standards",
-    overview: "Establish the ECM Library as the single source of truth with unified taxonomy, versioning, governance, required fields, and continuous improvement from provisional to mined to validated data. Foundation for all other capabilities.",
+    description: "The governed strategy foundation for opportunity logic, assumptions, and quality standards",
+    overview: "Establish the strategy foundation as the single source of truth with unified taxonomy, versioning, governance, required fields, and continuous improvement from provisional guidance to validated outcomes. Foundation for all other capabilities.",
     initiatives: [
       {
         horizon: "Now",
         pillars: ["Productivity"],
         valueDriver: "Standardization",
-        initiative: "Finalize and govern unified ECM taxonomy",
+        initiative: "Finalize and govern unified efficiency taxonomy",
         objective: "O1",
         primaryKR: "KR1",
         proofMetric: "Taxonomy completion %",
@@ -507,12 +507,12 @@ export const domainRoadmaps: DomainRoadmap[] = [
         horizon: "Now",
         pillars: ["Productivity"],
         valueDriver: "Foundation",
-        initiative: "Publish provisional ECM Library (seed list + SME review)",
+        initiative: "Publish provisional guidance base with SME review",
         objective: "O1",
         primaryKR: "KR2",
         proofMetric: "Library coverage %",
         aiLeverage: "SME workflow automation",
-        customerROI: "Immediate access to ECMs"
+        customerROI: "Immediate access to guidance"
       },
       {
         horizon: "Now",
@@ -523,7 +523,7 @@ export const domainRoadmaps: DomainRoadmap[] = [
         primaryKR: "KR1",
         proofMetric: "Data quality score",
         aiLeverage: "Automated DQA checks",
-        customerROI: "Reliable ECM data"
+        customerROI: "Reliable guidance data"
       },
       {
         horizon: "Next",
@@ -565,7 +565,7 @@ export const domainRoadmaps: DomainRoadmap[] = [
         initiative: "Provisional → mined → validated evolution complete",
         objective: "O1",
         primaryKR: "KR2",
-        proofMetric: "Validated ECM coverage %",
+        proofMetric: "Validated guidance coverage %",
         aiLeverage: "Validation automation",
         customerROI: "Highest confidence recommendations"
       }
@@ -575,39 +575,39 @@ export const domainRoadmaps: DomainRoadmap[] = [
     id: "strategy-integration",
     domain: "Strategy Integration",
     icon: "Target",
-    description: "Top-down Goal → ECM recommendations powering customer strategy",
-    overview: "Connect ECM Library to Strategy module for goal-based recommendations. Feed ECMs directly into Strategy's Actions and planning workflows. First customer-facing milestone that proves value early.",
+    description: "Top-down goal-based efficiency guidance powering customer strategy",
+    overview: "Connect the efficiency strategy foundation to Strategy for goal-based recommendations. Feed guidance directly into Actions and planning workflows. First customer-facing milestone that proves value early.",
     initiatives: [
       {
         horizon: "Now",
         pillars: ["Recurring Revenue"],
         valueDriver: "Customer value",
-        initiative: "Connect ECM Library → Strategy via clean service boundary",
+        initiative: "Connect efficiency guidance to Strategy via clean service boundary",
         objective: "O2",
         primaryKR: "KR4",
         proofMetric: "Integration live date",
         aiLeverage: "Service interface design",
-        customerROI: "Goal-based ECM access"
+        customerROI: "Goal-based efficiency access"
       },
       {
         horizon: "Now",
         pillars: ["Recurring Revenue"],
         valueDriver: "Actionability",
-        initiative: "Return ECMs based on goals, constraints, and site descriptors",
+        initiative: "Return recommendations based on goals, constraints, and site descriptors",
         objective: "O2",
         primaryKR: "KR5",
         proofMetric: "Recommendation relevance score",
-        aiLeverage: "Goal-to-ECM matching",
+        aiLeverage: "Goal-to-action matching",
         customerROI: "What should I do? answered"
       },
       {
         horizon: "Next",
         pillars: ["Recurring Revenue"],
         valueDriver: "Workflow integration",
-        initiative: "Feed ECMs directly into Strategy Actions and planning",
+        initiative: "Feed recommendations directly into Strategy Actions and planning",
         objective: "O2",
         primaryKR: "KR6",
-        proofMetric: "Action creation from ECMs",
+        proofMetric: "Action creation from recommendations",
         aiLeverage: "Workflow automation",
         customerROI: "Seamless planning"
       },
@@ -615,7 +615,7 @@ export const domainRoadmaps: DomainRoadmap[] = [
         horizon: "Next",
         pillars: ["Recurring Revenue"],
         valueDriver: "Customer engagement",
-        initiative: "Customer-facing ECM recommendations in Strategy",
+        initiative: "Customer-facing efficiency recommendations in Strategy",
         objective: "O3",
         primaryKR: "KR7",
         proofMetric: "Customer engagement rate",
@@ -626,7 +626,7 @@ export const domainRoadmaps: DomainRoadmap[] = [
         horizon: "Later",
         pillars: ["Recurring Revenue"],
         valueDriver: "Intelligence",
-        initiative: "AI-powered goal optimization and ECM prioritization",
+        initiative: "AI-powered goal optimization and action prioritization",
         objective: "O2",
         primaryKR: "KR5",
         proofMetric: "Optimization adoption",
@@ -637,7 +637,7 @@ export const domainRoadmaps: DomainRoadmap[] = [
         horizon: "Later",
         pillars: ["Recurring Revenue"],
         valueDriver: "Continuous improvement",
-        initiative: "Strategy outcome feedback to ECM Library",
+        initiative: "Strategy outcome feedback to the strategy foundation",
         objective: "O1",
         primaryKR: "KR1",
         proofMetric: "Feedback loop active",
