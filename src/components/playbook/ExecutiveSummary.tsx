@@ -56,94 +56,94 @@ const sections: Section[] = [
     id: "whats-happening",
     label: "What's Happening",
     title:
-      "Managed services carry too much manual cost on a fragmented data foundation",
+      "Efficiency expertise is valuable, but it is not yet productized at scale",
     icon: Activity,
     tone: "muted",
     body:
-      "Our managed services business carries significant operating cost and manual effort because we lack a single, authoritative way to ingest, standardize, and use the data that powers every offer: budgeting, invoice validation, sourcing, risk management, accruals, and PPA advisory. Teams spend outsized time reconciling interval, contract, invoice, tariff, and offer data across thousands of formats and retailer portals.",
+      "Today, Energy Efficiency value is still delivered largely through expert-led audits, manual analysis, and bespoke deliverables. That creates high-quality outcomes, but it limits throughput, makes consistency harder, and keeps early efficiency advice outside the recurring RA+ experience.",
     kpis: [
-      { value: "~8 wks", label: "Budget cycle" },
-      { value: "~160k", label: "Validation queue" },
-      { value: "Multi-team", label: "Duplicated portfolio work" },
+      { value: "Manual", label: "Audit delivery model" },
+      { value: "Fragmented", label: "ECM knowledge base" },
+      { value: "Limited", label: "Recurring advice loop" },
     ],
   },
   {
     num: "02",
     id: "true-problem",
     label: "The True Problem",
-    title: "It is not the service logic, it is the data foundation",
+    title: "The issue is not demand, it is repeatability",
     icon: AlertTriangle,
     tone: "destructive",
     body:
-      "When interval and contract data are available and mapped to sites and accounts, we can compute what a bill should be and automate downstream workflows. Where we fail is identity (meter to account to site mapping outside the UK), reactive regulatory content, market delays (D+15), and fragmented ingestion that sometimes mutates invoices on entry, undermining trust.",
+      "Customers want clear guidance on what to do next, and our teams have the expertise to answer. The constraint is that ECM logic, assumptions, applicability rules, and customer context are not yet governed as a reusable product foundation across Strategy, Building View, audit workflows, and customer-facing recommendations.",
   },
   {
     num: "03",
     id: "north-star",
     label: "Our North Star",
-    title: "A unified energy data platform inside RA+",
+    title: "A governed ECM Library embedded in RA+",
     icon: Compass,
     tone: "primary",
     body:
-      "We will build a unified energy data platform inside RA+: an as-received data lake with provenance, a schema registry, an identity registry that resolves global meter, account, and site keys (MPAN first, expanding to EAN, POD, and others), a regulatory content service with proactive completeness management, and APIs that power budgeting, forecasts, sourcing, invoice validation, and risk modules. Clients can securely contribute occupancy and production, or connect ERP and BMS, to enhance accuracy.",
+      "The north star is an authoritative ECM Library inside RA+ that standardizes measures, assumptions, confidence levels, applicability logic, and evidence. It should power goal-based Strategy recommendations, site-level Building View discovery, structured audit deliverables, and a clear path from early insight to expert engagement.",
   },
   {
     num: "04",
     id: "way-to-win",
     label: "A Pragmatic Way to Win",
-    title: "Do more with less: pseudo-bills first, reconcile later",
+    title: "Start with reusable content, then expand into guided workflows",
     icon: Wrench,
     tone: "muted",
     body:
-      "Start with Interval, Contract, and Tariffs to generate pseudo-bills at D+1 (end of month), then reconcile with the retailer's invoice when it arrives. This avoids the D+15 market dependency and eliminates today's brittle tolerance checks. Adding weather (easy) and optional occupancy or production (via portal or API) dramatically reduces false positives. We will also stop mutating invoice data at entry; transformations will only happen downstream, with lineage.",
+      "The practical sequence is to finalize the unified ECM taxonomy, publish a provisional library with SME review, define clean service boundaries, and connect the library to Strategy first. From there, we can introduce Building View, rule-based opportunity surfacing, customer self-service exploration, and platform-native audit outputs.",
   },
   {
     num: "05",
     id: "economic-impact",
     label: "Economic Impact",
-    title: "Material gains within two quarters of MVP",
+    title: "The value case spans productivity, upsell, and recurring revenue",
     icon: TrendingUp,
     tone: "secondary",
     body:
-      "Within two quarters of MVP, we expect to reduce the validation backlog and touches per bill, compress the budget cycle for pilot portfolios, and unlock near real-time actions for Efficiency and Microgrid teams.",
+      "This transformation lowers cost to serve by reducing rework and manual slide building, creates better qualified demand for advanced audits, and strengthens RA+ stickiness through continuous efficiency guidance that customers can act on between formal engagements.",
     kpis: [
-      { value: "50%+", label: "Backlog reduction" },
-      { value: "-40%", label: "Touches per bill" },
-      { value: "<2 wks", label: "Pilot budget cycle" },
+      { value: "Faster", label: "Audit throughput" },
+      { value: "Higher", label: "Advanced audit pull" },
+      { value: "Stickier", label: "RA+ value proposition" },
     ],
   },
   {
     num: "06",
     id: "strategic-upside",
     label: "Strategic Upside",
-    title: "RA+ powers our services and third-party consultants globally",
+    title: "Efficiency becomes a continuous RA+ capability, not a one-off service",
     icon: Rocket,
     tone: "muted",
     body:
-      "Once the platform is operating reliably, RA+ can power not only our services but also third-party consultants globally, a step-change in TAM similar to how Octopus commercialized Kraken for utilities. Our differentiator remains data and risk expertise, and a truly global footprint of regulatory content and identity mapping.",
+      "The end state is a credible, governed efficiency layer in RA+ where customers receive contextual recommendations, teams reuse a consistent knowledge base, and expert services are pulled in at the right moments for deeper analysis without turning early guidance into a contractual commitment.",
   },
 ];
 
 const risks: { risk: string; mitigation: string }[] = [
   {
-    risk: "Connector coverage and LOA complexity",
+    risk: "Advice could be interpreted as a guarantee",
     mitigation:
-      "Partner where it is faster; digitize LOA issuance and renewals with audit trail; prioritize UK, US, and 1 to 2 EU markets first.",
+      "Use confidence labels, ranges, assumptions, and clear escalation paths to expert audits before any commitment is made.",
   },
   {
-    risk: "Identity mapping outside the UK",
+    risk: "ECM content becomes inconsistent across teams",
     mitigation:
-      "Build the registry with progressive coverage; select pilots where identifiers are achievable.",
+      "Govern taxonomy, required fields, calculation assumptions, and SME review so the library becomes the single source of truth.",
   },
   {
-    risk: "Change management",
+    risk: "Customer context is too thin for useful recommendations",
     mitigation:
-      "Establish single ownership for portfolio and contract truth; codify 'no mutation at entry'.",
+      "Start with data-light guidance, show data gaps transparently, and progressively enrich with site, audit, AkitaBox, SCADA, and customer inputs.",
   },
   {
-    risk: "Client context (occupancy and production)",
+    risk: "Scope expands into detailed engineering or pricing",
     mitigation:
-      "Provide both lightweight portal capture and enterprise APIs into SAP and BMS.",
+      "Keep the product focused on guidance, prioritization, and workflow enablement while reserving detailed design and commercial terms for expert services.",
   },
 ];
 
