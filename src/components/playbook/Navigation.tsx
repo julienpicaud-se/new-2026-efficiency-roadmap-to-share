@@ -108,7 +108,6 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
             </div>
             <div className="hidden sm:block">
               <div className="font-semibold text-foreground text-sm">Efficiency Transformation</div>
-              <div className="text-xs text-muted-foreground">Efficiency Transformation with RA+</div>
             </div>
           </div>
 
@@ -174,7 +173,6 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                     </div>
                     <div>
                       <SheetTitle className="text-foreground text-sm">Efficiency Transformation</SheetTitle>
-                      <p className="text-xs text-muted-foreground">Efficiency Transformation with RA+</p>
                     </div>
                   </div>
                 </SheetHeader>
