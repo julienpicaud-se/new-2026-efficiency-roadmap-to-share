@@ -59,7 +59,7 @@ export const ExecutiveTakeaway = () => {
       <div className="mt-24 pt-6 border-t border-border/30">
         <div className="container px-4">
           <p className="text-center text-sm text-muted-foreground">
-            © 2026 Beyond ECM Library • Energy Efficiency Vision & Strategy • Internal Only and Confidential
+            © 2026 Efficiency Transformation • Efficiency Transformation with RA+ • Internal Only and Confidential
           </p>
         </div>
       </div>

@@ -39,7 +39,7 @@ export const OutOfScopeSection = () => {
               What Stays Out of Scope
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
-              To protect credibility and enable scale, these areas remain outside the Beyond ECM Library scope
+              To protect credibility and enable scale, these areas remain outside the Efficiency Transformation scope
             </p>
           </div>
 

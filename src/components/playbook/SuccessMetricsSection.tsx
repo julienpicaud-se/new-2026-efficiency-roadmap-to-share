@@ -62,7 +62,7 @@ export const SuccessMetricsSection = () => {
               Success Looks Like
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Five key indicators that demonstrate Beyond ECM Library is delivering value
+              Five key indicators that demonstrate Efficiency Transformation is delivering value
             </p>
           </div>
 

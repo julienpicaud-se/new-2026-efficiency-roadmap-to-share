@@ -105,7 +105,7 @@ export const AppendixSection = () => {
             Reference Materials
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
-            Beyond ECM Library Details
+            Efficiency Transformation Details
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto mt-4">
             Deep dive into phased delivery, capability evolution, quarterly plans, and supporting metrics.
@@ -479,7 +479,7 @@ export const AppendixSection = () => {
             </AccordionTrigger>
             <AccordionContent className="px-6 pb-6">
               <p className="text-sm text-muted-foreground max-w-2xl mb-6">
-                Key metrics that measure our progress toward the Beyond ECM Library vision.
+                Key metrics that measure our progress toward the Efficiency Transformation vision.
               </p>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {supportingScorecard.map((item, index) => (
