@@ -23,7 +23,6 @@ const navItems = [
   { id: "executive-summary", label: "Summary", shortLabel: "Summary" },
   { id: "key-challenges", label: "Why Now", shortLabel: "Why Now" },
   { id: "strategic-pillars", label: "Strategic Pillars", shortLabel: "Pillars" },
-  { id: "initiatives", label: "Journey Domains", shortLabel: "Domains" },
   { id: "existing-tools", label: "Strategy Landscape", shortLabel: "Landscape" },
   { id: "regional-journeys", label: "Regional Journeys", shortLabel: "Regions" },
   { id: "ecm-ingestion-engine", label: "Knowledge Engine", shortLabel: "Engine" },
