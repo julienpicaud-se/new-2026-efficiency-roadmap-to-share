@@ -377,7 +377,7 @@ export const appendixPillars = [
       "Improved win rates on proposals",
     ],
     themes: [
-      "Early high-potential ECM identification",
+      "Early high-potential opportunity identification",
       "In-product calls to action for audits",
       "Pre-filled assumptions for quotes",
       "Visibility into deeper analysis value",
@@ -645,7 +645,7 @@ export const phasedRoadmap = [
         title: "External and market research",
         details: [
           "Competitor analysis",
-          "Understanding market expectations for ECM discoverability and early guidance",
+          "Understanding market expectations for efficiency discoverability and early guidance",
         ],
       },
       {
@@ -666,7 +666,7 @@ export const phasedRoadmap = [
         title: "Draft efficiency knowledge base",
         details: [
           "Analysis of available past audits",
-          "Research on how to construct a high-quality ECM database (taxonomy, metadata, granularity, assumptions)",
+          "Research on how to construct a high-quality efficiency knowledge base with taxonomy, metadata, granularity, and assumptions",
           "Draft efficiency knowledge base created",
         ],
       },
@@ -739,7 +739,7 @@ export const capabilityMatrix = {
   capabilities: [
     {
       id: 1,
-      opportunity: "Shared ECM language (taxonomy & governance)",
+      opportunity: "Shared efficiency language, taxonomy, and governance",
       statuses: [
         { status: "done", note: "Defined first taxonomy, systems, subsystems, types" },
         { status: "done", note: "Validates & enriches taxonomy with real examples" },
@@ -887,17 +887,17 @@ export const quarterlyRoadmap = [
     deliverables: [
       "Guidance metadata consistency improvements from ongoing SME reviews",
       "Start defining assumption defaults (runtime, savings %, coverage)",
-      "Early version of per-ECM analysis prompts",
-      "ECM Library v0.2 enriched by mined audit content",
+      "Early version of per-opportunity analysis prompts",
+      "Strategy foundation v0.2 enriched by mined audit content",
       "UX + logic groundwork for Building View begins",
-      "Internal access to draft ECM Library for preparation before audits",
+      "Internal access to the draft knowledge base for preparation before audits",
     ],
     teamImpact: [
-      "Early ECM assumptions become standardized, not reinvented every time",
+      "Early assumptions become standardized, not reinvented every time",
       "You now have a reference library for preparing for site visits",
-      "You don't need to start from scratch for common ECMs",
+      "Teams do not need to start from scratch for common opportunities",
       "You can \"teach\" the system by correcting defaults → it improves over time",
-      "Strategy customers begin seeing ECM recommendations",
+      "Strategy customers begin seeing efficiency recommendations",
     ],
   },
   {
@@ -905,9 +905,9 @@ export const quarterlyRoadmap = [
     theme: "Customers Start Seeing Bottom-Up Value (Before Audits)",
     color: "blue",
     deliverables: [
-      "Building View MVP → Site→ECM relevance",
-      "ECM filtering by system, subsystem, building type",
-      "Early ECM signals for customers based on patterns from past audits",
+      "Building View MVP with site-level opportunity relevance",
+      "Opportunity filtering by system, subsystem, and building type",
+      "Early opportunity signals for customers based on patterns from past audits",
       "Improved metadata quality from Q1-Q2",
       "Shared language now visible across RA+",
     ],
@@ -915,7 +915,7 @@ export const quarterlyRoadmap = [
       "Customers arrive at audit discussions better prepared",
       "You get fewer \"basic discovery\" questions (\"What could we do for lighting?\")",
       "Building View becomes a pre-audit alignment tool",
-      "Customers understand what an ECM is and how ECMs work → saves your time",
+      "Customers understand efficiency options earlier, saving expert time",
       "You see consistency across markets (less \"we do it differently here\")",
     ],
   },
@@ -924,16 +924,16 @@ export const quarterlyRoadmap = [
     theme: "Foundations for Your Future Workflow",
     color: "violet",
     deliverables: [
-      "Deepening the ECM data model, adding fields efficiency teams need",
+      "Deepening the guidance data model, adding fields efficiency teams need",
       "Draft logic for analysis checklists",
       "Initial support for data grouping (families, packages)",
       "RFI → assumption-default refinement",
-      "Logic for linking AkitaBox data to ECM applicability (concept)",
+      "Logic for linking AkitaBox data to opportunity applicability",
       "Presentation builder logic foundations",
     ],
     teamImpact: [
       "You start to see the first real signs of your future EE workflow",
-      "ECMs include more of the detail",
+      "Recommendations include more of the detail",
       "Audit workflow is faster and more efficient",
     ],
   },
@@ -944,7 +944,7 @@ export const dataNeeded = [
   { name: "Default Assumptions", description: "Standard values for calculations" },
   { name: "Site Descriptors", description: "Building type, geography, segment" },
   { name: "Constraint Inputs", description: "Budget, timeline, risk tolerance" },
-  { name: "Goal Mappings", description: "Emissions targets to ECM recommendations" },
+  { name: "Goal Mappings", description: "Emissions targets to efficiency recommendations" },
   { name: "Pattern Data", description: "Similar site outcomes and evidence" },
   { name: "M&V Outcomes", description: "Measured results from completed projects" },
   { name: "Regulatory Links", description: "Incentives and compliance requirements" },
@@ -956,10 +956,10 @@ export const optionalClientContext = [
 ];
 
 export const existingTools = [
-  { name: "IDM", description: "Interval Data Module: 4800+ meters, ingestion, baselines, M&V, 24/7 emissions, cost allocation", limitation: "Data flows not yet connected to ECM discovery" },
-  { name: "ACT", description: "Action tracking and project management for efficiency measures", limitation: "Disconnected from ECM recommendations" },
+  { name: "IDM", description: "Interval Data Module: 4800+ meters, ingestion, baselines, M&V, 24/7 emissions, cost allocation", limitation: "Data flows not yet connected to opportunity discovery" },
+  { name: "ACT", description: "Action tracking and project management for efficiency measures", limitation: "Disconnected from efficiency recommendations" },
   { name: "CBMS", description: "Cloud-based monitoring and control integration", limitation: "Limited to alerting, no efficiency intelligence" },
-  { name: "RA Classic", description: "Resource Advisor: portfolio reporting, benchmarking, target setting", limitation: "Reporting-focused, no actionable ECM layer" },
+  { name: "RA Classic", description: "Resource Advisor: portfolio reporting, benchmarking, target setting", limitation: "Reporting-focused, no actionable efficiency layer" },
   { name: "IDP / Blair Agent", description: "Intelligent data processing and automated data quality workflows", limitation: "Upstream data gaps limit agent accuracy" },
   { name: "Variance Check Agent", description: "Automated variance detection between metered and billed consumption", limitation: "Reactive analysis, not predictive" },
 ];
@@ -982,7 +982,7 @@ export const idmCapabilities = {
         label: "Step Last",
         role: "Exit via post-implementation monitoring",
         description:
-          "After audits and ECM implementation, IDM tracks actual vs. baseline savings, verifies investment, and feeds M&V evidence back to the customer.",
+          "After audits and implementation, IDM tracks actual vs. baseline savings, verifies investment, and feeds M&V evidence back to the customer.",
         outcome: "Continuous proof that the efficiency program delivers.",
       },
     ],
@@ -1123,16 +1123,16 @@ export const intelligenceFlywheel = {
 export const marketConstraints = [
   "Trust is essential: advice must be labeled as guidance, not commitment",
   "Savings and costs must show ranges with confidence levels",
-  "ECMs requiring licensed engineering need clear expert escalation paths",
+  "Measures requiring licensed engineering need clear expert escalation paths",
   "Audit trails required for all advice shown and inputs used",
   "Safety notices mandatory where physical changes are involved",
 ];
 
 export const executiveNarrative = {
-  whatsHappening: "The ECM Library is the foundation, not the end goal. Efficiency Transformation represents a broader ambition: to transform energy efficiency expertise into a scalable product capability that improves efficiency team productivity, drives upsell opportunities for advanced audits, and generates recurring RA+ platform revenues through early, in-product efficiency advice.",
+  whatsHappening: "Efficiency Transformation is broader than a content library. It is the operating strategy for turning expertise, customer context, data, workflows, and advisory moments into a scalable RA+ capability.",
   trueProblem: "Today, efficiency audits rely heavily on manual workflows and PowerPoint deliverables. Client context is fragmented across tools and documents. Expertise is delivered late in the cycle and does not scale. Early advice is not productized and cannot generate recurring value.",
-  northStar: "Go beyond static ECM documentation by turning expert audit knowledge into structured, visual, and actionable capabilities that make the efficiency team more productive and consistent, expose expert advisory inside the platform to create upsell pull for advanced audits, and deliver ongoing customer value that supports recurring RA+ revenues.",
-  pragmaticWay: "We will establish the ECM Library as the authoritative foundation, deliver immediate customer value through Strategy integration, and introduce a bottom-up Building View for ECM discovery, all while laying groundwork for a future stand-alone Energy Efficiency product.",
+  northStar: "Go beyond static documentation by turning expert knowledge into structured, visual, and actionable capabilities that make teams more productive, expose advisory inside the platform, and deliver ongoing customer value that supports recurring RA+ revenue.",
+  pragmaticWay: "We will establish a governed strategy foundation, deliver immediate customer value through Strategy integration, and introduce a bottom-up Building View for opportunity discovery, all while laying groundwork for a future stand-alone Efficiency product.",
   economicImpact: [
     "Audits completed faster with higher consistency",
     "Increased upsell rate from early advisory to advanced audits",
@@ -1140,7 +1140,7 @@ export const executiveNarrative = {
     "Measurable adoption of in-product efficiency recommendations",
     "Tangible contribution to RA+ recurring revenue",
   ],
-  strategicUpside: "The vision connects top-down emissions strategy to actionable ECMs, bottom-up building insights to site-specific opportunities, and expert workflows to customer-facing experiences. It establishes a shared ECM foundation and a clear path toward a full Energy Efficiency product embedded in the RA+ platform.",
+  strategicUpside: "The vision connects top-down strategy, bottom-up building insights, expert workflows, and customer-facing experiences. It establishes a shared operating foundation and a clear path toward a full Efficiency product embedded in RA+.",
   risks: [
     { risk: "Trust and credibility", mitigation: "Implement guardrails for customer-facing advice: ranges, confidence levels, expert escalation paths" },
     { risk: "Scope creep", mitigation: "Keep out of scope: contractual guarantees, detailed engineering without validation" },
@@ -1148,8 +1148,8 @@ export const executiveNarrative = {
     { risk: "Data quality", mitigation: "Enforce minimum data checks; display applicability rules and blockers" },
   ],
   needsNow: [
-    "Finalize and govern unified ECM taxonomy",
-    "Connect efficiency guidance to Strategy for Goal → ECM recommendations",
+    "Finalize and govern unified efficiency taxonomy",
+    "Connect efficiency guidance to Strategy for goal-based efficiency guidance",
     "Define and implement guardrails for customer-facing advice",
     "Plan Building View MVP for bottom-up discovery",
   ],
@@ -1159,7 +1159,7 @@ export const timeline = {
   q1: {
     title: "Q1: Foundation & Strategy",
     items: [
-      "ECM taxonomy finalized",
+      "Efficiency taxonomy finalized",
       "Clean service boundaries",
       "Strategy integration live",
       "Guardrails defined",
@@ -1171,7 +1171,7 @@ export const timeline = {
     title: "Q2: Building View",
     items: [
       "Building View MVP",
-      "ECM relevance logic",
+      "Opportunity relevance logic",
       "Self-service exploration",
       "Structured deliverables",
     ],
@@ -1196,7 +1196,7 @@ export const regionalJourneys = {
     "Lead Intake",
     "Data Collection",
     "On-Site Audit",
-    "Analysis & ECMs",
+    "Analysis & Guidance",
     "Recommendations",
     "Implementation",
     "Monitoring",
@@ -1212,7 +1212,7 @@ export const regionalJourneys = {
         "Lead Intake": { level: "core", note: "80% are net-new, not in any Schneider system" },
         "Data Collection": { level: "core", note: "Pre-analysis from utility data; submeters rare" },
         "On-Site Audit": { level: "core", note: "Auditor visits, notes, photos, floor plans (Akita Box rolling out)" },
-        "Analysis & ECMs": { level: "core", note: "Manual today; ECM Library + ingestion engine in build" },
+        "Analysis & Guidance": { level: "core", note: "Manual today; Knowledge base and ingestion engine in build" },
         "Recommendations": { level: "core", note: "PPT deliverable is THE selling point" },
         "Implementation": { level: "none", note: "Out of scope; customer or 3rd party executes" },
         "Monitoring": { level: "optional", note: "Optional IDM hookup if submeters are installed later" },
@@ -1228,7 +1228,7 @@ export const regionalJourneys = {
         "Lead Intake": { level: "core", note: "RFPs, long sales cycles, commercial buildings" },
         "Data Collection": { level: "core", note: "Often pulled from BMS or utility records" },
         "On-Site Audit": { level: "core", note: "Fast-track assessments to scope the project" },
-        "Analysis & ECMs": { level: "core", note: "Detailed design phase follows the audit" },
+        "Analysis & Guidance": { level: "core", note: "Detailed design phase follows the audit" },
         "Recommendations": { level: "light", note: "Internal artifact, not the deliverable" },
         "Implementation": { level: "core", note: "MAIN revenue driver; SE installs the measures" },
         "Monitoring": { level: "core", note: "Contractual M&V; the natural RA+ meeting point" },
@@ -1244,7 +1244,7 @@ export const regionalJourneys = {
         "Lead Intake": { level: "core", note: "Direct enterprise accounts" },
         "Data Collection": { level: "core", note: "BMS pulls and utility data common" },
         "On-Site Audit": { level: "core", note: "Field audits feed design phase" },
-        "Analysis & ECMs": { level: "core", note: "27 TB of historic audit data exists, scattered" },
+        "Analysis & Guidance": { level: "core", note: "27 TB of historic audit data exists, scattered" },
         "Recommendations": { level: "light", note: "Internal artifact, not the deliverable" },
         "Implementation": { level: "core", note: "Core delivery model" },
         "Monitoring": { level: "core", note: "Post-install tracking; RA+ candidate" },
@@ -1260,7 +1260,7 @@ export const regionalJourneys = {
         "Lead Intake": { level: "optional", note: "Existing RA customers with submeters or BMS feeds" },
         "Data Collection": { level: "core", note: "5/15/30-min interval data; 4,800+ meters today" },
         "On-Site Audit": { level: "none", note: "No site visits; pure data analysis" },
-        "Analysis & ECMs": { level: "core", note: "Anomaly detection, benchmarks, alerts" },
+        "Analysis & Guidance": { level: "core", note: "Anomaly detection, benchmarks, alerts" },
         "Recommendations": { level: "light", note: "Triggers next-step audit referral" },
         "Implementation": { level: "none", note: "Hand-off to efficiency teams" },
         "Monitoring": { level: "core", note: "Continuous post-implementation verification" },
@@ -1295,10 +1295,10 @@ export const regionalJourneys = {
     "Build a flexible journey where customers enter and exit at any step. Shared backend, region-conditional UX. Do not force one umbrella.",
 };
 
-// ECM Ingestion Engine: PPT extraction prototype + Monte Carlo recommendations
+// Efficiency Knowledge Engine: PPT extraction prototype and probabilistic recommendations
 export const ecmIngestionEngine = {
   intro:
-    "27 TB of historic audit data sits in scattered SharePoints, desktops, and PPT decks across Schneider. The ingestion engine turns that latent IP into a structured, queryable ECM library that powers smart recommendations.",
+    "27 TB of historic audit data sits in scattered SharePoints, desktops, and PPT decks across Schneider. The knowledge engine turns that latent IP into a structured, queryable strategy foundation that powers smart recommendations.",
   prototype: {
     title: "PPT Extraction Prototype",
     subtitle: "Built with the Data Science team, in test starting this week.",
@@ -1311,7 +1311,7 @@ export const ecmIngestionEngine = {
       {
         step: "02",
         name: "Extract",
-        description: "The engine reads the deck and auto-extracts ~70 fields per ECM: name, savings, unit of measure, payback, baseline, scope.",
+        description: "The engine reads the deck and auto-extracts key fields per opportunity: name, savings, unit of measure, payback, baseline, and scope.",
       },
       {
         step: "03",
@@ -1321,37 +1321,37 @@ export const ecmIngestionEngine = {
       {
         step: "04",
         name: "Ingest",
-        description: "Validated ECMs land in the central library, tagged by client, site type, sector, and geography.",
+        description: "Validated opportunities land in the central knowledge base, tagged by client, site type, sector, and geography.",
       },
     ],
     accuracy: "~80% accuracy on first pass during initial testing.",
   },
   volumeRamp: {
     title: "Volume Ramp",
-    subtitle: "From a handful of decks to a 30,000+ ECM library.",
+    subtitle: "From a handful of decks to a broad efficiency intelligence base.",
     milestones: [
       {
         phase: "Pilot",
         target: "200",
-        unit: "ECMs",
+        unit: "items",
         detail: "First wave of European audit decks ingested for QA and tuning.",
       },
       {
         phase: "Inditex Push",
         target: "5,000+",
-        unit: "ECMs",
+        unit: "items",
         detail: "Multi-site Inditex audits processed in batch; one client unlocks orders of magnitude.",
       },
       {
         phase: "European Backlog",
         target: "15,000+",
-        unit: "ECMs",
+        unit: "items",
         detail: "Full European audit history, including Amazon and other large enterprise accounts.",
       },
       {
         phase: "US + Public Sector",
         target: "30,000+",
-        unit: "ECMs",
+        unit: "items",
         detail: "Once US teams release their 27 TB archive, the library scales globally.",
       },
     ],
@@ -1359,20 +1359,20 @@ export const ecmIngestionEngine = {
   monteCarlo: {
     title: "Monte Carlo Top-5 Recommendations",
     subtitle:
-      "Volume unlocks intelligence. Once we have tens of thousands of historic ECMs, we run probabilistic simulation to surface the right measures for the right client.",
+      "Volume unlocks intelligence. Once we have tens of thousands of historic examples, we run probabilistic simulation to surface the right actions for the right client.",
     inputs: [
       "Client context: site type, sector, geography, climate zone",
-      "Historic ECM performance distributions (savings, payback, cost ranges)",
+      "Historic opportunity performance distributions including savings, payback, and cost ranges",
       "Available data quality signals from IDM, BMS, or utility feeds",
       "Constraints: budget, downtime tolerance, regulatory scope",
     ],
     output:
-      "A ranked Top-5 ECM shortlist per client, with probability-weighted savings, payback bands, and confidence intervals — not a pixel-perfect single number.",
-    why: "An ECM might range from 20% to 140% payback depending on context. Monte Carlo embraces that uncertainty rather than hiding it, giving auditors a defensible starting point in seconds.",
+      "A ranked Top-5 opportunity shortlist per client, with probability-weighted savings, payback bands, and confidence intervals, not a pixel-perfect single number.",
+    why: "A measure might range from 20% to 140% payback depending on context. Monte Carlo embraces that uncertainty rather than hiding it, giving teams a defensible starting point in seconds.",
   },
   enablers: [
-    "Akita Box API (free, expected in 3-4 months) feeds field notes, photos, and floor plans straight into the ECM library.",
-    "ECM library refresh becomes live as more auditors adopt Akita Box on tablets.",
+    "Akita Box API feeds field notes, photos, and floor plans straight into the efficiency knowledge base.",
+    "The knowledge base refresh becomes live as more auditors adopt Akita Box on tablets.",
     "Expert-in-the-loop validation step keeps the library clean as it scales.",
   ],
   guardrails: [
@@ -1470,6 +1470,6 @@ export const efficiencyStrategicContext = {
       },
     ],
     soWhat:
-      "Build IDM and the ECM library so they natively serve carbon accounting, not just energy efficiency. The same data spine powers both.",
+      "Build IDM and the efficiency knowledge base so they natively serve carbon accounting, not just energy efficiency. The same data spine powers both.",
   },
 };
