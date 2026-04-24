@@ -41,7 +41,7 @@ export const ExecutiveTakeaway = () => {
 
           {/* Description */}
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-10 sm:mb-12">
-            By connecting top-down emissions strategy to actionable ECMs, bottom-up building insights to site-specific opportunities, and expert workflows to customer-facing experiences, we establish a shared ECM foundation and a clear path toward a full Energy Efficiency product embedded in the RA+ platform.
+            By connecting top-down strategy, bottom-up building insights, expert workflows, and customer-facing guidance, we establish a shared Efficiency foundation and a clear path toward a full Efficiency product embedded in the RA+ platform.
           </p>
 
           {/* Back to Top Button */}
