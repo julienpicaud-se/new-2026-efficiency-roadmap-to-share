@@ -1332,7 +1332,7 @@ export const ecmIngestionEngine = {
     "27 TB of historic audit data sits in scattered SharePoints, desktops, and PPT decks across Schneider. The knowledge engine turns that latent IP into a structured, queryable strategy foundation that powers smart recommendations.",
   prototype: {
     title: "PPT Extraction Prototype",
-    subtitle: "Built with the Data Science team, in test starting this week.",
+    subtitle: "Built with the Data Science team.",
     flow: [
       {
         step: "01",
