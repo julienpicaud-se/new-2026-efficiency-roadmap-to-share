@@ -946,7 +946,7 @@ export const dataNeeded = [
   { name: "Constraint Inputs", description: "Budget, timeline, risk tolerance" },
   { name: "Goal Mappings", description: "Emissions targets to efficiency recommendations" },
   { name: "Pattern Data", description: "Similar site outcomes and evidence" },
-  { name: "M&V Outcomes", description: "Measured results from completed projects" },
+  { name: "M&V Outcomes", description: "Measurement and verification results that compare actual post-project performance against an agreed baseline" },
   { name: "Regulatory Links", description: "Incentives and compliance requirements" },
 ];
 
@@ -1046,9 +1046,10 @@ export const idmCapabilities = {
     {
       name: "M&V and Outcomes",
       capabilities: [
-        "IPMVP-compliant baseline creation",
-        "Actual vs. baseline and cumulative savings tracking",
-        "EnPI models for ISO 50001 compliance",
+        "M&V workflows that measure, verify, and explain whether efficiency actions delivered the expected savings",
+        "IPMVP-compliant baseline creation using recognized measurement and verification methods for credible savings claims",
+        "Actual vs. baseline and cumulative savings tracking across cost, energy, and emissions outcomes",
+        "EnPI models that normalize performance indicators for weather, occupancy, production, or operating conditions to support ISO 50001",
         "Multiple baselines per data stream",
         "Performance deviation detection",
         "Investment protection and verification",
@@ -1093,7 +1094,7 @@ export const competitiveLandscape = [
 export const marketTrends = [
   "AI fueling expectations for intelligent, agentic energy management",
   "Data access and integrity are now vital, not optional",
-  "Performance projects shifting away from full M&V (except EaaS/IaaS)",
+  "Performance projects shifting toward right-sized M&V, with full verification reserved for EaaS, IaaS, and higher-risk commitments",
   "Segment-focused leaders investing in competitor platforms for AI workflows",
   "Increasing desire for interval data for compliance and reporting (accountability)",
   "Lack of cost-competitive metering packages limiting growth in US and AUS",
