@@ -382,6 +382,47 @@ export const ExistingToolsSection = () => {
               {intelligenceFlywheel.subtitle}
             </p>
 
+            <Card className="bg-card border-border/50 mb-8">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                    <Database className="w-5 h-5 text-primary" />
+                  </div>
+                  <div className="min-w-0">
+                    <h4 className="text-base font-semibold text-foreground mb-2">
+                      {intelligenceFlywheel.veeExplainer.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                      {intelligenceFlywheel.veeExplainer.description}
+                    </p>
+                    <div className="grid md:grid-cols-[1.1fr_0.9fr] gap-5">
+                      <div>
+                        <h5 className="text-sm font-semibold text-foreground mb-2">
+                          Used when
+                        </h5>
+                        <ul className="space-y-2">
+                          {intelligenceFlywheel.veeExplainer.usedWhen.map((item) => (
+                            <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
+                              <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="rounded-lg border border-primary/20 bg-primary/5 p-4">
+                        <h5 className="text-sm font-semibold text-foreground mb-1">
+                          Outcome
+                        </h5>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {intelligenceFlywheel.veeExplainer.outcome}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Flywheel stages */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
               {intelligenceFlywheel.stages.map((stage, i) => {
