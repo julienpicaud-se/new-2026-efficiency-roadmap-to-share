@@ -5,6 +5,7 @@ import {
   idmCapabilities,
   competitiveLandscape,
   marketTrends,
+  serviceModelComparison,
   intelligenceFlywheel,
 } from "@/data/playbook-data";
 import {
@@ -33,6 +34,7 @@ import {
   Building,
   Clock,
   Layers,
+  CheckCircle2,
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -309,6 +311,65 @@ export const ExistingToolsSection = () => {
                 </div>
               </CardContent>
             </Card>
+
+            <div className="grid md:grid-cols-2 gap-4 mt-6">
+              {serviceModelComparison.map((model) => (
+                <Card key={model.model} className="bg-card border-border/50">
+                  <CardContent className="p-6">
+                    <div className="mb-5">
+                      <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">
+                        {model.fullName}
+                      </div>
+                      <h4 className="text-xl font-bold text-foreground mb-2">
+                        {model.model}
+                      </h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {model.description}
+                      </p>
+                    </div>
+
+                    <div className="space-y-5">
+                      <div>
+                        <h5 className="text-sm font-semibold text-foreground mb-2">
+                          Typical outcomes
+                        </h5>
+                        <ul className="space-y-2">
+                          {model.typicalOutcomes.map((outcome) => (
+                            <li key={outcome} className="flex items-start gap-2 text-sm text-muted-foreground">
+                              <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                              <span>{outcome}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h5 className="text-sm font-semibold text-foreground mb-2">
+                          Data needs
+                        </h5>
+                        <ul className="space-y-2">
+                          {model.dataNeeds.map((need) => (
+                            <li key={need} className="flex items-start gap-2 text-sm text-muted-foreground">
+                              <Database className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                              <span>{need}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="rounded-lg border border-primary/20 bg-primary/5 p-4">
+                        <h5 className="text-sm font-semibold text-foreground mb-1">
+                          Verification level
+                        </h5>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {model.verificationLevel}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
 
           {/* Persistent Intelligence Flywheel */}
