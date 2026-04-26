@@ -223,11 +223,6 @@ export const ExecutiveSummary = () => {
             <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               A comprehensive view of the transformation opportunity for executive stakeholders.
             </p>
-            <div className="mt-6 flex flex-col items-center justify-center gap-1 font-mono text-[11px] uppercase tracking-widest text-muted-foreground sm:flex-row sm:gap-5">
-              <span>Distribution / Internal</span>
-              <span>Audience / Executive Committee</span>
-              <span className="text-primary">Status / For decision</span>
-            </div>
           </header>
 
           <div className="space-y-8 sm:space-y-9">
