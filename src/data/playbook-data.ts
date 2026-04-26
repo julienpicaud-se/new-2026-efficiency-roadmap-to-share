@@ -1093,7 +1093,7 @@ export const competitiveLandscape = [
 export const marketTrends = [
   "AI fueling expectations for intelligent, agentic energy management",
   "Data access and integrity are now vital, not optional",
-  "Performance projects shifting toward right-sized M&V, with full verification reserved for EaaS, IaaS, and higher-risk commitments",
+  "Performance projects shifting toward right-sized M&V, with full verification reserved for Energy as a Service (EaaS), where savings help fund ongoing service fees, Infrastructure as a Service (IaaS), where efficiency outcomes support financed upgrades, and other higher-risk commitments",
   "Segment-focused leaders investing in competitor platforms for AI workflows",
   "Increasing desire for interval data for compliance and reporting (accountability)",
   "Lack of cost-competitive metering packages limiting growth in US and AUS",
