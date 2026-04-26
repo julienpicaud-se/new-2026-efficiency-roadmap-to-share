@@ -958,7 +958,6 @@ export const optionalClientContext = [
 export const existingTools = [
   { name: "IDM", description: "Interval Data Module: 4800+ meters, ingestion, baselines, M&V, 24/7 emissions, cost allocation", limitation: "Data flows not yet connected to opportunity discovery" },
   { name: "ACT", description: "Action tracking and project management for efficiency measures", limitation: "Disconnected from efficiency recommendations" },
-  { name: "CBMS", description: "Cloud-based monitoring and control integration", limitation: "Limited to alerting, no efficiency intelligence" },
   { name: "RA Classic", description: "Resource Advisor: portfolio reporting, benchmarking, target setting", limitation: "Reporting-focused, no actionable efficiency layer" },
   { name: "IDP / Blair Agent", description: "Intelligent data processing and automated data quality workflows", limitation: "Upstream data gaps limit agent accuracy" },
   { name: "Variance Check Agent", description: "Automated variance detection between metered and billed consumption", limitation: "Reactive analysis, not predictive" },
