@@ -1100,6 +1100,25 @@ export const marketTrends = [
   "Increasing need for cross-domain expertise: site systems, data analysts, control strategy",
 ];
 
+export const serviceModelComparison = [
+  {
+    model: "EaaS",
+    fullName: "Energy as a Service",
+    description: "A service model where the customer pays for delivered energy outcomes rather than managing every upgrade as a standalone capital project.",
+    typicalOutcomes: ["Lower energy spend", "Operational performance improvement", "Ongoing optimization service"],
+    dataNeeds: ["Utility and interval meter data", "Tariffs and site operating schedules", "Baseline drivers such as weather and occupancy"],
+    verificationLevel: "Higher. Savings need to be credible enough to support recurring service fees and performance accountability.",
+  },
+  {
+    model: "IaaS",
+    fullName: "Infrastructure as a Service",
+    description: "A financed infrastructure model where upgrades are delivered as a managed service and repaid through committed value or operational benefits.",
+    typicalOutcomes: ["Funded equipment modernization", "Risk-managed capital avoidance", "Longer-term asset performance"],
+    dataNeeds: ["Asset condition and project scope", "Capex and maintenance assumptions", "Post-install performance and uptime data"],
+    verificationLevel: "Highest for large commitments. Verification must connect upgrade performance to the financed value case over time.",
+  },
+];
+
 export const intelligenceFlywheel = {
   title: "Persistent Intelligence Flywheel",
   subtitle: "From static reporting to efficient action",
