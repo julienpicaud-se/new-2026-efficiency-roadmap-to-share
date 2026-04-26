@@ -1122,6 +1122,18 @@ export const serviceModelComparison = [
 export const intelligenceFlywheel = {
   title: "Persistent Intelligence Flywheel",
   subtitle: "From static reporting to efficient action",
+  veeExplainer: {
+    title: "VEE: Validation, Estimation, and Editing",
+    description:
+      "VEE is the data quality step that checks incoming meter and telemetry data before it is used for analysis, baselines, recommendations, or performance claims.",
+    usedWhen: [
+      "A data feed has gaps, spikes, flatlines, duplicate intervals, or missing values",
+      "Estimated values are needed to create a complete operating history",
+      "A baseline, savings calculation, or anomaly signal depends on trusted interval data",
+    ],
+    outcome:
+      "The result is a cleaner, auditable data set that the efficiency workflow can trust before moving into benchmarking, opportunity discovery, M&V, or EnPI modeling.",
+  },
   stages: [
     { name: "Telemetry", description: "Integrations plus VEE: validation, estimation, and editing to clean gaps, spikes, and missing meter data before analysis", icon: "Database" },
     { name: "Context", description: "Knowledge graph, asset summaries, decision tracking", icon: "Brain" },
