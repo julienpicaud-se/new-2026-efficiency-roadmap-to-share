@@ -1123,7 +1123,7 @@ export const intelligenceFlywheel = {
   title: "Persistent Intelligence Flywheel",
   subtitle: "From static reporting to efficient action",
   stages: [
-    { name: "Telemetry", description: "Integrations and data VEE", icon: "Database" },
+    { name: "Telemetry", description: "Integrations plus VEE: validation, estimation, and editing to clean gaps, spikes, and missing meter data before analysis", icon: "Database" },
     { name: "Context", description: "Knowledge graph, asset summaries, decision tracking", icon: "Brain" },
     { name: "Enrichment", description: "Baselines, benchmarks, simulations, what-if models", icon: "Settings" },
     { name: "Observations", description: "Trends, root cause, prioritization, agentic reasoning", icon: "Eye" },
