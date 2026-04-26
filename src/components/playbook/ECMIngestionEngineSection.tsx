@@ -53,7 +53,7 @@ export const ECMIngestionEngineSection = () => {
               {prototype.subtitle}
             </p>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
               {prototype.flow.map((step, i) => {
                 const Icon = flowIcons[i] || FileUp;
                 return (
@@ -84,18 +84,6 @@ export const ECMIngestionEngineSection = () => {
                 );
               })}
             </div>
-
-            <Card className="bg-primary/5 border-primary/20">
-              <CardContent className="p-4 flex items-start gap-3">
-                <Sparkles className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                <p className="text-sm text-foreground">
-                  <span className="font-medium">First-pass result:</span>{" "}
-                  <span className="text-muted-foreground">
-                    {prototype.accuracy}
-                  </span>
-                </p>
-              </CardContent>
-            </Card>
           </div>
 
           {/* Volume Ramp */}
