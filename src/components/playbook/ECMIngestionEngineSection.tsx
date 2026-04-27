@@ -40,20 +40,20 @@ export const ECMIngestionEngineSection = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto space-y-12">
+        <div className="max-w-6xl mx-auto space-y-10 sm:space-y-12">
           {/* PPT Extraction Prototype */}
-          <div>
-            <div className="flex items-center gap-2 mb-1">
+          <div className="max-w-5xl mx-auto">
+            <div className="flex items-center justify-center gap-2 mb-1 text-center">
               <ScanText className="w-5 h-5 text-primary" />
               <h3 className="text-lg font-semibold text-foreground">
                 {prototype.title}
               </h3>
             </div>
-            <p className="text-sm text-muted-foreground mb-6 max-w-2xl">
+            <p className="text-sm text-muted-foreground mb-5 max-w-2xl mx-auto text-center">
               {prototype.subtitle}
             </p>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 items-stretch">
               {prototype.flow.map((step, i) => {
                 const Icon = flowIcons[i] || FileUp;
                 return (
