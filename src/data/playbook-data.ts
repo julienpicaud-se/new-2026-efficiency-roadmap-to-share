@@ -1416,29 +1416,29 @@ export const ecmIngestionEngine = {
 // Strategic Context: deadlines, customer archetypes, regulatory tailwinds
 export const efficiencyStrategicContext = {
   intro:
-    "Three forces shape why this strategy matters now: a hard internal deadline, a widening gap between customer expectations, and a regulatory tailwind that turns granularity into commercial value.",
+    "Three forces shape why this strategy matters now: the RA+ platform transition, rising expectations for intelligent energy management, and the need to turn trusted interval data into action.",
   raClassicSunset: {
-    title: "RA Classic Sunset",
-    badge: "Hard Deadline",
+    title: "RA+ Platform Transition",
+    badge: "Strategic Window",
     timeframe: "2027 - 2028",
     summary:
-      "RA Classic is being phased out. IDM and the broader efficiency capability must lift over to RA+ before existing customers lose their home.",
+      "IDM and the broader efficiency capability need to evolve into RA+ as more than a UI migration. The opportunity is to reuse proven data capabilities while reshaping them into shared platform intelligence.",
     implications: [
       {
-        label: "IDM lift-over",
-        detail: "Josh (PM, ex-Digital Energy) is assessing the IDM transition. Scope ranges from light-touch interval ingestion to full tariff and carbon integration.",
+        label: "IDM service reuse",
+        detail: "Identify which IDM data, modeling, tariff, and carbon capabilities should become RA+ core services versus module-specific capabilities.",
       },
       {
-        label: "Phased MVP approach",
-        detail: "Start narrow: bring granular data and dashboards across. Layer carbon, tariffs, and analytics in subsequent waves.",
+        label: "Phased evolution",
+        detail: "Start with the capabilities needed for reporting continuity and efficiency guidance, then layer deeper automation and reasoning.",
       },
       {
         label: "Customer continuity",
-        detail: "Existing IDM accounts must experience a clean migration, not a forced rebuild.",
+        detail: "Existing IDM customers need continuity while RA+ becomes the broader home for performance management.",
       },
       {
-        label: "Investment freeze on Classic",
-        detail: "New development on RA Classic is winding down. Every month without a roadmap costs us optionality.",
+        label: "Governance path",
+        detail: "Ongoing decisions need shared ownership across product, data, engineering, and domain experts.",
       },
     ],
   },
@@ -1475,13 +1475,13 @@ export const efficiencyStrategicContext = {
       },
     ],
     tension:
-      "Alex's pushback ('our customers are not on any system') is true for the traditional segment but dangerously wrong for the enterprise segment. The strategy must serve both without forcing convergence.",
+      "The strategy must serve both realities: some customers still need an expert-led audit deliverable, while strategic accounts increasingly expect an always-on performance platform.",
   },
   ghgTailwind: {
-    title: "Carbon Performance Tailwind",
-    badge: "Regulatory Lever",
+    title: "Intelligent Performance Tailwind",
+    badge: "Market Pull",
     summary:
-      "Carbon Performance reporting is tightening data granularity requirements. High-resolution meter data shifts from 'nice to have' to 'commercially required' for serious sustainability reporting.",
+      "Customers increasingly expect energy, cost, carbon, and operational performance to be connected in one intelligent experience. High-quality interval data becomes the foundation for that shift.",
     impacts: [
       {
         label: "Interval data becomes table stakes",
