@@ -956,7 +956,7 @@ export const optionalClientContext = [
 ];
 
 export const existingTools = [
-  { name: "IDM", description: "Interval Data Module: 4800+ meters, ingestion, baselines, M&V, 24/7 emissions, cost allocation", limitation: "Data flows not yet connected to opportunity discovery" },
+  { name: "IDM", description: "Interval Data Management: high-frequency utility, meter, BMS, and external data streams for reporting, allocation, performance, and optimization", limitation: "Core data services are not yet fully native to RA+ opportunity discovery" },
   { name: "ACT", description: "Action tracking and project management for efficiency measures", limitation: "Disconnected from efficiency recommendations" },
   { name: "RA Classic", description: "Resource Advisor: portfolio reporting, benchmarking, target setting", limitation: "Reporting-focused, no actionable efficiency layer" },
   { name: "IDP / Blair Agent", description: "Intelligent data processing and automated data quality workflows", limitation: "Upstream data gaps limit agent accuracy" },
@@ -965,28 +965,28 @@ export const existingTools = [
 
 export const idmCapabilities = {
   tagline:
-    "IDM is the data spine of the efficiency journey. It is the first step (anomaly-driven entry) or the last step (post-implementation monitoring), never a forced middle.",
+    "IDM is the interval-data backbone RA+ needs to move from reporting to managed performance. It supports accountability, allocation, performance management, and optimization across diverse data sources.",
   positioning: {
     title: "Step Zero or Step Last",
     subtitle: "IDM is flexible by design. Customers enter or exit at any point.",
     modes: [
       {
         label: "Step Zero",
-        role: "Entry via anomaly detection",
+        role: "Entry via data-led performance signals",
         description:
-          "Granular interval data surfaces anomalies, benchmarks, and savings gaps. Customers see a problem and pull in the efficiency team to scope an audit.",
-        outcome: "Data-led lead generation for the audit business.",
+          "Interval data reveals anomalies, savings gaps, unusual load patterns, and benchmarking issues before a full audit is launched.",
+        outcome: "A credible trigger for expert review and targeted efficiency work.",
       },
       {
         label: "Step Last",
         role: "Exit via post-implementation monitoring",
         description:
-          "After audits and implementation, IDM tracks actual vs. baseline savings, verifies investment, and feeds M&V evidence back to the customer.",
-        outcome: "Continuous proof that the efficiency program delivers.",
+          "After actions are taken, IDM tracks actual performance against baselines and keeps the customer connected to outcomes over time.",
+        outcome: "Continuous proof and a path back into the next improvement cycle.",
       },
     ],
     principle:
-      "Optional in the middle, essential at the edges. The platform must let customers join or leave the IDM layer without breaking the journey.",
+      "The RA+ opportunity is not a visual lift-over. It is deciding which IDM capabilities become shared platform services and which remain specialized module services.",
   },
   bmsBypass: {
     title: "BMS Integration: Bypass the Submeter Install",
@@ -1014,17 +1014,17 @@ export const idmCapabilities = {
       "Where BMS is absent, utility meter feeds (UK half-hourly, EU 5/15-min) still provide a baseline IDM experience. Submeter install becomes an upsell, not a prerequisite.",
   },
   stats: [
-    { value: "4,800+", label: "Meters Connected", detail: "Utility, sub-meter, virtual" },
-    { value: "1,600+", label: "Active Users", detail: "Site, regional, portfolio levels" },
-    { value: "243", label: "Alerts Configured", detail: "Sites and systems monitored" },
-    { value: "24/7", label: "Emissions Reporting", detail: "Granular carbon calculations" },
+    { value: "250k", label: "Data Streams", detail: "Utility, meter, BMS, external" },
+    { value: "5-15m", label: "Intervals", detail: "High-frequency operating signals" },
+    { value: "4", label: "Primary Jobs", detail: "Report, allocate, manage, optimize" },
+    { value: "24/7", label: "Performance View", detail: "Energy, cost, carbon, operations" },
   ],
   categories: [
     {
       name: "Data Ingestion",
       capabilities: [
-        "Extensive file formats and schema support",
-        "Multiple stream stitching and reprocessing",
+        "Utility, on-prem, cloud, BMS, PME, EBO, and external-source intake",
+        "Multiple stream stitching, reprocessing, and normalization",
         "Cumulative to interval conversion",
         "Data validation routines and bulk editing",
         "Patch-on-the-fly data quality",
