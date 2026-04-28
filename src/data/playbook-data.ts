@@ -956,7 +956,7 @@ export const optionalClientContext = [
 ];
 
 export const existingTools = [
-  { name: "IDM", description: "Interval Data Module: 4800+ meters, ingestion, baselines, M&V, 24/7 emissions, cost allocation", limitation: "Data flows not yet connected to opportunity discovery" },
+  { name: "IDM", description: "Interval Data Management: high-frequency utility, meter, BMS, and external data streams for reporting, allocation, performance, and optimization", limitation: "Core data services are not yet fully native to RA+ opportunity discovery" },
   { name: "ACT", description: "Action tracking and project management for efficiency measures", limitation: "Disconnected from efficiency recommendations" },
   { name: "RA Classic", description: "Resource Advisor: portfolio reporting, benchmarking, target setting", limitation: "Reporting-focused, no actionable efficiency layer" },
   { name: "IDP / Blair Agent", description: "Intelligent data processing and automated data quality workflows", limitation: "Upstream data gaps limit agent accuracy" },
@@ -965,28 +965,28 @@ export const existingTools = [
 
 export const idmCapabilities = {
   tagline:
-    "IDM is the data spine of the efficiency journey. It is the first step (anomaly-driven entry) or the last step (post-implementation monitoring), never a forced middle.",
+    "IDM is the interval-data backbone RA+ needs to move from reporting to managed performance. It supports accountability, allocation, performance management, and optimization across diverse data sources.",
   positioning: {
     title: "Step Zero or Step Last",
     subtitle: "IDM is flexible by design. Customers enter or exit at any point.",
     modes: [
       {
         label: "Step Zero",
-        role: "Entry via anomaly detection",
+        role: "Entry via data-led performance signals",
         description:
-          "Granular interval data surfaces anomalies, benchmarks, and savings gaps. Customers see a problem and pull in the efficiency team to scope an audit.",
-        outcome: "Data-led lead generation for the audit business.",
+          "Interval data reveals anomalies, savings gaps, unusual load patterns, and benchmarking issues before a full audit is launched.",
+        outcome: "A credible trigger for expert review and targeted efficiency work.",
       },
       {
         label: "Step Last",
         role: "Exit via post-implementation monitoring",
         description:
-          "After audits and implementation, IDM tracks actual vs. baseline savings, verifies investment, and feeds M&V evidence back to the customer.",
-        outcome: "Continuous proof that the efficiency program delivers.",
+          "After actions are taken, IDM tracks actual performance against baselines and keeps the customer connected to outcomes over time.",
+        outcome: "Continuous proof and a path back into the next improvement cycle.",
       },
     ],
     principle:
-      "Optional in the middle, essential at the edges. The platform must let customers join or leave the IDM layer without breaking the journey.",
+      "The RA+ opportunity is not a visual lift-over. It is deciding which IDM capabilities become shared platform services and which remain specialized module services.",
   },
   bmsBypass: {
     title: "BMS Integration: Bypass the Submeter Install",
@@ -1014,17 +1014,17 @@ export const idmCapabilities = {
       "Where BMS is absent, utility meter feeds (UK half-hourly, EU 5/15-min) still provide a baseline IDM experience. Submeter install becomes an upsell, not a prerequisite.",
   },
   stats: [
-    { value: "4,800+", label: "Meters Connected", detail: "Utility, sub-meter, virtual" },
-    { value: "1,600+", label: "Active Users", detail: "Site, regional, portfolio levels" },
-    { value: "243", label: "Alerts Configured", detail: "Sites and systems monitored" },
-    { value: "24/7", label: "Emissions Reporting", detail: "Granular carbon calculations" },
+    { value: "250k", label: "Data Streams", detail: "Utility, meter, BMS, external" },
+    { value: "5-15m", label: "Intervals", detail: "High-frequency operating signals" },
+    { value: "4", label: "Primary Jobs", detail: "Report, allocate, manage, optimize" },
+    { value: "24/7", label: "Performance View", detail: "Energy, cost, carbon, operations" },
   ],
   categories: [
     {
       name: "Data Ingestion",
       capabilities: [
-        "Extensive file formats and schema support",
-        "Multiple stream stitching and reprocessing",
+        "Utility, on-prem, cloud, BMS, PME, EBO, and external-source intake",
+        "Multiple stream stitching, reprocessing, and normalization",
         "Cumulative to interval conversion",
         "Data validation routines and bulk editing",
         "Patch-on-the-fly data quality",
@@ -1121,7 +1121,7 @@ export const serviceModelComparison = [
 
 export const intelligenceFlywheel = {
   title: "Persistent Intelligence Flywheel",
-  subtitle: "From static reporting to efficient action",
+  subtitle: "From static reporting to managed performance",
   veeExplainer: {
     title: "VEE: Validation, Estimation, and Editing",
     description:
@@ -1135,14 +1135,14 @@ export const intelligenceFlywheel = {
       "The result is a cleaner, auditable data set that the efficiency workflow can trust before moving into benchmarking, opportunity discovery, M&V, or EnPI modeling.",
   },
   stages: [
-    { name: "Telemetry", description: "Integrations plus VEE: validation, estimation, and editing to clean gaps, spikes, and missing meter data before analysis", icon: "Database" },
-    { name: "Context", description: "Knowledge graph, asset summaries, decision tracking", icon: "Brain" },
-    { name: "Enrichment", description: "Baselines, benchmarks, simulations, what-if models", icon: "Settings" },
-    { name: "Observations", description: "Trends, root cause, prioritization, agentic reasoning", icon: "Eye" },
-    { name: "Output", description: "Living reports, dashboards, findings, interrogation", icon: "FileText" },
-    { name: "Action", description: "Workflow integration, prioritization, outcome tracking", icon: "Zap" },
+    { name: "Telemetry", description: "Integrations plus VEE to make interval data reliable before it informs decisions", icon: "Database" },
+    { name: "Context", description: "Asset hierarchy, site relationships, energy flows, and decision history", icon: "Brain" },
+    { name: "Enrichment", description: "Baselines, benchmarks, tariffs, emissions, simulations, and what-if models", icon: "Settings" },
+    { name: "Observations", description: "Trends, root cause, prioritization, and agentic reasoning over connected context", icon: "Eye" },
+    { name: "Output", description: "Living reports, dashboards, guided findings, and executive narratives", icon: "FileText" },
+    { name: "Action", description: "Workflow integration, prioritization, outcome tracking, and next-best recommendations", icon: "Zap" },
   ],
-  keyInsight: "As platform intelligence becomes pervasive, the winners will be systems that centralize data, know context, apply domain knowledge at scale, and reliably turn insight into action.",
+  keyInsight: "The future platform advantage is not another dashboard. It is an intelligence layer that understands site context, reasons across energy relationships, and moves users from insight to action.",
   differentiators: [
     { label: "Data availability", status: "Baseline" },
     { label: "Agentic intelligence", status: "Expectation" },
@@ -1160,10 +1160,10 @@ export const marketConstraints = [
 ];
 
 export const executiveNarrative = {
-  whatsHappening: "Efficiency Transformation is broader than a content library. It is the operating strategy for turning expertise, customer context, data, workflows, and advisory moments into a scalable RA+ capability.",
-  trueProblem: "Today, efficiency audits rely heavily on manual workflows and PowerPoint deliverables. Client context is fragmented across tools and documents. Expertise is delivered late in the cycle and does not scale. Early advice is not productized and cannot generate recurring value.",
-  northStar: "Go beyond static documentation by turning expert knowledge into structured, visual, and actionable capabilities that make teams more productive, expose advisory inside the platform, and deliver ongoing customer value that supports recurring RA+ revenue.",
-  pragmaticWay: "We will establish a governed strategy foundation, deliver immediate customer value through Strategy integration, and introduce a bottom-up Building View for opportunity discovery, all while laying groundwork for a future stand-alone Efficiency product.",
+  whatsHappening: "Efficiency Transformation is broader than a content library. It is the operating strategy for bringing IDM data depth, expert knowledge, customer context, and action workflows into a scalable RA+ capability.",
+  trueProblem: "Today, interval data, audit expertise, customer context, and action workflows are not yet operating as one system. That limits RA+ from moving beyond reporting into guided performance improvement.",
+  northStar: "Go beyond static dashboards by creating an intelligence layer that understands buildings, reasons across energy relationships, and turns trusted data into recommended action.",
+  pragmaticWay: "We will lift the highest-value IDM capabilities into RA+, establish the governed efficiency strategy foundation, deliver immediate value through Strategy integration, and build toward an agentic performance experience over time.",
   economicImpact: [
     "Audits completed faster with higher consistency",
     "Increased upsell rate from early advisory to advanced audits",
@@ -1171,7 +1171,7 @@ export const executiveNarrative = {
     "Measurable adoption of in-product efficiency recommendations",
     "Tangible contribution to RA+ recurring revenue",
   ],
-  strategicUpside: "The vision connects top-down strategy, bottom-up building insights, expert workflows, and customer-facing experiences. It establishes a shared operating foundation and a clear path toward a full Efficiency product embedded in RA+.",
+  strategicUpside: "The vision connects top-down strategy, bottom-up building insights, IDM services, expert workflows, and customer-facing experiences. It establishes a shared operating foundation and a clear path toward intelligence-driven performance management in RA+.",
   risks: [
     { risk: "Trust and credibility", mitigation: "Implement guardrails for customer-facing advice: ranges, confidence levels, expert escalation paths" },
     { risk: "Scope creep", mitigation: "Keep out of scope: contractual guarantees, detailed engineering without validation" },
@@ -1416,29 +1416,29 @@ export const ecmIngestionEngine = {
 // Strategic Context: deadlines, customer archetypes, regulatory tailwinds
 export const efficiencyStrategicContext = {
   intro:
-    "Three forces shape why this strategy matters now: a hard internal deadline, a widening gap between customer expectations, and a regulatory tailwind that turns granularity into commercial value.",
+    "Three forces shape why this strategy matters now: the RA+ platform transition, rising expectations for intelligent energy management, and the need to turn trusted interval data into action.",
   raClassicSunset: {
-    title: "RA Classic Sunset",
-    badge: "Hard Deadline",
+    title: "RA+ Platform Transition",
+    badge: "Strategic Window",
     timeframe: "2027 - 2028",
     summary:
-      "RA Classic is being phased out. IDM and the broader efficiency capability must lift over to RA+ before existing customers lose their home.",
+      "IDM and the broader efficiency capability need to evolve into RA+ as more than a UI migration. The opportunity is to reuse proven data capabilities while reshaping them into shared platform intelligence.",
     implications: [
       {
-        label: "IDM lift-over",
-        detail: "Josh (PM, ex-Digital Energy) is assessing the IDM transition. Scope ranges from light-touch interval ingestion to full tariff and carbon integration.",
+        label: "IDM service reuse",
+        detail: "Identify which IDM data, modeling, tariff, and carbon capabilities should become RA+ core services versus module-specific capabilities.",
       },
       {
-        label: "Phased MVP approach",
-        detail: "Start narrow: bring granular data and dashboards across. Layer carbon, tariffs, and analytics in subsequent waves.",
+        label: "Phased evolution",
+        detail: "Start with the capabilities needed for reporting continuity and efficiency guidance, then layer deeper automation and reasoning.",
       },
       {
         label: "Customer continuity",
-        detail: "Existing IDM accounts must experience a clean migration, not a forced rebuild.",
+        detail: "Existing IDM customers need continuity while RA+ becomes the broader home for performance management.",
       },
       {
-        label: "Investment freeze on Classic",
-        detail: "New development on RA Classic is winding down. Every month without a roadmap costs us optionality.",
+        label: "Governance path",
+        detail: "Ongoing decisions need shared ownership across product, data, engineering, and domain experts.",
       },
     ],
   },
@@ -1475,13 +1475,13 @@ export const efficiencyStrategicContext = {
       },
     ],
     tension:
-      "Alex's pushback ('our customers are not on any system') is true for the traditional segment but dangerously wrong for the enterprise segment. The strategy must serve both without forcing convergence.",
+      "The strategy must serve both realities: some customers still need an expert-led audit deliverable, while strategic accounts increasingly expect an always-on performance platform.",
   },
   ghgTailwind: {
-    title: "Carbon Performance Tailwind",
-    badge: "Regulatory Lever",
+    title: "Intelligent Performance Tailwind",
+    badge: "Market Pull",
     summary:
-      "Carbon Performance reporting is tightening data granularity requirements. High-resolution meter data shifts from 'nice to have' to 'commercially required' for serious sustainability reporting.",
+      "Customers increasingly expect energy, cost, carbon, and operational performance to be connected in one intelligent experience. High-quality interval data becomes the foundation for that shift.",
     impacts: [
       {
         label: "Interval data becomes table stakes",
