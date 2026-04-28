@@ -3,6 +3,7 @@ import {
   Activity,
   AlertTriangle,
   Compass,
+  Database,
   Wrench,
   TrendingUp,
   Rocket,
@@ -224,6 +225,25 @@ export const ExecutiveSummary = () => {
               A comprehensive view of the transformation opportunity for executive stakeholders.
             </p>
           </header>
+
+          <article className="mb-8 rounded-lg border border-primary/35 bg-primary/5 p-6 shadow-[0_0_38px_hsl(var(--primary)/0.1)] sm:mb-9 sm:p-8">
+            <div className="grid gap-5 sm:grid-cols-[3rem_1fr] sm:gap-6">
+              <div
+                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/15 text-primary"
+                aria-hidden="true"
+              >
+                <Database className="h-5 w-5" />
+              </div>
+              <div>
+                <div className="mb-2 font-mono text-[10px] font-semibold uppercase tracking-widest text-primary">
+                  IDM to RA+ Executive Message
+                </div>
+                <p className="max-w-4xl text-base leading-relaxed text-foreground sm:text-lg">
+                  IDM should evolve into RA+ as more than a reporting migration. It is the interval-data backbone for a broader performance platform, connecting trusted energy, cost, carbon, and operational signals with expert efficiency knowledge so RA+ can move from static dashboards to guided decisions, prioritization, and continuous improvement.
+                </p>
+              </div>
+            </div>
+          </article>
 
           <div className="space-y-8 sm:space-y-9">
             {sections.map((section) => (
