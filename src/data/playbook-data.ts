@@ -1121,11 +1121,11 @@ export const serviceModelComparison = [
 
 export const intelligenceFlywheel = {
   title: "Persistent Intelligence Flywheel",
-  subtitle: "From static reporting to managed performance",
+  subtitle: "The operating model for intelligence-driven performance",
   veeExplainer: {
     title: "VEE: Validation, Estimation, and Editing",
     description:
-      "VEE is the data quality step that checks incoming meter and telemetry data before it is used for analysis, baselines, recommendations, or performance claims.",
+      "VEE is the trust layer that prepares meter and telemetry data before it informs analysis, recommendations, or performance claims.",
     usedWhen: [
       "A data feed has gaps, spikes, flatlines, duplicate intervals, or missing values",
       "Estimated values are needed to create a complete operating history",
@@ -1416,29 +1416,29 @@ export const ecmIngestionEngine = {
 // Strategic Context: deadlines, customer archetypes, regulatory tailwinds
 export const efficiencyStrategicContext = {
   intro:
-    "Three forces shape why this strategy matters now: the RA+ platform transition, rising expectations for intelligent energy management, and the need to turn trusted interval data into action.",
+    "Three forces shape why this strategy matters now: the RA+ platform transition, rising expectations for intelligent energy management, and the need to convert trusted interval data into action.",
   raClassicSunset: {
     title: "RA+ Platform Transition",
     badge: "Strategic Window",
     timeframe: "2027 - 2028",
     summary:
-      "IDM and the broader efficiency capability need to evolve into RA+ as more than a UI migration. The opportunity is to reuse proven data capabilities while reshaping them into shared platform intelligence.",
+      "IDM and the broader efficiency capability should evolve into RA+ as shared platform intelligence, not just a migrated interface.",
     implications: [
       {
-        label: "IDM service reuse",
-        detail: "Identify which IDM data, modeling, tariff, and carbon capabilities should become RA+ core services versus module-specific capabilities.",
+        label: "Reusable services",
+        detail: "Turn proven data, modeling, tariff, and carbon capabilities into RA+ services where they create platform leverage.",
       },
       {
         label: "Phased evolution",
-        detail: "Start with the capabilities needed for reporting continuity and efficiency guidance, then layer deeper automation and reasoning.",
+        detail: "Start with continuity and efficiency guidance, then layer deeper automation and reasoning.",
       },
       {
         label: "Customer continuity",
-        detail: "Existing IDM customers need continuity while RA+ becomes the broader home for performance management.",
+        detail: "Protect existing customers while RA+ becomes the broader home for performance management.",
       },
       {
-        label: "Governance path",
-        detail: "Ongoing decisions need shared ownership across product, data, engineering, and domain experts.",
+        label: "Clear governance",
+        detail: "Align product, data, engineering, and domain experts around the same transition choices.",
       },
     ],
   },
