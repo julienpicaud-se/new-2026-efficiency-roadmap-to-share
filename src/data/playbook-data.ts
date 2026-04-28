@@ -1121,7 +1121,7 @@ export const serviceModelComparison = [
 
 export const intelligenceFlywheel = {
   title: "Persistent Intelligence Flywheel",
-  subtitle: "From static reporting to efficient action",
+  subtitle: "From static reporting to managed performance",
   veeExplainer: {
     title: "VEE: Validation, Estimation, and Editing",
     description:
@@ -1135,14 +1135,14 @@ export const intelligenceFlywheel = {
       "The result is a cleaner, auditable data set that the efficiency workflow can trust before moving into benchmarking, opportunity discovery, M&V, or EnPI modeling.",
   },
   stages: [
-    { name: "Telemetry", description: "Integrations plus VEE: validation, estimation, and editing to clean gaps, spikes, and missing meter data before analysis", icon: "Database" },
-    { name: "Context", description: "Knowledge graph, asset summaries, decision tracking", icon: "Brain" },
-    { name: "Enrichment", description: "Baselines, benchmarks, simulations, what-if models", icon: "Settings" },
-    { name: "Observations", description: "Trends, root cause, prioritization, agentic reasoning", icon: "Eye" },
-    { name: "Output", description: "Living reports, dashboards, findings, interrogation", icon: "FileText" },
-    { name: "Action", description: "Workflow integration, prioritization, outcome tracking", icon: "Zap" },
+    { name: "Telemetry", description: "Integrations plus VEE to make interval data reliable before it informs decisions", icon: "Database" },
+    { name: "Context", description: "Asset hierarchy, site relationships, energy flows, and decision history", icon: "Brain" },
+    { name: "Enrichment", description: "Baselines, benchmarks, tariffs, emissions, simulations, and what-if models", icon: "Settings" },
+    { name: "Observations", description: "Trends, root cause, prioritization, and agentic reasoning over connected context", icon: "Eye" },
+    { name: "Output", description: "Living reports, dashboards, guided findings, and executive narratives", icon: "FileText" },
+    { name: "Action", description: "Workflow integration, prioritization, outcome tracking, and next-best recommendations", icon: "Zap" },
   ],
-  keyInsight: "As platform intelligence becomes pervasive, the winners will be systems that centralize data, know context, apply domain knowledge at scale, and reliably turn insight into action.",
+  keyInsight: "The future platform advantage is not another dashboard. It is an intelligence layer that understands site context, reasons across energy relationships, and moves users from insight to action.",
   differentiators: [
     { label: "Data availability", status: "Baseline" },
     { label: "Agentic intelligence", status: "Expectation" },
@@ -1160,10 +1160,10 @@ export const marketConstraints = [
 ];
 
 export const executiveNarrative = {
-  whatsHappening: "Efficiency Transformation is broader than a content library. It is the operating strategy for turning expertise, customer context, data, workflows, and advisory moments into a scalable RA+ capability.",
-  trueProblem: "Today, efficiency audits rely heavily on manual workflows and PowerPoint deliverables. Client context is fragmented across tools and documents. Expertise is delivered late in the cycle and does not scale. Early advice is not productized and cannot generate recurring value.",
-  northStar: "Go beyond static documentation by turning expert knowledge into structured, visual, and actionable capabilities that make teams more productive, expose advisory inside the platform, and deliver ongoing customer value that supports recurring RA+ revenue.",
-  pragmaticWay: "We will establish a governed strategy foundation, deliver immediate customer value through Strategy integration, and introduce a bottom-up Building View for opportunity discovery, all while laying groundwork for a future stand-alone Efficiency product.",
+  whatsHappening: "Efficiency Transformation is broader than a content library. It is the operating strategy for bringing IDM data depth, expert knowledge, customer context, and action workflows into a scalable RA+ capability.",
+  trueProblem: "Today, interval data, audit expertise, customer context, and action workflows are not yet operating as one system. That limits RA+ from moving beyond reporting into guided performance improvement.",
+  northStar: "Go beyond static dashboards by creating an intelligence layer that understands buildings, reasons across energy relationships, and turns trusted data into recommended action.",
+  pragmaticWay: "We will lift the highest-value IDM capabilities into RA+, establish the governed efficiency strategy foundation, deliver immediate value through Strategy integration, and build toward an agentic performance experience over time.",
   economicImpact: [
     "Audits completed faster with higher consistency",
     "Increased upsell rate from early advisory to advanced audits",
@@ -1171,7 +1171,7 @@ export const executiveNarrative = {
     "Measurable adoption of in-product efficiency recommendations",
     "Tangible contribution to RA+ recurring revenue",
   ],
-  strategicUpside: "The vision connects top-down strategy, bottom-up building insights, expert workflows, and customer-facing experiences. It establishes a shared operating foundation and a clear path toward a full Efficiency product embedded in RA+.",
+  strategicUpside: "The vision connects top-down strategy, bottom-up building insights, IDM services, expert workflows, and customer-facing experiences. It establishes a shared operating foundation and a clear path toward intelligence-driven performance management in RA+.",
   risks: [
     { risk: "Trust and credibility", mitigation: "Implement guardrails for customer-facing advice: ranges, confidence levels, expert escalation paths" },
     { risk: "Scope creep", mitigation: "Keep out of scope: contractual guarantees, detailed engineering without validation" },
