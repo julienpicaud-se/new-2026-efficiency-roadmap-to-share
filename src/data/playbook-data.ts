@@ -965,7 +965,7 @@ export const existingTools = [
 
 export const idmCapabilities = {
   tagline:
-    "IDM gives RA+ the trusted data foundation to move from reporting to managed performance across energy, cost, carbon, and operations.",
+    "IDM gives RA+ the interval-data backbone to connect trusted energy, cost, carbon, and operational signals with expert efficiency knowledge.",
   positioning: {
     title: "Data Backbone",
     subtitle: "Trusted interval data before insight, proof after action.",
@@ -986,7 +986,7 @@ export const idmCapabilities = {
       },
     ],
     principle:
-      "The RA+ opportunity is not a visual lift-over. It is turning proven IDM capabilities into shared platform intelligence.",
+      "The RA+ opportunity is not a reporting migration or visual lift-over. It is turning proven IDM capabilities into shared platform intelligence that guides decisions, prioritization, and continuous improvement.",
   },
   bmsBypass: {
     title: "BMS Integration: Bypass the Submeter Install",
@@ -1121,7 +1121,7 @@ export const serviceModelComparison = [
 
 export const intelligenceFlywheel = {
   title: "Persistent Intelligence Flywheel",
-  subtitle: "The operating model for intelligence-driven performance",
+  subtitle: "The operating model that moves RA+ from static dashboards to guided performance decisions",
   veeExplainer: {
     title: "VEE: Validation, Estimation, and Editing",
     description:
@@ -1142,7 +1142,7 @@ export const intelligenceFlywheel = {
     { name: "Output", description: "Living reports, dashboards, guided findings, and executive narratives", icon: "FileText" },
     { name: "Action", description: "Workflow integration, prioritization, outcome tracking, and next-best recommendations", icon: "Zap" },
   ],
-  keyInsight: "The future platform advantage is not another dashboard. It is an intelligence layer that understands site context, reasons across energy relationships, and moves users from insight to action.",
+  keyInsight: "The future platform advantage is not another dashboard. It is an intelligence layer that connects trusted signals, expert efficiency knowledge, and site context so RA+ can move users from insight to action.",
   differentiators: [
     { label: "Data availability", status: "Baseline" },
     { label: "Agentic intelligence", status: "Expectation" },
