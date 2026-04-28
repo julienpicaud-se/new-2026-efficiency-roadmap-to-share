@@ -965,28 +965,28 @@ export const existingTools = [
 
 export const idmCapabilities = {
   tagline:
-    "IDM is the interval-data backbone RA+ needs to move from reporting to managed performance. It supports accountability, allocation, performance management, and optimization across diverse data sources.",
+    "IDM gives RA+ the trusted data foundation to move from reporting to managed performance across energy, cost, carbon, and operations.",
   positioning: {
-    title: "Step Zero or Step Last",
-    subtitle: "IDM is flexible by design. Customers enter or exit at any point.",
+    title: "Data Backbone",
+    subtitle: "Trusted interval data before insight, proof after action.",
     modes: [
       {
         label: "Step Zero",
-        role: "Entry via data-led performance signals",
+        role: "Signal where action is needed",
         description:
-          "Interval data reveals anomalies, savings gaps, unusual load patterns, and benchmarking issues before a full audit is launched.",
-        outcome: "A credible trigger for expert review and targeted efficiency work.",
+          "Interval data reveals performance gaps before a full audit is launched.",
+        outcome: "A credible trigger for expert review and targeted action.",
       },
       {
         label: "Step Last",
-        role: "Exit via post-implementation monitoring",
+        role: "Prove what changed",
         description:
-          "After actions are taken, IDM tracks actual performance against baselines and keeps the customer connected to outcomes over time.",
-        outcome: "Continuous proof and a path back into the next improvement cycle.",
+          "After actions are taken, IDM tracks performance against baselines and keeps customers connected to outcomes.",
+        outcome: "Continuous proof and a path into the next improvement cycle.",
       },
     ],
     principle:
-      "The RA+ opportunity is not a visual lift-over. It is deciding which IDM capabilities become shared platform services and which remain specialized module services.",
+      "The RA+ opportunity is not a visual lift-over. It is turning proven IDM capabilities into shared platform intelligence.",
   },
   bmsBypass: {
     title: "BMS Integration: Bypass the Submeter Install",
@@ -1014,10 +1014,10 @@ export const idmCapabilities = {
       "Where BMS is absent, utility meter feeds (UK half-hourly, EU 5/15-min) still provide a baseline IDM experience. Submeter install becomes an upsell, not a prerequisite.",
   },
   stats: [
-    { value: "250k", label: "Data Streams", detail: "Utility, meter, BMS, external" },
-    { value: "5-15m", label: "Intervals", detail: "High-frequency operating signals" },
-    { value: "4", label: "Primary Jobs", detail: "Report, allocate, manage, optimize" },
-    { value: "24/7", label: "Performance View", detail: "Energy, cost, carbon, operations" },
+    { value: "250k", label: "Signals", detail: "Across meters, buildings, and sources" },
+    { value: "5-15m", label: "Granularity", detail: "Operating detail at decision speed" },
+    { value: "4", label: "Value Uses", detail: "Report, allocate, manage, optimize" },
+    { value: "24/7", label: "Performance", detail: "Always-on energy and carbon view" },
   ],
   categories: [
     {
@@ -1121,11 +1121,11 @@ export const serviceModelComparison = [
 
 export const intelligenceFlywheel = {
   title: "Persistent Intelligence Flywheel",
-  subtitle: "From static reporting to managed performance",
+  subtitle: "The operating model for intelligence-driven performance",
   veeExplainer: {
     title: "VEE: Validation, Estimation, and Editing",
     description:
-      "VEE is the data quality step that checks incoming meter and telemetry data before it is used for analysis, baselines, recommendations, or performance claims.",
+      "VEE is the trust layer that prepares meter and telemetry data before it informs analysis, recommendations, or performance claims.",
     usedWhen: [
       "A data feed has gaps, spikes, flatlines, duplicate intervals, or missing values",
       "Estimated values are needed to create a complete operating history",
@@ -1416,29 +1416,29 @@ export const ecmIngestionEngine = {
 // Strategic Context: deadlines, customer archetypes, regulatory tailwinds
 export const efficiencyStrategicContext = {
   intro:
-    "Three forces shape why this strategy matters now: the RA+ platform transition, rising expectations for intelligent energy management, and the need to turn trusted interval data into action.",
+    "Three forces shape why this strategy matters now: the RA+ platform transition, rising expectations for intelligent energy management, and the need to convert trusted interval data into action.",
   raClassicSunset: {
     title: "RA+ Platform Transition",
     badge: "Strategic Window",
     timeframe: "2027 - 2028",
     summary:
-      "IDM and the broader efficiency capability need to evolve into RA+ as more than a UI migration. The opportunity is to reuse proven data capabilities while reshaping them into shared platform intelligence.",
+      "IDM and the broader efficiency capability should evolve into RA+ as shared platform intelligence, not just a migrated interface.",
     implications: [
       {
-        label: "IDM service reuse",
-        detail: "Identify which IDM data, modeling, tariff, and carbon capabilities should become RA+ core services versus module-specific capabilities.",
+        label: "Reusable services",
+        detail: "Turn proven data, modeling, tariff, and carbon capabilities into RA+ services where they create platform leverage.",
       },
       {
         label: "Phased evolution",
-        detail: "Start with the capabilities needed for reporting continuity and efficiency guidance, then layer deeper automation and reasoning.",
+        detail: "Start with continuity and efficiency guidance, then layer deeper automation and reasoning.",
       },
       {
         label: "Customer continuity",
-        detail: "Existing IDM customers need continuity while RA+ becomes the broader home for performance management.",
+        detail: "Protect existing customers while RA+ becomes the broader home for performance management.",
       },
       {
-        label: "Governance path",
-        detail: "Ongoing decisions need shared ownership across product, data, engineering, and domain experts.",
+        label: "Clear governance",
+        detail: "Align product, data, engineering, and domain experts around the same transition choices.",
       },
     ],
   },

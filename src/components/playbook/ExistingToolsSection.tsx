@@ -84,7 +84,7 @@ export const ExistingToolsSection = () => {
           <div>
             <h3 className="text-lg font-semibold text-foreground mb-2 flex items-center gap-2">
               <Activity className="w-5 h-5 text-primary" />
-              IDM: Step Zero or Step Last
+              IDM as the RA+ Data Backbone
             </h3>
             <p className="text-sm text-muted-foreground mb-6 max-w-2xl">
               {idmCapabilities.tagline}
