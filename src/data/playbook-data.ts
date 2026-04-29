@@ -1416,7 +1416,7 @@ export const ecmIngestionEngine = {
 // Strategic Context: deadlines, customer archetypes, regulatory tailwinds
 export const efficiencyStrategicContext = {
   intro:
-    "Three forces shape why this strategy matters now: the RA+ platform transition, rising expectations for intelligent energy management, and the need to convert trusted interval data into action.",
+    "Three forces shape why this strategy matters now: the RA+ platform transition, proven Efficiency CoE delivery strength, and the need to convert trusted interval data into guided action.",
   raClassicSunset: {
     title: "RA+ Platform Transition",
     badge: "Strategic Window",
@@ -1425,8 +1425,8 @@ export const efficiencyStrategicContext = {
       "IDM and the broader efficiency capability should evolve into RA+ as shared platform intelligence, not just a migrated interface.",
     implications: [
       {
-        label: "Reusable services",
-        detail: "Turn proven data, modeling, tariff, and carbon capabilities into RA+ services where they create platform leverage.",
+        label: "CoE capability scale",
+        detail: "Turn proven consulting, implementation, IDM, and Global Energy Bureau capabilities into RA+ services where they create platform leverage.",
       },
       {
         label: "Phased evolution",
@@ -1434,7 +1434,7 @@ export const efficiencyStrategicContext = {
       },
       {
         label: "Customer continuity",
-        detail: "Protect existing customers while RA+ becomes the broader home for performance management.",
+        detail: "Protect existing customers while RA+ becomes the broader home for performance management and continuous improvement.",
       },
       {
         label: "Clear governance",
@@ -1481,26 +1481,26 @@ export const efficiencyStrategicContext = {
     title: "Intelligent Performance Tailwind",
     badge: "Market Pull",
     summary:
-      "Customers increasingly expect energy, cost, carbon, and operational performance to be connected in one intelligent experience. High-quality interval data becomes the foundation for that shift.",
+      "Customers increasingly expect energy, cost, carbon, resilience, and operational performance to be connected in one intelligent experience. High-quality interval data becomes the foundation for that shift.",
     impacts: [
       {
         label: "Interval data becomes table stakes",
-        detail: "Annual or monthly utility totals will not satisfy the next wave of disclosure standards.",
+        detail: "Annual or monthly utility totals will not satisfy executive expectations for timely performance decisions.",
       },
       {
-        label: "IDM commercial case strengthens",
-        detail: "Every sustainability customer becomes a credible IDM upsell, well beyond the efficiency use case.",
+        label: "IDM role strengthens",
+        detail: "IDM becomes the trusted system of record behind reporting, action guidance, and performance services.",
       },
       {
-        label: "Cross-product upsell path",
-        detail: "Sustainability-only RA+ accounts become natural targets for energy and IDM modules.",
+        label: "Consulting-to-action path",
+        detail: "Strategy, design, execution, and continuous improvement can operate as one guided RA+ journey.",
       },
       {
-        label: "Submeter ROI improves",
-        detail: "When granularity is mandated, the cost-benefit math for installing submeters or BMS feeds tilts in our favor.",
+        label: "BMS and SCADA unlock scale",
+        detail: "Existing operational data sources reduce friction and extend the addressable base before new hardware is required.",
       },
     ],
     soWhat:
-      "Build IDM and the efficiency knowledge base so they natively serve carbon accounting, not just energy efficiency. The same data spine powers both.",
+      "Build IDM and the efficiency knowledge base so they natively serve energy, carbon, resilience, and operational performance. The same data spine powers the full improvement cycle.",
   },
 };
