@@ -9,6 +9,7 @@ const sections = [
   "initiatives",
   "value-proof",
   "start-stop",
+  "delivery-roadmap",
   "appendix",
   "takeaway",
 ];
