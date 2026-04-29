@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { appendixPillars, supportingScorecard, roadmapSummary, quarterlyRoadmap, capabilityMatrix, phasedRoadmap } from "@/data/playbook-data";
-import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Calendar, Check, Zap, ArrowRight, X, Minus } from "lucide-react";
+import { appendixPillars, supportingScorecard, roadmapSummary, quarterlyRoadmap, capabilityMatrix, intelligenceFlywheel } from "@/data/playbook-data";
+import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Check, Zap, ArrowRight, X, Minus, Database, Brain, Settings, Eye, FileText } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
@@ -29,12 +29,16 @@ const quarterColors: Record<string, string> = {
   violet: "border-violet-500/30 bg-violet-500/10 text-violet-400",
 };
 
-const phaseColors: Record<string, string> = {
-  amber: "bg-amber-500/20 text-amber-400 border-amber-500/30",
-  emerald: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
-  primary: "bg-primary/20 text-primary border-primary/30",
-  violet: "bg-violet-500/20 text-violet-400 border-violet-500/30",
-  "muted-foreground": "bg-muted text-muted-foreground border-border/50",
+
+
+
+const flywheelIconMap: Record<string, React.ElementType> = {
+  Database,
+  Brain,
+  Settings,
+  Eye,
+  FileText,
+  Zap,
 };
 
 const StatusIcon = ({ status }: { status: string }) => {
@@ -45,7 +49,7 @@ const StatusIcon = ({ status }: { status: string }) => {
 
 const APPENDIX_SECTIONS = [
   "initiatives-by-domain",
-  "phased-roadmap",
+  "strategy-flywheel",
   "capability-matrix",
   "quarterly-roadmap",
   "value-pillar-deep-dive",
@@ -110,7 +114,7 @@ export const AppendixSection = () => {
             Efficiency Transformation Details
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto mt-4">
-            Deep dive into phased delivery, capability evolution, quarterly plans, and supporting metrics.
+            Deep dive into the operating model, capability evolution, quarterly plans, and supporting metrics.
           </p>
         </div>
 
@@ -170,54 +174,84 @@ export const AppendixSection = () => {
             </AccordionContent>
           </AccordionItem>
 
-        {/* ============ Phased Roadmap ============ */}
+        {/* ============ Strategy-to-Improvement Flywheel ============ */}
           <AccordionItem
-            value="phased-roadmap"
-            ref={setItemRef("phased-roadmap")}
-            data-section="phased-roadmap"
-            className={itemClass("phased-roadmap")}
+            value="strategy-flywheel"
+            ref={setItemRef("strategy-flywheel")}
+            data-section="strategy-flywheel"
+            className={itemClass("strategy-flywheel")}
           >
             <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
               <div className="text-left">
                 <span className="text-primary text-xs font-semibold uppercase tracking-wider block mb-1">
-                  Delivery Phases
+                  Operating Model
                 </span>
                 <h3 className="text-lg sm:text-xl font-bold text-foreground">
-                  Phased Roadmap
+                  {intelligenceFlywheel.title}
                 </h3>
               </div>
             </AccordionTrigger>
             <AccordionContent className="px-6 pb-6">
               <p className="text-sm text-muted-foreground max-w-3xl mb-6">
-                From foundational research to a stand-alone efficiency product, each phase builds on the last.
+                {intelligenceFlywheel.subtitle}
               </p>
-              <div className="space-y-6">
-                {phasedRoadmap.map((phase) => (
-                  <div key={phase.phase} className="bg-muted/20 rounded-xl border border-border/50 overflow-hidden">
-                    <div className="px-6 py-3 border-b border-border/30 flex items-center gap-3">
-                      <span className={`px-3 py-1 rounded-full text-xs font-bold border ${phaseColors[phase.color] || phaseColors.primary}`}>
-                        {phase.phase}
-                      </span>
-                      <span className="text-sm text-muted-foreground">{phase.items.length} workstream{phase.items.length > 1 ? "s" : ""}</span>
+
+              <div className="grid lg:grid-cols-[1fr_1.4fr] gap-6 mb-6">
+                <Card className="bg-card border-border/50">
+                  <CardContent className="p-5">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                      <Database className="w-5 h-5 text-primary" />
                     </div>
-                    <div className="p-6 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                      {phase.items.map((item, i) => (
-                        <div key={i} className="bg-card rounded-lg border border-border/30 p-4">
-                          <h4 className="font-semibold text-foreground text-sm mb-3">{item.title}</h4>
-                          <ul className="space-y-1.5">
-                            {item.details.map((detail, j) => (
-                              <li key={j} className="flex items-start gap-2 text-xs text-muted-foreground">
-                                <span className="w-1 h-1 rounded-full bg-primary shrink-0 mt-1.5" />
-                                {detail}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
+                    <h4 className="font-semibold text-foreground mb-2">
+                      {intelligenceFlywheel.veeExplainer.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                      {intelligenceFlywheel.veeExplainer.description}
+                    </p>
+                    <div className="rounded-lg border border-primary/20 bg-primary/5 p-4">
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {intelligenceFlywheel.veeExplainer.outcome}
+                      </p>
                     </div>
-                  </div>
-                ))}
+                  </CardContent>
+                </Card>
+
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {intelligenceFlywheel.stages.map((stage, i) => {
+                    const Icon = flywheelIconMap[stage.icon] || Settings;
+                    return (
+                      <Card key={stage.name} className="bg-primary/5 border-primary/20">
+                        <CardContent className="p-4">
+                          <div className="flex items-center gap-3 mb-2">
+                            <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                              <Icon className="w-4 h-4 text-primary" />
+                            </div>
+                            <div>
+                              <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
+                                Step {String(i + 1).padStart(2, "0")}
+                              </div>
+                              <h4 className="text-sm font-semibold text-foreground">
+                                {stage.name}
+                              </h4>
+                            </div>
+                          </div>
+                          <p className="text-xs text-muted-foreground leading-relaxed">
+                            {stage.description}
+                          </p>
+                        </CardContent>
+                      </Card>
+                    );
+                  })}
+                </div>
               </div>
+
+              <Card className="border-primary/20 bg-primary/5">
+                <CardContent className="p-5 text-center">
+                  <p className="text-sm sm:text-base text-foreground italic">
+                    "{intelligenceFlywheel.keyInsight}"
+                  </p>
+                </CardContent>
+              </Card>
             </AccordionContent>
           </AccordionItem>
 
