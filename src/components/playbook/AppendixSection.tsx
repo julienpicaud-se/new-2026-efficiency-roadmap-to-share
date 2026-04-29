@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { appendixPillars, supportingScorecard, roadmapSummary, quarterlyRoadmap, capabilityMatrix, intelligenceFlywheel } from "@/data/playbook-data";
+import { appendixPillars, supportingScorecard, quarterlyRoadmap, capabilityMatrix, intelligenceFlywheel } from "@/data/playbook-data";
 import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Check, Zap, ArrowRight, X, Minus, Database, Brain, Settings, Eye, FileText } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
