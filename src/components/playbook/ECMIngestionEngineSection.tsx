@@ -7,7 +7,6 @@ import {
   CheckCheck,
   Database,
   ArrowRight,
-  TrendingUp,
   Dices,
   Sparkles,
   Shield,
@@ -18,7 +17,7 @@ const flowIcons = [FileUp, ScanText, CheckCheck, Database];
 
 export const ECMIngestionEngineSection = () => {
   const { ref, isVisible } = useScrollAnimation();
-  const { intro, prototype, volumeRamp, monteCarlo, enablers, guardrails } =
+  const { intro, prototype, monteCarlo, enablers, guardrails } =
     ecmIngestionEngine;
 
   return (
@@ -83,54 +82,6 @@ export const ECMIngestionEngineSection = () => {
                   </Card>
                 );
               })}
-            </div>
-          </div>
-
-          {/* Volume Ramp */}
-          <div>
-            <div className="flex items-center gap-2 mb-1">
-              <TrendingUp className="w-5 h-5 text-primary" />
-              <h3 className="text-lg font-semibold text-foreground">
-                {volumeRamp.title}
-              </h3>
-            </div>
-            <p className="text-sm text-muted-foreground mb-6 max-w-2xl">
-              {volumeRamp.subtitle}
-            </p>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-              {volumeRamp.milestones.map((m, i) => (
-                <Card
-                  key={m.phase}
-                  className="bg-card border-border/50 relative overflow-hidden"
-                >
-                  <div
-                    className="absolute top-0 left-0 h-0.5 bg-primary"
-                    style={{
-                      width: `${((i + 1) / volumeRamp.milestones.length) * 100}%`,
-                    }}
-                  />
-                  <CardContent className="p-5">
-                    <div className="text-[10px] uppercase tracking-wider text-muted-foreground mb-2">
-                      Phase {String(i + 1).padStart(2, "0")}
-                    </div>
-                    <div className="flex items-baseline gap-1 mb-1">
-                      <span className="text-2xl sm:text-3xl font-bold text-primary">
-                        {m.target}
-                      </span>
-                      <span className="text-xs text-muted-foreground">
-                        {m.unit}
-                      </span>
-                    </div>
-                    <h4 className="font-semibold text-foreground text-sm mb-2">
-                      {m.phase}
-                    </h4>
-                    <p className="text-xs text-muted-foreground leading-snug">
-                      {m.detail}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
             </div>
           </div>
 

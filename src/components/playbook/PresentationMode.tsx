@@ -7,7 +7,7 @@ const sections = [
   { id: "executive-summary", title: "Executive Summary" },
   { id: "key-challenges", title: "Key Challenges" },
   { id: "strategic-pillars", title: "Strategic Pillars" },
-  { id: "existing-tools", title: "IDM & Flywheel" },
+  { id: "existing-tools", title: "IDM Backbone" },
   { id: "regional-journey", title: "Regional Journey" },
   { id: "strategic-context", title: "Strategic Context" },
   { id: "what-if", title: "What If" },

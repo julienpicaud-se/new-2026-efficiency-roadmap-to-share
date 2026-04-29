@@ -6,7 +6,7 @@ export const strategicPillars = [
     title: "Productivity Gains",
     tagline: "For the efficiency team",
     promise: "We turn efficiency expertise into repeatable operating models, guided workflows, and structured deliverables that improve team effectiveness across the customer journey.",
-    description: "Lower cost to serve and higher delivery capacity without linear headcount growth. The strategy standardizes assessment methods, customer context, calculations, and deliverables so teams can move faster with more consistent outputs.",
+    description: "Lower cost to serve and higher delivery capacity. The strategy standardizes assessment methods, customer context, calculations, and deliverables so teams can move faster with more consistent outputs.",
     whatLivesHere: [
       "Faster assessments through standardized methods, assumptions, and defaults",
       "Consistent calculations, assumptions, and outputs across engagements",
@@ -27,7 +27,7 @@ export const strategicPillars = [
     id: "upsell-engine",
     title: "Upsell Engine",
     tagline: "For advanced audit projects",
-    promise: "We intentionally expose selected expert content and early advisory to create demand for deeper, paid audit engagements.",
+    promise: "We intentionally expose selected expert content (e.g. ECMs) and early advisory to create demand for deeper, paid audit engagements.",
     description: "Higher conversion to advanced efficiency engagements and better qualified pipeline for the efficiency team. By exposing credible early guidance, customers see the value of deeper analysis, creating pull for expert services.",
     whatLivesHere: [
       "Early identification of high-potential efficiency opportunities before a full audit",
@@ -122,14 +122,14 @@ export const roadmapBets = {
     { title: "Implement opportunity relevance logic", pillar: "upsell-engine", outcome: "Pattern-based opportunity surfacing", objective: "O3", kr: "KR8" },
     { title: "Enable customer self-service exploration", pillar: "recurring-revenue", outcome: "DIY inputs and scenario comparison", objective: "O3", kr: "KR9" },
     { title: "Build structured audit deliverables", pillar: "productivity", outcome: "Platform-native reports replace slides", objective: "O1", kr: "KR2" },
-    { title: "Integrate AkitaBox/SCADA data", pillar: "productivity", outcome: "Enhanced site context", objective: "O3", kr: "KR7" },
+    { title: "Integrate AkitaBox and BMS data", pillar: "productivity", outcome: "Enhanced site context", objective: "O3", kr: "KR7" },
     { title: "Deploy rule-based opportunity surfacing", pillar: "recurring-revenue", outcome: "Automated recommendations", objective: "O2", kr: "KR5" },
   ],
   later: [
     { title: "Full auditor workflow integration", pillar: "productivity", outcome: "End-to-end digital audit process", objective: "O1", kr: "KR2" },
     { title: "M&V feedback loop implementation", pillar: "productivity", outcome: "Continuous improvement from outcomes", objective: "O1", kr: "KR1" },
     { title: "AI-powered efficiency recommendations", pillar: "recurring-revenue", outcome: "Similarity clustering and ML models", objective: "O2", kr: "KR5" },
-    { title: "Stand-alone Energy Efficiency product", pillar: "recurring-revenue", outcome: "Full Efficiency capability in RA+", objective: "O3", kr: "KR9" },
+    { title: "Dedicated Energy Efficiency product", pillar: "recurring-revenue", outcome: "Full Efficiency capability in RA+", objective: "O3", kr: "KR9" },
     { title: "Analytics integration", pillar: "upsell-engine", outcome: "Advanced insights and reporting", objective: "O3", kr: "KR8" },
     { title: "Weather and external data integration", pillar: "productivity", outcome: "Enhanced prediction accuracy", objective: "O2", kr: "KR6" },
   ],
@@ -563,7 +563,7 @@ export const whyNowColumns = [
     color: "amber",
     items: [
       "Customers expect earlier and clearer efficiency guidance",
-      "Regulatory push (CSRD, mandatory audits)",
+      "Customer demand for earlier, clearer efficiency guidance",
       "RA+ needs integrated efficiency intelligence beyond emissions",
       "Competitor movement accelerating digital efficiency advisory",
       "Internal scaling limits (manual audits, fragmented tools)",
@@ -585,7 +585,7 @@ export const whyNowColumns = [
     color: "emerald",
     items: [
       "Provisional opportunity knowledge base now, enriched via past-audit pipeline",
-      "Create the connection from shared guidance to Strategy, Building View, and the stand-alone Efficiency product",
+      "Create the connection from shared guidance to Strategy, Building View, and the Energy Efficiency product",
       "Single governed efficiency knowledge base with taxonomy, required fields, and versions",
       "Lock shared language & assumptions (inputs, \"From→To\", typical ranges) to remove variance",
     ],
@@ -597,8 +597,8 @@ export const whyNowColumns = [
     items: [
       "Top-down: goal-based efficiency guidance inside Strategy so customers get value before a full audit",
       "Bottom-up: building-level opportunity relevance so customers explore by place, not just targets",
-      "Explainability & guardrails so early advice is credible and upsells to deeper work when needed",
-      "Stand-alone Energy Efficiency product with end-to-end workflows for customers and engineers",
+      "Explainability & guardrails so early advice is credible and upsells to deeper expert advisory work when needed",
+      "Dedicated Energy Efficiency product with end-to-end workflows for customers and engineers",
     ],
   },
   {
@@ -610,7 +610,7 @@ export const whyNowColumns = [
       "The same efficiency intelligence can be reused across Strategy, Building View, regions, and sectors",
       "Integration with RA+, IDM, AkitaBox etc.",
       "Internal expertise is leveraged at scale rather than repeated manually",
-      "This foundation supports the future stand-alone Energy Efficiency product",
+      "This foundation supports the future Energy Efficiency product",
     ],
   },
   {
@@ -622,107 +622,7 @@ export const whyNowColumns = [
       "Customers achieve measurable emissions, energy & cost reductions",
       "Schneider E. gains stronger credibility and trust",
       "Stickier RA+ recurring revenue",
-      "Efficiency team gets audit upsell from early insight, saves resources due to digitisation",
-    ],
-  },
-];
-
-// Phased Roadmap (Image 2)
-export const phasedRoadmap = [
-  {
-    phase: "Foundational Work 2025",
-    color: "amber",
-    items: [
-      {
-        title: "Internal research and alignment",
-        details: [
-          "Interviews with efficiency teams across regions",
-          "Internal surveys capturing tooling, workflow, and data pain points",
-          "Establishing working relationships with engineering, EE teams, Strategy, IDM, and RA+ teams",
-        ],
-      },
-      {
-        title: "External and market research",
-        details: [
-          "Competitor analysis",
-          "Understanding market expectations for efficiency discoverability and early guidance",
-        ],
-      },
-      {
-        title: "Proposed opportunities",
-        details: [
-          "Identified lack of a central efficiency strategy system of record",
-          "Defined the bottlenecks across customers, Strategy, and efficiency teams",
-          "Mapped internal and external needs into a refined opportunity set",
-        ],
-      },
-    ],
-  },
-  {
-    phase: "2025-26",
-    color: "emerald",
-    items: [
-      {
-        title: "Draft efficiency knowledge base",
-        details: [
-          "Analysis of available past audits",
-          "Research on how to construct a high-quality efficiency knowledge base with taxonomy, metadata, granularity, and assumptions",
-          "Draft efficiency knowledge base created",
-        ],
-      },
-      {
-        title: "Data-mining project launched",
-        details: [
-          "Identifying required fields and extraction logic",
-          "First mapping rules and controlled vocabularies drafted",
-        ],
-      },
-    ],
-  },
-  {
-    phase: "Now 2026",
-    color: "primary",
-    items: [
-      {
-        title: "Emissions Strategy First",
-        details: [
-          "Strategy team is ready to consume efficiency guidance immediately",
-          "It needs minimal UX to unlock immediate value",
-          "It is the simplest integration surface",
-          "It brings direct customer revenue earliest",
-        ],
-      },
-    ],
-  },
-  {
-    phase: "Next 2026",
-    color: "violet",
-    items: [
-      {
-        title: "Building View second",
-        details: [
-          "It needs the shared knowledge base and metadata",
-          "It needs some site context that is not fully built yet",
-          "It is heavier UX",
-          "It expands customer value, but is not the fastest win",
-        ],
-      },
-    ],
-  },
-  {
-    phase: "Later 2027",
-    color: "muted-foreground",
-    items: [
-      {
-        title: "Stand alone efficiency product",
-        details: [
-          "Same strategy foundation accessed by various parts of RA+",
-          "Integration with AKITABOX, CAP etc",
-          "Fully supported onboarding",
-          "SERA assisted calculations",
-          "Built in visualisation for presentation",
-        ],
-      },
+      "Efficiency team gets audit upsell from early insight, becomes more productive due to digitisation",
     ],
   },
 ];
@@ -864,77 +764,71 @@ export const capabilityMatrix = {
 // Quarterly Roadmap (Image 4)
 export const quarterlyRoadmap = [
   {
-    quarter: "Q1 2026",
-    theme: "Expertise is Becoming Centralized",
+    quarter: "Q2 2026",
+    theme: "Assessment and Scope Definition",
     color: "amber",
     deliverables: [
-      "Publish provisional opportunity knowledge base v0",
-      "Initial taxonomy, naming rules, granularity, metadata standards",
-      "First SME review loops (your experts become the reviewers)",
-      "Data-mining pipeline starts → real audit examples entering structured form",
-      "Strategy starts consuming efficiency guidance",
+      "Run the first assessment of what IDM should bring into RA+",
+      "Confirm the ECM and IDM data model, taxonomy, metadata, and governance needs",
+      "Define minimum RA+ service boundaries for ECM guidance, IDM signals, and Strategy consumption",
+      "Prioritize the top 200 ECMs for the initial library launch",
+      "Start SME review loops across efficiency, IDM, data, product, and engineering teams",
     ],
     teamImpact: [
-      "Your knowledge is no longer trapped in PowerPoints and individual templates",
-      "You influence and validate the Efficiency strategy foundation from day one",
-      "You help define the \"official\" way we describe measures globally",
-    ],
-  },
-  {
-    quarter: "Q2 2026",
-    theme: "Work Begins to Scale",
-    color: "emerald",
-    deliverables: [
-      "Guidance metadata consistency improvements from ongoing SME reviews",
-      "Start defining assumption defaults (runtime, savings %, coverage)",
-      "Early version of per-opportunity analysis prompts",
-      "Strategy foundation v0.2 enriched by mined audit content",
-      "UX + logic groundwork for Building View begins",
-      "Internal access to the draft knowledge base for preparation before audits",
-    ],
-    teamImpact: [
-      "Early assumptions become standardized, not reinvented every time",
-      "You now have a reference library for preparing for site visits",
-      "Teams do not need to start from scratch for common opportunities",
-      "You can \"teach\" the system by correcting defaults → it improves over time",
-      "Strategy customers begin seeing efficiency recommendations",
+      "Teams align on what must be built before RA+ exposes ECM and IDM capability",
+      "Experts define the official language, fields, and quality expectations early",
+      "IDM requirements are captured before delivery work hardens around the wrong assumptions",
     ],
   },
   {
     quarter: "Q3 2026",
-    theme: "Customers Start Seeing Bottom-Up Value (Before Audits)",
-    color: "blue",
+    theme: "Initial ECM Library Launch",
+    color: "emerald",
     deliverables: [
-      "Building View MVP with site-level opportunity relevance",
-      "Opportunity filtering by system, subsystem, and building type",
-      "Early opportunity signals for customers based on patterns from past audits",
-      "Improved metadata quality from Q1-Q2",
-      "Shared language now visible across RA+",
+      "Launch the initial ECM library late Q3 with the top 200 ECMs",
+      "Publish taxonomy, naming rules, granularity, and metadata standards for v1",
+      "Connect ECM guidance to Strategy as the first RA+ consumption path",
+      "Document IDM inputs needed for opportunity relevance and future performance signals",
+      "Prepare the MVP scope for Q4, including ECM guidance and IDM signal priorities",
     ],
     teamImpact: [
-      "Customers arrive at audit discussions better prepared",
-      "You get fewer \"basic discovery\" questions (\"What could we do for lighting?\")",
-      "Building View becomes a pre-audit alignment tool",
-      "Customers understand efficiency options earlier, saving expert time",
-      "You see consistency across markets (less \"we do it differently here\")",
+      "Experts stop recreating common measure language from scratch",
+      "Strategy starts consuming a governed ECM foundation",
+      "The team has a concrete IDM backlog tied to the RA+ MVP instead of a generic migration plan",
     ],
   },
   {
     quarter: "Q4 2026",
-    theme: "Foundations for Your Future Workflow",
-    color: "violet",
+    theme: "RA+ MVP Launch",
+    color: "blue",
     deliverables: [
-      "Deepening the guidance data model, adding fields efficiency teams need",
-      "Draft logic for analysis checklists",
-      "Initial support for data grouping (families, packages)",
-      "RFI → assumption-default refinement",
-      "Logic for linking AkitaBox data to opportunity applicability",
-      "Presentation builder logic foundations",
+      "Launch the initial RA+ MVP for Energy Efficiency",
+      "Expose the top 200 ECMs through governed guidance and Strategy workflows",
+      "Bring initial IDM signals into RA+ for interval-data context, quality indicators, and prioritization support",
+      "Enable early expert audit request paths from guided ECM discovery",
+      "Capture feedback from pilot users to refine data fields, assumptions, and workflow handoffs",
     ],
     teamImpact: [
-      "You start to see the first real signs of your future EE workflow",
-      "Recommendations include more of the detail",
-      "Audit workflow is faster and more efficient",
+      "Customers and internal teams see the first usable RA+ Energy Efficiency experience",
+      "Auditors receive better prepared demand from early guided discovery",
+      "IDM starts contributing to action guidance instead of sitting only behind reporting",
+    ],
+  },
+  {
+    quarter: "Q1 2027",
+    theme: "MVP Hardening and Workflow Expansion",
+    color: "violet",
+    deliverables: [
+      "Improve ECM metadata quality and expand beyond the top 200 based on usage and expert review",
+      "Deepen IDM integration for data-quality visibility, interval patterns, and performance context",
+      "Refine assumption defaults, applicability rules, and expert escalation triggers",
+      "Add structured handoff outputs for expert advisory and audit preparation",
+      "Prepare the next release path toward Building View and dedicated Energy Efficiency workflows",
+    ],
+    teamImpact: [
+      "The MVP becomes more reliable and useful for real advisory workflows",
+      "Efficiency teams become more productive through reusable ECM and IDM context",
+      "The roadmap shifts from foundation building to workflow depth and scaled adoption",
     ],
   },
 ];
@@ -951,21 +845,20 @@ export const dataNeeded = [
 ];
 
 export const optionalClientContext = [
-  { name: "Building Data", description: "SCADA, BMS, AkitaBox integrations" },
+  { name: "Building Data", description: "BMS and AkitaBox integrations" },
   { name: "Energy Data", description: "Interval consumption and costs" },
 ];
 
 export const existingTools = [
-  { name: "IDM", description: "Interval Data Management: trusted energy data from cloud platforms, BMS, SCADA, meters, and external sources into a single system of record", limitation: "Core data services are not yet fully native to RA+ opportunity discovery" },
+  { name: "IDM", description: "Interval Data Management: trusted energy data from cloud platforms, BMS, meters, and external sources into a single system of record", limitation: "Core data services are not yet fully native to RA+ opportunity discovery" },
   { name: "ACT", description: "Action tracking and project management for efficiency measures", limitation: "Disconnected from efficiency recommendations" },
   { name: "RA Classic", description: "Resource Advisor: portfolio reporting, benchmarking, target setting", limitation: "Reporting-focused, no actionable efficiency layer" },
-  { name: "IDP / Blair Agent", description: "Intelligent data processing and automated data quality workflows", limitation: "Upstream data gaps limit agent accuracy" },
   { name: "Variance Check Agent", description: "Automated variance detection between metered and billed consumption", limitation: "Reactive analysis, not predictive" },
 ];
 
 export const idmCapabilities = {
   tagline:
-    "IDM gives RA+ the trusted interval-data system of record to connect cloud, BMS, SCADA, meter, cost, carbon, and operational signals with expert efficiency knowledge.",
+    "IDM gives RA+ the trusted interval-data system of record to connect cloud, BMS, meter, cost, carbon, and operational signals with expert efficiency knowledge.",
   positioning: {
     title: "Data Backbone",
     subtitle: "Trusted interval data before insight, proof after action.",
@@ -1023,7 +916,7 @@ export const idmCapabilities = {
     {
       name: "Data Ingestion",
       capabilities: [
-        "Utility, cloud platform, BMS, SCADA, meter, PME, EBO, and external-source intake",
+        "Utility, cloud platform, BMS, meter, PME, EBO, and external-source intake",
         "Multiple stream stitching, reprocessing, and normalization",
         "Cumulative to interval conversion",
         "Data validation routines and bulk editing",
@@ -1246,7 +1139,7 @@ export const regionalJourneys = {
         "Analysis & Guidance": { level: "core", note: "Manual today; Knowledge base and ingestion engine in build" },
         "Recommendations": { level: "core", note: "PPT deliverable is THE selling point" },
         "Implementation": { level: "none", note: "Out of scope; customer or 3rd party executes" },
-        "Monitoring": { level: "optional", note: "Optional IDM hookup if submeters are installed later" },
+        "Monitoring": { level: "light", note: "Light IDM hookup if submeters are installed later" },
       },
     },
     {
@@ -1314,10 +1207,6 @@ export const regionalJourneys = {
       detail: "Europe sells the polished PPT recommendation. US sells the installed savings. IDM sells the alert.",
     },
     {
-      title: "Entry point",
-      detail: "Europe is cold customer-led. US is RFP-led. IDM is data-led from existing accounts.",
-    },
-    {
       title: "Site visit",
       detail: "Europe and US require boots on the ground. IDM never does.",
     },
@@ -1356,36 +1245,6 @@ export const ecmIngestionEngine = {
       },
     ],
     accuracy: "~80% accuracy on first pass during initial testing.",
-  },
-  volumeRamp: {
-    title: "Volume Ramp",
-    subtitle: "From a handful of decks to a broad efficiency intelligence base.",
-    milestones: [
-      {
-        phase: "Pilot",
-        target: "200",
-        unit: "items",
-        detail: "First wave of European audit decks ingested for QA and tuning.",
-      },
-      {
-        phase: "Inditex Push",
-        target: "5,000+",
-        unit: "items",
-        detail: "Multi-site Inditex audits processed in batch; one client unlocks orders of magnitude.",
-      },
-      {
-        phase: "European Backlog",
-        target: "15,000+",
-        unit: "items",
-        detail: "Full European audit history, including Amazon and other large enterprise accounts.",
-      },
-      {
-        phase: "US + Public Sector",
-        target: "30,000+",
-        unit: "items",
-        detail: "Once US teams release their 27 TB archive, the library scales globally.",
-      },
-    ],
   },
   monteCarlo: {
     title: "Monte Carlo Top-5 Recommendations",
@@ -1450,7 +1309,7 @@ export const efficiencyStrategicContext = {
       {
         name: "Traditional Audit Customer",
         tagline: "Cold case, fast turnaround, PPT deliverable",
-        share: "~80% of European volume",
+        share: "Traditional audit demand",
         wants: [
           "Quick on-site audit, no installs",
           "Polished recommendation deck",
@@ -1458,7 +1317,7 @@ export const efficiencyStrategicContext = {
           "In and out, no ongoing platform commitment",
         ],
         risk: "If we force them onto a platform, we lose the deal. Self-serve adoption is unrealistic.",
-        fit: "Internal productivity tool only. Auditors use the platform; the customer never sees it.",
+        fit: "Internal productivity tool only (to start). Auditors use the platform; the customer never sees it.",
       },
       {
         name: "Enterprise Strategic Account",
@@ -1470,7 +1329,7 @@ export const efficiencyStrategicContext = {
           "Self-serve exploration with expert support",
           "A reference story they can cite internally",
         ],
-        risk: "A PPT-only deliverable underwhelms them. Without RA+, they will look at Deepki, Measurabl, or build it themselves.",
+        risk: "A PPT-only deliverable underwhelms them. Without RA+, they will look at competitors, or build it themselves.",
         fit: "Full RA+ deployment with services wrapped around the platform.",
       },
     ],
@@ -1481,7 +1340,7 @@ export const efficiencyStrategicContext = {
     title: "Intelligent Performance Tailwind",
     badge: "Market Pull",
     summary:
-      "Customers increasingly expect energy, cost, carbon, resilience, and operational performance to be connected in one intelligent experience. High-quality interval data becomes the foundation for that shift.",
+      "Customers increasingly expect energy, cost, carbon, and operational performance to be connected in one intelligent experience. High-quality interval data becomes the foundation for that shift.",
     impacts: [
       {
         label: "Interval data becomes table stakes",
@@ -1496,11 +1355,11 @@ export const efficiencyStrategicContext = {
         detail: "Strategy, design, execution, and continuous improvement can operate as one guided RA+ journey.",
       },
       {
-        label: "BMS and SCADA unlock scale",
+        label: "BMS and meter data unlock scale",
         detail: "Existing operational data sources reduce friction and extend the addressable base before new hardware is required.",
       },
     ],
     soWhat:
-      "Build IDM and the efficiency knowledge base so they natively serve energy, carbon, resilience, and operational performance. The same data spine powers the full improvement cycle.",
+      "Build IDM and the efficiency knowledge base connection so they natively serve energy, carbon, resilience, and operational performance. The same data spine powers the full improvement cycle.",
   },
 };

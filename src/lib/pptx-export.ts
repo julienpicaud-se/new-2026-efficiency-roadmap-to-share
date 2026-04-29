@@ -3,7 +3,6 @@ import {
   strategicPillars,
   objectives,
   roadmapBets,
-  phasedRoadmap,
   quarterlyRoadmap,
   capabilityMatrix,
   idmCapabilities,
@@ -91,9 +90,9 @@ export const exportToPptx = async () => {
     });
   });
 
-  // ===== Slide 3: IDM and Flywheel =====
+  // ===== Slide 3: IDM Data Backbone =====
   const slide3 = pptx.addSlide({ masterName: "MASTER_SLIDE" });
-  slide3.addText("IDM and Intelligence Flywheel", {
+  slide3.addText("IDM Data Backbone", {
     x: 0.5, y: 0.3, w: 9, h: 0.5,
     fontSize: 28, bold: true, color: TEXT_WHITE,
   });
@@ -120,24 +119,22 @@ export const exportToPptx = async () => {
       fontSize: 6.5, color: TEXT_MUTED, align: "center",
     });
   });
-  slide3.addText(intelligenceFlywheel.subtitle, {
-    x: 0.5, y: 3.05, w: 9, h: 0.35,
-    fontSize: 12, bold: true, color: TEXT_WHITE,
+  slide3.addText(idmCapabilities.positioning.principle, {
+    x: 0.5, y: 3.1, w: 9, h: 0.55,
+    fontSize: 10, color: TEXT_WHITE, fit: "shrink",
   });
-  intelligenceFlywheel.stages.forEach((stage, index) => {
-    const xPos = 0.5 + index * 1.5;
-    slide3.addText(stage.name, {
-      x: xPos, y: 3.65, w: 1.25, h: 0.25,
-      fontSize: 8, bold: true, color: BRAND_GREEN,
+  idmCapabilities.categories.forEach((category, index) => {
+    const xPos = 0.5 + index * 3.05;
+    slide3.addText(category.name, {
+      x: xPos, y: 4.0, w: 2.8, h: 0.25,
+      fontSize: 10, bold: true, color: BRAND_GREEN,
     });
-    slide3.addText(stage.description, {
-      x: xPos, y: 3.95, w: 1.25, h: 0.9,
-      fontSize: 6.2, color: TEXT_MUTED, valign: "top", fit: "shrink",
+    category.capabilities.slice(0, 3).forEach((capability, capabilityIndex) => {
+      slide3.addText(`• ${capability}`, {
+        x: xPos, y: 4.35 + capabilityIndex * 0.28, w: 2.75, h: 0.25,
+        fontSize: 6.5, color: TEXT_MUTED, fit: "shrink",
+      });
     });
-  });
-  slide3.addText(intelligenceFlywheel.keyInsight, {
-    x: 0.5, y: 5.05, w: 9, h: 0.35,
-    fontSize: 8.5, color: TEXT_WHITE, fit: "shrink",
   });
 
   // ===== Slide 4: Strategic Pillars =====
@@ -215,37 +212,6 @@ export const exportToPptx = async () => {
       slide6.addText(item.outcome, {
         x: xPos + 0.15, y: 1.9 + itemIndex * 0.8, w: 2.85, h: 0.35,
         fontSize: 8, color: TEXT_MUTED,
-      });
-    });
-  });
-
-  // ===== Slide 7: Phased Roadmap =====
-  const slide7 = pptx.addSlide({ masterName: "MASTER_SLIDE" });
-  slide7.addText("Phased Roadmap", {
-    x: 0.5, y: 0.3, w: 9, h: 0.5,
-    fontSize: 28, bold: true, color: TEXT_WHITE,
-  });
-
-  phasedRoadmap.forEach((phase, phaseIdx) => {
-    const color = COL_COLORS[phase.color] || BRAND_GREEN;
-    const xPos = 0.3 + phaseIdx * 1.9;
-    
-    slide7.addText(phase.phase, {
-      x: xPos, y: 1, w: 1.8, h: 0.35,
-      fontSize: 8, bold: true, color: color,
-    });
-    
-    phase.items.forEach((item, i) => {
-      const yPos = 1.5 + i * 1.3;
-      slide7.addText(item.title, {
-        x: xPos, y: yPos, w: 1.8, h: 0.3,
-        fontSize: 8, bold: true, color: TEXT_WHITE,
-      });
-      item.details.slice(0, 3).forEach((detail, j) => {
-        slide7.addText(`• ${detail}`, {
-          x: xPos, y: yPos + 0.3 + j * 0.3, w: 1.8, h: 0.28,
-          fontSize: 6, color: TEXT_MUTED, valign: "top",
-        });
       });
     });
   });
@@ -398,6 +364,37 @@ export const exportToPptx = async () => {
         fontSize: 7, color: TEXT_MUTED,
       });
     });
+  });
+
+  // ===== Appendix Slide: Strategy-to-Improvement Flywheel =====
+  const slideFlywheel = pptx.addSlide({ masterName: "MASTER_SLIDE" });
+  slideFlywheel.addText("Appendix: Strategy-to-Improvement Flywheel", {
+    x: 0.5, y: 0.3, w: 9, h: 0.5,
+    fontSize: 24, bold: true, color: TEXT_WHITE,
+  });
+  slideFlywheel.addText(intelligenceFlywheel.subtitle, {
+    x: 0.5, y: 0.95, w: 9, h: 0.35,
+    fontSize: 11, color: TEXT_MUTED,
+  });
+  intelligenceFlywheel.stages.forEach((stage, index) => {
+    const xPos = 0.5 + (index % 3) * 3.05;
+    const yPos = 1.65 + Math.floor(index / 3) * 1.55;
+    slideFlywheel.addShape("rect" as PptxGenJS.ShapeType, {
+      x: xPos, y: yPos, w: 2.75, h: 1.15,
+      fill: { color: CARD_BG }, line: { color: BRAND_GREEN, width: 1 },
+    });
+    slideFlywheel.addText(stage.name, {
+      x: xPos + 0.15, y: yPos + 0.15, w: 2.45, h: 0.25,
+      fontSize: 11, bold: true, color: BRAND_GREEN,
+    });
+    slideFlywheel.addText(stage.description, {
+      x: xPos + 0.15, y: yPos + 0.48, w: 2.45, h: 0.55,
+      fontSize: 7, color: TEXT_MUTED, fit: "shrink",
+    });
+  });
+  slideFlywheel.addText(intelligenceFlywheel.keyInsight, {
+    x: 0.5, y: 5.05, w: 9, h: 0.35,
+    fontSize: 8.5, color: TEXT_WHITE, fit: "shrink",
   });
 
   // ===== Final Slide: Thank You =====

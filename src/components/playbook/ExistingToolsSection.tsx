@@ -6,23 +6,17 @@ import {
   competitiveLandscape,
   marketTrends,
   serviceModelComparison,
-  intelligenceFlywheel,
 } from "@/data/playbook-data";
 import {
   Download,
   Calculator,
   Settings,
   Monitor,
-  FileSearch,
   BarChart3,
   AlertTriangle,
   XCircle,
   Globe,
   Database,
-  Brain,
-  Eye,
-  FileText,
-  Zap,
   TrendingUp,
   Shield,
   ArrowRight,
@@ -43,17 +37,7 @@ const iconMap: Record<string, React.ElementType> = {
   ACT: Calculator,
   CBMS: Settings,
   "RA Classic": Monitor,
-  "IDP / Blair Agent": FileSearch,
   "Variance Check Agent": BarChart3,
-};
-
-const flywheelIconMap: Record<string, React.ElementType> = {
-  Database,
-  Brain,
-  Settings,
-  Eye,
-  FileText,
-  Zap,
 };
 
 export const ExistingToolsSection = () => {
@@ -74,8 +58,7 @@ export const ExistingToolsSection = () => {
             Efficiency Strategy Landscape
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
-            Where we are today, what the market demands, and the intelligence flywheel
-            that will set us apart.
+            Where we are today, what the market demands, and how IDM becomes the RA+ data backbone.
           </p>
         </div>
 
@@ -370,119 +353,6 @@ export const ExistingToolsSection = () => {
                 </Card>
               ))}
             </div>
-          </div>
-
-          {/* Persistent Intelligence Flywheel */}
-          <div>
-            <h3 className="text-lg font-semibold text-foreground mb-2 flex items-center gap-2">
-              <Brain className="w-5 h-5 text-primary" />
-              {intelligenceFlywheel.title}
-            </h3>
-            <p className="text-sm text-muted-foreground mb-6 max-w-2xl">
-              {intelligenceFlywheel.subtitle}
-            </p>
-
-            <Card className="bg-card border-border/50 mb-8">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                    <Database className="w-5 h-5 text-primary" />
-                  </div>
-                  <div className="min-w-0">
-                    <h4 className="text-base font-semibold text-foreground mb-2">
-                      {intelligenceFlywheel.veeExplainer.title}
-                    </h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                      {intelligenceFlywheel.veeExplainer.description}
-                    </p>
-                    <div className="grid md:grid-cols-[1.1fr_0.9fr] gap-5">
-                      <div>
-                        <h5 className="text-sm font-semibold text-foreground mb-2">
-                          Used when
-                        </h5>
-                        <ul className="space-y-2">
-                          {intelligenceFlywheel.veeExplainer.usedWhen.map((item) => (
-                            <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
-                              <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="rounded-lg border border-primary/20 bg-primary/5 p-4">
-                        <h5 className="text-sm font-semibold text-foreground mb-1">
-                          Outcome
-                        </h5>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                          {intelligenceFlywheel.veeExplainer.outcome}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Flywheel stages */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
-              {intelligenceFlywheel.stages.map((stage, i) => {
-                const Icon = flywheelIconMap[stage.icon] || Settings;
-                return (
-                  <Card key={i} className="bg-primary/5 border-primary/20 relative">
-                    <CardContent className="p-4 text-center">
-                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2">
-                        <Icon className="w-5 h-5 text-primary" />
-                      </div>
-                      <div className="text-xs font-semibold text-foreground mb-1">
-                        {stage.name}
-                      </div>
-                      <div className="text-[10px] text-muted-foreground leading-tight">
-                        {stage.description}
-                      </div>
-                    </CardContent>
-                    {i < intelligenceFlywheel.stages.length - 1 && (
-                      <ArrowRight className="hidden lg:block absolute -right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-primary/40 z-10" />
-                    )}
-                  </Card>
-                );
-              })}
-            </div>
-
-            {/* Differentiators */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
-              {intelligenceFlywheel.differentiators.map((diff, i) => (
-                <div
-                  key={i}
-                  className="flex flex-col items-center p-4 rounded-lg bg-card border border-border/50 text-center"
-                >
-                  <span className="text-xs text-muted-foreground mb-1">
-                    {diff.label}
-                  </span>
-                  <span
-                    className={`text-sm font-bold ${
-                      diff.status === "Differentiator"
-                        ? "text-primary"
-                        : diff.status === "Essential"
-                        ? "text-orange-400"
-                        : diff.status === "Expectation"
-                        ? "text-yellow-500"
-                        : "text-muted-foreground"
-                    }`}
-                  >
-                    {diff.status}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {/* Key Insight */}
-            <Card className="border-primary/20 bg-primary/5">
-              <CardContent className="p-6 text-center">
-                <p className="text-base sm:text-lg text-foreground italic">
-                  "{intelligenceFlywheel.keyInsight}"
-                </p>
-              </CardContent>
-            </Card>
           </div>
 
           {/* Market Constraints */}
