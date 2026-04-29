@@ -1120,8 +1120,8 @@ export const serviceModelComparison = [
 ];
 
 export const intelligenceFlywheel = {
-  title: "Persistent Intelligence Flywheel",
-  subtitle: "The operating model that moves RA+ from static dashboards to guided performance decisions",
+  title: "Strategy-to-Improvement Flywheel",
+  subtitle: "The operating model that connects consulting, implementation, IDM, and continuous performance improvement in RA+",
   veeExplainer: {
     title: "VEE: Validation, Estimation, and Editing",
     description:
@@ -1136,18 +1136,18 @@ export const intelligenceFlywheel = {
   },
   stages: [
     { name: "Telemetry", description: "Integrations plus VEE to make interval data reliable before it informs decisions", icon: "Database" },
-    { name: "Context", description: "Asset hierarchy, site relationships, energy flows, and decision history", icon: "Brain" },
-    { name: "Enrichment", description: "Baselines, benchmarks, tariffs, emissions, simulations, and what-if models", icon: "Settings" },
-    { name: "Observations", description: "Trends, root cause, prioritization, and agentic reasoning over connected context", icon: "Eye" },
-    { name: "Output", description: "Living reports, dashboards, guided findings, and executive narratives", icon: "FileText" },
-    { name: "Action", description: "Workflow integration, prioritization, outcome tracking, and next-best recommendations", icon: "Zap" },
+    { name: "Strategy", description: "Portfolio priorities, KPI workshops, maturity assessment, and site prioritization", icon: "Brain" },
+    { name: "Design", description: "Audits, baselines, business case inputs, and solution shaping from trusted context", icon: "Settings" },
+    { name: "Execution", description: "Workflow integration, project handoff, implementation support, and outcome tracking", icon: "Eye" },
+    { name: "Output", description: "Living reports, guided findings, audit deliverables, and executive narratives", icon: "FileText" },
+    { name: "Improve", description: "Continuous optimization, performance services, and next-best recommendations", icon: "Zap" },
   ],
-  keyInsight: "The future platform advantage is not another dashboard. It is an intelligence layer that connects trusted signals, expert efficiency knowledge, and site context so RA+ can move users from insight to action.",
+  keyInsight: "The future platform advantage is not another dashboard. It is an intelligence layer that connects trusted signals, expert efficiency knowledge, implementation pathways, and site context so RA+ can move users from strategy to measurable improvement.",
   differentiators: [
     { label: "Data availability", status: "Baseline" },
-    { label: "Agentic intelligence", status: "Expectation" },
     { label: "Expert context", status: "Essential" },
-    { label: "Customer outcomes", status: "Differentiator" },
+    { label: "Implementation path", status: "Advantage" },
+    { label: "Continuous outcomes", status: "Differentiator" },
   ],
 };
 
