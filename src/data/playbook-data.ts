@@ -770,13 +770,13 @@ export const quarterlyRoadmap = [
     deliverables: [
       "Run the first assessment of what IDM should bring into RA+",
       "Confirm the ECM and IDM data model, taxonomy, metadata, and governance needs",
-      "Define minimum RA+ service boundaries for ECM guidance, IDM signals, and Strategy consumption",
+      "Define minimum RA+ service boundaries for ECM guidance and IDM signals",
       "Prioritize the top 200 ECMs for the initial library launch",
-      "Start SME review loops across efficiency, IDM, data, product, and engineering teams",
+      "Start SME review loops across efficiency to refine ECM and IDM priorities",
     ],
     teamImpact: [
       "Teams align on what must be built before RA+ exposes ECM and IDM capability",
-      "Experts define the official language, fields, and quality expectations early",
+      "Experts help define expectations early during workshops",
       "IDM requirements are captured before delivery work hardens around the wrong assumptions",
     ],
   },
@@ -787,13 +787,13 @@ export const quarterlyRoadmap = [
     deliverables: [
       "Launch the initial ECM library late Q3 with the top 200 ECMs",
       "Publish taxonomy, naming rules, granularity, and metadata standards for v1",
-      "Connect ECM guidance to Strategy as the first RA+ consumption path",
+      "Connect ECM guidance to the Strategy product as the first RA+ consumption path",
       "Document IDM inputs needed for opportunity relevance and future performance signals",
       "Prepare the MVP scope for Q4, including ECM guidance and IDM signal priorities",
     ],
     teamImpact: [
-      "Experts stop recreating common measure language from scratch",
-      "Strategy starts consuming a governed ECM foundation",
+      "Experts start leveraging standard database connected with IDM and get access to common measure language",
+      "The Strategy product starts consuming a governed ECM foundation",
       "The team has a concrete IDM backlog tied to the RA+ MVP instead of a generic migration plan",
     ],
   },
@@ -804,14 +804,14 @@ export const quarterlyRoadmap = [
     deliverables: [
       "Launch the initial RA+ MVP for Energy Efficiency",
       "Expose the top 200 ECMs through governed guidance and Strategy workflows",
-      "Bring initial IDM signals into RA+ for interval-data context, quality indicators, and prioritization support",
+      "Bring initial IDM signals into RA+ for interval-data context.",
       "Enable early expert audit request paths from guided ECM discovery",
       "Capture feedback from pilot users to refine data fields, assumptions, and workflow handoffs",
     ],
     teamImpact: [
       "Customers and internal teams see the first usable RA+ Energy Efficiency experience",
       "Auditors receive better prepared demand from early guided discovery",
-      "IDM starts contributing to action guidance instead of sitting only behind reporting",
+      "IDM starts contributing to action guidance on a central platform",
     ],
   },
   {
