@@ -956,7 +956,7 @@ export const optionalClientContext = [
 ];
 
 export const existingTools = [
-  { name: "IDM", description: "Interval Data Management: high-frequency utility, meter, BMS, and external data streams for reporting, allocation, performance, and optimization", limitation: "Core data services are not yet fully native to RA+ opportunity discovery" },
+  { name: "IDM", description: "Interval Data Management: trusted energy data from cloud platforms, BMS, SCADA, meters, and external sources into a single system of record", limitation: "Core data services are not yet fully native to RA+ opportunity discovery" },
   { name: "ACT", description: "Action tracking and project management for efficiency measures", limitation: "Disconnected from efficiency recommendations" },
   { name: "RA Classic", description: "Resource Advisor: portfolio reporting, benchmarking, target setting", limitation: "Reporting-focused, no actionable efficiency layer" },
   { name: "IDP / Blair Agent", description: "Intelligent data processing and automated data quality workflows", limitation: "Upstream data gaps limit agent accuracy" },
@@ -965,7 +965,7 @@ export const existingTools = [
 
 export const idmCapabilities = {
   tagline:
-    "IDM gives RA+ the interval-data backbone to connect trusted energy, cost, carbon, and operational signals with expert efficiency knowledge.",
+    "IDM gives RA+ the trusted interval-data system of record to connect cloud, BMS, SCADA, meter, cost, carbon, and operational signals with expert efficiency knowledge.",
   positioning: {
     title: "Data Backbone",
     subtitle: "Trusted interval data before insight, proof after action.",
@@ -986,7 +986,7 @@ export const idmCapabilities = {
       },
     ],
     principle:
-      "The RA+ opportunity is not a reporting migration or visual lift-over. It is turning proven IDM capabilities into shared platform intelligence that guides decisions, prioritization, and continuous improvement.",
+      "The RA+ opportunity is not a reporting migration or visual lift-over. It is turning proven Global Energy Bureau and IDM capabilities into shared platform intelligence that guides decisions, prioritization, and continuous improvement.",
   },
   bmsBypass: {
     title: "BMS Integration: Bypass the Submeter Install",
@@ -1014,16 +1014,16 @@ export const idmCapabilities = {
       "Where BMS is absent, utility meter feeds (UK half-hourly, EU 5/15-min) still provide a baseline IDM experience. Submeter install becomes an upsell, not a prerequisite.",
   },
   stats: [
-    { value: "250k", label: "Signals", detail: "Across meters, buildings, and sources" },
-    { value: "5-15m", label: "Granularity", detail: "Operating detail at decision speed" },
-    { value: "4", label: "Value Uses", detail: "Report, allocate, manage, optimize" },
+    { value: "428", label: "Clients", detail: "Global Energy Bureau support base" },
+    { value: "38", label: "Experts", detail: "Across 11 country locations" },
+    { value: "$75M", label: "Active Guarantees", detail: "Measured through performance services" },
     { value: "24/7", label: "Performance", detail: "Always-on energy and carbon view" },
   ],
   categories: [
     {
       name: "Data Ingestion",
       capabilities: [
-        "Utility, on-prem, cloud, BMS, PME, EBO, and external-source intake",
+        "Utility, cloud platform, BMS, SCADA, meter, PME, EBO, and external-source intake",
         "Multiple stream stitching, reprocessing, and normalization",
         "Cumulative to interval conversion",
         "Data validation routines and bulk editing",
@@ -1045,7 +1045,7 @@ export const idmCapabilities = {
     {
       name: "M&V and Outcomes",
       capabilities: [
-        "M&V workflows that measure, verify, and explain whether efficiency actions delivered the expected savings",
+        "M&V workflows that measure, verify, and explain whether efficiency actions delivered expected performance outcomes",
         "IPMVP-compliant baseline creation using recognized measurement and verification methods for credible savings claims",
         "Actual vs. baseline and cumulative savings tracking across cost, energy, and emissions outcomes",
         "EnPI models that normalize performance indicators for weather, occupancy, production, or operating conditions to support ISO 50001",
@@ -1120,8 +1120,8 @@ export const serviceModelComparison = [
 ];
 
 export const intelligenceFlywheel = {
-  title: "Persistent Intelligence Flywheel",
-  subtitle: "The operating model that moves RA+ from static dashboards to guided performance decisions",
+  title: "Strategy-to-Improvement Flywheel",
+  subtitle: "The operating model that connects consulting, implementation, IDM, and continuous performance improvement in RA+",
   veeExplainer: {
     title: "VEE: Validation, Estimation, and Editing",
     description:
@@ -1136,18 +1136,18 @@ export const intelligenceFlywheel = {
   },
   stages: [
     { name: "Telemetry", description: "Integrations plus VEE to make interval data reliable before it informs decisions", icon: "Database" },
-    { name: "Context", description: "Asset hierarchy, site relationships, energy flows, and decision history", icon: "Brain" },
-    { name: "Enrichment", description: "Baselines, benchmarks, tariffs, emissions, simulations, and what-if models", icon: "Settings" },
-    { name: "Observations", description: "Trends, root cause, prioritization, and agentic reasoning over connected context", icon: "Eye" },
-    { name: "Output", description: "Living reports, dashboards, guided findings, and executive narratives", icon: "FileText" },
-    { name: "Action", description: "Workflow integration, prioritization, outcome tracking, and next-best recommendations", icon: "Zap" },
+    { name: "Strategy", description: "Portfolio priorities, KPI workshops, maturity assessment, and site prioritization", icon: "Brain" },
+    { name: "Design", description: "Audits, baselines, business case inputs, and solution shaping from trusted context", icon: "Settings" },
+    { name: "Execution", description: "Workflow integration, project handoff, implementation support, and outcome tracking", icon: "Eye" },
+    { name: "Output", description: "Living reports, guided findings, audit deliverables, and executive narratives", icon: "FileText" },
+    { name: "Improve", description: "Continuous optimization, performance services, and next-best recommendations", icon: "Zap" },
   ],
-  keyInsight: "The future platform advantage is not another dashboard. It is an intelligence layer that connects trusted signals, expert efficiency knowledge, and site context so RA+ can move users from insight to action.",
+  keyInsight: "The future platform advantage is not another dashboard. It is an intelligence layer that connects trusted signals, expert efficiency knowledge, implementation pathways, and site context so RA+ can move users from strategy to measurable improvement.",
   differentiators: [
     { label: "Data availability", status: "Baseline" },
-    { label: "Agentic intelligence", status: "Expectation" },
     { label: "Expert context", status: "Essential" },
-    { label: "Customer outcomes", status: "Differentiator" },
+    { label: "Implementation path", status: "Advantage" },
+    { label: "Continuous outcomes", status: "Differentiator" },
   ],
 };
 
@@ -1416,7 +1416,7 @@ export const ecmIngestionEngine = {
 // Strategic Context: deadlines, customer archetypes, regulatory tailwinds
 export const efficiencyStrategicContext = {
   intro:
-    "Three forces shape why this strategy matters now: the RA+ platform transition, rising expectations for intelligent energy management, and the need to convert trusted interval data into action.",
+    "Three forces shape why this strategy matters now: the RA+ platform transition, proven Efficiency CoE delivery strength, and the need to convert trusted interval data into guided action.",
   raClassicSunset: {
     title: "RA+ Platform Transition",
     badge: "Strategic Window",
@@ -1425,8 +1425,8 @@ export const efficiencyStrategicContext = {
       "IDM and the broader efficiency capability should evolve into RA+ as shared platform intelligence, not just a migrated interface.",
     implications: [
       {
-        label: "Reusable services",
-        detail: "Turn proven data, modeling, tariff, and carbon capabilities into RA+ services where they create platform leverage.",
+        label: "CoE capability scale",
+        detail: "Turn proven consulting, implementation, IDM, and Global Energy Bureau capabilities into RA+ services where they create platform leverage.",
       },
       {
         label: "Phased evolution",
@@ -1434,7 +1434,7 @@ export const efficiencyStrategicContext = {
       },
       {
         label: "Customer continuity",
-        detail: "Protect existing customers while RA+ becomes the broader home for performance management.",
+        detail: "Protect existing customers while RA+ becomes the broader home for performance management and continuous improvement.",
       },
       {
         label: "Clear governance",
@@ -1481,26 +1481,26 @@ export const efficiencyStrategicContext = {
     title: "Intelligent Performance Tailwind",
     badge: "Market Pull",
     summary:
-      "Customers increasingly expect energy, cost, carbon, and operational performance to be connected in one intelligent experience. High-quality interval data becomes the foundation for that shift.",
+      "Customers increasingly expect energy, cost, carbon, resilience, and operational performance to be connected in one intelligent experience. High-quality interval data becomes the foundation for that shift.",
     impacts: [
       {
         label: "Interval data becomes table stakes",
-        detail: "Annual or monthly utility totals will not satisfy the next wave of disclosure standards.",
+        detail: "Annual or monthly utility totals will not satisfy executive expectations for timely performance decisions.",
       },
       {
-        label: "IDM commercial case strengthens",
-        detail: "Every sustainability customer becomes a credible IDM upsell, well beyond the efficiency use case.",
+        label: "IDM role strengthens",
+        detail: "IDM becomes the trusted system of record behind reporting, action guidance, and performance services.",
       },
       {
-        label: "Cross-product upsell path",
-        detail: "Sustainability-only RA+ accounts become natural targets for energy and IDM modules.",
+        label: "Consulting-to-action path",
+        detail: "Strategy, design, execution, and continuous improvement can operate as one guided RA+ journey.",
       },
       {
-        label: "Submeter ROI improves",
-        detail: "When granularity is mandated, the cost-benefit math for installing submeters or BMS feeds tilts in our favor.",
+        label: "BMS and SCADA unlock scale",
+        detail: "Existing operational data sources reduce friction and extend the addressable base before new hardware is required.",
       },
     ],
     soWhat:
-      "Build IDM and the efficiency knowledge base so they natively serve carbon accounting, not just energy efficiency. The same data spine powers both.",
+      "Build IDM and the efficiency knowledge base so they natively serve energy, carbon, resilience, and operational performance. The same data spine powers the full improvement cycle.",
   },
 };

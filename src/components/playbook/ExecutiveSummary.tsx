@@ -56,11 +56,11 @@ const sections: Section[] = [
     id: "whats-happening",
     label: "What's Happening",
     title:
-      "Efficiency expertise is valuable, but it is not yet productized at scale",
+      "Efficiency CoE expertise is proven, but not yet scaled through RA+",
     icon: Activity,
     tone: "muted",
     body:
-      "Today, Energy Efficiency value is still delivered largely through expert-led audits, manual analysis, and bespoke deliverables. That creates high-quality outcomes, but it limits throughput, makes consistency harder, and keeps early efficiency advice outside the recurring RA+ experience.",
+      "The Efficiency CoE already delivers trusted advisory, implementation, IDM, and Global Energy Bureau capabilities across public and private sectors. The RA+ opportunity is to convert that operating strength into a repeatable platform capability that reaches customers earlier, guides action faster, and supports continuous improvement.",
     kpis: [
       { value: "Manual", label: "Audit delivery model" },
       { value: "Fragmented", label: "Strategy foundation" },
@@ -75,27 +75,27 @@ const sections: Section[] = [
     icon: AlertTriangle,
     tone: "destructive",
     body:
-      "Customers want clear guidance on what to do next, and our teams have the expertise to answer. The constraint is that opportunity logic, assumptions, applicability rules, and customer context are not yet governed as a reusable product foundation across Strategy, Building View, audit workflows, and customer-facing recommendations.",
+      "Customers want clear guidance on what to do next, and our teams have the expertise to answer. The constraint is that interval data, audit knowledge, implementation pathways, and customer context are not yet governed as one reusable product foundation across Strategy, Building View, audit workflows, and customer-facing recommendations.",
   },
   {
     num: "03",
     id: "north-star",
     label: "Our North Star",
-    title: "A governed Efficiency strategy foundation embedded in RA+",
+    title: "A governed Efficiency CoE capability embedded in RA+",
     icon: Compass,
     tone: "primary",
     body:
-      "The north star is an authoritative Efficiency strategy foundation inside RA+ that standardizes opportunity types, assumptions, confidence levels, applicability logic, and evidence. It should power goal-based Strategy recommendations, site-level Building View discovery, structured deliverables, and a clear path from early insight to expert engagement.",
+      "The north star is an authoritative efficiency foundation inside RA+ that connects IDM as the trusted interval-data system of record, expert CoE knowledge, and guided workflows. It should power goal-based Strategy recommendations, site-level Building View discovery, structured deliverables, and a clear path from early insight to expert engagement.",
   },
   {
     num: "04",
     id: "way-to-win",
     label: "A Pragmatic Way to Win",
-    title: "Start with reusable content, then expand into guided workflows",
+    title: "Start with reusable intelligence, then expand into guided workflows",
     icon: Wrench,
     tone: "muted",
     body:
-      "The practical sequence is to finalize the unified efficiency taxonomy, publish a provisional guidance base with SME review, define clean service boundaries, and connect the guidance to Strategy first. From there, we can introduce Building View, rule-based opportunity surfacing, customer self-service exploration, and platform-native audit outputs.",
+      "The practical sequence is to finalize the unified efficiency taxonomy, publish a provisional guidance base with SME review, define clean service boundaries, and connect trusted IDM signals to Strategy first. From there, RA+ can introduce Building View, rule-based opportunity surfacing, customer self-service exploration, and platform-native audit outputs.",
   },
   {
     num: "05",
@@ -116,11 +116,11 @@ const sections: Section[] = [
     num: "06",
     id: "strategic-upside",
     label: "Strategic Upside",
-    title: "Efficiency becomes a continuous RA+ capability, not a one-off service",
+    title: "Efficiency becomes a continuous RA+ operating model",
     icon: Rocket,
     tone: "muted",
     body:
-      "The end state is a credible, governed efficiency layer in RA+ where customers receive contextual recommendations, teams reuse a consistent knowledge base, and expert services are pulled in at the right moments for deeper analysis without turning early guidance into a contractual commitment.",
+      "The end state is a credible, governed efficiency layer in RA+ that links strategy, design, execution, and continuous improvement. Customers receive contextual recommendations, teams reuse a consistent knowledge base, and expert services are pulled in at the right moments for deeper analysis without turning early guidance into a contractual commitment.",
   },
 ];
 
