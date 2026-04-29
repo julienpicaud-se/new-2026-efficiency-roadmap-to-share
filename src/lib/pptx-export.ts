@@ -1,5 +1,29 @@
 import PptxGenJS from "pptxgenjs";
-import { strategicPillars, objectives, roadmapBets, strategicContext, whyNowColumns, phasedRoadmap, quarterlyRoadmap, capabilityMatrix } from "@/data/playbook-data";
+import {
+  strategicPillars,
+  objectives,
+  roadmapBets,
+  phasedRoadmap,
+  quarterlyRoadmap,
+  capabilityMatrix,
+  idmCapabilities,
+  intelligenceFlywheel,
+} from "@/data/playbook-data";
+
+const executiveSummarySlides = [
+  {
+    title: "Efficiency CoE expertise is proven, but not yet scaled through RA+",
+    body: "The Efficiency CoE already delivers trusted advisory, implementation, IDM, and Global Energy Bureau capabilities across public and private sectors. The RA+ opportunity is to convert that operating strength into a repeatable platform capability that reaches customers earlier, guides action faster, and supports continuous improvement.",
+  },
+  {
+    title: "A governed Efficiency CoE capability embedded in RA+",
+    body: "The north star is an authoritative efficiency foundation inside RA+ that connects IDM as the trusted interval-data system of record, expert CoE knowledge, and guided workflows. It should power goal-based Strategy recommendations, site-level Building View discovery, structured deliverables, and a clear path from early insight to expert engagement.",
+  },
+  {
+    title: "Efficiency becomes a continuous RA+ operating model",
+    body: "The end state is a credible, governed efficiency layer in RA+ that links strategy, design, execution, and continuous improvement. Customers receive contextual recommendations, teams reuse a consistent knowledge base, and expert services are pulled in at the right moments for deeper analysis without turning early guidance into a contractual commitment.",
+  },
+];
 
 const BRAND_GREEN = "3DCD58";
 const DARK_BG = "1A1A1A";
