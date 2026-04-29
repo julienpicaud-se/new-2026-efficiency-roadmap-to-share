@@ -72,47 +72,72 @@ export const exportToPptx = async () => {
     fontSize: 14, color: TEXT_MUTED, align: "center",
   });
 
-  // ===== Slide 2: North Star =====
+  // ===== Slide 2: Executive Summary =====
   const slide2 = pptx.addSlide({ masterName: "MASTER_SLIDE" });
-  slide2.addText("Strategic Context", {
+  slide2.addText("Executive Summary", {
     x: 0.5, y: 0.3, w: 9, h: 0.5,
     fontSize: 28, bold: true, color: TEXT_WHITE,
   });
-  slide2.addText(strategicContext.summary, {
-    x: 0.5, y: 1.2, w: 9, h: 1.2,
-    fontSize: 12, color: TEXT_MUTED,
-  });
-  slide2.addText("Our North Star", {
-    x: 0.5, y: 2.8, w: 9, h: 0.4,
-    fontSize: 16, bold: true, color: BRAND_GREEN,
-  });
-  slide2.addText(strategicContext.northStar, {
-    x: 0.5, y: 3.3, w: 9, h: 1.5,
-    fontSize: 14, color: TEXT_WHITE, align: "center", valign: "middle",
+  executiveSummarySlides.forEach((item, index) => {
+    const yPos = 1 + index * 1.45;
+    slide2.addText(item.title, {
+      x: 0.5, y: yPos, w: 9, h: 0.35,
+      fontSize: 13, bold: true, color: BRAND_GREEN,
+    });
+    slide2.addText(item.body, {
+      x: 0.5, y: yPos + 0.42, w: 9, h: 0.8,
+      fontSize: 9.5, color: index === 1 ? TEXT_WHITE : TEXT_MUTED,
+      breakLine: false, fit: "shrink",
+    });
   });
 
-  // ===== Slide 3: Why Now =====
+  // ===== Slide 3: IDM and Flywheel =====
   const slide3 = pptx.addSlide({ masterName: "MASTER_SLIDE" });
-  slide3.addText("Why Now", {
+  slide3.addText("IDM and Intelligence Flywheel", {
     x: 0.5, y: 0.3, w: 9, h: 0.5,
     fontSize: 28, bold: true, color: TEXT_WHITE,
   });
-  
-  whyNowColumns.forEach((col, colIdx) => {
-    const xPos = 0.3 + colIdx * 1.6;
-    const color = COL_COLORS[col.color] || BRAND_GREEN;
-    
-    slide3.addText(col.title.toUpperCase(), {
-      x: xPos, y: 1, w: 1.5, h: 0.35,
-      fontSize: 9, bold: true, color: color,
+  slide3.addText(idmCapabilities.tagline, {
+    x: 0.5, y: 0.95, w: 9, h: 0.5,
+    fontSize: 12, color: TEXT_MUTED,
+  });
+  idmCapabilities.stats.forEach((stat, index) => {
+    const xPos = 0.5 + index * 2.35;
+    slide3.addShape("rect" as PptxGenJS.ShapeType, {
+      x: xPos, y: 1.65, w: 2.1, h: 1.05,
+      fill: { color: CARD_BG }, line: { color: BRAND_GREEN, width: 1 },
     });
-    
-    col.items.forEach((item, i) => {
-      slide3.addText(`• ${item}`, {
-        x: xPos, y: 1.4 + i * 0.75, w: 1.5, h: 0.7,
-        fontSize: 7, color: TEXT_WHITE, valign: "top",
-      });
+    slide3.addText(stat.value, {
+      x: xPos + 0.15, y: 1.82, w: 1.8, h: 0.3,
+      fontSize: 18, bold: true, color: BRAND_GREEN, align: "center",
     });
+    slide3.addText(stat.label, {
+      x: xPos + 0.15, y: 2.18, w: 1.8, h: 0.22,
+      fontSize: 8, bold: true, color: TEXT_WHITE, align: "center",
+    });
+    slide3.addText(stat.detail, {
+      x: xPos + 0.15, y: 2.42, w: 1.8, h: 0.2,
+      fontSize: 6.5, color: TEXT_MUTED, align: "center",
+    });
+  });
+  slide3.addText(intelligenceFlywheel.subtitle, {
+    x: 0.5, y: 3.05, w: 9, h: 0.35,
+    fontSize: 12, bold: true, color: TEXT_WHITE,
+  });
+  intelligenceFlywheel.stages.forEach((stage, index) => {
+    const xPos = 0.5 + index * 1.5;
+    slide3.addText(stage.name, {
+      x: xPos, y: 3.65, w: 1.25, h: 0.25,
+      fontSize: 8, bold: true, color: BRAND_GREEN,
+    });
+    slide3.addText(stage.description, {
+      x: xPos, y: 3.95, w: 1.25, h: 0.9,
+      fontSize: 6.2, color: TEXT_MUTED, valign: "top", fit: "shrink",
+    });
+  });
+  slide3.addText(intelligenceFlywheel.keyInsight, {
+    x: 0.5, y: 5.05, w: 9, h: 0.35,
+    fontSize: 8.5, color: TEXT_WHITE, fit: "shrink",
   });
 
   // ===== Slide 4: Strategic Pillars =====
