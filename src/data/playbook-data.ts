@@ -956,7 +956,7 @@ export const optionalClientContext = [
 ];
 
 export const existingTools = [
-  { name: "IDM", description: "Interval Data Management: high-frequency utility, meter, BMS, and external data streams for reporting, allocation, performance, and optimization", limitation: "Core data services are not yet fully native to RA+ opportunity discovery" },
+  { name: "IDM", description: "Interval Data Management: trusted energy data from cloud platforms, BMS, SCADA, meters, and external sources into a single system of record", limitation: "Core data services are not yet fully native to RA+ opportunity discovery" },
   { name: "ACT", description: "Action tracking and project management for efficiency measures", limitation: "Disconnected from efficiency recommendations" },
   { name: "RA Classic", description: "Resource Advisor: portfolio reporting, benchmarking, target setting", limitation: "Reporting-focused, no actionable efficiency layer" },
   { name: "IDP / Blair Agent", description: "Intelligent data processing and automated data quality workflows", limitation: "Upstream data gaps limit agent accuracy" },
@@ -965,7 +965,7 @@ export const existingTools = [
 
 export const idmCapabilities = {
   tagline:
-    "IDM gives RA+ the interval-data backbone to connect trusted energy, cost, carbon, and operational signals with expert efficiency knowledge.",
+    "IDM gives RA+ the trusted interval-data system of record to connect cloud, BMS, SCADA, meter, cost, carbon, and operational signals with expert efficiency knowledge.",
   positioning: {
     title: "Data Backbone",
     subtitle: "Trusted interval data before insight, proof after action.",
@@ -986,7 +986,7 @@ export const idmCapabilities = {
       },
     ],
     principle:
-      "The RA+ opportunity is not a reporting migration or visual lift-over. It is turning proven IDM capabilities into shared platform intelligence that guides decisions, prioritization, and continuous improvement.",
+      "The RA+ opportunity is not a reporting migration or visual lift-over. It is turning proven Global Energy Bureau and IDM capabilities into shared platform intelligence that guides decisions, prioritization, and continuous improvement.",
   },
   bmsBypass: {
     title: "BMS Integration: Bypass the Submeter Install",
@@ -1014,16 +1014,16 @@ export const idmCapabilities = {
       "Where BMS is absent, utility meter feeds (UK half-hourly, EU 5/15-min) still provide a baseline IDM experience. Submeter install becomes an upsell, not a prerequisite.",
   },
   stats: [
-    { value: "250k", label: "Signals", detail: "Across meters, buildings, and sources" },
-    { value: "5-15m", label: "Granularity", detail: "Operating detail at decision speed" },
-    { value: "4", label: "Value Uses", detail: "Report, allocate, manage, optimize" },
+    { value: "428", label: "Clients", detail: "Global Energy Bureau support base" },
+    { value: "38", label: "Experts", detail: "Across 11 country locations" },
+    { value: "$75M", label: "Active Guarantees", detail: "Measured through performance services" },
     { value: "24/7", label: "Performance", detail: "Always-on energy and carbon view" },
   ],
   categories: [
     {
       name: "Data Ingestion",
       capabilities: [
-        "Utility, on-prem, cloud, BMS, PME, EBO, and external-source intake",
+        "Utility, cloud platform, BMS, SCADA, meter, PME, EBO, and external-source intake",
         "Multiple stream stitching, reprocessing, and normalization",
         "Cumulative to interval conversion",
         "Data validation routines and bulk editing",
@@ -1045,7 +1045,7 @@ export const idmCapabilities = {
     {
       name: "M&V and Outcomes",
       capabilities: [
-        "M&V workflows that measure, verify, and explain whether efficiency actions delivered the expected savings",
+        "M&V workflows that measure, verify, and explain whether efficiency actions delivered expected performance outcomes",
         "IPMVP-compliant baseline creation using recognized measurement and verification methods for credible savings claims",
         "Actual vs. baseline and cumulative savings tracking across cost, energy, and emissions outcomes",
         "EnPI models that normalize performance indicators for weather, occupancy, production, or operating conditions to support ISO 50001",
