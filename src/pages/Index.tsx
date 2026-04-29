@@ -13,6 +13,7 @@ import { OutOfScopeSection } from "@/components/playbook/OutOfScopeSection";
 import { SuccessMetricsSection } from "@/components/playbook/SuccessMetricsSection";
 import { GuardrailsSection } from "@/components/playbook/GuardrailsSection";
 import { ECMCapabilityMapping } from "@/components/playbook/ECMCapabilityMapping";
+import { DeliveryRoadmapSection } from "@/components/playbook/DeliveryRoadmapSection";
 import { AppendixSection } from "@/components/playbook/AppendixSection";
 import { ExecutiveTakeaway } from "@/components/playbook/ExecutiveTakeaway";
 import { ReadingProgressBar } from "@/components/playbook/ReadingProgressBar";
@@ -46,6 +47,7 @@ const Index = () => {
       <SuccessMetricsSection />
       <GuardrailsSection />
       <ECMCapabilityMapping />
+      <DeliveryRoadmapSection />
       <AppendixSection />
       <ExecutiveTakeaway />
     </div>

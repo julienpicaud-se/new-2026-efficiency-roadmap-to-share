@@ -12,6 +12,7 @@ const sections = [
   { id: "strategic-context", title: "Strategic Context" },
   { id: "what-if", title: "What If" },
   { id: "guardrails", title: "Guardrails" },
+  { id: "delivery-roadmap", title: "2026 Roadmap" },
   { id: "appendix", title: "Appendix" },
   { id: "takeaway", title: "Takeaway" },
 ];

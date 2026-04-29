@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { appendixPillars, supportingScorecard, quarterlyRoadmap, capabilityMatrix, intelligenceFlywheel } from "@/data/playbook-data";
-import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Check, Zap, ArrowRight, X, Minus, Database, Brain, Settings, Eye, FileText } from "lucide-react";
+import { appendixPillars, supportingScorecard, capabilityMatrix, intelligenceFlywheel } from "@/data/playbook-data";
+import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Zap, X, Minus, Database, Brain, Settings, Eye, FileText } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
@@ -22,16 +22,6 @@ const pillarIcons: Record<string, React.ElementType> = {
   Sparkles: Sparkles,
 };
 
-const quarterColors: Record<string, string> = {
-  amber: "border-amber-500/30 bg-amber-500/10 text-amber-400",
-  emerald: "border-emerald-500/30 bg-emerald-500/10 text-emerald-400",
-  blue: "border-blue-500/30 bg-blue-500/10 text-blue-400",
-  violet: "border-violet-500/30 bg-violet-500/10 text-violet-400",
-};
-
-
-
-
 const flywheelIconMap: Record<string, React.ElementType> = {
   Database,
   Brain,
@@ -51,7 +41,6 @@ const APPENDIX_SECTIONS = [
   "initiatives-by-domain",
   "strategy-flywheel",
   "capability-matrix",
-  "quarterly-roadmap",
   "value-pillar-deep-dive",
   "supporting-scorecard",
 ];
@@ -341,80 +330,6 @@ export const AppendixSection = () => {
                 </AccordionItem>
               ))}
             </Accordion>
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-
-        {/* ============ Quarterly Roadmap ============ */}
-          <AccordionItem
-            value="quarterly-roadmap"
-            ref={setItemRef("quarterly-roadmap")}
-            data-section="quarterly-roadmap"
-            className={itemClass("quarterly-roadmap")}
-          >
-            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
-              <div className="text-left">
-                <span className="text-primary text-xs font-semibold uppercase tracking-wider block mb-1">
-                  Quarterly Plan
-                </span>
-                <h3 className="text-lg sm:text-xl font-bold text-foreground">
-                  2026 Delivery Roadmap
-                </h3>
-              </div>
-            </AccordionTrigger>
-            <AccordionContent className="px-6 pb-6">
-              <p className="text-sm text-muted-foreground max-w-3xl mb-6">
-                What we deliver each quarter and what it means for efficiency teams.
-              </p>
-              <div className="grid md:grid-cols-2 gap-6">
-                {quarterlyRoadmap.map((q) => {
-                  const colorClass = quarterColors[q.color] || quarterColors.amber;
-                  return (
-                    <div
-                      key={q.quarter}
-                      className="bg-muted/20 rounded-xl border border-border/50 overflow-hidden"
-                    >
-                      <div className="px-6 py-4 border-b border-border/30">
-                        <span className={`px-3 py-1 rounded-full text-xs font-bold border ${colorClass} inline-block mb-2`}>
-                          {q.quarter}
-                        </span>
-                        <h4 className="text-lg font-bold text-foreground">{q.theme}</h4>
-                      </div>
-
-                      <div className="p-6 space-y-6">
-                        <div>
-                          <h5 className="text-sm font-semibold text-foreground mb-3 flex items-center gap-2">
-                            <Zap className="w-4 h-4 text-primary" />
-                            What we deliver
-                          </h5>
-                          <ul className="space-y-2">
-                            {q.deliverables.map((d, i) => (
-                              <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
-                                <Check className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
-                                <span>{d}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        <div className="bg-card rounded-lg border border-border/30 p-4">
-                          <h5 className="text-sm font-semibold text-foreground mb-3 flex items-center gap-2">
-                            <Target className="w-4 h-4 text-primary" />
-                            What this means for efficiency teams
-                          </h5>
-                          <ul className="space-y-2">
-                            {q.teamImpact.map((impact, i) => (
-                              <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
-                                <ArrowRight className="w-3 h-3 text-primary/70 shrink-0 mt-0.5" />
-                                <span>{impact}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
               </div>
             </AccordionContent>
           </AccordionItem>
