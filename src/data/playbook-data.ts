@@ -129,7 +129,7 @@ export const roadmapBets = {
     { title: "Full auditor workflow integration", pillar: "productivity", outcome: "End-to-end digital audit process", objective: "O1", kr: "KR2" },
     { title: "M&V feedback loop implementation", pillar: "productivity", outcome: "Continuous improvement from outcomes", objective: "O1", kr: "KR1" },
     { title: "AI-powered efficiency recommendations", pillar: "recurring-revenue", outcome: "Similarity clustering and ML models", objective: "O2", kr: "KR5" },
-    { title: "Stand-alone Energy Efficiency product", pillar: "recurring-revenue", outcome: "Full Efficiency capability in RA+", objective: "O3", kr: "KR9" },
+    { title: "Dedicated Energy Efficiency product", pillar: "recurring-revenue", outcome: "Full Efficiency capability in RA+", objective: "O3", kr: "KR9" },
     { title: "Analytics integration", pillar: "upsell-engine", outcome: "Advanced insights and reporting", objective: "O3", kr: "KR8" },
     { title: "Weather and external data integration", pillar: "productivity", outcome: "Enhanced prediction accuracy", objective: "O2", kr: "KR6" },
   ],
@@ -585,7 +585,7 @@ export const whyNowColumns = [
     color: "emerald",
     items: [
       "Provisional opportunity knowledge base now, enriched via past-audit pipeline",
-      "Create the connection from shared guidance to Strategy, Building View, and the stand-alone Efficiency product",
+      "Create the connection from shared guidance to Strategy, Building View, and the Energy Efficiency product",
       "Single governed efficiency knowledge base with taxonomy, required fields, and versions",
       "Lock shared language & assumptions (inputs, \"From→To\", typical ranges) to remove variance",
     ],

@@ -12,7 +12,6 @@ import {
   Calculator,
   Settings,
   Monitor,
-  FileSearch,
   BarChart3,
   AlertTriangle,
   XCircle,
@@ -38,7 +37,6 @@ const iconMap: Record<string, React.ElementType> = {
   ACT: Calculator,
   CBMS: Settings,
   "RA Classic": Monitor,
-  "IDP / Blair Agent": FileSearch,
   "Variance Check Agent": BarChart3,
 };
 

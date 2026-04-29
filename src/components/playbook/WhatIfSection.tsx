@@ -28,7 +28,7 @@ const scenarios = [
   {
     icon: MousePointer,
     title: "One-click audit requests",
-    description: "Let customers discover early efficiency insights on their own, then request deeper audits with one click",
+    description: "Let customers discover early efficiency insights on their own, then request deeper expert audits with one click",
   },
   {
     icon: TrendingUp,

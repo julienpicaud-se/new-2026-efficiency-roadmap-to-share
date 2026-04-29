@@ -138,7 +138,7 @@ const risks: { risk: string; mitigation: string }[] = [
   {
     risk: "Customer context is too thin for useful recommendations",
     mitigation:
-      "Start with data-light guidance, show data gaps transparently, and progressively enrich with site, audit, AkitaBox, SCADA, and customer inputs.",
+      "Start with data-light guidance, show data gaps transparently, and progressively enrich with site, audit, AkitaBox, BMS, and customer inputs.",
   },
   {
     risk: "Scope expands into detailed engineering or pricing",
