@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { appendixPillars, supportingScorecard, quarterlyRoadmap, capabilityMatrix, intelligenceFlywheel } from "@/data/playbook-data";
-import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Check, Zap, ArrowRight, X, Minus, Database, Brain, Settings, Eye, FileText } from "lucide-react";
+import { appendixPillars, supportingScorecard, capabilityMatrix, intelligenceFlywheel } from "@/data/playbook-data";
+import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Zap, X, Minus, Database, Brain, Settings, Eye, FileText } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
@@ -22,16 +22,6 @@ const pillarIcons: Record<string, React.ElementType> = {
   Sparkles: Sparkles,
 };
 
-const quarterColors: Record<string, string> = {
-  amber: "border-amber-500/30 bg-amber-500/10 text-amber-400",
-  emerald: "border-emerald-500/30 bg-emerald-500/10 text-emerald-400",
-  blue: "border-blue-500/30 bg-blue-500/10 text-blue-400",
-  violet: "border-violet-500/30 bg-violet-500/10 text-violet-400",
-};
-
-
-
-
 const flywheelIconMap: Record<string, React.ElementType> = {
   Database,
   Brain,
@@ -51,7 +41,6 @@ const APPENDIX_SECTIONS = [
   "initiatives-by-domain",
   "strategy-flywheel",
   "capability-matrix",
-  "quarterly-roadmap",
   "value-pillar-deep-dive",
   "supporting-scorecard",
 ];
