@@ -1363,3 +1363,280 @@ export const efficiencyStrategicContext = {
       "Build IDM and the efficiency knowledge base connection so they natively serve energy, carbon, resilience, and operational performance. The same data spine powers the full improvement cycle.",
   },
 };
+
+// Platform Shift: RA Classic (module) vs RA+ (platform)
+export const platformShift = {
+  intro:
+    "RA Classic treats interval data as a separate module. RA+ makes it a native platform capability. This is the opportunity to build a SaaS solution for Efficiency services, not migrate a module.",
+  classic: {
+    title: "RA Classic: The Module",
+    tagline: "Isolated by design",
+    points: [
+      "Separate hierarchy (PAM vs RA)",
+      "Separate filters that do not work together",
+      "Separate reports with a 5-step bridge to standard RA",
+      "Corrected data does not persist",
+      "200+ integration sources, but data stays siloed",
+    ],
+  },
+  raPlus: {
+    title: "RA+: The Platform",
+    tagline: "Integrated by design",
+    points: [
+      "One unified data model across all products",
+      "Interval data in dashboards, reports, and emissions natively",
+      "Sera as the primary interface from day one",
+      "Self-serve onboarding, no spreadsheets",
+      "ECM digitization via existing sustainability surfaces",
+    ],
+  },
+  thesis:
+    "Every pain point from RA Classic stems from the module architecture. RA+ eliminates that architecture entirely.",
+  bureauAnchor: {
+    title: "What the Bureau Delivers Today",
+    subtitle: "38 people, 428 clients, $8 to 10M per year, 195K connected meters",
+    lines: [
+      {
+        layer: "Foundation",
+        name: "Resource Advisor IDM",
+        detail: "Data ingestion, quality management, dashboards, alerts. 195K connected meters across 200+ integration source types.",
+      },
+      {
+        layer: "Accelerator",
+        name: "Energy Performance Services",
+        detail: "ECM identification, savings analysis, optimization recommendations. $75M in active energy guarantees ($1B+ total).",
+      },
+      {
+        layer: "Feedback Loop",
+        name: "Measurement and Verification",
+        detail: "Audit-grade evidence that closes the loop between recommendation and outcome.",
+      },
+    ],
+    soWhat:
+      "RA+ digitizes all three. The data platform replaces manual IDM workflows. Sera automates EPS analysis. M&V becomes a platform capability. Reach expands from 428 Bureau-served clients to the broader RA+ installed base.",
+  },
+};
+
+// Personas (4 ranked roles) and design sequence
+export const personas = {
+  intro:
+    "Four roles interact with Energy Efficiency. We design for all of them, but in a deliberate sequence: the Energy Manager's daily experience drives the primary UX.",
+  designPrinciple:
+    "Design the Energy Manager's experience first. It is the highest-frequency, highest-emotional-stakes interaction. Both modes (daily monitoring and analytical investigation) are Sera-driven. Data Ops Analyst configuration tools are layered behind through progressive disclosure. Sustainability Lead and Executive consume interval insights through existing RA+ reporting and dashboarding surfaces.",
+  roles: [
+    {
+      name: "Energy / Facility Manager",
+      rank: "Primary",
+      context: "Daily operator, client-side, 1 to 10 sites",
+      summary:
+        "The person closest to the buildings. Checks RA+ every morning. Operates in two modes: daily monitoring and analytical investigation. Both modes are Sera-driven.",
+      outcomes: [
+        "Spot energy waste before it costs money",
+        "Prove that efficiency projects deliver savings",
+        "Trust that the numbers on screen are accurate",
+        "Share a savings report with leadership without help",
+        "Understand why something happened, not just that it happened",
+        "Find patterns worth acting on across the portfolio",
+      ],
+    },
+    {
+      name: "Data Operations Analyst",
+      rank: "Secondary",
+      context: "SE internal or client power-user, 10 to 100+ sites",
+      summary:
+        "Onboards new meters, fixes gaps, manages hierarchies. In RA Classic this role absorbs enormous administrative overhead. In RA+ this role should shrink dramatically.",
+      outcomes: [
+        "Onboard new meters in minutes, not days",
+        "Know where data gaps exist and fix them fast",
+        "Trust that interval data flows into reports without manual bridges",
+        "Manage 100 sites without touching spreadsheets",
+      ],
+    },
+    {
+      name: "Sustainability / ESG Lead",
+      rank: "Tertiary",
+      context: "Client-side, portfolio level, 50 to 500+ sites",
+      summary:
+        "Cares about interval data only insofar as it feeds compliance reporting, Scope 1/2 targets, and portfolio benchmarks. Needs the numbers right and reports auditable.",
+      outcomes: [
+        "Interval data feeds ESG reports without manual aggregation",
+        "Portfolio benchmarks include interval-granularity sites",
+        "Audit trail proves data provenance for compliance",
+        "One reporting surface for all data types",
+      ],
+    },
+    {
+      name: "Executive / VP of Energy",
+      rank: "Inform",
+      context: "Client-side, consumes outcomes only",
+      summary:
+        "Receives dashboards and summary reports. Never interacts with interval data directly but makes investment decisions based on the insights it enables.",
+      outcomes: [
+        "See verified savings against targets",
+        "Confidence that reported numbers are trustworthy",
+        "One dashboard covering the full portfolio",
+        "Actionable insights, not raw data",
+      ],
+    },
+  ],
+};
+
+// Jobs to Be Done (10 jobs, operational vs analytical)
+export const jobsToBeDone = {
+  intro:
+    "The 10 jobs users hire Energy Efficiency to do. Not features, not screens, but outcomes. Operational covers the daily rhythm of detecting, monitoring, tracking, and proving. Analytical covers investigation sessions: root cause, comparison, pattern discovery, insight packaging. In both modes, Sera is the primary interface.",
+  ecmInsight:
+    "ECM identification is not a separate job. It is what happens when jobs 3, 6, and 8 are done well with good data and good AI. Customers do not ask for ECMs. They ask Sera to find waste, explain anomalies, and show patterns. The output of those conversations is an ECM.",
+  jobs: [
+    { num: 1, type: "Operational", title: "Detect anomalies", description: "When responsible for energy performance across sites, know immediately if something is consuming abnormally, so problems can be addressed before they become costly." },
+    { num: 2, type: "Operational", title: "Monitor performance", description: "When managing daily operations, see real-time consumption against expected baselines, so deviations are caught early." },
+    { num: 3, type: "Operational", title: "Identify waste", description: "When reviewing a facility's energy profile, pinpoint where energy is consumed unnecessarily, so savings opportunities can be quantified and prioritized." },
+    { num: 4, type: "Operational", title: "Validate data quality", description: "When making decisions based on energy data, confirm readings are complete and accurate, so action is taken with confidence and audit-ready records are maintained." },
+    { num: 5, type: "Operational", title: "Track against targets", description: "When managing energy reduction commitments, track performance against targets continuously, so drift is corrected early and compliance can be proven." },
+    { num: 6, type: "Analytical", title: "Diagnose root cause", description: "When detecting an anomaly or unexpected consumption pattern, understand the root cause quickly, so the right corrective action is taken." },
+    { num: 7, type: "Analytical", title: "Compare performance", description: "When evaluating a site's performance, compare it fairly against similar sites or time periods, so real underperformance is distinguished from expected variation." },
+    { num: 8, type: "Analytical", title: "Discover patterns", description: "When managing energy across a portfolio over time, surface slow drifts and seasonal patterns not visible day-to-day, so problems are caught early and structural improvements identified." },
+    { num: 9, type: "Analytical", title: "Drive action from insights", description: "When an insight is worth acting on, package it into a clear deliverable for the right audience, so decisions are driven from leadership, finance, or operations." },
+    { num: 10, type: "Analytical", title: "Manage action plans and follow-through", description: "When committing to an energy improvement, track action items, site-level progress, and target attainment, so follow-through is ensured and continuous improvement is provable. Validated by SE Corporate. Absent from RA Classic." },
+    { num: 11, type: "Analytical", title: "Prioritize across portfolio", description: "When responsible for multiple sites, know which buildings need attention most urgently, so time is spent where it has the greatest impact." },
+  ],
+};
+
+// VOC Evidence: 3 customer interviews + SE Corporate
+export const vocEvidence = {
+  intro:
+    "Three external customer interviews plus SE Corporate evidence gathered through Bureau leadership. Both sources are treated as real evidence, clearly attributed.",
+  signals: [
+    { label: "Persona Validation", value: "High", detail: "3 clients across 4 personas" },
+    { label: "JTBD Validation", value: "High", detail: "Jobs 1, 3, 4, 5, 7, 8, 9 validated" },
+    { label: "AI-First Demand", value: "High", detail: "3/3 customers demand AI" },
+    { label: "Alert Fatigue Risk", value: "High", detail: "All 3 flagged unprompted" },
+  ],
+  customers: [
+    {
+      name: "Alfa Laval",
+      contact: "Magnus Roth, Head of Global Sustainability",
+      context: "63 service centers, long-term RA Classic client",
+      findings: [
+        "Reports go in the drawer. Automated daily and weekly hints are the #1 request.",
+        "Sera concept directly validated: pushed insights without requiring expertise.",
+        "Hierarchy UX is a blocker. Meter names are numeric codes.",
+        "Expansion blocked. 90% of 63 service centers are unconnected.",
+      ],
+      quote: "It does not have to be a thorough analysis, but more of a hint, because then you get it built into your daily work.",
+    },
+    {
+      name: "Velux",
+      contact: "Rasmus Sorensen and Maja Lewinska, Energy Program Lead and Global Sustainability Lead",
+      context: "~24 sites, ISO 50001 certified",
+      findings: [
+        "Daily login confirmed. Rasmus uses RA daily, many times.",
+        "Diagnosis AND prognosis. AI must flag risk of missing targets.",
+        "ISO 50001 is the strategic driver. Standardized KPIs across all sites.",
+      ],
+      quote: "I need you to tell me if I am at risk of missing my targets. The diagnosis and the prognosis.",
+    },
+    {
+      name: "Tetra Pak",
+      contact: "Ramzi Cherad, Global Energy Program Lead",
+      context: "45 factories, 4,000+ meters",
+      findings: [
+        "AI should find what humans spend months finding. Continuous, automatic detection.",
+        "Continuous, not historical. Catch anomalies when they start.",
+        "Competitive AI bypass risk. Users will route data through Copilot or Notebook LM if RA does not offer native AI.",
+        "Enterprise AI mandate. Tetra Pak requires every platform to incorporate AI.",
+      ],
+      quote: "It is the continuous finding it when it happens. That is the important bit. Not historic.",
+    },
+  ],
+};
+
+// SE Corporate as the MVP blueprint
+export const seCorporateBlueprint = {
+  title: "SE Corporate: Our MVP Blueprint",
+  intro:
+    "SE Corporate is not a future customer. They are the living proof of concept for RA+ Energy Efficiency. Their actual workflow is the product blueprint.",
+  scale: [
+    { value: "4,800+", label: "Meters connected", detail: "Electricity, gas, water, HVAC, lighting, IT, distribution, process lines, PV, generators" },
+    { value: "1,200", label: "Monthly logins", detail: "62+ individual users with 10+ IDM sessions in the past 12 months" },
+    { value: "40+", label: "Unique data systems", detail: "Many sites have 25+ interval streams pushing into monthly KPIs" },
+    { value: "243", label: "Alerts and alarms", detail: "Configured across sites and systems, with 100s of dashboards" },
+  ],
+  trainingSignal:
+    "RA IDM scored 4.8 / 5 in the Energy Performance Training program, the highest-rated module (PME scored 3.3). Confirms the product works when users are enabled. The opportunity is making that enablement the default interface, not a paid service.",
+  phaseMap: [
+    {
+      phase: "Foundation (Q3 2026)",
+      detail: "What SE Corporate already depends on daily: KPI tracking, dashboards, alerting, hierarchy management, baseline creation.",
+    },
+    {
+      phase: "Intelligence (Q4 2026)",
+      detail: "What SE Corporate has explicitly asked for: action tracking and workflow support. Use RA as the backbone for action plans and continuous improvement.",
+    },
+    {
+      phase: "Advisory (Q1 2027)",
+      detail: "What SE Corporate currently pays the Bureau to do manually: regular site audits, target setting, managing follow-up (Jacob Freeman, ISO 50001 and SE Energy Action Plans).",
+    },
+  ],
+  conclusion:
+    "Every phase of the roadmap maps to an existing, documented SE Corporate need. This is not speculative demand. It is observed workflow.",
+};
+
+// RA Classic Pain Inventory
+export const painInventory = {
+  intro:
+    "RA Classic limitations that the platform shift eliminates. Every must-fix item stems from the module architecture: separate hierarchies, disconnected filters, siloed data.",
+  pains: [
+    { id: "P1", severity: "Must fix", title: "Two competing data models", detail: "Standard RA bottoms out at Account; PAM goes deeper to locations, meters, nodes. Users do not know which world they are in." },
+    { id: "P2", severity: "Must fix", title: "Dashboard filters silently fail on PAM widgets", detail: "Division/Group and Data Stream filters do not affect PAM widgets. Users apply filters expecting everything to respond; PAM widgets stay unchanged." },
+    { id: "P3", severity: "Must fix", title: "5-step bridge to monthly reporting", detail: "To get a PAM measurement into a standard RA report: create PAM measurement, create RA stream, map via Site Mapping, enable import, wait for daily aggregation. Performed daily across 150+ sites." },
+    { id: "P4", severity: "Must fix", title: "Corrected data is not persisted", detail: "PAM corrections are computed on the fly. Only raw metered values are stored. No audit trail. Corrected values do not reach standard RA." },
+    { id: "P5", severity: "Must fix", title: "Spreadsheet-driven commissioning", detail: "Hierarchy Setup and Manual Meter Readings require generating an Excel template, editing offline, uploading, validating, applying. Drives Bureau onboarding timelines." },
+    { id: "P6", severity: "Must fix", title: "Separate report system", detail: "Interval Data Reports are saved PAM analyses packaged for email. Completely disconnected from standard RA Reporting." },
+  ],
+};
+
+// Two product scope: Energy Efficiency vs Asset Planning
+export const productScope = {
+  intro:
+    "RA+ organizes interval data capabilities into two separately-sold products within the Efficiency family. This playbook covers Energy Efficiency. Asset Planning is a separate discovery.",
+  products: [
+    {
+      name: "Energy Efficiency",
+      tag: "This Discovery",
+      summary: "The daily-use product. Monitoring, analysis, alerting, data quality, meter management, and operational optimization.",
+      capabilities: [
+        "Real-time and near-real-time energy monitoring",
+        "Anomaly detection and proactive alerting",
+        "Interval data analysis (trend, load profile, heatmap, comparison, Sankey)",
+        "Data quality: completeness, gap detection, correction, audit trails",
+        "Meter and source onboarding (self-serve)",
+        "Unified data model integration with RA+ platform",
+        "Schedule management and segmentation",
+        "Action tracking and workflow support",
+      ],
+    },
+    {
+      name: "Asset Planning",
+      tag: "Separate Discovery",
+      summary: "The project-oriented product. Baseline modeling, M&V, savings verification, capital investment planning, and project portfolio tracking.",
+      capabilities: [
+        "Baseline modeling (IPMVP Option C/D)",
+        "Measurement and Verification (CUSUM, savings quantification)",
+        "Project tagging, tracking, and savings reporting",
+        "Capital asset lifecycle planning",
+        "Dollar/unit savings analysis",
+        "Schneider PASS Analytics",
+      ],
+    },
+  ],
+  whyEEFirst: [
+    "Foundation: Energy Efficiency creates the data infrastructure that Asset Planning builds on.",
+    "Frequency: Energy Efficiency is a daily-use product, and daily-use products drive adoption.",
+    "Pain severity: All 6 must-fix items from the RA Classic pain inventory are Energy Efficiency problems.",
+    "Dependency: Asset Planning consumes Energy Efficiency's substrate. Reliable interval data, baselines, a unified hierarchy.",
+  ],
+  boundary:
+    "These products are sold separately, but they build on each other. The platform must ensure the boundary between them is a licensing boundary, not a technical one.",
+};
+
