@@ -1,8 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  FileCheck, 
-  Wrench, 
-  ShieldAlert
+import {
+  FileCheck,
+  Wrench,
+  ShieldAlert,
+  Boxes,
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -16,6 +17,11 @@ const outOfScopeItems = [
     icon: Wrench,
     title: "Detailed Engineering",
     description: "Detailed engineering design without expert validation stays outside scope",
+  },
+  {
+    icon: Boxes,
+    title: "Asset Planning",
+    description: "Baseline modeling, M&V workflows, and capital planning are covered in a separate Asset Planning discovery, not in this playbook",
   },
 ];
 

@@ -2,6 +2,13 @@ import { useState } from "react";
 import { Navigation } from "@/components/playbook/Navigation";
 import { HeroSection } from "@/components/playbook/HeroSection";
 import { ExecutiveSummary } from "@/components/playbook/ExecutiveSummary";
+import { PlatformShiftSection } from "@/components/playbook/PlatformShiftSection";
+import { ProductScopeSection } from "@/components/playbook/ProductScopeSection";
+import { PersonasSection } from "@/components/playbook/PersonasSection";
+import { JobsToBeDoneSection } from "@/components/playbook/JobsToBeDoneSection";
+import { VOCEvidenceSection } from "@/components/playbook/VOCEvidenceSection";
+import { SECorporateBlueprintSection } from "@/components/playbook/SECorporateBlueprintSection";
+import { PainInventorySection } from "@/components/playbook/PainInventorySection";
 import { KeyChallengesSection } from "@/components/playbook/KeyChallengesSection";
 import { StrategicPillars } from "@/components/playbook/StrategicPillars";
 import { ExistingToolsSection } from "@/components/playbook/ExistingToolsSection";
@@ -22,20 +29,25 @@ import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
 
 const Index = () => {
   const [isPresentationMode, setIsPresentationMode] = useState(false);
-  
-  // Enable keyboard navigation
   useKeyboardNavigation();
 
   return (
     <div className="min-h-screen bg-background">
       <ReadingProgressBar />
       <Navigation onPresentationMode={() => setIsPresentationMode(true)} />
-      <PresentationMode 
-        isActive={isPresentationMode} 
-        onClose={() => setIsPresentationMode(false)} 
+      <PresentationMode
+        isActive={isPresentationMode}
+        onClose={() => setIsPresentationMode(false)}
       />
       <HeroSection />
       <ExecutiveSummary />
+      <PlatformShiftSection />
+      <ProductScopeSection />
+      <PersonasSection />
+      <JobsToBeDoneSection />
+      <VOCEvidenceSection />
+      <SECorporateBlueprintSection />
+      <PainInventorySection />
       <KeyChallengesSection />
       <StrategicPillars />
       <ExistingToolsSection />
