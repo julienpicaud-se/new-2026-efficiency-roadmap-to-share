@@ -7,6 +7,13 @@ import {
   capabilityMatrix,
   idmCapabilities,
   intelligenceFlywheel,
+  platformShift,
+  productScope,
+  personas,
+  jobsToBeDone,
+  vocEvidence,
+  seCorporateBlueprint,
+  painInventory,
 } from "@/data/playbook-data";
 
 const executiveSummarySlides = [
