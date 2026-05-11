@@ -14,6 +14,9 @@ import {
   vocEvidence,
   seCorporateBlueprint,
   painInventory,
+  maturityLadder,
+  architectureDecision,
+  seraKPIs,
 } from "@/data/playbook-data";
 
 const executiveSummarySlides = [
@@ -504,6 +507,88 @@ export const exportToPptx = async () => {
         x: xPos, y: 4.5 + i * 0.3, w: 4.3, h: 0.28,
         fontSize: 7, color: TEXT_MUTED,
       });
+    });
+  });
+
+  // ===== Slide: Customer Maturity Ladder =====
+  const slideML = pptx.addSlide({ masterName: "MASTER_SLIDE" });
+  addTitle(slideML, "MATURITY LADDER", "Meet Customers Where They Are", maturityLadder.intro);
+  maturityLadder.stages.forEach((s, i) => {
+    const xPos = 0.5 + i * 2.35;
+    slideML.addShape("rect" as PptxGenJS.ShapeType, {
+      x: xPos, y: 2.0, w: 2.15, h: 2.5,
+      fill: { color: CARD_BG }, line: { color: BRAND_GREEN, width: 1 },
+    });
+    slideML.addText(s.num, {
+      x: xPos + 0.15, y: 2.1, w: 1.85, h: 0.5,
+      fontSize: 24, bold: true, color: BRAND_GREEN,
+    });
+    slideML.addText(s.label, {
+      x: xPos + 0.15, y: 2.7, w: 1.85, h: 0.35,
+      fontSize: 12, bold: true, color: TEXT_WHITE,
+    });
+    slideML.addText(s.description, {
+      x: xPos + 0.15, y: 3.1, w: 1.85, h: 1.3,
+      fontSize: 8, color: TEXT_MUTED, fit: "shrink",
+    });
+  });
+  slideML.addText(maturityLadder.note, {
+    x: 0.5, y: 4.7, w: 9, h: 0.3,
+    fontSize: 8, italic: true, color: TEXT_MUTED,
+  });
+
+  // ===== Slide: Plan A vs Plan B =====
+  const slideAD = pptx.addSlide({ masterName: "MASTER_SLIDE" });
+  addTitle(slideAD, "OPEN ARCHITECTURAL DECISION", "Plan A vs Plan B", architectureDecision.intro);
+  architectureDecision.options.forEach((opt, i) => {
+    const xPos = 0.5 + i * 4.7;
+    slideAD.addShape("rect" as PptxGenJS.ShapeType, {
+      x: xPos, y: 1.95, w: 4.55, h: 3.2,
+      fill: { color: CARD_BG }, line: { color: BRAND_GREEN, width: 1 },
+    });
+    slideAD.addText(opt.label, {
+      x: xPos + 0.15, y: 2.05, w: 4.3, h: 0.25,
+      fontSize: 8, bold: true, color: BRAND_GREEN,
+    });
+    slideAD.addText(opt.title, {
+      x: xPos + 0.15, y: 2.3, w: 4.3, h: 0.32,
+      fontSize: 12, bold: true, color: TEXT_WHITE,
+    });
+    slideAD.addText(opt.summary, {
+      x: xPos + 0.15, y: 2.65, w: 4.3, h: 0.5,
+      fontSize: 7.5, color: TEXT_MUTED, fit: "shrink",
+    });
+    slideAD.addText("Pros", { x: xPos + 0.15, y: 3.2, w: 4.3, h: 0.22, fontSize: 8, bold: true, color: "10B981" });
+    opt.pros.forEach((p, pi) => {
+      slideAD.addText(`✓ ${p}`, { x: xPos + 0.15, y: 3.42 + pi * 0.22, w: 4.3, h: 0.2, fontSize: 7, color: TEXT_WHITE });
+    });
+    const consY = 3.42 + opt.pros.length * 0.22 + 0.1;
+    slideAD.addText("Trade-offs", { x: xPos + 0.15, y: consY, w: 4.3, h: 0.22, fontSize: 8, bold: true, color: "EF4444" });
+    opt.cons.forEach((c, ci) => {
+      slideAD.addText(`✕ ${c}`, { x: xPos + 0.15, y: consY + 0.22 + ci * 0.22, w: 4.3, h: 0.2, fontSize: 7, color: TEXT_MUTED });
+    });
+  });
+  slideAD.addText(`Status: ${architectureDecision.status}`, {
+    x: 0.5, y: 5.25, w: 9, h: 0.25, fontSize: 8, italic: true, color: TEXT_MUTED,
+  });
+
+  // ===== Slide: Sera KPIs =====
+  const slideSK = pptx.addSlide({ masterName: "MASTER_SLIDE" });
+  addTitle(slideSK, "SUCCESS SIGNALS", "Sera Interface KPIs", seraKPIs.intro);
+  seraKPIs.kpis.forEach((k, i) => {
+    const xPos = 0.5 + (i % 3) * 3.05;
+    const yPos = 1.95 + Math.floor(i / 3) * 1.5;
+    slideSK.addShape("rect" as PptxGenJS.ShapeType, {
+      x: xPos, y: yPos, w: 2.85, h: 1.35,
+      fill: { color: CARD_BG }, line: { color: BRAND_GREEN, width: 1 },
+    });
+    slideSK.addText(k.label, {
+      x: xPos + 0.15, y: yPos + 0.1, w: 2.55, h: 0.4,
+      fontSize: 10, bold: true, color: TEXT_WHITE, fit: "shrink",
+    });
+    slideSK.addText(k.description, {
+      x: xPos + 0.15, y: yPos + 0.55, w: 2.55, h: 0.7,
+      fontSize: 8, color: TEXT_MUTED, fit: "shrink",
     });
   });
 
