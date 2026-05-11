@@ -19,27 +19,55 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-const navItems = [
-  { id: "executive-summary", label: "Summary", shortLabel: "Summary" },
-  { id: "platform-shift", label: "Platform Shift", shortLabel: "Platform" },
-  { id: "product-scope", label: "Product Scope", shortLabel: "Scope" },
-  { id: "personas", label: "Personas", shortLabel: "Personas" },
-  { id: "jobs-to-be-done", label: "Jobs to Be Done", shortLabel: "JTBD" },
-  { id: "voc-evidence", label: "VOC Evidence", shortLabel: "VOC" },
-  { id: "se-corporate-blueprint", label: "SE Corporate Blueprint", shortLabel: "SE Corp" },
-  { id: "pain-inventory", label: "Pain Inventory", shortLabel: "Pains" },
-  { id: "key-challenges", label: "Why Now", shortLabel: "Why Now" },
-  { id: "strategic-pillars", label: "Strategic Pillars", shortLabel: "Pillars" },
-  { id: "existing-tools", label: "Strategy Landscape", shortLabel: "Landscape" },
-  { id: "regional-journeys", label: "Regional Journeys", shortLabel: "Regions" },
-  { id: "ecm-ingestion-engine", label: "Knowledge Engine", shortLabel: "Engine" },
-  { id: "strategic-context", label: "Strategic Context", shortLabel: "Context" },
-  { id: "what-if", label: "What If Tomorrow", shortLabel: "Vision" },
-  { id: "out-of-scope", label: "Out of Scope", shortLabel: "Scope" },
-  { id: "success-metrics", label: "Success Metrics", shortLabel: "Success" },
-  { id: "guardrails", label: "Guardrails", shortLabel: "Guardrails" },
-  { id: "ecm-mapping", label: "Capability Mapping", shortLabel: "Mapping" },
-  { id: "appendix", label: "Appendix", shortLabel: "Appendix" },
+type NavItem = { id: string; label: string };
+type NavGroup = { label: string; items: NavItem[] };
+
+const topLevel: NavItem[] = [
+  { id: "executive-summary", label: "Summary" },
+  { id: "delivery-roadmap", label: "Roadmap" },
+  { id: "appendix", label: "Appendix" },
+];
+
+const groups: NavGroup[] = [
+  {
+    label: "Strategy",
+    items: [
+      { id: "platform-shift", label: "Platform Shift" },
+      { id: "product-scope", label: "Product Scope" },
+      { id: "key-challenges", label: "Why Now" },
+      { id: "strategic-pillars", label: "Strategic Pillars" },
+      { id: "existing-tools", label: "Strategy Landscape" },
+      { id: "strategic-context", label: "Strategic Context" },
+    ],
+  },
+  {
+    label: "Audience",
+    items: [
+      { id: "personas", label: "Personas" },
+      { id: "jobs-to-be-done", label: "Jobs to Be Done" },
+      { id: "voc-evidence", label: "VOC Evidence" },
+      { id: "se-corporate-blueprint", label: "SE Corporate Blueprint" },
+    ],
+  },
+  {
+    label: "Execution",
+    items: [
+      { id: "pain-inventory", label: "Pain Inventory" },
+      { id: "regional-journeys", label: "Regional Journeys" },
+      { id: "ecm-ingestion-engine", label: "Knowledge Engine" },
+      { id: "what-if", label: "What If Tomorrow" },
+      { id: "out-of-scope", label: "Out of Scope" },
+      { id: "success-metrics", label: "Success Metrics" },
+      { id: "guardrails", label: "Guardrails" },
+      { id: "ecm-mapping", label: "Capability Mapping" },
+    ],
+  },
+];
+
+const allItems: NavItem[] = [
+  topLevel[0],
+  ...groups.flatMap((g) => g.items),
+  ...topLevel.slice(1),
 ];
 
 interface NavigationProps {
