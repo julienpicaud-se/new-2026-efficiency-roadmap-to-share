@@ -493,18 +493,18 @@ export const exportToPptx = async () => {
     });
     q.deliverables.slice(0, 6).forEach((d, i) => {
       slideQ34.addText(`✓ ${d}`, {
-        x: xPos, y: 2.2 + i * 0.3, w: 4.3, h: 0.28,
+        x: xPos, y: 2.18 + i * 0.27, w: 4.3, h: 0.26,
         fontSize: 7, color: TEXT_WHITE,
       });
     });
 
     slideQ34.addText("For efficiency teams:", {
-      x: xPos, y: 4.2, w: 4.3, h: 0.3,
+      x: xPos, y: 3.95, w: 4.3, h: 0.3,
       fontSize: 9, bold: true, color: BRAND_GREEN,
     });
     q.teamImpact.slice(0, 4).forEach((impact, i) => {
       slideQ34.addText(`→ ${impact}`, {
-        x: xPos, y: 4.5 + i * 0.3, w: 4.3, h: 0.28,
+        x: xPos, y: 4.22 + i * 0.27, w: 4.3, h: 0.26,
         fontSize: 7, color: TEXT_MUTED,
       });
     });
