@@ -17,6 +17,8 @@ const sections = [
   "initiatives",
   "value-proof",
   "start-stop",
+  "maturity-ladder",
+  "architecture-decision",
   "delivery-roadmap",
   "appendix",
   "takeaway",

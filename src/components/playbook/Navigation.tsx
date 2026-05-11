@@ -60,6 +60,8 @@ const groups: NavGroup[] = [
       { id: "success-metrics", label: "Success Metrics" },
       { id: "guardrails", label: "Guardrails" },
       { id: "ecm-mapping", label: "Capability Mapping" },
+      { id: "maturity-ladder", label: "Maturity Ladder" },
+      { id: "architecture-decision", label: "Plan A vs Plan B" },
     ],
   },
 ];

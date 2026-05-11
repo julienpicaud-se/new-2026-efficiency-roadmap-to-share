@@ -563,8 +563,9 @@ export const whyNowColumns = [
     color: "amber",
     items: [
       "Customers expect earlier and clearer efficiency guidance",
-      "Customer demand for earlier, clearer efficiency guidance",
-      "RA+ needs integrated efficiency intelligence beyond emissions",
+      "Enterprise AI mandates push customers to adopt AI-driven energy decisions in 2026",
+      "ISO 50001 certification cycles are creating concrete buying pressure",
+      "AI bypass risk: customers like Tetra Pak are evaluating in-house AI on their own data",
       "Competitor movement accelerating digital efficiency advisory",
       "Internal scaling limits (manual audits, fragmented tools)",
     ],
@@ -773,11 +774,13 @@ export const quarterlyRoadmap = [
       "Define minimum RA+ service boundaries for ECM guidance and IDM signals",
       "Prioritize the top 200 ECMs for the initial library launch",
       "Start SME review loops across efficiency to refine ECM and IDM priorities",
+      "Ship targeted intelligence enhancements in RA Classic in parallel (June 2026) so existing customers feel forward motion",
     ],
     teamImpact: [
       "Teams align on what must be built before RA+ exposes ECM and IDM capability",
       "Experts help define expectations early during workshops",
       "IDM requirements are captured before delivery work hardens around the wrong assumptions",
+      "RA Classic users see continued investment while RA+ foundations are built in parallel",
     ],
   },
   {
@@ -819,6 +822,7 @@ export const quarterlyRoadmap = [
     theme: "MVP Hardening and Workflow Expansion",
     color: "violet",
     deliverables: [
+      "Go live with SE Corporate as the lead reference customer in March 2027",
       "Improve ECM metadata quality and expand beyond the top 200 based on usage and expert review",
       "Deepen IDM integration for data-quality visibility, interval patterns, and performance context",
       "Refine assumption defaults, applicability rules, and expert escalation triggers",
@@ -826,6 +830,7 @@ export const quarterlyRoadmap = [
       "Prepare the next release path toward Building View and dedicated Energy Efficiency workflows",
     ],
     teamImpact: [
+      "SE Corporate provides a living proof point for the RA+ Energy Efficiency experience",
       "The MVP becomes more reliable and useful for real advisory workflows",
       "Efficiency teams become more productive through reusable ECM and IDM context",
       "The roadmap shifts from foundation building to workflow depth and scaled adoption",
@@ -1640,3 +1645,95 @@ export const productScope = {
     "These products are sold separately, but they build on each other. The platform must ensure the boundary between them is a licensing boundary, not a technical one.",
 };
 
+
+export const architectureDecision = {
+  intro:
+    "Two viable paths to bring Energy Efficiency live in RA+ by Q4 2026. The choice shapes integration cost, time to value, and the long-term shape of the platform.",
+  options: [
+    {
+      id: "plan-a",
+      label: "Plan A",
+      title: "Build native in RA+",
+      summary:
+        "Stand up ECM guidance and IDM signals as first-class RA+ services, consumed directly by Strategy and the Energy Efficiency MVP.",
+      pros: [
+        "Cleanest long-term architecture and shared services across modules",
+        "No bridge code to maintain or sunset later",
+        "Best foundation for Sera as the unified interface",
+      ],
+      cons: [
+        "Heavier upfront engineering investment",
+        "Higher delivery risk for the Q4 2026 milestone",
+      ],
+    },
+    {
+      id: "plan-b",
+      label: "Plan B",
+      title: "Bridge from RA Classic",
+      summary:
+        "Expose existing RA Classic capabilities through a controlled bridge into RA+ to hit the Q4 2026 milestone, with a planned migration to native services later.",
+      pros: [
+        "Faster path to a usable RA+ Energy Efficiency MVP",
+        "Lower delivery risk for the committed timeline",
+        "Keeps RA Classic investment productive during the transition",
+      ],
+      cons: [
+        "Bridge code becomes technical debt that must be retired",
+        "Risk of carrying RA Classic data-model issues into RA+",
+        "Sera experience may feel less coherent until native services land",
+      ],
+    },
+  ],
+  decisionCriteria: [
+    "Confidence that native services can be delivered by Q4 2026",
+    "Severity of RA Classic pain points that would leak into RA+",
+    "SE Corporate readiness to use a Plan B experience in March 2027",
+    "Engineering capacity available without slowing parallel RA Classic work",
+  ],
+  status: "Open decision flagged for the working group, no commitment made.",
+};
+
+export const maturityLadder = {
+  intro:
+    "Customer maturity progresses through four stages. RA+ Energy Efficiency must meet customers where they are and pull them up the ladder over time.",
+  stages: [
+    {
+      num: "01",
+      label: "Accountability",
+      description:
+        "Customers know who owns what, can see consumption by site or business unit, and have a baseline they trust.",
+    },
+    {
+      num: "02",
+      label: "Cost Allocation",
+      description:
+        "Energy and carbon are allocated cleanly to cost centers and tenants, enabling chargeback and clear ownership of spend.",
+    },
+    {
+      num: "03",
+      label: "Performance Management",
+      description:
+        "Targets, baselines, and variances are tracked continuously. Anomalies and drift are surfaced before they become problems.",
+    },
+    {
+      num: "04",
+      label: "Optimization",
+      description:
+        "Customers act on prioritized recommendations, manage action plans, and verify outcomes through M&V loops.",
+    },
+  ],
+  note:
+    "This ladder is a customer maturity lens, not a pricing or commercial-tiering model.",
+};
+
+export const seraKPIs = {
+  intro:
+    "Sera-specific signals confirm that the interface is producing real daily value, not just dashboards.",
+  kpis: [
+    { label: "Morning briefings consumed", description: "Energy Managers open the daily briefing as part of their routine" },
+    { label: "Anomaly narration accuracy", description: "Sera explanations of anomalies are confirmed as useful by Data Ops" },
+    { label: "Alert top-3 prioritization", description: "Top-3 alerts are acted on, lower-priority noise stays suppressed" },
+    { label: "Target risk prognosis use", description: "Sustainability Leads use forward-looking target risk views in reviews" },
+    { label: "Action plan attainment", description: "Action plans created in Sera reach committed completion rates" },
+  ],
+};

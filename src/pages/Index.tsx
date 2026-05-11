@@ -20,6 +20,8 @@ import { OutOfScopeSection } from "@/components/playbook/OutOfScopeSection";
 import { SuccessMetricsSection } from "@/components/playbook/SuccessMetricsSection";
 import { GuardrailsSection } from "@/components/playbook/GuardrailsSection";
 import { ECMCapabilityMapping } from "@/components/playbook/ECMCapabilityMapping";
+import { ArchitectureDecisionSection } from "@/components/playbook/ArchitectureDecisionSection";
+import { MaturityLadderSection } from "@/components/playbook/MaturityLadderSection";
 import { DeliveryRoadmapSection } from "@/components/playbook/DeliveryRoadmapSection";
 import { AppendixSection } from "@/components/playbook/AppendixSection";
 import { ExecutiveTakeaway } from "@/components/playbook/ExecutiveTakeaway";
@@ -59,6 +61,8 @@ const Index = () => {
       <SuccessMetricsSection />
       <GuardrailsSection />
       <ECMCapabilityMapping />
+      <MaturityLadderSection />
+      <ArchitectureDecisionSection />
       <DeliveryRoadmapSection />
       <AppendixSection />
       <ExecutiveTakeaway />
