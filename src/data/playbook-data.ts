@@ -1061,7 +1061,8 @@ export const marketConstraints = [
 export const executiveNarrative = {
   whatsHappening: "Efficiency Transformation is broader than a content library. It is the operating strategy for bringing IDM data depth, expert knowledge, customer context, and action workflows into a scalable RA+ capability.",
   trueProblem: "Today, interval data, audit expertise, customer context, and action workflows are not yet operating as one system. That limits RA+ from moving beyond reporting into guided performance improvement.",
-  northStar: "Go beyond static dashboards by creating an intelligence layer that understands buildings, reasons across energy relationships, and turns trusted data into recommended action.",
+  northStarTitle: "A governed Efficiency CoE capability embedded in RA+",
+  northStar: "The north star is an authoritative efficiency foundation inside RA+ that connects IDM as the trusted interval-data system of record, expert CoE knowledge, and guided workflows. It should power goal-based Strategy recommendations, site-level Building View discovery, structured deliverables, and a clear path from early insight to expert engagement.",
   pragmaticWay: "We will lift the highest-value IDM capabilities into RA+, establish the governed efficiency strategy foundation, deliver immediate value through Strategy integration, and build toward an agentic performance experience over time.",
   economicImpact: [
     "Audits completed faster with higher consistency",
