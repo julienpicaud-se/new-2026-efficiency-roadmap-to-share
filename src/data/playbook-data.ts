@@ -563,8 +563,9 @@ export const whyNowColumns = [
     color: "amber",
     items: [
       "Customers expect earlier and clearer efficiency guidance",
-      "Customer demand for earlier, clearer efficiency guidance",
-      "RA+ needs integrated efficiency intelligence beyond emissions",
+      "Enterprise AI mandates push customers to adopt AI-driven energy decisions in 2026",
+      "ISO 50001 certification cycles are creating concrete buying pressure",
+      "AI bypass risk: customers like Tetra Pak are evaluating in-house AI on their own data",
       "Competitor movement accelerating digital efficiency advisory",
       "Internal scaling limits (manual audits, fragmented tools)",
     ],
@@ -773,11 +774,13 @@ export const quarterlyRoadmap = [
       "Define minimum RA+ service boundaries for ECM guidance and IDM signals",
       "Prioritize the top 200 ECMs for the initial library launch",
       "Start SME review loops across efficiency to refine ECM and IDM priorities",
+      "Ship targeted intelligence enhancements in RA Classic in parallel (June 2026) so existing customers feel forward motion",
     ],
     teamImpact: [
       "Teams align on what must be built before RA+ exposes ECM and IDM capability",
       "Experts help define expectations early during workshops",
       "IDM requirements are captured before delivery work hardens around the wrong assumptions",
+      "RA Classic users see continued investment while RA+ foundations are built in parallel",
     ],
   },
   {
@@ -819,6 +822,7 @@ export const quarterlyRoadmap = [
     theme: "MVP Hardening and Workflow Expansion",
     color: "violet",
     deliverables: [
+      "Go live with SE Corporate as the lead reference customer in March 2027",
       "Improve ECM metadata quality and expand beyond the top 200 based on usage and expert review",
       "Deepen IDM integration for data-quality visibility, interval patterns, and performance context",
       "Refine assumption defaults, applicability rules, and expert escalation triggers",
@@ -826,6 +830,7 @@ export const quarterlyRoadmap = [
       "Prepare the next release path toward Building View and dedicated Energy Efficiency workflows",
     ],
     teamImpact: [
+      "SE Corporate provides a living proof point for the RA+ Energy Efficiency experience",
       "The MVP becomes more reliable and useful for real advisory workflows",
       "Efficiency teams become more productive through reusable ECM and IDM context",
       "The roadmap shifts from foundation building to workflow depth and scaled adoption",
