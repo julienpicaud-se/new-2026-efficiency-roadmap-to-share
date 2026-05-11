@@ -56,12 +56,15 @@ const sections: Section[] = [
     id: "whats-happening",
     label: "What's Happening",
     title:
-      "RA Classic is a set of modules. RA+ needs to be a platform.",
+      "Proven CoE expertise, ready to scale through the RA+ platform",
     icon: Activity,
     tone: "muted",
     body:
-      "The Global Energy Bureau (38 people, 428 clients, 195K connected meters, $75M in performance guarantees) already proves the demand and the expertise. The shift now is from siloed RA Classic modules to RA+ as an integrated platform, with Sera as the unified interface and IDM as the trusted data foundation that every product consumes.",
+      "The Efficiency CoE already delivers trusted advisory, implementation, IDM, and Global Energy Bureau capabilities across public and private sectors (38 people, 428 clients, 195K connected meters, $75M in performance guarantees). The opportunity is to convert that operating strength into a repeatable platform capability inside RA+, with Sera as the unified interface and IDM as the trusted data foundation, so customers are reached earlier, action is guided faster, and continuous improvement becomes the default.",
     kpis: [
+      { value: "Manual", label: "Audit delivery model" },
+      { value: "Fragmented", label: "Strategy foundation" },
+      { value: "Limited", label: "Recurring advice loop" },
       { value: "Modules", label: "RA Classic shape" },
       { value: "Platform", label: "RA+ target shape" },
       { value: "Sera", label: "Unified interface" },
