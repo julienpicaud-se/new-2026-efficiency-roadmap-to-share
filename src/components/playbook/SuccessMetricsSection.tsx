@@ -6,9 +6,11 @@ import {
   MousePointer,
   DollarSign,
   CheckCircle2,
-  ArrowUpRight
+  ArrowUpRight,
+  Sparkles
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { seraKPIs } from "@/data/playbook-data";
 
 const successMetrics = [
   {
@@ -149,6 +151,27 @@ export const SuccessMetricsSection = () => {
               </p>
             </CardContent>
           </Card>
+
+          {/* Sera-specific KPIs */}
+          <div className="mt-12">
+            <div className="flex items-center gap-2 mb-4">
+              <Sparkles className="w-4 h-4 text-primary" />
+              <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                Sera Interface Signals
+              </span>
+            </div>
+            <p className="text-sm text-muted-foreground mb-5 max-w-3xl">{seraKPIs.intro}</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {seraKPIs.kpis.map((k) => (
+                <Card key={k.label} className="bg-card border-border/50">
+                  <CardContent className="p-4">
+                    <h4 className="text-sm font-semibold text-foreground mb-1.5">{k.label}</h4>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{k.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
