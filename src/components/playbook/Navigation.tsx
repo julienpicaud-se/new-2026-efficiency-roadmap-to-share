@@ -84,12 +84,11 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      // Find current section
       const scrollPosition = window.scrollY + 200;
-      for (let i = navItems.length - 1; i >= 0; i--) {
-        const element = document.getElementById(navItems[i].id);
+      for (let i = allItems.length - 1; i >= 0; i--) {
+        const element = document.getElementById(allItems[i].id);
         if (element && element.offsetTop <= scrollPosition) {
-          setActiveSection(navItems[i].id);
+          setActiveSection(allItems[i].id);
           break;
         }
       }
@@ -145,10 +144,52 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
             </div>
           </div>
 
-          {/* Desktop Navigation - Pills */}
+          {/* Desktop Navigation - Pills with grouped dropdowns */}
           <div className="hidden lg:flex items-center gap-2">
             <div className="flex items-center bg-muted/50 rounded-full p-1 border border-border/30">
-              {navItems.map((item) => (
+              <button
+                onClick={() => scrollToSection(topLevel[0].id)}
+                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                  activeSection === topLevel[0].id
+                    ? "bg-primary text-primary-foreground shadow-md shadow-primary/20"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/80"
+                }`}
+              >
+                {topLevel[0].label}
+              </button>
+
+              {groups.map((group) => {
+                const isActive = group.items.some((i) => i.id === activeSection);
+                return (
+                  <DropdownMenu key={group.label}>
+                    <DropdownMenuTrigger asChild>
+                      <button
+                        className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1 ${
+                          isActive
+                            ? "bg-primary text-primary-foreground shadow-md shadow-primary/20"
+                            : "text-muted-foreground hover:text-foreground hover:bg-muted/80"
+                        }`}
+                      >
+                        {group.label}
+                        <ChevronDown className="w-3.5 h-3.5 opacity-70" />
+                      </button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="center" className="w-56 bg-popover">
+                      {group.items.map((item) => (
+                        <DropdownMenuItem
+                          key={item.id}
+                          onClick={() => scrollToSection(item.id)}
+                          className={activeSection === item.id ? "bg-primary/10 text-primary" : ""}
+                        >
+                          {item.label}
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                );
+              })}
+
+              {topLevel.slice(1).map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
@@ -158,7 +199,7 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                       : "text-muted-foreground hover:text-foreground hover:bg-muted/80"
                   }`}
                 >
-                  {item.shortLabel}
+                  {item.label}
                 </button>
               ))}
             </div>
@@ -212,9 +253,8 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                 </SheetHeader>
                 
                 <div className="flex flex-col gap-1 py-6">
-                  {/* Appendix at top for quick access */}
                   {(() => {
-                    const appendix = navItems.find((i) => i.id === "appendix");
+                    const appendix = allItems.find((i) => i.id === "appendix");
                     if (!appendix) return null;
                     return (
                       <button
@@ -235,22 +275,49 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                     );
                   })()}
 
-                  {navItems
-                    .filter((item) => item.id !== "appendix")
-                    .map((item) => (
-                    <button
-                      key={item.id}
-                      onClick={() => scrollToSection(item.id)}
-                      className={`flex items-center justify-between text-left px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                        activeSection === item.id
-                          ? "bg-primary text-primary-foreground"
-                          : "text-muted-foreground hover:bg-muted hover:text-foreground"
-                      }`}
-                    >
-                      <span>{item.label}</span>
-                      <ChevronRight className="w-4 h-4 opacity-50" />
-                    </button>
+                  <button
+                    onClick={() => scrollToSection(topLevel[0].id)}
+                    className={`flex items-center justify-between text-left px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                      activeSection === topLevel[0].id
+                        ? "bg-primary text-primary-foreground"
+                        : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                    }`}
+                  >
+                    <span>{topLevel[0].label}</span>
+                    <ChevronRight className="w-4 h-4 opacity-50" />
+                  </button>
+
+                  {groups.map((group) => (
+                    <div key={group.label} className="mt-3">
+                      <p className="px-4 text-xs text-muted-foreground uppercase tracking-wider mb-1">{group.label}</p>
+                      {group.items.map((item) => (
+                        <button
+                          key={item.id}
+                          onClick={() => scrollToSection(item.id)}
+                          className={`w-full flex items-center justify-between text-left px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${
+                            activeSection === item.id
+                              ? "bg-primary text-primary-foreground"
+                              : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                          }`}
+                        >
+                          <span>{item.label}</span>
+                          <ChevronRight className="w-4 h-4 opacity-50" />
+                        </button>
+                      ))}
+                    </div>
                   ))}
+
+                  <button
+                    onClick={() => scrollToSection("delivery-roadmap")}
+                    className={`mt-3 flex items-center justify-between text-left px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                      activeSection === "delivery-roadmap"
+                        ? "bg-primary text-primary-foreground"
+                        : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                    }`}
+                  >
+                    <span>Roadmap</span>
+                    <ChevronRight className="w-4 h-4 opacity-50" />
+                  </button>
 
                   
                   {/* Domain Links in Mobile */}
