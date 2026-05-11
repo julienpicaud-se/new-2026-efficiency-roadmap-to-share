@@ -311,7 +311,8 @@ export const valuePillars = [
 
 export const strategicContext = {
   summary: "Today, efficiency audits rely heavily on manual workflows and PowerPoint deliverables. Client context is fragmented across tools and documents, expertise is delivered late in the cycle and does not scale, and early advice is not productized to generate recurring value.",
-  northStar: "Build a unified, intelligence-driven Efficiency capability that transforms expert knowledge into scalable product value, empowering customers and Schneider teams to prioritize, plan, and act at the right time.",
+  northStarTitle: "A governed Efficiency CoE capability embedded in RA+",
+  northStar: "The north star is an authoritative efficiency foundation inside RA+ that connects IDM as the trusted interval-data system of record, expert CoE knowledge, and guided workflows. It should power goal-based Strategy recommendations, site-level Building View discovery, structured deliverables, and a clear path from early insight to expert engagement.",
 };
 
 export const supportingScorecard = [
