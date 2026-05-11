@@ -62,14 +62,14 @@ export const HeroSection = () => {
 
           {/* Main headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up">
-            <span className="gradient-text">Efficiency Transformation</span>
+            <span className="gradient-text">From Module to Platform</span>
             <br />
-            <span className="text-foreground">with RA+</span>
+            <span className="text-foreground">Energy Efficiency in RA+</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            From internal productivity to scalable revenue and in-product efficiency advisory. Transform expert knowledge into scalable product value.
+            Sera as the interface, IDM as the foundation. A governed Energy Efficiency product inside the RA+ platform that turns expert knowledge into continuous, scalable customer value.
           </p>
 
           {/* Key pillars preview */}

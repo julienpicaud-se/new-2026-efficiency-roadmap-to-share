@@ -56,15 +56,15 @@ const sections: Section[] = [
     id: "whats-happening",
     label: "What's Happening",
     title:
-      "Efficiency CoE expertise is proven, but not yet scaled through RA+",
+      "RA Classic is a set of modules. RA+ needs to be a platform.",
     icon: Activity,
     tone: "muted",
     body:
-      "The Efficiency CoE already delivers trusted advisory, implementation, IDM, and Global Energy Bureau capabilities across public and private sectors. The RA+ opportunity is to convert that operating strength into a repeatable platform capability that reaches customers earlier, guides action faster, and supports continuous improvement.",
+      "The Global Energy Bureau (38 people, 428 clients, 195K connected meters, $75M in performance guarantees) already proves the demand and the expertise. The shift now is from siloed RA Classic modules to RA+ as an integrated platform, with Sera as the unified interface and IDM as the trusted data foundation that every product consumes.",
     kpis: [
-      { value: "Manual", label: "Audit delivery model" },
-      { value: "Fragmented", label: "Strategy foundation" },
-      { value: "Limited", label: "Recurring advice loop" },
+      { value: "Modules", label: "RA Classic shape" },
+      { value: "Platform", label: "RA+ target shape" },
+      { value: "Sera", label: "Unified interface" },
     ],
   },
   {
@@ -81,11 +81,11 @@ const sections: Section[] = [
     num: "03",
     id: "north-star",
     label: "Our North Star",
-    title: "A governed Efficiency CoE capability embedded in RA+",
+    title: "A two-product Energy platform: Efficiency now, Asset Planning next",
     icon: Compass,
     tone: "primary",
     body:
-      "The north star is an authoritative efficiency foundation inside RA+ that connects IDM as the trusted interval-data system of record, expert CoE knowledge, and guided workflows. It should power goal-based Strategy recommendations, site-level Building View discovery, structured deliverables, and a clear path from early insight to expert engagement.",
+      "Energy Efficiency is the focus of this discovery: a governed product inside RA+ that combines IDM as the system of record, expert CoE knowledge, and guided workflows for Energy Managers, Data Ops, Sustainability, and Executives. Asset Planning is a separate adjacent product. Sera is the single interface across both, sequenced so the Energy Manager experience leads.",
   },
   {
     num: "04",

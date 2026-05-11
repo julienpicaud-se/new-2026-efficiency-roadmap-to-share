@@ -36,12 +36,12 @@ export const ExecutiveTakeaway = () => {
           {/* Main Headline */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 sm:mb-8 text-foreground">
             Energy Efficiency as a{" "}
-            <span className="text-primary">scalable product capability</span> that transforms expert knowledge into value.
+            <span className="text-primary">platform capability</span>, with Sera as the interface and IDM as the foundation.
           </h2>
 
           {/* Description */}
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-10 sm:mb-12">
-            By connecting top-down strategy, bottom-up building insights, expert workflows, and customer-facing guidance, we establish a shared Efficiency foundation and a clear path toward a full Efficiency product embedded in the RA+ platform.
+            Moving from siloed RA Classic modules to a governed RA+ platform turns Bureau expertise into a continuous, in-product experience. Energy Managers act daily, Data Ops investigate deeply, Sustainability reports with confidence, and Executives see the value, all on one foundation.
           </p>
 
           {/* Back to Top Button */}
