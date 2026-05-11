@@ -21,6 +21,13 @@ import {
 
 const navItems = [
   { id: "executive-summary", label: "Summary", shortLabel: "Summary" },
+  { id: "platform-shift", label: "Platform Shift", shortLabel: "Platform" },
+  { id: "product-scope", label: "Product Scope", shortLabel: "Scope" },
+  { id: "personas", label: "Personas", shortLabel: "Personas" },
+  { id: "jobs-to-be-done", label: "Jobs to Be Done", shortLabel: "JTBD" },
+  { id: "voc-evidence", label: "VOC Evidence", shortLabel: "VOC" },
+  { id: "se-corporate-blueprint", label: "SE Corporate Blueprint", shortLabel: "SE Corp" },
+  { id: "pain-inventory", label: "Pain Inventory", shortLabel: "Pains" },
   { id: "key-challenges", label: "Why Now", shortLabel: "Why Now" },
   { id: "strategic-pillars", label: "Strategic Pillars", shortLabel: "Pillars" },
   { id: "existing-tools", label: "Strategy Landscape", shortLabel: "Landscape" },
