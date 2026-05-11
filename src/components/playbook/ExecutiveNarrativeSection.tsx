@@ -84,7 +84,8 @@ export const ExecutiveNarrativeSection = () => {
                     <Target className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold gradient-text mb-3">Our North Star</h3>
+                    <h3 className="text-sm font-semibold text-primary mb-2 uppercase tracking-wide">Our North Star</h3>
+                    <h4 className="text-xl font-semibold gradient-text mb-3">{executiveNarrative.northStarTitle}</h4>
                     <p className="text-foreground leading-relaxed">
                       {executiveNarrative.northStar}
                     </p>
