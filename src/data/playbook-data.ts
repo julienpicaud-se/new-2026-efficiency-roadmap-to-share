@@ -1560,7 +1560,7 @@ export const vocEvidence = {
 
 // SE Corporate as the MVP blueprint
 export const seCorporateBlueprint = {
-  title: "SE Corporate: RA Classic Client, Product Blueprint",
+  title: "SE Corporate: RA Classic Client",
   intro: "",
   scale: [
     { value: "4,800+", label: "Meters connected", detail: "Electricity, gas, water, HVAC, lighting, IT, distribution, process lines, PV, generators" },
