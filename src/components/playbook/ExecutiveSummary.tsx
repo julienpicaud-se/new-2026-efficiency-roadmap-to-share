@@ -84,7 +84,7 @@ const sections: Section[] = [
     num: "03",
     id: "north-star",
     label: "Our North Star",
-    title: "A two-product Energy platform: Efficiency now, Asset Planning next",
+    title: "A governed Efficiency CoE capability embedded in RA+",
     icon: Compass,
     tone: "primary",
     body:
