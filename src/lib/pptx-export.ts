@@ -111,7 +111,7 @@ export const exportToPptx = async () => {
 
   // ===== Slide: Platform Shift =====
   const slidePS = pptx.addSlide({ masterName: "MASTER_SLIDE" });
-  addTitle(slidePS, "PLATFORM SHIFT", "Energy Efficiency in RA+", platformShift.intro);
+  addTitle(slidePS, "PLATFORM SHIFT", "Efficiency Transformation with RA+", platformShift.intro);
   [platformShift.classic, platformShift.raPlus].forEach((col, i) => {
     const xPos = 0.5 + i * 4.6;
     slidePS.addShape("rect" as PptxGenJS.ShapeType, {

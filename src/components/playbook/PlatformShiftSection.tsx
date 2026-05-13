@@ -19,7 +19,7 @@ export const PlatformShiftSection = () => {
               Efficiency Transformation
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Energy Efficiency in RA+
+              Efficiency Transformation with RA+
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
             {platformShift.intro}
