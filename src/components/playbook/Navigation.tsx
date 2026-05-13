@@ -46,7 +46,7 @@ const groups: NavGroup[] = [
       { id: "personas", label: "Personas" },
       { id: "jobs-to-be-done", label: "Jobs to Be Done" },
       { id: "voc-evidence", label: "VOC Evidence" },
-      { id: "se-corporate-blueprint", label: "SE Corporate Blueprint" },
+      { id: "se-corporate-blueprint", label: "SE Corporate Proof of Concept" },
     ],
   },
   {

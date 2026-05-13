@@ -1560,9 +1560,9 @@ export const vocEvidence = {
 
 // SE Corporate as the MVP blueprint
 export const seCorporateBlueprint = {
-  title: "SE Corporate: The Living Proof of Concept",
+  title: "SE Corporate: Existing Client, Product Blueprint",
   intro:
-    "SE Corporate is not a future customer. They are the living proof of concept for RA+ Energy Efficiency. Their actual workflow is the product blueprint.",
+    "SE Corporate are existing RA+ clients. Their actual workflow is the living proof of concept and the product blueprint for RA+ Energy Efficiency.",
   scale: [
     { value: "4,800+", label: "Meters connected", detail: "Electricity, gas, water, HVAC, lighting, IT, distribution, process lines, PV, generators" },
     { value: "1,200", label: "Monthly logins", detail: "62+ individual users with 10+ IDM sessions in the past 12 months" },

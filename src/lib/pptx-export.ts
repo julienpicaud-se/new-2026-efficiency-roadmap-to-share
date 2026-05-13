@@ -193,9 +193,9 @@ export const exportToPptx = async () => {
     slideV.addText(`"${c.quote}"`, { x: xPos + 0.15, y: 4.6, w: 2.7, h: 0.85, fontSize: 6.5, italic: true, color: BRAND_GREEN, fit: "shrink" });
   });
 
-  // ===== Slide: SE Corporate Blueprint =====
+  // ===== Slide: SE Corporate Proof of Concept =====
   const slideSE = pptx.addSlide({ masterName: "MASTER_SLIDE" });
-  addTitle(slideSE, "MVP BLUEPRINT", seCorporateBlueprint.title, seCorporateBlueprint.intro);
+  addTitle(slideSE, "PROOF OF CONCEPT", seCorporateBlueprint.title, seCorporateBlueprint.intro);
   seCorporateBlueprint.scale.forEach((s, i) => {
     const xPos = 0.5 + i * 2.25;
     slideSE.addShape("rect" as PptxGenJS.ShapeType, {
