@@ -62,7 +62,7 @@ export const HeroSection = () => {
 
           {/* Main headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up">
-            <span className="gradient-text">From Module to Platform</span>
+            <span className="gradient-text">Energy Efficiency in RA+</span>
             <br />
             <span className="text-foreground">Energy Efficiency in RA+</span>
           </h1>
