@@ -111,7 +111,7 @@ export const exportToPptx = async () => {
 
   // ===== Slide: Platform Shift =====
   const slidePS = pptx.addSlide({ masterName: "MASTER_SLIDE" });
-  addTitle(slidePS, "PLATFORM SHIFT", "From Module to Platform", platformShift.intro);
+  addTitle(slidePS, "PLATFORM SHIFT", "Energy Efficiency in RA+", platformShift.intro);
   [platformShift.classic, platformShift.raPlus].forEach((col, i) => {
     const xPos = 0.5 + i * 4.6;
     slidePS.addShape("rect" as PptxGenJS.ShapeType, {
@@ -220,7 +220,7 @@ export const exportToPptx = async () => {
 
   // ===== Slide: Pain Inventory =====
   const slidePI = pptx.addSlide({ masterName: "MASTER_SLIDE" });
-  addTitle(slidePI, "RA CLASSIC PAIN INVENTORY", "What the Platform Shift Eliminates", painInventory.intro);
+  addTitle(slidePI, "RA CLASSIC PAIN INVENTORY", "What the Efficiency Transformation Eliminates", painInventory.intro);
   painInventory.pains.forEach((p, i) => {
     const xPos = 0.3 + (i % 2) * 4.7;
     const yPos = 1.95 + Math.floor(i / 2) * 1.2;

@@ -19,7 +19,7 @@ export const PainInventorySection = () => {
             RA Classic Pain Inventory
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            What the Platform Shift Eliminates
+            What the Efficiency Transformation Eliminates
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{painInventory.intro}</p>
         </div>

@@ -14,12 +14,12 @@ export const PlatformShiftSection = () => {
     >
       <div className="container px-4 max-w-6xl mx-auto">
         <div className="mb-12 max-w-3xl">
-          <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 flex items-center gap-2">
-            <Layers className="w-4 h-4" />
-            Platform Shift
-          </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            From Module to Platform
+            <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 flex items-center gap-2">
+              <Layers className="w-4 h-4" />
+              Efficiency Transformation
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Energy Efficiency in RA+
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
             {platformShift.intro}

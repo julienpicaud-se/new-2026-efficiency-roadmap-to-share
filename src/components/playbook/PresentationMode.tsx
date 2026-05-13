@@ -5,7 +5,7 @@ import { Minimize2, ChevronLeft, ChevronRight, Grid3X3, X } from "lucide-react";
 const sections = [
   { id: "hero", title: "Overview" },
   { id: "executive-summary", title: "Executive Summary" },
-  { id: "platform-shift", title: "Platform Shift" },
+  { id: "platform-shift", title: "Efficiency Transformation" },
   { id: "product-scope", title: "Product Scope" },
   { id: "personas", title: "Personas" },
   { id: "jobs-to-be-done", title: "Jobs to Be Done" },

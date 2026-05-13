@@ -32,7 +32,7 @@ const groups: NavGroup[] = [
   {
     label: "Strategy",
     items: [
-      { id: "platform-shift", label: "Platform Shift" },
+      { id: "platform-shift", label: "Efficiency Transformation" },
       { id: "product-scope", label: "Product Scope" },
       { id: "key-challenges", label: "Why Now" },
       { id: "strategic-pillars", label: "Strategic Pillars" },
