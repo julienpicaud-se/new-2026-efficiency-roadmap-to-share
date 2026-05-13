@@ -1560,7 +1560,7 @@ export const vocEvidence = {
 
 // SE Corporate as the MVP blueprint
 export const seCorporateBlueprint = {
-  title: "SE Corporate: Our MVP Blueprint",
+  title: "SE Corporate: The Living Proof of Concept",
   intro:
     "SE Corporate is not a future customer. They are the living proof of concept for RA+ Energy Efficiency. Their actual workflow is the product blueprint.",
   scale: [
