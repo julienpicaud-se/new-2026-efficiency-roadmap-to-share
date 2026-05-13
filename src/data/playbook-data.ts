@@ -1560,9 +1560,8 @@ export const vocEvidence = {
 
 // SE Corporate as the MVP blueprint
 export const seCorporateBlueprint = {
-  title: "SE Corporate: Existing Client, Product Blueprint",
-  intro:
-    "SE Corporate are existing RA+ clients. Their actual workflow is the living proof of concept and the product blueprint for RA+ Energy Efficiency.",
+  title: "SE Corporate: RA Classic Client, Product Blueprint",
+  intro: "",
   scale: [
     { value: "4,800+", label: "Meters connected", detail: "Electricity, gas, water, HVAC, lighting, IT, distribution, process lines, PV, generators" },
     { value: "1,200", label: "Monthly logins", detail: "62+ individual users with 10+ IDM sessions in the past 12 months" },
@@ -1571,22 +1570,8 @@ export const seCorporateBlueprint = {
   ],
   trainingSignal:
     "RA IDM scored 4.8 / 5 in the Energy Performance Training program, the highest-rated module (PME scored 3.3). Confirms the product works when users are enabled. The opportunity is making that enablement the default interface, not a paid service.",
-  phaseMap: [
-    {
-      phase: "Foundation (Q3 2026)",
-      detail: "What SE Corporate already depends on daily: KPI tracking, dashboards, alerting, hierarchy management, baseline creation.",
-    },
-    {
-      phase: "Intelligence (Q4 2026)",
-      detail: "What SE Corporate has explicitly asked for: action tracking and workflow support. Use RA as the backbone for action plans and continuous improvement.",
-    },
-    {
-      phase: "Advisory (Q1 2027)",
-      detail: "What SE Corporate currently pays the Bureau to do manually: regular site audits, target setting, managing follow-up (Jacob Freeman, ISO 50001 and SE Energy Action Plans).",
-    },
-  ],
-  conclusion:
-    "Every phase of the roadmap maps to an existing, documented SE Corporate need. This is not speculative demand. It is observed workflow.",
+  phaseMap: [] as { phase: string; detail: string }[],
+  conclusion: "",
 };
 
 // RA Classic Pain Inventory

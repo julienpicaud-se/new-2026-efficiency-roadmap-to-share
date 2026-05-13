@@ -16,10 +16,9 @@ export const SECorporateBlueprintSection = () => {
         <div className="mb-10 max-w-3xl">
           <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 flex items-center gap-2">
             <Building2 className="w-4 h-4" />
-            Proof of Concept
+            RA Classic Client
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">{seCorporateBlueprint.title}</h2>
-          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{seCorporateBlueprint.intro}</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
@@ -41,18 +40,6 @@ export const SECorporateBlueprintSection = () => {
           </CardContent>
         </Card>
 
-        <div className="grid md:grid-cols-3 gap-4 mb-6">
-          {seCorporateBlueprint.phaseMap.map((p) => (
-            <Card key={p.phase} className="bg-card border-border/50">
-              <CardContent className="p-5">
-                <h4 className="font-bold text-foreground mb-2">{p.phase}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{p.detail}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        <p className="text-sm text-foreground italic max-w-3xl">{seCorporateBlueprint.conclusion}</p>
       </div>
     </section>
   );
