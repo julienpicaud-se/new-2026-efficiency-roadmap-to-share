@@ -10,7 +10,7 @@ const sections = [
   { id: "personas", title: "Personas" },
   { id: "jobs-to-be-done", title: "Jobs to Be Done" },
   { id: "voc-evidence", title: "VOC Evidence" },
-  { id: "se-corporate-blueprint", title: "SE Corporate Blueprint" },
+  { id: "se-corporate-blueprint", title: "SE Corporate: Existing Client" },
   { id: "pain-inventory", title: "Pain Inventory" },
   { id: "key-challenges", title: "Key Challenges" },
   { id: "strategic-pillars", title: "Strategic Pillars" },
