@@ -24,7 +24,7 @@ type NavGroup = { label: string; items: NavItem[] };
 
 const topLevel: NavItem[] = [
   { id: "executive-summary", label: "Summary" },
-  { id: "delivery-roadmap", label: "Roadmap" },
+  // { id: "delivery-roadmap", label: "Roadmap" },
   { id: "appendix", label: "Appendix" },
 ];
 
