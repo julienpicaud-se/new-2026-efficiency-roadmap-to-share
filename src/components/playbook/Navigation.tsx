@@ -63,6 +63,8 @@ const groups: NavGroup[] = [
       { id: "ecm-mapping", label: "Capability Mapping" },
       { id: "maturity-ladder", label: "Maturity Ladder" },
       { id: "architecture-decision", label: "Plan A vs Plan B" },
+      { id: "phasing", label: "Phasing" },
+      { id: "idm-vision", label: "IDM 2.0 Vision" },
     ],
   },
 ];
