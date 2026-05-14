@@ -34,25 +34,33 @@ export const HeroSection = () => {
       {/* Background - dark base */}
       <div className="absolute inset-0 bg-background" />
       
+      {/* Animated ambient glow behind content */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 50% 50% at 50% 50%, hsl(var(--primary) / 0.18) 0%, transparent 70%)',
+        }}
+      />
+      
       {/* Subtle green glow on the right with parallax */}
       <div 
         className="absolute inset-0 pointer-events-none transition-transform duration-100 ease-out"
         style={{
-          background: 'radial-gradient(ellipse 60% 80% at 85% 50%, hsl(var(--primary) / 0.12) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 70% 90% at 85% 50%, hsl(var(--primary) / 0.22) 0%, transparent 55%)',
           transform: `translateY(${glowOffset * 0.5}px)`,
         }}
       />
       
-      {/* Secondary subtle glow on the left with parallax */}
+      {/* Secondary glow on the left with parallax */}
       <div 
         className="absolute inset-0 pointer-events-none transition-transform duration-100 ease-out"
         style={{
-          background: 'radial-gradient(ellipse 40% 60% at 15% 60%, hsl(var(--primary) / 0.06) 0%, transparent 50%)',
+          background: 'radial-gradient(ellipse 50% 70% at 15% 60%, hsl(var(--primary) / 0.12) 0%, transparent 50%)',
           transform: `translateY(${glowOffset * 0.8}px)`,
         }}
       />
 
-      <div className="container relative z-10 px-4 pt-20 pb-32">
+      <div className="container relative z-10 px-4 pt-16 pb-24">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-in">
