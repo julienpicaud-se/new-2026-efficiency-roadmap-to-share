@@ -67,7 +67,6 @@ const sections: Section[] = [
       { value: "Limited", label: "Recurring advice loop" },
       { value: "Modules", label: "RA Classic shape" },
       { value: "Platform", label: "RA+ target shape" },
-      { value: "Sera", label: "Unified interface" },
     ],
   },
   {
