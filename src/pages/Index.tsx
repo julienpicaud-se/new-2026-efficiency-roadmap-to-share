@@ -67,6 +67,7 @@ const Index = () => {
       {/* <DeliveryRoadmapSection /> */}
       <AppendixSection />
       <ExecutiveTakeaway />
+      <GlossarySection />
     </div>
   );
 };
