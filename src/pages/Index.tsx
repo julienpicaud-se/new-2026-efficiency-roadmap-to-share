@@ -66,6 +66,8 @@ const Index = () => {
       <ECMCapabilityMapping />
       <MaturityLadderSection />
       <ArchitectureDecisionSection />
+      <PhasingSection />
+      <IDMVisionSection />
       {/* <DeliveryRoadmapSection /> */}
       <AppendixSection />
       <ExecutiveTakeaway />
