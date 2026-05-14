@@ -82,7 +82,7 @@ export const PhasingSection = () => {
     <section
       id="phasing"
       ref={ref as React.RefObject<HTMLElement>}
-      className={`py-24 bg-background section-fade ${isVisible ? "visible" : ""}`}
+      className={`py-24 bg-muted/50 section-fade ${isVisible ? "visible" : ""}`}
     >
       <div className="container px-4">
         <div className="text-center mb-12 sm:mb-16">

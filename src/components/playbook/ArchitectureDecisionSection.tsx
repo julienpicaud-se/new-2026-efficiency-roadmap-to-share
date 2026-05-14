@@ -10,7 +10,7 @@ export const ArchitectureDecisionSection = () => {
     <section
       id="architecture-decision"
       ref={ref as React.RefObject<HTMLElement>}
-      className={`py-20 sm:py-24 section-fade ${isVisible ? "visible" : ""}`}
+      className={`py-20 sm:py-24 bg-muted/40 section-fade ${isVisible ? "visible" : ""}`}
     >
       <div className="container px-4 max-w-6xl mx-auto">
         <div className="mb-10 max-w-3xl">
