@@ -69,7 +69,7 @@ export const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Sera as the interface, IDM as the foundation. A governed Energy Efficiency product inside the RA+ platform that turns expert knowledge into continuous, scalable customer value.
+            From internal productivity to scalable revenue and in-product efficiency advisory. Transform expert knowledge into scalable product value.
           </p>
 
           {/* Key pillars preview */}
