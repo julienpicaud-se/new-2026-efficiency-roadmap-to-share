@@ -16,7 +16,7 @@ export const SECorporateBlueprintSection = () => {
         <div className="mb-10 max-w-3xl">
           <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 flex items-center gap-2">
             <Building2 className="w-4 h-4" />
-            RA Classic Client
+            RA Classic IDM Client
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">{seCorporateBlueprint.title}</h2>
         </div>
