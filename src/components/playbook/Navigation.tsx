@@ -26,6 +26,7 @@ const topLevel: NavItem[] = [
   { id: "executive-summary", label: "Summary" },
   // { id: "delivery-roadmap", label: "Roadmap" },
   { id: "appendix", label: "Appendix" },
+  { id: "glossary", label: "Glossary" },
 ];
 
 const groups: NavGroup[] = [
