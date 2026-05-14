@@ -64,7 +64,7 @@ export const ExecutiveTakeaway = () => {
       </div>
 
       {/* Footer */}
-      <div className="mt-24 pt-6 border-t border-border/30">
+      <div className="mt-16 pt-6 border-t border-border/30">
         <div className="container px-4">
           <p className="text-center text-sm text-muted-foreground">
             © 2026 Efficiency Transformation • Efficiency Transformation with RA+ • Internal Only and Confidential
