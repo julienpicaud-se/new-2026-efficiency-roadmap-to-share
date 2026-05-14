@@ -15,7 +15,7 @@ export const StrategicPillars = () => {
     <section
       id="strategic-pillars"
       ref={ref as React.RefObject<HTMLElement>}
-      className={`py-24 bg-muted/30 section-fade ${isVisible ? "visible" : ""}`}
+      className={`py-24 bg-muted/50 section-fade ${isVisible ? "visible" : ""}`}
     >
       <div className="container px-4">
         <div className="text-center mb-12 sm:mb-16">

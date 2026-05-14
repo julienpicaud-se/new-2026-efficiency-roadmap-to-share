@@ -17,11 +17,19 @@ export const ExecutiveTakeaway = () => {
       ref={ref as React.RefObject<HTMLElement>}
       className={`py-16 sm:py-24 section-fade relative overflow-hidden ${isVisible ? "visible" : ""}`}
     >
-      {/* Radial gradient background glow */}
+      {/* Central ambient glow */}
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 80% 60% at 50% 40%, hsl(var(--primary) / 0.15) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 60% 50% at 50% 45%, hsl(var(--primary) / 0.2) 0%, transparent 70%)',
+        }}
+      />
+      
+      {/* Wide edge glow for coverage */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 90% 80% at 50% 50%, hsl(var(--primary) / 0.08) 0%, transparent 60%)',
         }}
       />
       
@@ -56,7 +64,7 @@ export const ExecutiveTakeaway = () => {
       </div>
 
       {/* Footer */}
-      <div className="mt-24 pt-6 border-t border-border/30">
+      <div className="mt-16 pt-6 border-t border-border/30">
         <div className="container px-4">
           <p className="text-center text-sm text-muted-foreground">
             © 2026 Efficiency Transformation • Efficiency Transformation with RA+ • Internal Only and Confidential

@@ -10,7 +10,7 @@ export const PlatformShiftSection = () => {
     <section
       id="platform-shift"
       ref={ref as React.RefObject<HTMLElement>}
-      className={`py-20 sm:py-24 bg-muted/20 section-fade ${isVisible ? "visible" : ""}`}
+      className={`py-20 sm:py-24 bg-muted/40 section-fade ${isVisible ? "visible" : ""}`}
     >
       <div className="container px-4 max-w-6xl mx-auto">
         <div className="mb-12 max-w-3xl">

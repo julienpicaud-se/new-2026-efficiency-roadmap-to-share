@@ -84,7 +84,7 @@ export const IDMVisionSection = () => {
     <section
       id="idm-vision"
       ref={ref as React.RefObject<HTMLElement>}
-      className={`py-24 bg-muted/30 section-fade ${isVisible ? "visible" : ""}`}
+      className={`py-24 bg-muted/40 section-fade ${isVisible ? "visible" : ""}`}
     >
       <div className="container px-4 max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
