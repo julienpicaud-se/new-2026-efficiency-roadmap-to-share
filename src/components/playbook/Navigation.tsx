@@ -309,19 +309,8 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                     </div>
                   ))}
 
-                  <button
-                    onClick={() => scrollToSection("delivery-roadmap")}
-                    className={`mt-3 flex items-center justify-between text-left px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                      activeSection === "delivery-roadmap"
-                        ? "bg-primary text-primary-foreground"
-                        : "text-muted-foreground hover:bg-muted hover:text-foreground"
-                    }`}
-                  >
-                    <span>Roadmap</span>
-                    <ChevronRight className="w-4 h-4 opacity-50" />
-                  </button>
+                  {/* Roadmap hidden for now */}
 
-                  
                   {/* Domain Links in Mobile */}
                   <div className="mt-4 pt-4 border-t border-border/50">
                     <p className="px-4 text-xs text-muted-foreground uppercase tracking-wider mb-2">Views</p>
