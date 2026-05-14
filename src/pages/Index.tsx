@@ -22,7 +22,7 @@ import { GuardrailsSection } from "@/components/playbook/GuardrailsSection";
 import { ECMCapabilityMapping } from "@/components/playbook/ECMCapabilityMapping";
 import { ArchitectureDecisionSection } from "@/components/playbook/ArchitectureDecisionSection";
 import { MaturityLadderSection } from "@/components/playbook/MaturityLadderSection";
-import { DeliveryRoadmapSection } from "@/components/playbook/DeliveryRoadmapSection";
+// import { DeliveryRoadmapSection } from "@/components/playbook/DeliveryRoadmapSection";
 import { AppendixSection } from "@/components/playbook/AppendixSection";
 import { ExecutiveTakeaway } from "@/components/playbook/ExecutiveTakeaway";
 import { ReadingProgressBar } from "@/components/playbook/ReadingProgressBar";
@@ -63,7 +63,7 @@ const Index = () => {
       <ECMCapabilityMapping />
       <MaturityLadderSection />
       <ArchitectureDecisionSection />
-      <DeliveryRoadmapSection />
+      {/* <DeliveryRoadmapSection /> */}
       <AppendixSection />
       <ExecutiveTakeaway />
     </div>

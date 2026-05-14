@@ -22,7 +22,7 @@ const sections = [
   { id: "ecm-mapping", title: "Capability Mapping" },
   { id: "maturity-ladder", title: "Maturity Ladder" },
   { id: "architecture-decision", title: "Plan A vs Plan B" },
-  { id: "delivery-roadmap", title: "2026 Roadmap" },
+  // { id: "delivery-roadmap", title: "2026 Roadmap" },
   { id: "appendix", title: "Appendix" },
   { id: "takeaway", title: "Takeaway" },
 ];
