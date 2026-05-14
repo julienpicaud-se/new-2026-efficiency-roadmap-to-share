@@ -63,7 +63,7 @@ const Index = () => {
       <ECMCapabilityMapping />
       <MaturityLadderSection />
       <ArchitectureDecisionSection />
-      <DeliveryRoadmapSection />
+      {/* <DeliveryRoadmapSection /> */}
       <AppendixSection />
       <ExecutiveTakeaway />
     </div>
