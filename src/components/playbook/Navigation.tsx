@@ -278,6 +278,28 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                     );
                   })()}
 
+                  {(() => {
+                    const glossary = allItems.find((i) => i.id === "glossary");
+                    if (!glossary) return null;
+                    return (
+                      <button
+                        key={glossary.id}
+                        onClick={() => scrollToSection(glossary.id)}
+                        className={`flex items-center justify-between text-left px-4 py-3 rounded-lg text-sm font-medium transition-all mb-2 border ${
+                          activeSection === glossary.id
+                            ? "bg-primary text-primary-foreground border-primary"
+                            : "bg-muted/30 text-foreground border-border/50 hover:bg-muted"
+                        }`}
+                      >
+                        <span className="flex items-center gap-2">
+                          <BookOpen className="w-4 h-4" />
+                          {glossary.label}
+                        </span>
+                        <ChevronRight className="w-4 h-4 opacity-50" />
+                      </button>
+                    );
+                  })()}
+
                   <button
                     onClick={() => scrollToSection(topLevel[0].id)}
                     className={`flex items-center justify-between text-left px-4 py-3 rounded-lg text-sm font-medium transition-all ${
