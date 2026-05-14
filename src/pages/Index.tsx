@@ -25,6 +25,7 @@ import { MaturityLadderSection } from "@/components/playbook/MaturityLadderSecti
 // import { DeliveryRoadmapSection } from "@/components/playbook/DeliveryRoadmapSection";
 import { AppendixSection } from "@/components/playbook/AppendixSection";
 import { ExecutiveTakeaway } from "@/components/playbook/ExecutiveTakeaway";
+import { GlossarySection } from "@/components/playbook/GlossarySection";
 import { ReadingProgressBar } from "@/components/playbook/ReadingProgressBar";
 import { PresentationMode } from "@/components/playbook/PresentationMode";
 import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
@@ -66,6 +67,7 @@ const Index = () => {
       {/* <DeliveryRoadmapSection /> */}
       <AppendixSection />
       <ExecutiveTakeaway />
+      <GlossarySection />
     </div>
   );
 };
