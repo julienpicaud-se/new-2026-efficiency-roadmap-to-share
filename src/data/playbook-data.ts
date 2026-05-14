@@ -1254,7 +1254,7 @@ export const ecmIngestionEngine = {
     accuracy: "~80% accuracy on first pass during initial testing.",
   },
   monteCarlo: {
-    title: "Monte Carlo Top-5 Recommendations",
+    title: "Monte Carlo Top-5 Recommendations (to be considered for RA+)",
     subtitle:
       "Volume unlocks intelligence. Once we have tens of thousands of historic examples, we run probabilistic simulation to surface the right actions for the right client.",
     inputs: [
@@ -1560,7 +1560,7 @@ export const vocEvidence = {
 
 // SE Corporate as the MVP blueprint
 export const seCorporateBlueprint = {
-  title: "SE Corporate: RA Classic Client",
+  title: "SE Corporate: RA Classic IDM Client",
   intro: "",
   scale: [
     { value: "4,800+", label: "Meters connected", detail: "Electricity, gas, water, HVAC, lighting, IT, distribution, process lines, PV, generators" },
