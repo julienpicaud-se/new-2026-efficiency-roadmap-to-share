@@ -34,6 +34,25 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showOverview, setShowOverview] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [showHelp, setShowHelp] = useState(false);
+  const [cursorHidden, setCursorHidden] = useState(false);
+  const cursorTimerRef = useRef<number | null>(null);
+
+  // Auto-hide cursor after inactivity
+  useEffect(() => {
+    if (!isActive) return;
+    const reveal = () => {
+      setCursorHidden(false);
+      if (cursorTimerRef.current) window.clearTimeout(cursorTimerRef.current);
+      cursorTimerRef.current = window.setTimeout(() => setCursorHidden(true), 3000);
+    };
+    reveal();
+    window.addEventListener("mousemove", reveal);
+    return () => {
+      window.removeEventListener("mousemove", reveal);
+      if (cursorTimerRef.current) window.clearTimeout(cursorTimerRef.current);
+    };
+  }, [isActive]);
 
   const scrollToSlide = useCallback((index: number, smooth: boolean = true) => {
     const element = document.getElementById(sections[index].id);
