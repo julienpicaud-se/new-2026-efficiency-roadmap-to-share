@@ -398,6 +398,52 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
           Exit
         </span>
       </div>
+
+      {/* Help overlay */}
+      {showHelp && (
+        <div
+          className="fixed inset-0 z-[210] bg-background/95 backdrop-blur-md flex items-center justify-center animate-fade-in"
+          onClick={() => setShowHelp(false)}
+        >
+          <div className="bg-card border border-border/50 rounded-2xl p-8 max-w-md shadow-2xl">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-lg font-semibold text-foreground">Keyboard Shortcuts</h3>
+              <Button variant="ghost" size="icon" onClick={() => setShowHelp(false)}>
+                <X className="w-5 h-5" />
+              </Button>
+            </div>
+            <div className="space-y-3 text-sm">
+              {[
+                { keys: ["←", "→"], label: "Previous / next slide" },
+                { keys: ["Space"], label: "Next slide" },
+                { keys: ["Home", "End"], label: "First / last slide" },
+                { keys: ["G"], label: "Toggle slide overview" },
+                { keys: ["?"], label: "Show this help" },
+                { keys: ["Esc"], label: "Exit presentation" },
+              ].map((row) => (
+                <div key={row.label} className="flex items-center justify-between">
+                  <span className="text-muted-foreground">{row.label}</span>
+                  <span className="flex gap-1">
+                    {row.keys.map((k) => (
+                      <kbd key={k} className="px-2 py-1 rounded bg-muted text-foreground font-mono text-xs">{k}</kbd>
+                    ))}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
+};
+
+// Toggles a `cursor-hidden` class on document.body alongside `presentation-mode`
+const CursorClassToggle = ({ hidden }: { hidden: boolean }) => {
+  useEffect(() => {
+    if (hidden) document.body.classList.add("cursor-hidden");
+    else document.body.classList.remove("cursor-hidden");
+    return () => document.body.classList.remove("cursor-hidden");
+  }, [hidden]);
+  return null;
 };
