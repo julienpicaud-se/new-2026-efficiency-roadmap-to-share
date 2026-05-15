@@ -67,8 +67,8 @@ const principles = [
   },
   {
     icon: ShieldCheck,
-    title: "Differentiated within SNS",
-    body: "Clearly defensible against adjacent SNS products (BDP, Foresight) so re-platforming is justified in budget reviews.",
+    title: "Differentiated within S&S",
+    body: "Clearly defensible against adjacent S&S products (BDP, Foresight) so re-platforming is justified in budget reviews.",
   },
   {
     icon: Users,

@@ -126,7 +126,7 @@ export const AppendixSection = () => {
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
           <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 sm:mb-4 block">
-            Reference Materials
+            Appendix
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
             Efficiency Transformation Details

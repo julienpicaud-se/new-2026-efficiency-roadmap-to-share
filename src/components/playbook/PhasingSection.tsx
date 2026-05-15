@@ -57,7 +57,7 @@ const phases = [
       "Confirmed as one of three no-regret strategic moves",
       "Build vs. partner vs. integrate not yet decided",
       "Surface area within RA+ vs. standalone module to be scoped",
-      "Differentiation vs. adjacent SNS products (BDP, Foresight) must be clear",
+      "Differentiation vs. adjacent S&S products (BDP, Foresight) must be clear",
     ],
     dependencies: "Sequencing depends on IDM and ECM groundwork plus a clearer commercial case.",
   },
