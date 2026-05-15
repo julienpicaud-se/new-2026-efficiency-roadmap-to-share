@@ -138,7 +138,9 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
         prevSlide();
       } else if (e.key === "Escape") {
         e.preventDefault();
-        if (showOverview) {
+        if (showHelp) {
+          setShowHelp(false);
+        } else if (showOverview) {
           setShowOverview(false);
         } else {
           handleClose();
@@ -146,6 +148,9 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
       } else if (e.key === "g" || e.key === "G") {
         e.preventDefault();
         setShowOverview(!showOverview);
+      } else if (e.key === "?" || (e.shiftKey && e.key === "/")) {
+        e.preventDefault();
+        setShowHelp((v) => !v);
       } else if (e.key === "Home") {
         e.preventDefault();
         goToSlide(0);
@@ -157,7 +162,7 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isActive, nextSlide, prevSlide, handleClose, showOverview, isTransitioning, goToSlide]);
+  }, [isActive, nextSlide, prevSlide, handleClose, showOverview, showHelp, isTransitioning, goToSlide]);
 
   // Update current slide based on scroll position
   useEffect(() => {
