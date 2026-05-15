@@ -1,6 +1,6 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Minimize2, ChevronLeft, ChevronRight, Grid3X3, X } from "lucide-react";
+import { Minimize2, ChevronLeft, ChevronRight, Grid3X3, X, Keyboard } from "lucide-react";
 
 const sections = [
   { id: "hero", title: "Overview" },
