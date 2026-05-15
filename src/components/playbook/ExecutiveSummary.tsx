@@ -61,13 +61,6 @@ const sections: Section[] = [
     tone: "muted",
     body:
       "The Efficiency CoE already delivers trusted advisory, implementation, IDM, and Global Energy Bureau capabilities across public and private sectors (38 people, 428 clients, 195K connected meters, $75M in performance guarantees). The opportunity is to convert that operating strength into a repeatable platform capability inside RA+, with Sera as the unified interface and IDM as the trusted data foundation, so customers are reached earlier, action is guided faster, and continuous improvement becomes the default.",
-    kpis: [
-      { value: "Manual", label: "Audit delivery model" },
-      { value: "Fragmented", label: "Strategy foundation" },
-      { value: "Limited", label: "Recurring advice loop" },
-      { value: "Modules", label: "RA Classic shape" },
-      { value: "Platform", label: "RA+ target shape" },
-    ],
   },
   {
     num: "02",
@@ -128,24 +121,14 @@ const sections: Section[] = [
 
 const risks: { risk: string; mitigation: string }[] = [
   {
-    risk: "Advice could be interpreted as a guarantee",
-    mitigation:
-      "Use confidence labels, ranges, assumptions, and clear escalation paths to expert audits before any commitment is made.",
-  },
-  {
-    risk: "Efficiency guidance becomes inconsistent across teams",
-    mitigation:
-      "Govern taxonomy, required fields, calculation assumptions, and SME review so the library becomes the single source of truth.",
-  },
-  {
     risk: "Customer context is too thin for useful recommendations",
     mitigation:
       "Start with data-light guidance, show data gaps transparently, and progressively enrich with site, audit, AkitaBox, BMS, and customer inputs.",
   },
   {
-    risk: "Scope expands into detailed engineering or pricing",
+    risk: "Efficiency guidance becomes inconsistent across teams",
     mitigation:
-      "Keep the product focused on guidance, prioritization, and workflow enablement while reserving detailed design and commercial terms for expert services.",
+      "Govern taxonomy, required fields, calculation assumptions, and SME review so the library becomes the single source of truth.",
   },
 ];
 
@@ -249,6 +232,13 @@ export const ExecutiveSummary = () => {
                   </h3>
                 </div>
               </div>
+
+              <p className="mb-6 text-sm text-muted-foreground">
+                Two cross-cutting risks live here. Operating rules are detailed in{" "}
+                <a href="#guardrails" className="text-primary underline-offset-4 hover:underline">Guardrails</a>{" "}
+                and boundaries in{" "}
+                <a href="#out-of-scope" className="text-primary underline-offset-4 hover:underline">Out of Scope</a>.
+              </p>
 
               <div className="grid gap-4 md:grid-cols-2">
                 {risks.map((item) => (
