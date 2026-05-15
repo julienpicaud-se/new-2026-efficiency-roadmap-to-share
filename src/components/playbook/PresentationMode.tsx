@@ -314,6 +314,15 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
           <Grid3X3 className="w-4 h-4 mr-2" />
           Overview
         </Button>
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={() => setShowHelp(true)}
+          title="Keyboard shortcuts (?)"
+          className="bg-background/80 backdrop-blur-md border-border/50 shadow-lg hover:bg-background/90 h-9 w-9"
+        >
+          <Keyboard className="w-4 h-4" />
+        </Button>
         <Button 
           variant="outline" 
           size="sm" 
