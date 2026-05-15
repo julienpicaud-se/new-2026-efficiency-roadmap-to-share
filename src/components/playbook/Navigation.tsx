@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Download, Maximize2, ChevronRight, Layers, ChevronDown, FileDown, Map, BookOpen } from "lucide-react";
+import { Menu, Download, Maximize2, ChevronRight, Layers, ChevronDown, FileDown, Map } from "lucide-react";
 import { exportToPptx } from "@/lib/pptx-export";
 import { domainRoadmaps } from "@/data/domain-roadmaps";
 import {
@@ -18,14 +18,17 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 
 type NavItem = { id: string; label: string };
-type NavGroup = { label: string; items: NavItem[] };
+type NavGroup = { label: string; items: NavItem[]; defaultOpen?: boolean };
 
 const topLevel: NavItem[] = [
   { id: "executive-summary", label: "Summary" },
-  // { id: "delivery-roadmap", label: "Roadmap" },
-  { id: "appendix", label: "Appendix" },
 ];
 
 const groups: NavGroup[] = [
@@ -53,9 +56,8 @@ const groups: NavGroup[] = [
       { id: "ecm-mapping", label: "Capability Mapping" },
       { id: "regional-journeys", label: "Regional Journeys" },
       { id: "what-if", label: "What If Tomorrow" },
-      { id: "out-of-scope", label: "Out of Scope" },
+      { id: "boundaries", label: "Boundaries & Rules" },
       { id: "success-metrics", label: "Success Metrics" },
-      { id: "guardrails", label: "Guardrails" },
       { id: "maturity-ladder", label: "Maturity Ladder" },
       { id: "phasing", label: "Phasing" },
       { id: "idm-vision", label: "IDM 2.0 Vision" },
@@ -64,6 +66,7 @@ const groups: NavGroup[] = [
   {
     label: "Reference",
     items: [
+      { id: "appendix", label: "Browse all reference materials" },
       { id: "appendix:se-corporate-blueprint", label: "RA Classic IDM Client" },
       { id: "appendix:glossary", label: "Glossary" },
     ],
@@ -71,9 +74,8 @@ const groups: NavGroup[] = [
 ];
 
 const allItems: NavItem[] = [
-  topLevel[0],
-  ...groups.flatMap((g) => g.items),
-  ...topLevel.slice(1),
+  ...topLevel,
+  ...groups.flatMap((g) => g.items.filter((i) => !i.id.includes(":"))),
 ];
 
 interface NavigationProps {
