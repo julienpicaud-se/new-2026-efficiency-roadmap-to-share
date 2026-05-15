@@ -1,8 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { appendixPillars, supportingScorecard, capabilityMatrix, intelligenceFlywheel } from "@/data/playbook-data";
-import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Zap, X, Minus, Database, Brain, Settings, Eye, FileText, AlertOctagon, MessageSquare } from "lucide-react";
+import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Zap, X, Minus, Database, Brain, Settings, Eye, FileText, AlertOctagon, MessageSquare, Building2, BookOpen } from "lucide-react";
 import { PainInventorySection } from "@/components/playbook/PainInventorySection";
 import { VOCEvidenceSection } from "@/components/playbook/VOCEvidenceSection";
+import { SECorporateBlueprintSection } from "@/components/playbook/SECorporateBlueprintSection";
+import { GlossarySection } from "@/components/playbook/GlossarySection";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
@@ -40,6 +42,7 @@ const StatusIcon = ({ status }: { status: string }) => {
 };
 
 const APPENDIX_SECTIONS = [
+  "se-corporate-blueprint",
   "pain-inventory",
   "voc-evidence",
   "initiatives-by-domain",
@@ -47,6 +50,7 @@ const APPENDIX_SECTIONS = [
   "capability-matrix",
   "value-pillar-deep-dive",
   "supporting-scorecard",
+  "glossary",
 ];
 
 export const AppendixSection = () => {
