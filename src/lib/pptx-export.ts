@@ -15,7 +15,6 @@ import {
   seCorporateBlueprint,
   painInventory,
   maturityLadder,
-  architectureDecision,
   seraKPIs,
 } from "@/data/playbook-data";
 
@@ -537,39 +536,47 @@ export const exportToPptx = async () => {
     fontSize: 8, italic: true, color: TEXT_MUTED,
   });
 
-  // ===== Slide: Plan A vs Plan B =====
-  const slideAD = pptx.addSlide({ masterName: "MASTER_SLIDE" });
-  addTitle(slideAD, "OPEN ARCHITECTURAL DECISION", "Plan A vs Plan B", architectureDecision.intro);
-  architectureDecision.options.forEach((opt, i) => {
-    const xPos = 0.5 + i * 4.7;
-    slideAD.addShape("rect" as PptxGenJS.ShapeType, {
-      x: xPos, y: 1.95, w: 4.55, h: 3.2,
+  // ===== Slide: Boundaries & Operating Rules =====
+  const slideB = pptx.addSlide({ masterName: "MASTER_SLIDE" });
+  addTitle(
+    slideB,
+    "BOUNDARIES & OPERATING RULES",
+    "Where We Stop, How We Operate",
+    "The boundary list keeps scope honest. The operating rules keep customer-facing advice trustworthy."
+  );
+
+  const outOfScope = [
+    { title: "Contractual Guarantees", detail: "Performance guarantees and contractual commitments require separate validation." },
+    { title: "Detailed Engineering", detail: "Detailed engineering design without expert validation stays outside scope." },
+    { title: "Asset Planning", detail: "Baseline modeling, M&V, and capital planning live in a separate Asset Planning discovery." },
+  ];
+  const guardrails = [
+    { title: "Transparency & Scope", detail: "Label advice as guidance, show ranges with confidence levels, surface assumptions and gaps." },
+    { title: "Data Quality & Applicability", detail: "Enforce data checks, show applicability rules, filter by geography, segment, and asset tags." },
+    { title: "Risk & Compliance", detail: "No auto-suggest where licensed sign-off is required. Maintain audit trails. Link to standards." },
+    { title: "User Experience & Escalation", detail: "Expert escalation from any advice card. Rationale snippets and similar-site evidence." },
+  ];
+
+  slideB.addText("Out of Scope", { x: 0.5, y: 1.95, w: 4.4, h: 0.3, fontSize: 11, bold: true, color: "F97316" });
+  outOfScope.forEach((item, i) => {
+    const yPos = 2.3 + i * 1.05;
+    slideB.addShape("rect" as PptxGenJS.ShapeType, {
+      x: 0.5, y: yPos, w: 4.4, h: 0.95,
+      fill: { color: CARD_BG }, line: { color: "F97316", width: 1 },
+    });
+    slideB.addText(item.title, { x: 0.65, y: yPos + 0.1, w: 4.1, h: 0.3, fontSize: 10, bold: true, color: TEXT_WHITE });
+    slideB.addText(item.detail, { x: 0.65, y: yPos + 0.4, w: 4.1, h: 0.5, fontSize: 7.5, color: TEXT_MUTED, fit: "shrink" });
+  });
+
+  slideB.addText("Guardrails", { x: 5.1, y: 1.95, w: 4.4, h: 0.3, fontSize: 11, bold: true, color: BRAND_GREEN });
+  guardrails.forEach((item, i) => {
+    const yPos = 2.3 + i * 0.78;
+    slideB.addShape("rect" as PptxGenJS.ShapeType, {
+      x: 5.1, y: yPos, w: 4.4, h: 0.7,
       fill: { color: CARD_BG }, line: { color: BRAND_GREEN, width: 1 },
     });
-    slideAD.addText(opt.label, {
-      x: xPos + 0.15, y: 2.05, w: 4.3, h: 0.25,
-      fontSize: 8, bold: true, color: BRAND_GREEN,
-    });
-    slideAD.addText(opt.title, {
-      x: xPos + 0.15, y: 2.3, w: 4.3, h: 0.32,
-      fontSize: 12, bold: true, color: TEXT_WHITE,
-    });
-    slideAD.addText(opt.summary, {
-      x: xPos + 0.15, y: 2.65, w: 4.3, h: 0.5,
-      fontSize: 7.5, color: TEXT_MUTED, fit: "shrink",
-    });
-    slideAD.addText("Pros", { x: xPos + 0.15, y: 3.2, w: 4.3, h: 0.22, fontSize: 8, bold: true, color: "10B981" });
-    opt.pros.forEach((p, pi) => {
-      slideAD.addText(`✓ ${p}`, { x: xPos + 0.15, y: 3.42 + pi * 0.22, w: 4.3, h: 0.2, fontSize: 7, color: TEXT_WHITE });
-    });
-    const consY = 3.42 + opt.pros.length * 0.22 + 0.1;
-    slideAD.addText("Trade-offs", { x: xPos + 0.15, y: consY, w: 4.3, h: 0.22, fontSize: 8, bold: true, color: "EF4444" });
-    opt.cons.forEach((c, ci) => {
-      slideAD.addText(`✕ ${c}`, { x: xPos + 0.15, y: consY + 0.22 + ci * 0.22, w: 4.3, h: 0.2, fontSize: 7, color: TEXT_MUTED });
-    });
-  });
-  slideAD.addText(`Status: ${architectureDecision.status}`, {
-    x: 0.5, y: 5.25, w: 9, h: 0.25, fontSize: 8, italic: true, color: TEXT_MUTED,
+    slideB.addText(item.title, { x: 5.25, y: yPos + 0.05, w: 4.1, h: 0.25, fontSize: 9, bold: true, color: BRAND_GREEN });
+    slideB.addText(item.detail, { x: 5.25, y: yPos + 0.3, w: 4.1, h: 0.38, fontSize: 7, color: TEXT_MUTED, fit: "shrink" });
   });
 
   // ===== Slide: Sera KPIs =====
