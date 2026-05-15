@@ -142,6 +142,52 @@ export const AppendixSection = () => {
           className="space-y-4"
         >
 
+        {/* ============ Pain Inventory ============ */}
+          <AccordionItem
+            value="pain-inventory"
+            ref={setItemRef("pain-inventory")}
+            data-section="pain-inventory"
+            className={itemClass("pain-inventory")}
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-destructive text-xs font-semibold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                  <AlertOctagon className="w-3.5 h-3.5" />
+                  RA Classic Pain Inventory
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                  What the Efficiency Transformation Eliminates
+                </h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-2 pb-2">
+              <PainInventorySection />
+            </AccordionContent>
+          </AccordionItem>
+
+        {/* ============ VOC Evidence ============ */}
+          <AccordionItem
+            value="voc-evidence"
+            ref={setItemRef("voc-evidence")}
+            data-section="voc-evidence"
+            className={itemClass("voc-evidence")}
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-primary text-xs font-semibold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                  <MessageSquare className="w-3.5 h-3.5" />
+                  VOC Validation
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                  Customer Evidence
+                </h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-2 pb-2">
+              <VOCEvidenceSection />
+            </AccordionContent>
+          </AccordionItem>
+
         {/* ============ Initiatives by Domain ============ */}
           <AccordionItem
             value="initiatives-by-domain"
