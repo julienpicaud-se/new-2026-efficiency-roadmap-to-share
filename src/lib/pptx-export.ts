@@ -164,9 +164,10 @@ export const exportToPptx = async () => {
     });
   });
 
-  // ===== 7. Strategic Pillars =====
+  // ===== 7. Strategic Pillars (Qualitative Outcomes) =====
   const slide4 = newSlide();
-  slide4.addText("Strategic Pillars", { x: 0.5, y: 0.3, w: 9, h: 0.5, fontSize: 28, bold: true, color: TEXT_WHITE });
+  slide4.addText("QUALITATIVE OUTCOMES", { x: 0.5, y: 0.3, w: 9, h: 0.3, fontSize: 11, bold: true, color: BRAND_GREEN });
+  slide4.addText("Strategic Pillars", { x: 0.5, y: 0.6, w: 9, h: 0.5, fontSize: 24, bold: true, color: TEXT_WHITE });
   strategicPillars.forEach((pillar, i) => {
     const xPos = 0.5 + i * 3.2;
     slide4.addShape("rect" as PptxGenJS.ShapeType, {
@@ -317,18 +318,36 @@ export const exportToPptx = async () => {
     slideB.addText(item.detail, { x: 5.25, y: yPos + 0.3, w: 4.1, h: 0.38, fontSize: 7, color: TEXT_MUTED, fit: "shrink" });
   });
 
-  // ===== 15. Success Metrics (Sera KPIs) =====
+  // ===== 15. Success Looks Like (Quantitative KPIs) =====
   const slideSK = newSlide();
-  addTitle(slideSK, "SUCCESS METRICS", "Sera Interface KPIs", seraKPIs.intro);
-  seraKPIs.kpis.forEach((k, i) => {
-    const xPos = 0.5 + (i % 3) * 3.05;
-    const yPos = 1.95 + Math.floor(i / 3) * 1.5;
+  addTitle(slideSK, "QUANTITATIVE KPIS", "Success Looks Like", "Measurable signals that translate the Strategic Pillars into trackable indicators. Each KPI defines what we measure, not a committed target.");
+  const quantKPIs = [
+    { label: "Audit Cycle Time", signal: "Days per audit (trend)" },
+    { label: "Advisory-to-Audit Conversion", signal: "% prompts → audits" },
+    { label: "Time to Quote", signal: "Hours to quote (median)" },
+    { label: "Recommendation Adoption", signal: "% recs actioned (90d)" },
+    { label: "RA+ Revenue Contribution", signal: "% of RA+ ARR" },
+  ];
+  quantKPIs.forEach((k, i) => {
+    const xPos = 0.5 + i * 1.85;
     slideSK.addShape("rect" as PptxGenJS.ShapeType, {
-      x: xPos, y: yPos, w: 2.85, h: 1.35,
+      x: xPos, y: 1.95, w: 1.75, h: 1.0,
       fill: { color: CARD_BG }, line: { color: BRAND_GREEN, width: 1 },
     });
-    slideSK.addText(k.label, { x: xPos + 0.15, y: yPos + 0.1, w: 2.55, h: 0.4, fontSize: 10, bold: true, color: TEXT_WHITE, fit: "shrink" });
-    slideSK.addText(k.description, { x: xPos + 0.15, y: yPos + 0.55, w: 2.55, h: 0.7, fontSize: 8, color: TEXT_MUTED, fit: "shrink" });
+    slideSK.addText(k.label, { x: xPos + 0.1, y: 2.0, w: 1.55, h: 0.45, fontSize: 9, bold: true, color: TEXT_WHITE, fit: "shrink" });
+    slideSK.addText(k.signal, { x: xPos + 0.1, y: 2.45, w: 1.55, h: 0.45, fontSize: 7.5, color: BRAND_GREEN, fit: "shrink" });
+  });
+  slideSK.addText("Sera Interface Signals", { x: 0.5, y: 3.15, w: 9, h: 0.3, fontSize: 11, bold: true, color: BRAND_GREEN });
+  slideSK.addText(seraKPIs.intro, { x: 0.5, y: 3.45, w: 9, h: 0.35, fontSize: 8, italic: true, color: TEXT_MUTED, fit: "shrink" });
+  seraKPIs.kpis.forEach((k, i) => {
+    const xPos = 0.5 + (i % 3) * 3.05;
+    const yPos = 3.85 + Math.floor(i / 3) * 0.85;
+    slideSK.addShape("rect" as PptxGenJS.ShapeType, {
+      x: xPos, y: yPos, w: 2.85, h: 0.75,
+      fill: { color: CARD_BG }, line: { color: BRAND_GREEN, width: 1 },
+    });
+    slideSK.addText(k.label, { x: xPos + 0.1, y: yPos + 0.05, w: 2.65, h: 0.25, fontSize: 8, bold: true, color: TEXT_WHITE, fit: "shrink" });
+    slideSK.addText(k.description, { x: xPos + 0.1, y: yPos + 0.3, w: 2.65, h: 0.42, fontSize: 6.5, color: TEXT_MUTED, fit: "shrink" });
   });
 
   // ===== 16. Maturity Ladder =====
