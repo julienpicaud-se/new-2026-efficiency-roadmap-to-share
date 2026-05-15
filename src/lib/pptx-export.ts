@@ -395,7 +395,7 @@ export const exportToPptx = async () => {
   });
 
   // ===== 19. Appendix Divider =====
-  addSectionDivider("REFERENCE MATERIALS", "Appendix");
+  addSectionDivider("APPENDIX", "Reference Materials");
 
   // ===== Appendix: VOC Evidence =====
   const slideV = newSlide();
