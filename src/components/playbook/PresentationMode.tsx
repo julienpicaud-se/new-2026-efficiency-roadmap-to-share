@@ -1,28 +1,26 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Minimize2, ChevronLeft, ChevronRight, Grid3X3, X } from "lucide-react";
+import { Minimize2, ChevronLeft, ChevronRight, Grid3X3, X, Keyboard } from "lucide-react";
 
 const sections = [
   { id: "hero", title: "Overview" },
   { id: "executive-summary", title: "Executive Summary" },
   { id: "platform-shift", title: "Efficiency Transformation" },
-  { id: "product-scope", title: "Product Scope" },
   { id: "personas", title: "Personas" },
   { id: "jobs-to-be-done", title: "Jobs to Be Done" },
-  { id: "voc-evidence", title: "VOC Evidence" },
-  { id: "se-corporate-blueprint", title: "SE Corporate: Existing Client" },
-  { id: "pain-inventory", title: "Pain Inventory" },
-  { id: "key-challenges", title: "Key Challenges" },
+  { id: "key-challenges", title: "Why Now" },
   { id: "strategic-pillars", title: "Strategic Pillars" },
-  { id: "existing-tools", title: "IDM Backbone" },
-  { id: "regional-journey", title: "Regional Journey" },
-  { id: "strategic-context", title: "Strategic Context" },
-  { id: "what-if", title: "What If" },
-  { id: "guardrails", title: "Guardrails" },
+  { id: "existing-tools", title: "Technology Landscape" },
+  { id: "ecm-ingestion-engine", title: "Knowledge Engine" },
   { id: "ecm-mapping", title: "Capability Mapping" },
+  { id: "regional-journeys", title: "Regional Journeys" },
+  { id: "strategic-context", title: "Strategic Context" },
+  { id: "what-if", title: "What If Tomorrow" },
+  { id: "boundaries", title: "Boundaries & Operating Rules" },
+  { id: "success-metrics", title: "Success Metrics" },
   { id: "maturity-ladder", title: "Maturity Ladder" },
-  { id: "architecture-decision", title: "Plan A vs Plan B" },
-  // { id: "delivery-roadmap", title: "2026 Roadmap" },
+  { id: "phasing", title: "Phasing" },
+  { id: "idm-vision", title: "IDM 2.0 Vision" },
   { id: "appendix", title: "Appendix" },
   { id: "takeaway", title: "Takeaway" },
 ];
@@ -36,6 +34,25 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showOverview, setShowOverview] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [showHelp, setShowHelp] = useState(false);
+  const [cursorHidden, setCursorHidden] = useState(false);
+  const cursorTimerRef = useRef<number | null>(null);
+
+  // Auto-hide cursor after inactivity
+  useEffect(() => {
+    if (!isActive) return;
+    const reveal = () => {
+      setCursorHidden(false);
+      if (cursorTimerRef.current) window.clearTimeout(cursorTimerRef.current);
+      cursorTimerRef.current = window.setTimeout(() => setCursorHidden(true), 3000);
+    };
+    reveal();
+    window.addEventListener("mousemove", reveal);
+    return () => {
+      window.removeEventListener("mousemove", reveal);
+      if (cursorTimerRef.current) window.clearTimeout(cursorTimerRef.current);
+    };
+  }, [isActive]);
 
   const scrollToSlide = useCallback((index: number, smooth: boolean = true) => {
     const element = document.getElementById(sections[index].id);
@@ -121,7 +138,9 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
         prevSlide();
       } else if (e.key === "Escape") {
         e.preventDefault();
-        if (showOverview) {
+        if (showHelp) {
+          setShowHelp(false);
+        } else if (showOverview) {
           setShowOverview(false);
         } else {
           handleClose();
@@ -129,6 +148,9 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
       } else if (e.key === "g" || e.key === "G") {
         e.preventDefault();
         setShowOverview(!showOverview);
+      } else if (e.key === "?" || (e.shiftKey && e.key === "/")) {
+        e.preventDefault();
+        setShowHelp((v) => !v);
       } else if (e.key === "Home") {
         e.preventDefault();
         goToSlide(0);
@@ -140,7 +162,7 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isActive, nextSlide, prevSlide, handleClose, showOverview, isTransitioning, goToSlide]);
+  }, [isActive, nextSlide, prevSlide, handleClose, showOverview, showHelp, isTransitioning, goToSlide]);
 
   // Update current slide based on scroll position
   useEffect(() => {
@@ -178,8 +200,13 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
           overflow-x: hidden;
         }
         .presentation-mode nav,
-        .presentation-mode .reading-progress-bar {
+        .presentation-mode .reading-progress-bar,
+        .presentation-mode [aria-label="Jump to top"] {
           display: none !important;
+        }
+        .presentation-mode.cursor-hidden,
+        .presentation-mode.cursor-hidden * {
+          cursor: none !important;
         }
         .presentation-mode section {
           min-height: 100vh;
@@ -188,7 +215,7 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          padding: 3rem 1rem 5rem;
+          padding: 4rem 1rem 5rem;
           box-sizing: border-box;
           opacity: 1;
           transform: translateY(0);
@@ -205,21 +232,27 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
           opacity: 0.3;
           transform: translateY(10px);
         }
-        
-        /* Scale content to fit viewport */
+
         @media (max-height: 800px) {
-          .presentation-mode section {
-            transform: scale(0.9);
-            transform-origin: center center;
-          }
+          .presentation-mode section { transform: scale(0.9); transform-origin: center center; }
         }
         @media (max-height: 600px) {
-          .presentation-mode section {
-            transform: scale(0.8);
-            transform-origin: center center;
-          }
+          .presentation-mode section { transform: scale(0.8); transform-origin: center center; }
         }
       `}</style>
+
+      {/* Toggle cursor-hidden class on body */}
+      <CursorClassToggle hidden={cursorHidden} />
+
+      {/* Top progress bar */}
+      <div className="fixed top-0 left-0 right-0 h-0.5 z-[150] bg-muted/40">
+        <div
+          className="h-full bg-primary transition-all duration-300"
+          style={{
+            width: `${((currentSlide + 1) / sections.length) * 100}%`,
+          }}
+        />
+      </div>
 
       {/* Transition overlay */}
       <div 
@@ -280,6 +313,15 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
         >
           <Grid3X3 className="w-4 h-4 mr-2" />
           Overview
+        </Button>
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={() => setShowHelp(true)}
+          title="Keyboard shortcuts (?)"
+          className="bg-background/80 backdrop-blur-md border-border/50 shadow-lg hover:bg-background/90 h-9 w-9"
+        >
+          <Keyboard className="w-4 h-4" />
         </Button>
         <Button 
           variant="outline" 
@@ -365,6 +407,52 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
           Exit
         </span>
       </div>
+
+      {/* Help overlay */}
+      {showHelp && (
+        <div
+          className="fixed inset-0 z-[210] bg-background/95 backdrop-blur-md flex items-center justify-center animate-fade-in"
+          onClick={() => setShowHelp(false)}
+        >
+          <div className="bg-card border border-border/50 rounded-2xl p-8 max-w-md shadow-2xl">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-lg font-semibold text-foreground">Keyboard Shortcuts</h3>
+              <Button variant="ghost" size="icon" onClick={() => setShowHelp(false)}>
+                <X className="w-5 h-5" />
+              </Button>
+            </div>
+            <div className="space-y-3 text-sm">
+              {[
+                { keys: ["←", "→"], label: "Previous / next slide" },
+                { keys: ["Space"], label: "Next slide" },
+                { keys: ["Home", "End"], label: "First / last slide" },
+                { keys: ["G"], label: "Toggle slide overview" },
+                { keys: ["?"], label: "Show this help" },
+                { keys: ["Esc"], label: "Exit presentation" },
+              ].map((row) => (
+                <div key={row.label} className="flex items-center justify-between">
+                  <span className="text-muted-foreground">{row.label}</span>
+                  <span className="flex gap-1">
+                    {row.keys.map((k) => (
+                      <kbd key={k} className="px-2 py-1 rounded bg-muted text-foreground font-mono text-xs">{k}</kbd>
+                    ))}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
+};
+
+// Toggles a `cursor-hidden` class on document.body alongside `presentation-mode`
+const CursorClassToggle = ({ hidden }: { hidden: boolean }) => {
+  useEffect(() => {
+    if (hidden) document.body.classList.add("cursor-hidden");
+    else document.body.classList.remove("cursor-hidden");
+    return () => document.body.classList.remove("cursor-hidden");
+  }, [hidden]);
+  return null;
 };
