@@ -87,7 +87,7 @@ export const PhasingSection = () => {
       <div className="container px-4">
         <div className="text-center mb-12 sm:mb-16">
           <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 sm:mb-4 block">
-            Sequencing
+            Sequencing · Axis: over time
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
             Phasing: Three No-Regret Moves
