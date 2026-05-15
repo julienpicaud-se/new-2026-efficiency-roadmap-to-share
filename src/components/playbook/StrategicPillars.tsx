@@ -26,7 +26,7 @@ export const StrategicPillars = () => {
             Strategic Pillars
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
-            Three interconnected pillars that define our platform strategy
+            Three interconnected pillars defining the qualitative outcomes we commit to. Quantitative KPIs live in <span className="text-primary font-medium">Success Looks Like</span>.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export const StrategicPillars = () => {
                 {/* Success Metrics */}
                 <div className="mt-auto">
                   <h4 className="font-semibold text-muted-foreground uppercase text-xs tracking-wider mb-4">
-                    Success Metrics
+                    Qualitative Outcomes
                   </h4>
                   <div className="space-y-3">
                     {pillar.successMetrics.map((metric, i) => (

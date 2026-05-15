@@ -15,38 +15,38 @@ import { seraKPIs } from "@/data/playbook-data";
 const successMetrics = [
   {
     icon: Timer,
-    metric: "Faster Audits",
-    description: "Audits completed faster with higher consistency",
-    indicator: "Speed & Quality",
-    signal: "Delivery throughput",
+    metric: "Audit Cycle Time",
+    description: "Average days from kickoff to deliverable, tracked per audit type.",
+    indicator: "Throughput",
+    signal: "Days per audit (trend)",
   },
   {
     icon: TrendingUp,
-    metric: "Increased Upsell",
-    description: "Increased upsell rate from early advisory to advanced audits",
-    indicator: "Conversion",
-    signal: "Expert advisory pull",
+    metric: "Advisory-to-Audit Conversion",
+    description: "Share of in-product advisory prompts that convert into a paid advanced audit.",
+    indicator: "Conversion Rate",
+    signal: "% prompts → audits",
   },
   {
     icon: Clock,
-    metric: "Reduced Quote Time",
-    description: "Reduced time to quote for efficiency engagements",
-    indicator: "Efficiency",
-    signal: "Faster qualification",
+    metric: "Time to Quote",
+    description: "Median hours from opportunity identification to signed quote for efficiency engagements.",
+    indicator: "Sales Velocity",
+    signal: "Hours to quote (median)",
   },
   {
     icon: MousePointer,
-    metric: "Platform Adoption",
-    description: "Measurable adoption of in-product efficiency recommendations",
+    metric: "Recommendation Adoption",
+    description: "Share of in-product efficiency recommendations acted on by RA+ users within 90 days.",
     indicator: "Engagement",
-    signal: "RA+ usage depth",
+    signal: "% recs actioned (90d)",
   },
   {
     icon: DollarSign,
-    metric: "Revenue Contribution",
-    description: "Tangible contribution to RA+ recurring revenue",
+    metric: "RA+ Revenue Contribution",
+    description: "Recurring revenue attributable to efficiency features as a share of RA+ ARR.",
     indicator: "Business Impact",
-    signal: "Recurring value",
+    signal: "% of RA+ ARR",
   },
 ];
 
@@ -64,13 +64,13 @@ export const SuccessMetricsSection = () => {
           {/* Section Header */}
           <div className="text-center mb-12 sm:mb-16">
             <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 sm:mb-4 block">
-              Measuring Impact
+              Quantitative KPIs
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
               Success Looks Like
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Five key indicators that demonstrate Efficiency Transformation is delivering value
+              Five measurable indicators that translate the Strategic Pillars into trackable signals. Each KPI defines what we measure, not a committed target.
             </p>
           </div>
 
