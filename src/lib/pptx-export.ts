@@ -164,9 +164,10 @@ export const exportToPptx = async () => {
     });
   });
 
-  // ===== 7. Strategic Pillars =====
+  // ===== 7. Strategic Pillars (Qualitative Outcomes) =====
   const slide4 = newSlide();
-  slide4.addText("Strategic Pillars", { x: 0.5, y: 0.3, w: 9, h: 0.5, fontSize: 28, bold: true, color: TEXT_WHITE });
+  slide4.addText("QUALITATIVE OUTCOMES", { x: 0.5, y: 0.3, w: 9, h: 0.3, fontSize: 11, bold: true, color: BRAND_GREEN });
+  slide4.addText("Strategic Pillars", { x: 0.5, y: 0.6, w: 9, h: 0.5, fontSize: 24, bold: true, color: TEXT_WHITE });
   strategicPillars.forEach((pillar, i) => {
     const xPos = 0.5 + i * 3.2;
     slide4.addShape("rect" as PptxGenJS.ShapeType, {
@@ -317,9 +318,9 @@ export const exportToPptx = async () => {
     slideB.addText(item.detail, { x: 5.25, y: yPos + 0.3, w: 4.1, h: 0.38, fontSize: 7, color: TEXT_MUTED, fit: "shrink" });
   });
 
-  // ===== 15. Success Metrics (Sera KPIs) =====
+  // ===== 15. Success Looks Like (Quantitative KPIs) =====
   const slideSK = newSlide();
-  addTitle(slideSK, "SUCCESS METRICS", "Sera Interface KPIs", seraKPIs.intro);
+  addTitle(slideSK, "QUANTITATIVE KPIS", "Success Looks Like", "Measurable signals that translate the Strategic Pillars into trackable indicators. Each KPI defines what we measure, not a committed target.");
   seraKPIs.kpis.forEach((k, i) => {
     const xPos = 0.5 + (i % 3) * 3.05;
     const yPos = 1.95 + Math.floor(i / 3) * 1.5;
