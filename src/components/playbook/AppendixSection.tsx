@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { appendixPillars, supportingScorecard, capabilityMatrix, intelligenceFlywheel } from "@/data/playbook-data";
-import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Zap, X, Minus, Database, Brain, Settings, Eye, FileText } from "lucide-react";
+import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Zap, X, Minus, Database, Brain, Settings, Eye, FileText, AlertOctagon, MessageSquare } from "lucide-react";
+import { PainInventorySection } from "@/components/playbook/PainInventorySection";
+import { VOCEvidenceSection } from "@/components/playbook/VOCEvidenceSection";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
@@ -38,6 +40,8 @@ const StatusIcon = ({ status }: { status: string }) => {
 };
 
 const APPENDIX_SECTIONS = [
+  "pain-inventory",
+  "voc-evidence",
   "initiatives-by-domain",
   "strategy-flywheel",
   "capability-matrix",
