@@ -61,6 +61,13 @@ const groups: NavGroup[] = [
       { id: "idm-vision", label: "IDM 2.0 Vision" },
     ],
   },
+  {
+    label: "Reference",
+    items: [
+      { id: "appendix:se-corporate-blueprint", label: "RA Classic IDM Client" },
+      { id: "appendix:glossary", label: "Glossary" },
+    ],
+  },
 ];
 
 const allItems: NavItem[] = [
@@ -98,6 +105,20 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
   }, []);
 
   const scrollToSection = (id: string) => {
+    // Deep link into the Appendix accordion: "appendix:<section-id>"
+    if (id.startsWith("appendix:")) {
+      const target = id.split(":")[1];
+      const appendix = document.getElementById("appendix");
+      if (appendix) {
+        const top = appendix.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+      window.dispatchEvent(
+        new CustomEvent("open-appendix-section", { detail: target })
+      );
+      setIsMobileMenuOpen(false);
+      return;
+    }
     const element = document.getElementById(id);
     if (element) {
       const navHeight = 80;
