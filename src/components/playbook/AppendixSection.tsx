@@ -83,6 +83,27 @@ export const AppendixSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Listen for deep-link requests from navigation
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const id = (e as CustomEvent<string>).detail;
+      if (!id || !APPENDIX_SECTIONS.includes(id)) return;
+      setOpenSections((prev) => (prev.includes(id) ? prev : [...prev, id]));
+      // Wait for accordion to expand, then scroll
+      setTimeout(() => {
+        const el = itemsRef.current.get(id);
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top, behavior: "smooth" });
+          setActiveSection(id);
+        }
+      }, 60);
+    };
+    window.addEventListener("open-appendix-section", handler as EventListener);
+    return () =>
+      window.removeEventListener("open-appendix-section", handler as EventListener);
+  }, []);
+
   const setItemRef = (id: string) => (el: HTMLDivElement | null) => {
     if (el) itemsRef.current.set(id, el);
     else itemsRef.current.delete(id);
