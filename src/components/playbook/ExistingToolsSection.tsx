@@ -55,7 +55,7 @@ export const ExistingToolsSection = () => {
             Current State & Vision
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
-            Efficiency Strategy Landscape
+            Efficiency Technology Landscape
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
             Where we are today, what the market demands, and how IDM becomes the RA+ data backbone.
