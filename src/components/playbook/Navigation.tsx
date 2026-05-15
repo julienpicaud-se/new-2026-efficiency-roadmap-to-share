@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Download, Maximize2, ChevronRight, Layers, ChevronDown, FileDown, Map, BookOpen } from "lucide-react";
+import { Menu, Download, Maximize2, ChevronRight, Layers, ChevronDown, FileDown, Map } from "lucide-react";
 import { exportToPptx } from "@/lib/pptx-export";
 import { domainRoadmaps } from "@/data/domain-roadmaps";
 import {
@@ -18,14 +18,17 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 
 type NavItem = { id: string; label: string };
-type NavGroup = { label: string; items: NavItem[] };
+type NavGroup = { label: string; items: NavItem[]; defaultOpen?: boolean };
 
 const topLevel: NavItem[] = [
   { id: "executive-summary", label: "Summary" },
-  // { id: "delivery-roadmap", label: "Roadmap" },
-  { id: "appendix", label: "Appendix" },
 ];
 
 const groups: NavGroup[] = [
@@ -53,9 +56,8 @@ const groups: NavGroup[] = [
       { id: "ecm-mapping", label: "Capability Mapping" },
       { id: "regional-journeys", label: "Regional Journeys" },
       { id: "what-if", label: "What If Tomorrow" },
-      { id: "out-of-scope", label: "Out of Scope" },
+      { id: "boundaries", label: "Boundaries & Rules" },
       { id: "success-metrics", label: "Success Metrics" },
-      { id: "guardrails", label: "Guardrails" },
       { id: "maturity-ladder", label: "Maturity Ladder" },
       { id: "phasing", label: "Phasing" },
       { id: "idm-vision", label: "IDM 2.0 Vision" },
@@ -64,6 +66,7 @@ const groups: NavGroup[] = [
   {
     label: "Reference",
     items: [
+      { id: "appendix", label: "Browse all reference materials" },
       { id: "appendix:se-corporate-blueprint", label: "RA Classic IDM Client" },
       { id: "appendix:glossary", label: "Glossary" },
     ],
@@ -71,9 +74,8 @@ const groups: NavGroup[] = [
 ];
 
 const allItems: NavItem[] = [
-  topLevel[0],
-  ...groups.flatMap((g) => g.items),
-  ...topLevel.slice(1),
+  ...topLevel,
+  ...groups.flatMap((g) => g.items.filter((i) => !i.id.includes(":"))),
 ];
 
 interface NavigationProps {
@@ -209,19 +211,6 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                 );
               })}
 
-              {topLevel.slice(1).map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
-                    activeSection === item.id
-                      ? "bg-primary text-primary-foreground shadow-md shadow-primary/20"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted/80"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
             </div>
           </div>
 
@@ -273,29 +262,6 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                 </SheetHeader>
                 
                 <div className="flex flex-col gap-1 py-6">
-                  {(() => {
-                    const appendix = allItems.find((i) => i.id === "appendix");
-                    if (!appendix) return null;
-                    return (
-                      <button
-                        key={appendix.id}
-                        onClick={() => scrollToSection(appendix.id)}
-                        className={`flex items-center justify-between text-left px-4 py-3 rounded-lg text-sm font-medium transition-all mb-2 border ${
-                          activeSection === appendix.id
-                            ? "bg-primary text-primary-foreground border-primary"
-                            : "bg-muted/30 text-foreground border-border/50 hover:bg-muted"
-                        }`}
-                      >
-                        <span className="flex items-center gap-2">
-                          <Layers className="w-4 h-4" />
-                          {appendix.label}
-                        </span>
-                        <ChevronRight className="w-4 h-4 opacity-50" />
-                      </button>
-                    );
-                  })()}
-
-
                   <button
                     onClick={() => scrollToSection(topLevel[0].id)}
                     className={`flex items-center justify-between text-left px-4 py-3 rounded-lg text-sm font-medium transition-all ${
@@ -308,25 +274,37 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                     <ChevronRight className="w-4 h-4 opacity-50" />
                   </button>
 
-                  {groups.map((group) => (
-                    <div key={group.label} className="mt-3">
-                      <p className="px-4 text-xs text-muted-foreground uppercase tracking-wider mb-1">{group.label}</p>
-                      {group.items.map((item) => (
-                        <button
-                          key={item.id}
-                          onClick={() => scrollToSection(item.id)}
-                          className={`w-full flex items-center justify-between text-left px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${
-                            activeSection === item.id
-                              ? "bg-primary text-primary-foreground"
-                              : "text-muted-foreground hover:bg-muted hover:text-foreground"
-                          }`}
-                        >
-                          <span>{item.label}</span>
-                          <ChevronRight className="w-4 h-4 opacity-50" />
-                        </button>
-                      ))}
-                    </div>
-                  ))}
+                  {groups.map((group) => {
+                    const isActiveGroup = group.items.some((i) => i.id === activeSection);
+                    return (
+                      <Collapsible
+                        key={group.label}
+                        defaultOpen={isActiveGroup}
+                        className="mt-2"
+                      >
+                        <CollapsibleTrigger className="w-full flex items-center justify-between px-4 py-2 text-xs text-muted-foreground uppercase tracking-wider hover:text-foreground group">
+                          <span>{group.label}</span>
+                          <ChevronDown className="w-4 h-4 opacity-60 transition-transform group-data-[state=open]:rotate-180" />
+                        </CollapsibleTrigger>
+                        <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+                          {group.items.map((item) => (
+                            <button
+                              key={item.id}
+                              onClick={() => scrollToSection(item.id)}
+                              className={`w-full flex items-center justify-between text-left px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${
+                                activeSection === item.id
+                                  ? "bg-primary text-primary-foreground"
+                                  : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                              }`}
+                            >
+                              <span>{item.label}</span>
+                              <ChevronRight className="w-4 h-4 opacity-50" />
+                            </button>
+                          ))}
+                        </CollapsibleContent>
+                      </Collapsible>
+                    );
+                  })}
 
                   {/* Roadmap hidden for now */}
 

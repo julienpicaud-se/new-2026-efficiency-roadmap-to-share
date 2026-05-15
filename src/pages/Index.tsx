@@ -16,9 +16,9 @@ import { RegionalJourneyComparison } from "@/components/playbook/RegionalJourney
 import { ECMIngestionEngineSection } from "@/components/playbook/ECMIngestionEngineSection";
 import { StrategicContextSection } from "@/components/playbook/StrategicContextSection";
 import { WhatIfSection } from "@/components/playbook/WhatIfSection";
-import { OutOfScopeSection } from "@/components/playbook/OutOfScopeSection";
+import { BoundariesSection } from "@/components/playbook/BoundariesSection";
 import { SuccessMetricsSection } from "@/components/playbook/SuccessMetricsSection";
-import { GuardrailsSection } from "@/components/playbook/GuardrailsSection";
+import { JumpToTop } from "@/components/playbook/JumpToTop";
 import { ECMCapabilityMapping } from "@/components/playbook/ECMCapabilityMapping";
 
 import { MaturityLadderSection } from "@/components/playbook/MaturityLadderSection";
@@ -58,15 +58,15 @@ const Index = () => {
       <RegionalJourneyComparison />
       <StrategicContextSection />
       <WhatIfSection />
-      <OutOfScopeSection />
+      <BoundariesSection />
       <SuccessMetricsSection />
-      <GuardrailsSection />
       <MaturityLadderSection />
       <PhasingSection />
       <IDMVisionSection />
       {/* <DeliveryRoadmapSection /> */}
       <AppendixSection />
       <ExecutiveTakeaway />
+      <JumpToTop />
     </div>
   );
 };
