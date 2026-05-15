@@ -16,12 +16,14 @@ export const ArchitectureDecisionSection = () => {
         <div className="mb-10 max-w-3xl">
           <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 flex items-center gap-2">
             <GitBranch className="w-4 h-4" />
-            Open Architectural Decision
+            Open Architectural Decision · Technical rationale
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Plan A vs Plan B: How We Land RA+ by Q4 2026
           </h2>
-          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{architectureDecision.intro}</p>
+          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+            Two viable technical paths for the Energy Efficiency build inside RA+. Compare on data model, governance, and shared services only. Sequencing, scope, and customer-facing value are covered in their dedicated sections.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-5 mb-8">

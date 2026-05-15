@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { platformShift } from "@/data/playbook-data";
+import { platformShift, productScope } from "@/data/playbook-data";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Layers, Network, Check, X } from "lucide-react";
+import { Layers, Network, Check, X, Boxes } from "lucide-react";
 
 export const PlatformShiftSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -88,6 +88,43 @@ export const PlatformShiftSection = () => {
             ))}
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed max-w-4xl">{platformShift.bureauAnchor.soWhat}</p>
+        </div>
+
+        {/* Product Scope (folded in) */}
+        <div className="mt-16 pt-12 border-t border-border/40">
+          <div className="mb-8 flex items-center gap-3">
+            <Boxes className="w-5 h-5 text-primary" />
+            <div>
+              <h3 className="text-xl font-bold text-foreground">In Scope vs Adjacent: Energy Efficiency vs Asset Planning</h3>
+              <p className="text-xs text-muted-foreground mt-0.5">{productScope.intro}</p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-5 mb-6">
+            {productScope.products.map((p, idx) => (
+              <Card key={p.name} className={idx === 0 ? "border-primary/40 bg-primary/5" : "border-border/50 bg-card"}>
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="text-base font-bold text-foreground">{p.name}</h4>
+                    <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full border ${idx === 0 ? "bg-primary/15 text-primary border-primary/30" : "bg-muted text-muted-foreground border-border/50"}`}>
+                      {p.tag}
+                    </span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{p.summary}</p>
+                  <ul className="space-y-1.5">
+                    {p.capabilities.map((c, i) => (
+                      <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
+                        <Check className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+                        <span>{c}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <p className="text-sm text-foreground italic max-w-3xl">{productScope.boundary}</p>
         </div>
       </div>
     </section>

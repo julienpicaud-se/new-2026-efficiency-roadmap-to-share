@@ -16,7 +16,7 @@ export const MaturityLadderSection = () => {
         <div className="mb-10 max-w-3xl">
           <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 flex items-center gap-2">
             <TrendingUp className="w-4 h-4" />
-            Customer Maturity Ladder
+            Customer Maturity Ladder · Axis: capability depth
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Meet Customers Where They Are, Pull Them Up
