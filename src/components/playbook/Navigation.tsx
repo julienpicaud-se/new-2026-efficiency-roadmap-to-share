@@ -26,7 +26,6 @@ const topLevel: NavItem[] = [
   { id: "executive-summary", label: "Summary" },
   // { id: "delivery-roadmap", label: "Roadmap" },
   { id: "appendix", label: "Appendix" },
-  { id: "glossary", label: "Glossary" },
 ];
 
 const groups: NavGroup[] = [
@@ -45,7 +44,6 @@ const groups: NavGroup[] = [
     items: [
       { id: "personas", label: "Personas" },
       { id: "jobs-to-be-done", label: "Jobs to Be Done" },
-      { id: "se-corporate-blueprint", label: "SE Corporate Proof of Concept" },
     ],
   },
   {
@@ -59,7 +57,6 @@ const groups: NavGroup[] = [
       { id: "success-metrics", label: "Success Metrics" },
       { id: "guardrails", label: "Guardrails" },
       { id: "maturity-ladder", label: "Maturity Ladder" },
-      { id: "architecture-decision", label: "Plan A vs Plan B" },
       { id: "phasing", label: "Phasing" },
       { id: "idm-vision", label: "IDM 2.0 Vision" },
     ],
@@ -277,27 +274,6 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                     );
                   })()}
 
-                  {(() => {
-                    const glossary = allItems.find((i) => i.id === "glossary");
-                    if (!glossary) return null;
-                    return (
-                      <button
-                        key={glossary.id}
-                        onClick={() => scrollToSection(glossary.id)}
-                        className={`flex items-center justify-between text-left px-4 py-3 rounded-lg text-sm font-medium transition-all mb-2 border ${
-                          activeSection === glossary.id
-                            ? "bg-primary text-primary-foreground border-primary"
-                            : "bg-muted/30 text-foreground border-border/50 hover:bg-muted"
-                        }`}
-                      >
-                        <span className="flex items-center gap-2">
-                          <BookOpen className="w-4 h-4" />
-                          {glossary.label}
-                        </span>
-                        <ChevronRight className="w-4 h-4 opacity-50" />
-                      </button>
-                    );
-                  })()}
 
                   <button
                     onClick={() => scrollToSection(topLevel[0].id)}
