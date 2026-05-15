@@ -200,8 +200,13 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
           overflow-x: hidden;
         }
         .presentation-mode nav,
-        .presentation-mode .reading-progress-bar {
+        .presentation-mode .reading-progress-bar,
+        .presentation-mode [aria-label="Jump to top"] {
           display: none !important;
+        }
+        .presentation-mode.cursor-hidden,
+        .presentation-mode.cursor-hidden * {
+          cursor: none !important;
         }
         .presentation-mode section {
           min-height: 100vh;
@@ -210,7 +215,7 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          padding: 3rem 1rem 5rem;
+          padding: 4rem 1rem 5rem;
           box-sizing: border-box;
           opacity: 1;
           transform: translateY(0);
@@ -227,21 +232,27 @@ export const PresentationMode = ({ isActive, onClose }: PresentationModeProps) =
           opacity: 0.3;
           transform: translateY(10px);
         }
-        
-        /* Scale content to fit viewport */
+
         @media (max-height: 800px) {
-          .presentation-mode section {
-            transform: scale(0.9);
-            transform-origin: center center;
-          }
+          .presentation-mode section { transform: scale(0.9); transform-origin: center center; }
         }
         @media (max-height: 600px) {
-          .presentation-mode section {
-            transform: scale(0.8);
-            transform-origin: center center;
-          }
+          .presentation-mode section { transform: scale(0.8); transform-origin: center center; }
         }
       `}</style>
+
+      {/* Toggle cursor-hidden class on body */}
+      <CursorClassToggle hidden={cursorHidden} />
+
+      {/* Top progress bar */}
+      <div className="fixed top-0 left-0 right-0 h-0.5 z-[150] bg-muted/40">
+        <div
+          className="h-full bg-primary transition-all duration-300"
+          style={{
+            width: `${((currentSlide + 1) / sections.length) * 100}%`,
+          }}
+        />
+      </div>
 
       {/* Transition overlay */}
       <div 
