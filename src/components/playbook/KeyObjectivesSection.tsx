@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Target, ChevronDown, Zap, Compass, BookOpen, Layers } from "lucide-react";
+import { Target, ChevronDown, Zap, Compass, BookOpen, Layers, Database, Activity } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import {
   Collapsible,
@@ -59,6 +59,33 @@ const keyObjectives = [
       "Reuse building context across audits, quotes, and follow-ups without re-keying",
       "Eliminate manual reconciliation between RA+, audit tools, and deliverables",
       "Expose APIs that let every service line draw from the same building record",
+    ],
+  },
+  {
+    id: "O5",
+    tag: "IDM 2.0",
+    tagIcon: Database,
+    title: "Re-platform IDM as the agent-ready data spine inside RA+",
+    description:
+      "Move IDM from a standalone module to a native RA+ capability that blends interval telemetry with the field and consultancy work product only Schneider can bring, exposed to Sera and downstream agents.",
+    keyResults: [
+      "Retire the IDM 1.0 module hop and run interval data natively inside RA+",
+      "Expose an enriched, agent-ready context layer (telemetry + asset + ECM + audit IP) to Sera",
+      "Cover Give Me, Help Me, and Do It For Me engagement profiles on the same IDM-powered platform",
+      "Align IDM 2.0 MVP with SE Corporate as design partner ahead of RA+ go-live",
+    ],
+  },
+  {
+    id: "O6",
+    tag: "Continuous Discovery",
+    tagIcon: Activity,
+    title: "Turn interval data into always-on efficiency discovery",
+    description:
+      "Use the IDM 2.0 spine so RA+ continuously surfaces staging, compressed air, and control ECMs the consultancy team would normally find manually, between formal audit cycles.",
+    keyResults: [
+      "Stand up always-on ECM detection on top of IDM 2.0 interval data",
+      "Lift RA+ stickiness with continuous, in-product efficiency guidance between engagements",
+      "Generate qualified pull from RA+ discovery into deeper expert audit work",
     ],
   },
 ];
