@@ -271,6 +271,54 @@ export const AppendixSection = () => {
             </AccordionContent>
           </AccordionItem>
 
+        {/* ============ Data Requirements ============ */}
+          <AccordionItem
+            value="data-requirements"
+            ref={setItemRef("data-requirements")}
+            data-section="data-requirements"
+            className={itemClass("data-requirements")}
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-primary text-xs font-semibold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                  <Database className="w-3.5 h-3.5" />
+                  Data Foundation
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                  Data Required for Efficiency Capabilities
+                </h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-2 pb-2">
+              <DataRequirementsSection />
+            </AccordionContent>
+          </AccordionItem>
+
+        {/* ============ ECM Ingestion Engine ============ */}
+          <AccordionItem
+            value="ecm-ingestion-engine"
+            ref={setItemRef("ecm-ingestion-engine")}
+            data-section="ecm-ingestion-engine"
+            className={itemClass("ecm-ingestion-engine")}
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-primary text-xs font-semibold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                  <ScanText className="w-3.5 h-3.5" />
+                  Knowledge Engine
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                  Efficiency Knowledge Engine
+                </h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-2 pb-2">
+              <ECMIngestionEngineSection />
+            </AccordionContent>
+          </AccordionItem>
+
+
+
 
 
           <AccordionItem
