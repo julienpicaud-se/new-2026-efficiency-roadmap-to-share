@@ -5,14 +5,14 @@ export const strategicPillars = [
     id: "productivity",
     title: "Productivity Gains",
     tagline: "For the efficiency team",
-    promise: "We turn efficiency expertise into repeatable operating models, guided workflows, and structured deliverables that improve team effectiveness across the customer journey.",
-    description: "Lower cost to serve and higher delivery capacity. The strategy standardizes assessment methods, customer context, calculations, and deliverables so teams can move faster with more consistent outputs.",
+    promise: "We turn efficiency expertise into repeatable operating models, guided workflows, and structured deliverables that improve team effectiveness across the customer journey, all running on the IDM 2.0 data spine.",
+    description: "Lower cost to serve and higher delivery capacity. The strategy standardizes assessment methods, customer context, calculations, and deliverables on top of a shared IDM 2.0 spine so teams move faster with more consistent outputs.",
     whatLivesHere: [
       "Faster assessments through standardized methods, assumptions, and defaults",
       "Consistent calculations, assumptions, and outputs across engagements",
-      "Structured, visual audit deliverables generated in the platform",
+      "Structured, visual audit deliverables generated in the platform from IDM-grade data",
       "Less rework, less manual slide building, higher throughput per auditor",
-      "Centralized client context across sites, audits, and recommendations",
+      "Centralized client context across sites, audits, and recommendations on a single IDM spine",
     ],
     successMetrics: [
       "Audits completed faster with higher consistency",
@@ -27,14 +27,14 @@ export const strategicPillars = [
     id: "upsell-engine",
     title: "Upsell Engine",
     tagline: "For advanced audit projects",
-    promise: "We intentionally expose selected expert content (e.g. ECMs) and early advisory to create demand for deeper, paid audit engagements.",
-    description: "Higher conversion to advanced efficiency engagements and better qualified pipeline for the efficiency team. By exposing credible early guidance, customers see the value of deeper analysis, creating pull for expert services.",
+    promise: "We intentionally expose selected expert content (e.g. ECMs) and early advisory inside RA+, powered by IDM 2.0 interval data, to create demand for deeper, paid audit engagements.",
+    description: "Higher conversion to advanced efficiency engagements and better qualified pipeline for the efficiency team. By exposing credible early guidance grounded in IDM-grade telemetry, customers see the value of deeper analysis, creating pull for expert services.",
     whatLivesHere: [
-      "Early identification of high-potential efficiency opportunities before a full audit",
+      "Always-on identification of high-potential efficiency opportunities from IDM 2.0 interval data",
       "Clear visibility into what deeper analysis would unlock",
       "In-product calls to action to request advanced audits or detailed studies",
-      "Pre-filled context and assumptions when an audit is quoted or launched",
-      "Seamless path from early insight to expert engagement",
+      "Pre-filled context and assumptions from the IDM spine when an audit is quoted or launched",
+      "Seamless path from early IDM-driven insight to expert engagement",
     ],
     successMetrics: [
       "Increased upsell rate from early advisory to advanced audits",
@@ -49,13 +49,14 @@ export const strategicPillars = [
     id: "recurring-revenue",
     title: "Recurring RA+ Revenue",
     tagline: "Through in-product efficiency advice",
-    promise: "We productize early-stage efficiency insights as part of the RA+ experience, delivering continuous value beyond one-off audits.",
-    description: "Recurring revenue justified by continuous efficiency guidance, not just reporting. A shift from one-off audit value to ongoing advisory value creates stronger platform stickiness and differentiation.",
+    promise: "We productize early-stage efficiency insights as part of the RA+ experience, with IDM 2.0 as the continuous data layer that turns telemetry into ongoing value beyond one-off audits.",
+    description: "Recurring revenue justified by continuous efficiency guidance, not just reporting. With IDM 2.0 as the native spine, RA+ shifts from one-off audit value to ongoing advisory value, creating stronger platform stickiness and differentiation.",
     whatLivesHere: [
       "Continuous, contextual efficiency recommendations inside the platform",
-      "Value delivered even without a full on-site audit",
+      "Value delivered even without a full on-site audit, on top of live IDM 2.0 data",
       "A shift from one-off audit value to ongoing advisory value",
-      "Stronger platform stickiness and differentiation",
+      "Stronger platform stickiness and differentiation through IDM as the agent-ready spine",
+      "Give Me, Help Me, and Do It For Me engagement profiles on a single IDM-powered platform",
       "Goal-to-action recommendations integrated in Strategy module",
     ],
     successMetrics: [
@@ -67,7 +68,30 @@ export const strategicPillars = [
     icon: "Sparkles",
     color: "from-primary via-secondary to-primary",
   },
+  {
+    id: "idm-spine",
+    title: "IDM 2.0 Data Spine",
+    tagline: "Foundation for every pillar",
+    promise: "We re-platform IDM as a native, agent-ready capability inside RA+ that blends interval telemetry with the field and consultancy work product only Schneider can bring.",
+    description: "IDM 2.0 is the connective tissue under Productivity, Upsell, and Recurring Revenue. It turns interval data from a standalone module into an enriched context layer Sera and downstream agents can reason over.",
+    whatLivesHere: [
+      "Interval data exposed natively across dashboards, reports, and emissions surfaces",
+      "Enriched context layer combining telemetry, asset, ECM, and audit IP",
+      "Agent-ready data surfaced to Sera and downstream reasoning agents",
+      "One spine supporting Give Me, Help Me, and Do It For Me engagement profiles",
+      "On-premise context and field work product pure software players cannot reach",
+    ],
+    successMetrics: [
+      "IDM 2.0 MVP delivered with SE Corporate as design partner",
+      "Retirement of the IDM 1.0 module hop for re-platformed clients",
+      "Coverage of all three engagement profiles on the same data foundation",
+      "Sera adoption grounded in IDM-backed context",
+    ],
+    icon: "Database",
+    color: "from-secondary via-primary to-secondary",
+  },
 ];
+
 
 export const objectives = [
   {
