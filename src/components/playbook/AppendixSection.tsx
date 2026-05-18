@@ -1,10 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { appendixPillars, supportingScorecard, capabilityMatrix, intelligenceFlywheel } from "@/data/playbook-data";
-import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Zap, X, Minus, Database, Brain, Settings, Eye, FileText, AlertOctagon, MessageSquare, Building2, BookOpen } from "lucide-react";
+import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Zap, X, Minus, Database, Brain, Settings, Eye, FileText, AlertOctagon, MessageSquare, Building2, BookOpen, Compass, ShieldOff, Lightbulb } from "lucide-react";
 import { PainInventorySection } from "@/components/playbook/PainInventorySection";
 import { VOCEvidenceSection } from "@/components/playbook/VOCEvidenceSection";
 import { SECorporateBlueprintSection } from "@/components/playbook/SECorporateBlueprintSection";
 import { GlossarySection } from "@/components/playbook/GlossarySection";
+import { MaturityLadderSection } from "@/components/playbook/MaturityLadderSection";
+import { BoundariesSection } from "@/components/playbook/BoundariesSection";
+import { StrategicContextSection } from "@/components/playbook/StrategicContextSection";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
@@ -42,6 +45,9 @@ const StatusIcon = ({ status }: { status: string }) => {
 };
 
 const APPENDIX_SECTIONS = [
+  "maturity-ladder",
+  "boundaries",
+  "strategic-context",
   "se-corporate-blueprint",
   "pain-inventory",
   "voc-evidence",
@@ -167,7 +173,76 @@ export const AppendixSection = () => {
           className="space-y-4"
         >
 
-        {/* ============ SE Corporate Blueprint ============ */}
+        {/* ============ Maturity Ladder ============ */}
+          <AccordionItem
+            value="maturity-ladder"
+            ref={setItemRef("maturity-ladder")}
+            data-section="maturity-ladder"
+            className={itemClass("maturity-ladder")}
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-primary text-xs font-semibold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                  <Compass className="w-3.5 h-3.5" />
+                  Customer Maturity Ladder
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                  Meet Customers Where They Are, Pull Them Up
+                </h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-2 pb-2">
+              <MaturityLadderSection />
+            </AccordionContent>
+          </AccordionItem>
+
+        {/* ============ Boundaries ============ */}
+          <AccordionItem
+            value="boundaries"
+            ref={setItemRef("boundaries")}
+            data-section="boundaries"
+            className={itemClass("boundaries")}
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-primary text-xs font-semibold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                  <ShieldOff className="w-3.5 h-3.5" />
+                  Guardrails
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                  Where We Stop, How We Operate
+                </h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-2 pb-2">
+              <BoundariesSection />
+            </AccordionContent>
+          </AccordionItem>
+
+        {/* ============ Strategic Context ============ */}
+          <AccordionItem
+            value="strategic-context"
+            ref={setItemRef("strategic-context")}
+            data-section="strategic-context"
+            className={itemClass("strategic-context")}
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-primary text-xs font-semibold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                  <Lightbulb className="w-3.5 h-3.5" />
+                  Strategic Context
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                  Why Now, Why This Way
+                </h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-2 pb-2">
+              <StrategicContextSection />
+            </AccordionContent>
+          </AccordionItem>
+
+
           <AccordionItem
             value="se-corporate-blueprint"
             ref={setItemRef("se-corporate-blueprint")}
