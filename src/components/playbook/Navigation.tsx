@@ -73,21 +73,18 @@ const groups: NavGroup[] = [
     label: "Context",
     items: [
       { id: "regional-journeys", label: "Regional Journeys" },
-      { id: "strategic-context", label: "Strategic Context" },
       { id: "what-if", label: "What If Tomorrow" },
     ],
   },
   {
     label: "Guardrails",
     items: [
-      { id: "boundaries", label: "Boundaries & Rules" },
       { id: "success-metrics", label: "Success Metrics" },
     ],
   },
   {
     label: "Delivery",
     items: [
-      { id: "maturity-ladder", label: "Maturity Ladder" },
       { id: "phasing", label: "Phasing" },
       { id: "start-stop-matrix", label: "Start / Stop Matrix" },
       { id: "idm-vision", label: "IDM 2.0 Vision" },
@@ -98,6 +95,9 @@ const groups: NavGroup[] = [
     label: "Appendix",
     items: [
       { id: "appendix", label: "Browse full appendix" },
+      { id: "appendix:maturity-ladder", label: "Customer Maturity Ladder" },
+      { id: "appendix:boundaries", label: "Where We Stop" },
+      { id: "appendix:strategic-context", label: "Why Now, Why This Way" },
       { id: "appendix:se-corporate-blueprint", label: "RA Classic IDM Client" },
       { id: "appendix:pain-inventory", label: "RA Classic Pain Inventory" },
       { id: "appendix:voc-evidence", label: "VOC Evidence" },
