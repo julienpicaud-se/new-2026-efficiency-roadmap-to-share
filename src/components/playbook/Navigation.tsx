@@ -97,6 +97,8 @@ const groups: NavGroup[] = [
       { id: "appendix:boundaries", label: "Where We Stop" },
       { id: "appendix:strategic-context", label: "Why Now, Why This Way" },
       { id: "appendix:competitive-landscape", label: "Efficiency Technology Landscape" },
+      { id: "appendix:data-requirements", label: "Data Required for Efficiency Capabilities" },
+      { id: "appendix:ecm-ingestion-engine", label: "Efficiency Knowledge Engine" },
       { id: "appendix:se-corporate-blueprint", label: "RA Classic IDM Client" },
       { id: "appendix:pain-inventory", label: "RA Classic Pain Inventory" },
       { id: "appendix:voc-evidence", label: "VOC Evidence" },
