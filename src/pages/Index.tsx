@@ -70,8 +70,8 @@ const Index = () => {
       <PersonasSection />
       <JobsToBeDoneSection />
       {/* Response */}
-      <KeyObjectivesSection />
       <StrategicPillars />
+      <KeyObjectivesSection />
       {/* How – ECM Foundation cluster */}
       <ExistingToolsSection />
       <ECMIngestionEngineSection />
