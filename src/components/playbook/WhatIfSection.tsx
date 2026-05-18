@@ -12,28 +12,28 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const scenarios = [
   {
     icon: Zap,
-    title: "Show opportunities in minutes",
-    description: "Walk into a first meeting and show site-relevant efficiency opportunities in RA+ within minutes, grounded in the IDM 2.0 interval data and asset context already on file",
+    title: "Show ECM opportunities in minutes",
+    description: "Walk into a first meeting and show site-relevant ECMs in RA+ within minutes, ranked against the IDM 2.0 interval data and asset context already on file",
   },
   {
     icon: FileText,
     title: "Replace PowerPoint with platform",
-    description: "Replace audit PowerPoint decks with structured, visual, interactive deliverables in the platform, backed by live IDM 2.0 telemetry instead of static exports",
+    description: "Replace static audit decks with structured, interactive ECM deliverables in the platform, backed by live IDM 2.0 telemetry instead of frozen exports",
   },
   {
     icon: Database,
     title: "Centralize context on the IDM 2.0 spine",
-    description: "Capture client context once on the IDM 2.0 spine (interval data, assets, audit IP) and reuse it across audits, quotes, follow-ups, and Sera conversations",
+    description: "Capture client context once on the IDM 2.0 spine (interval data, assets, ECM history, audit IP) and reuse it across audits, quotes, follow-ups, and Sera conversations",
   },
   {
     icon: MousePointer,
     title: "One-click audit requests",
-    description: "Let customers discover early efficiency insights on their own from IDM 2.0 continuous detection, then request deeper expert audits with one click",
+    description: "Let customers discover early ECM insights on their own, surfaced by always-on IDM detection, then request deeper expert audits with one click",
   },
   {
     icon: TrendingUp,
-    title: "Always-on continuous improvement",
-    description: "Turn every delivered audit into IDM-grade data that powers always-on ECM detection between formal audit cycles and improves future recommendations",
+    title: "Always-on ECM discovery",
+    description: "Turn every delivered audit into IDM-grade data that fuels continuous ECM detection between formal cycles and sharpens the next recommendation",
   },
 ];
 
