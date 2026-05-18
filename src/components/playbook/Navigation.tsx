@@ -63,10 +63,8 @@ const groups: NavGroup[] = [
     label: "How",
     items: [
       { id: "existing-tools", label: "Technology Landscape" },
-      { id: "ecm-ingestion-engine", label: "Knowledge Engine" },
       { id: "ecm-mapping", label: "Capability Mapping" },
       { id: "operating-model", label: "Operating Model" },
-      { id: "data-requirements", label: "Data Requirements" },
     ],
   },
   {
