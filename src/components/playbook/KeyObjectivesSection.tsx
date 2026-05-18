@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Target, ChevronDown, Zap, Compass, BookOpen, Layers } from "lucide-react";
+import { Target, ChevronDown, Zap, Compass, BookOpen, Layers, Database, Activity } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import {
   Collapsible,
