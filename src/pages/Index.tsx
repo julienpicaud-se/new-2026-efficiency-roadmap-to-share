@@ -60,9 +60,9 @@ const Index = () => {
       {/* Problem */}
       <KeyChallengesGridSection />
       <ClientPainEngagementSection />
-      <CompetitiveLandscapeSection />
       {/* Vision */}
       <WhatIfSection />
+      <CompetitiveLandscapeSection />
       {/* Why */}
       <PlatformShiftSection />
       <KeyChallengesSection />
