@@ -1,12 +1,11 @@
 import { strategicPillars } from "@/data/playbook-data";
-import { Layers, TrendingUp, Sparkles, Check, Database } from "lucide-react";
+import { Layers, TrendingUp, Sparkles, Check } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const iconMap = {
   Layers: Layers,
   LineChart: TrendingUp,
   Sparkles: Sparkles,
-  Database: Database,
 };
 
 export const StrategicPillars = () => {

@@ -68,28 +68,6 @@ export const strategicPillars = [
     icon: "Sparkles",
     color: "from-primary via-secondary to-primary",
   },
-  {
-    id: "idm-spine",
-    title: "IDM 2.0 Data Spine",
-    tagline: "Foundation for every pillar",
-    promise: "We re-platform IDM as a native, agent-ready capability inside RA+ that blends interval telemetry with the field and consultancy work product only Schneider can bring.",
-    description: "IDM 2.0 is the connective tissue under Productivity, Upsell, and Recurring Revenue. It turns interval data from a standalone module into an enriched context layer Sera and downstream agents can reason over.",
-    whatLivesHere: [
-      "Interval data exposed natively across dashboards, reports, and emissions surfaces",
-      "Enriched context layer combining telemetry, asset, ECM, and audit IP",
-      "Agent-ready data surfaced to Sera and downstream reasoning agents",
-      "One spine supporting Give Me, Help Me, and Do It For Me engagement profiles",
-      "On-premise context and field work product pure software players cannot reach",
-    ],
-    successMetrics: [
-      "IDM 2.0 MVP delivered with SE Corporate as design partner",
-      "Retirement of the IDM 1.0 module hop for re-platformed clients",
-      "Coverage of all three engagement profiles on the same data foundation",
-      "Sera adoption grounded in IDM-backed context",
-    ],
-    icon: "Database",
-    color: "from-secondary via-primary to-secondary",
-  },
 ];
 
 
