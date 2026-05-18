@@ -54,6 +54,7 @@ const Index = () => {
       <KeyChallengesSection />
       <StrategicPillars />
       <OperatingModelSection />
+      <DataRequirementsSection />
       {/* ECM Foundation cluster */}
       <ExistingToolsSection />
       <ECMIngestionEngineSection />
