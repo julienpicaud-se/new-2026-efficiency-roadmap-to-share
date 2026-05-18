@@ -1,4 +1,4 @@
-import { Compass, Clock, BookOpen, Layers, Sparkles } from "lucide-react";
+import { Compass, Clock, BookOpen, Layers, Sparkles, Database, Activity } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const kpis = [
@@ -15,12 +15,25 @@ const kpis = [
     detail: "Legacy ECM deliverables reactivated as structured, searchable evidence",
   },
   {
+    icon: Database,
+    value: "IDM 2.0",
+    label: "Interval Data Spine",
+    detail: "Re-platformed inside RA+ as the agent-ready context layer that blends telemetry with field and consultancy work product",
+  },
+  {
+    icon: Activity,
+    value: "Always-On",
+    label: "IDM-Driven Discovery",
+    detail: "Interval data continuously surfaces staging, compressed air, and control ECMs without waiting for a full audit",
+  },
+  {
     icon: Layers,
     value: "1 Spine",
     label: "Unified Building Data",
     detail: "Shared across discovery, scoping, proposals, and in-product guidance",
   },
 ];
+
 
 export const StrategicContextHighlight = () => {
   const { ref, isVisible } = useScrollAnimation();
