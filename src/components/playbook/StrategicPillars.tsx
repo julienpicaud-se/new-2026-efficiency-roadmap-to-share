@@ -6,7 +6,6 @@ const iconMap = {
   Layers: Layers,
   LineChart: TrendingUp,
   Sparkles: Sparkles,
-  Database: Database,
 };
 
 export const StrategicPillars = () => {
