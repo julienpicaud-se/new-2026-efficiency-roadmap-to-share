@@ -59,14 +59,14 @@ const Index = () => {
       <MarketContextSection />
       <ClientPainEngagementSection />
       <CompetitiveLandscapeSection />
+      {/* Problem */}
+      <KeyChallengesGridSection />
+      <KeyChallengesSection />
       {/* Why */}
       <PlatformShiftSection />
       {/* Who */}
       <PersonasSection />
       <JobsToBeDoneSection />
-      {/* Problem */}
-      <KeyChallengesGridSection />
-      <KeyChallengesSection />
       {/* Response */}
       <KeyObjectivesSection />
       <StrategicPillars />
