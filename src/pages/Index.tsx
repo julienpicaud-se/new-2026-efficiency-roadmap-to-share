@@ -79,11 +79,11 @@ const Index = () => {
       <DataRequirementsSection />
       {/* Context */}
       <RegionalJourneyComparison />
-      {/* Guardrails */}
-      <SuccessMetricsSection />
       {/* Delivery */}
       <PhasingSection />
       <IDMVisionSection />
+      {/* Guardrails */}
+      <SuccessMetricsSection />
       <StartStopMatrix />
       {/* <DeliveryRoadmapSection /> */}
       {/* Close */}
