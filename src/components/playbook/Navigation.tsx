@@ -36,12 +36,6 @@ const groups: NavGroup[] = [
     label: "Strategy",
     items: [
       { id: "platform-shift", label: "Efficiency Transformation" },
-      { id: "key-challenges-grid", label: "Key Challenges" },
-      { id: "key-challenges", label: "Why Now" },
-      { id: "key-objectives", label: "Key Objectives" },
-      { id: "strategic-pillars", label: "Strategic Pillars" },
-      { id: "existing-tools", label: "Technology Landscape" },
-      { id: "strategic-context", label: "Strategic Context" },
     ],
   },
   {
@@ -52,17 +46,52 @@ const groups: NavGroup[] = [
     ],
   },
   {
-    label: "Execution",
+    label: "Problem",
     items: [
+      { id: "key-challenges-grid", label: "Key Challenges" },
+      { id: "key-challenges", label: "Why Now" },
+    ],
+  },
+  {
+    label: "Response",
+    items: [
+      { id: "key-objectives", label: "Key Objectives" },
+      { id: "strategic-pillars", label: "Strategic Pillars" },
+    ],
+  },
+  {
+    label: "How",
+    items: [
+      { id: "existing-tools", label: "Technology Landscape" },
       { id: "ecm-ingestion-engine", label: "Knowledge Engine" },
       { id: "ecm-mapping", label: "Capability Mapping" },
+      { id: "operating-model", label: "Operating Model" },
+      { id: "data-requirements", label: "Data Requirements" },
+    ],
+  },
+  {
+    label: "Context",
+    items: [
       { id: "regional-journeys", label: "Regional Journeys" },
+      { id: "strategic-context", label: "Strategic Context" },
       { id: "what-if", label: "What If Tomorrow" },
+    ],
+  },
+  {
+    label: "Guardrails",
+    items: [
       { id: "boundaries", label: "Boundaries & Rules" },
       { id: "success-metrics", label: "Success Metrics" },
+    ],
+  },
+  {
+    label: "Delivery",
+    items: [
       { id: "maturity-ladder", label: "Maturity Ladder" },
       { id: "phasing", label: "Phasing" },
+      { id: "start-stop-matrix", label: "Start / Stop Matrix" },
       { id: "idm-vision", label: "IDM 2.0 Vision" },
+      { id: "executive-takeaway", label: "Executive Takeaway" },
     ],
   },
   {
