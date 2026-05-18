@@ -49,6 +49,7 @@ const APPENDIX_SECTIONS = [
   "maturity-ladder",
   "boundaries",
   "strategic-context",
+  "competitive-landscape",
   "se-corporate-blueprint",
   "pain-inventory",
   "voc-evidence",
