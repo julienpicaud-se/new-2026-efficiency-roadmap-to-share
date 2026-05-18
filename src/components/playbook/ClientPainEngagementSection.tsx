@@ -49,7 +49,7 @@ export const ClientPainEngagementSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {signals.map((s) => {
             const Icon = s.icon;
             return (
