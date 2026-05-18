@@ -1,5 +1,5 @@
 import { strategicPillars } from "@/data/playbook-data";
-import { Layers, TrendingUp, Sparkles, Check, Database } from "lucide-react";
+import { Layers, TrendingUp, Sparkles, Check } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const iconMap = {
