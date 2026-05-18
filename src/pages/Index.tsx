@@ -54,7 +54,9 @@ const Index = () => {
       <PlatformShiftSection />
       <PersonasSection />
       <JobsToBeDoneSection />
+      <KeyChallengesGridSection />
       <KeyChallengesSection />
+      <KeyObjectivesSection />
       <StrategicPillars />
       <OperatingModelSection />
       <DataRequirementsSection />
