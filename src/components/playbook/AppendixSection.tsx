@@ -244,6 +244,30 @@ export const AppendixSection = () => {
             </AccordionContent>
           </AccordionItem>
 
+        {/* ============ Competitive Landscape ============ */}
+          <AccordionItem
+            value="competitive-landscape"
+            ref={setItemRef("competitive-landscape")}
+            data-section="competitive-landscape"
+            className={itemClass("competitive-landscape")}
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-primary text-xs font-semibold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                  <BarChart3 className="w-3.5 h-3.5" />
+                  Competitive Landscape
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                  Efficiency Technology Landscape
+                </h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-2 pb-2">
+              <CompetitiveLandscapeSection />
+            </AccordionContent>
+          </AccordionItem>
+
+
 
           <AccordionItem
             value="se-corporate-blueprint"
