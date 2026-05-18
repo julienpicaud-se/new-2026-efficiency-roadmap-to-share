@@ -1374,31 +1374,34 @@ export const efficiencyStrategicContext = {
 // Platform Shift: RA Classic (module) vs RA+ (platform)
 export const platformShift = {
   intro:
-    "RA Classic treats interval data as a separate module. RA+ makes it a native platform capability. This is the opportunity to build a SaaS solution for Efficiency services, not migrate a module.",
+    "RA Classic treats IDM as a separate module bolted to the side of the platform. RA+ re-platforms IDM 2.0 as a native, agent-ready data spine. This is the opportunity to build a SaaS solution for Efficiency services, not migrate a module.",
   classic: {
     title: "RA Classic: The Module",
     tagline: "Isolated by design",
     points: [
-      "Separate hierarchy (PAM vs RA)",
-      "Separate filters that do not work together",
+      "IDM 1.0 lives as a standalone module, separate from the rest of RA",
+      "Separate hierarchy (PAM vs RA), separate filters that do not work together",
       "Separate reports with a 5-step bridge to standard RA",
-      "Corrected data does not persist",
-      "200+ integration sources, but data stays siloed",
+      "Corrected interval data does not persist back into the platform",
+      "200+ integration sources, but interval data stays siloed inside IDM",
+      "Field and consultancy work product never reaches the IDM layer",
     ],
   },
   raPlus: {
     title: "RA+: The Platform",
     tagline: "Integrated by design",
     points: [
-      "One unified data model across all products",
-      "Interval data in dashboards, reports, and emissions natively",
-      "Sera as the primary interface from day one",
-      "Self-serve onboarding, no spreadsheets",
-      "ECM digitization via existing sustainability surfaces",
+      "IDM 2.0 re-platformed inside RA+ as the agent-ready context layer",
+      "One unified data model across all products, with interval data as a first-class citizen",
+      "Interval data live in dashboards, reports, and emissions natively, no module hop",
+      "Telemetry blended with asset, ECM, and audit context that Sera can reason over",
+      "Sera as the primary interface from day one across all engagement profiles",
+      "Self-serve onboarding, no spreadsheets, no IDM export and re-import loop",
+      "ECM digitization via existing sustainability surfaces, fed by the IDM spine",
     ],
   },
   thesis:
-    "Every pain point from RA Classic stems from the module architecture. RA+ eliminates that architecture entirely.",
+    "Every pain point from RA Classic stems from IDM living as a module. RA+ eliminates that architecture by turning IDM 2.0 into the spine the whole efficiency workflow runs on.",
   bureauAnchor: {
     title: "What the Bureau Delivers Today",
     subtitle: "38 people, 428 clients, $8 to 10M per year, 195K connected meters",
@@ -1406,23 +1409,24 @@ export const platformShift = {
       {
         layer: "Foundation",
         name: "Resource Advisor IDM",
-        detail: "Data ingestion, quality management, dashboards, alerts. 195K connected meters across 200+ integration source types.",
+        detail: "Data ingestion, quality management, dashboards, alerts. 195K connected meters across 200+ integration source types. Today a standalone module, re-platformed in Phase 1 as IDM 2.0 inside RA+.",
       },
       {
         layer: "Accelerator",
         name: "Energy Performance Services",
-        detail: "ECM identification, savings analysis, optimization recommendations. $75M in active energy guarantees ($1B+ total).",
+        detail: "ECM identification, savings analysis, optimization recommendations. $75M in active energy guarantees ($1B+ total). Powered by the same IDM spine, surfaced through Sera.",
       },
       {
         layer: "Feedback Loop",
         name: "Measurement and Verification",
-        detail: "Audit-grade evidence that closes the loop between recommendation and outcome.",
+        detail: "Audit-grade evidence that closes the loop between recommendation and outcome, with M&V results flowing back into the IDM-backed context layer.",
       },
     ],
     soWhat:
-      "RA+ digitizes all three. The data platform replaces manual IDM workflows. Sera automates EPS analysis. M&V becomes a platform capability. Reach expands from 428 Bureau-served clients to the broader RA+ installed base.",
+      "RA+ digitizes all three on a single IDM 2.0 spine. The data platform replaces manual IDM workflows. Sera automates EPS analysis. M&V becomes a platform capability. Reach expands from 428 Bureau-served clients to the broader RA+ installed base, supporting Give Me, Help Me, and Do It For Me engagement profiles on the same data foundation.",
   },
 };
+
 
 // Personas (4 ranked roles) and design sequence
 export const personas = {
