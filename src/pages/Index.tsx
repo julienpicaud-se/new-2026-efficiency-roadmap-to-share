@@ -34,6 +34,9 @@ import { StartStopMatrix } from "@/components/playbook/StartStopMatrix";
 import { KeyObjectivesSection } from "@/components/playbook/KeyObjectivesSection";
 import { KeyChallengesGridSection } from "@/components/playbook/KeyChallengesGridSection";
 import { StrategicContextHighlight } from "@/components/playbook/StrategicContextHighlight";
+import { MarketContextSection } from "@/components/playbook/MarketContextSection";
+import { ClientPainEngagementSection } from "@/components/playbook/ClientPainEngagementSection";
+import { CompetitiveLandscapeSection } from "@/components/playbook/CompetitiveLandscapeSection";
 import { ReadingProgressBar } from "@/components/playbook/ReadingProgressBar";
 import { PresentationMode } from "@/components/playbook/PresentationMode";
 import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
@@ -53,6 +56,9 @@ const Index = () => {
       <HeroSection />
       <ExecutiveSummary />
       <StrategicContextHighlight />
+      <MarketContextSection />
+      <ClientPainEngagementSection />
+      <CompetitiveLandscapeSection />
       {/* Why */}
       <PlatformShiftSection />
       {/* Who */}
