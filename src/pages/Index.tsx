@@ -73,10 +73,8 @@ const Index = () => {
       <KeyObjectivesSection />
       {/* How – ECM Foundation cluster */}
       <ExistingToolsSection />
-      <ECMIngestionEngineSection />
       <ECMCapabilityMapping />
       <OperatingModelSection />
-      <DataRequirementsSection />
       {/* Context */}
       <RegionalJourneyComparison />
       {/* Delivery */}

@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { appendixPillars, supportingScorecard, capabilityMatrix, intelligenceFlywheel } from "@/data/playbook-data";
-import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Zap, X, Minus, Database, Brain, Settings, Eye, FileText, AlertOctagon, MessageSquare, Building2, BookOpen, Compass, ShieldOff, Lightbulb, BarChart3 } from "lucide-react";
+import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Zap, X, Minus, Database, Brain, Settings, Eye, FileText, AlertOctagon, MessageSquare, Building2, BookOpen, Compass, ShieldOff, Lightbulb, BarChart3, ScanText } from "lucide-react";
 import { PainInventorySection } from "@/components/playbook/PainInventorySection";
 import { VOCEvidenceSection } from "@/components/playbook/VOCEvidenceSection";
 import { SECorporateBlueprintSection } from "@/components/playbook/SECorporateBlueprintSection";
@@ -9,6 +9,8 @@ import { MaturityLadderSection } from "@/components/playbook/MaturityLadderSecti
 import { BoundariesSection } from "@/components/playbook/BoundariesSection";
 import { StrategicContextSection } from "@/components/playbook/StrategicContextSection";
 import { CompetitiveLandscapeSection } from "@/components/playbook/CompetitiveLandscapeSection";
+import { DataRequirementsSection } from "@/components/playbook/DataRequirementsSection";
+import { ECMIngestionEngineSection } from "@/components/playbook/ECMIngestionEngineSection";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
@@ -50,6 +52,8 @@ const APPENDIX_SECTIONS = [
   "boundaries",
   "strategic-context",
   "competitive-landscape",
+  "data-requirements",
+  "ecm-ingestion-engine",
   "se-corporate-blueprint",
   "pain-inventory",
   "voc-evidence",
@@ -266,6 +270,54 @@ export const AppendixSection = () => {
               <CompetitiveLandscapeSection />
             </AccordionContent>
           </AccordionItem>
+
+        {/* ============ Data Requirements ============ */}
+          <AccordionItem
+            value="data-requirements"
+            ref={setItemRef("data-requirements")}
+            data-section="data-requirements"
+            className={itemClass("data-requirements")}
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-primary text-xs font-semibold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                  <Database className="w-3.5 h-3.5" />
+                  Data Foundation
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                  Data Required for Efficiency Capabilities
+                </h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-2 pb-2">
+              <DataRequirementsSection />
+            </AccordionContent>
+          </AccordionItem>
+
+        {/* ============ ECM Ingestion Engine ============ */}
+          <AccordionItem
+            value="ecm-ingestion-engine"
+            ref={setItemRef("ecm-ingestion-engine")}
+            data-section="ecm-ingestion-engine"
+            className={itemClass("ecm-ingestion-engine")}
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-primary text-xs font-semibold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                  <ScanText className="w-3.5 h-3.5" />
+                  Knowledge Engine
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                  Efficiency Knowledge Engine
+                </h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-2 pb-2">
+              <ECMIngestionEngineSection />
+            </AccordionContent>
+          </AccordionItem>
+
+
 
 
 
