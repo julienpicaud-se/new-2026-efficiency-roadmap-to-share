@@ -7,36 +7,36 @@ const pillars = [
     title: "Expert Auditors",
     tagline: "JUDGMENT, ENGINEERING, CLIENT RELATIONSHIPS",
     description:
-      "Senior energy engineers, ECM specialists, and sustainability advisors who own the recommendation and the customer conversation.",
+      "Senior energy engineers, ECM specialists, and sustainability advisors who own the recommendation and the customer conversation, working from IDM 2.0 interval data and asset context inside RA+.",
   },
   {
     icon: Bot,
     title: "Agentic AI Assistants",
     tagline: "CO-PILOTS THAT COMPRESS AUDIT HOURS INTO MINUTES",
     description:
-      "Purpose-built agents that ingest legacy audits, draft ROM estimates, stack measures, and explain assumptions so experts focus on calibration and trade-offs.",
+      "Purpose-built agents (Sera and peers) that reason over the IDM 2.0 spine plus legacy audits, draft ROM estimates, stack measures, and explain assumptions so experts focus on calibration and trade-offs.",
   },
   {
     icon: Zap,
     title: "Automation Engine",
     tagline: "PARAMETRIC EFFICIENCY AT SCALE",
     description:
-      "Templated ECM calculations, sensitivity sweeps, CPQ handoffs, and M&V scaffolding generated automatically from site, asset, and tariff data.",
+      "Templated ECM calculations, sensitivity sweeps, CPQ handoffs, and M&V scaffolding generated automatically from IDM 2.0 interval telemetry, asset, and tariff data — with always-on detection between formal audit cycles.",
   },
   {
     icon: Database,
-    title: "Unified Data Platform",
-    tagline: "ONE SOURCE OF TRUTH FOR EVERY BUILDING",
+    title: "IDM 2.0 Data Spine",
+    tagline: "AGENT-READY TELEMETRY + WORK PRODUCT, NATIVE TO RA+",
     description:
-      "RA+ resolves building identity, ingests meter and asset data, and exposes APIs that power discovery, scoping, proposals, and in-product recommendations.",
+      "IDM re-platformed as a native RA+ capability: resolves building identity, ingests interval meter and asset data, blends in field/consultancy work product, and exposes one enriched context layer to experts and agents — no module hop.",
   },
 ];
 
 const principles = [
   "Software absorbs the repeatable work; auditors own the judgment calls",
-  "Every service line shares the same building data spine — no swivel-chair handoffs",
-  "Agents are accountable to humans; humans are accountable to clients",
-  "Automation targets 90%+ of recurring ECM scoping touches over the horizon",
+  "Every service line shares the same IDM 2.0 spine — interval data, asset context, and audit IP in one place, no swivel-chair handoffs",
+  "Agents are accountable to humans; humans are accountable to clients; IDM-grade data is accountable to both",
+  "Automation targets 90%+ of recurring ECM scoping touches over the horizon, powered by always-on IDM 2.0 discovery",
 ];
 
 export const OperatingModelSection = () => {
