@@ -31,6 +31,8 @@ import { IDMVisionSection } from "@/components/playbook/IDMVisionSection";
 import { OperatingModelSection } from "@/components/playbook/OperatingModelSection";
 import { DataRequirementsSection } from "@/components/playbook/DataRequirementsSection";
 import { StartStopMatrix } from "@/components/playbook/StartStopMatrix";
+import { KeyObjectivesSection } from "@/components/playbook/KeyObjectivesSection";
+import { KeyChallengesGridSection } from "@/components/playbook/KeyChallengesGridSection";
 import { ReadingProgressBar } from "@/components/playbook/ReadingProgressBar";
 import { PresentationMode } from "@/components/playbook/PresentationMode";
 import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
