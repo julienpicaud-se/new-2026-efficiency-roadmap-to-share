@@ -160,7 +160,7 @@ export const KeyChallengesGridSection = () => {
           })}
         </div>
 
-        <div className="grid sm:grid-cols-3 gap-3 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-6xl mx-auto">
           {kpis.map((k) => (
             <div
               key={k.label}
