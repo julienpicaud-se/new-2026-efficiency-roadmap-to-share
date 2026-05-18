@@ -51,31 +51,40 @@ const Index = () => {
       />
       <HeroSection />
       <ExecutiveSummary />
+      {/* Why */}
       <PlatformShiftSection />
+      {/* Who */}
       <PersonasSection />
       <JobsToBeDoneSection />
+      {/* Problem */}
       <KeyChallengesGridSection />
       <KeyChallengesSection />
+      {/* Response */}
       <KeyObjectivesSection />
       <StrategicPillars />
-      <OperatingModelSection />
-      <DataRequirementsSection />
-      {/* ECM Foundation cluster */}
+      {/* How – ECM Foundation cluster */}
       <ExistingToolsSection />
       <ECMIngestionEngineSection />
       <ECMCapabilityMapping />
+      <OperatingModelSection />
+      <DataRequirementsSection />
+      {/* Context */}
       <RegionalJourneyComparison />
       <StrategicContextSection />
       <WhatIfSection />
+      {/* Guardrails */}
       <BoundariesSection />
       <SuccessMetricsSection />
+      {/* Delivery */}
       <MaturityLadderSection />
       <PhasingSection />
       <StartStopMatrix />
       <IDMVisionSection />
       {/* <DeliveryRoadmapSection /> */}
-      <AppendixSection />
+      {/* Close */}
       <ExecutiveTakeaway />
+      {/* Appendix (reference, last) */}
+      <AppendixSection />
       <JumpToTop />
     </div>
   );
