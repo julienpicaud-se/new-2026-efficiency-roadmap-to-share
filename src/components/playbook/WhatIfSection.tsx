@@ -13,27 +13,27 @@ const scenarios = [
   {
     icon: Zap,
     title: "Show opportunities in minutes",
-    description: "Walk into a first meeting and show site-relevant efficiency opportunities in RA+ within minutes",
+    description: "Walk into a first meeting and show site-relevant efficiency opportunities in RA+ within minutes, grounded in the IDM 2.0 interval data and asset context already on file",
   },
   {
     icon: FileText,
     title: "Replace PowerPoint with platform",
-    description: "Replace audit PowerPoint decks with structured, visual, interactive deliverables in the platform",
+    description: "Replace audit PowerPoint decks with structured, visual, interactive deliverables in the platform, backed by live IDM 2.0 telemetry instead of static exports",
   },
   {
     icon: Database,
-    title: "Centralize context once",
-    description: "Centralize all client context once and reuse it across audits, quotes, and follow-ups",
+    title: "Centralize context on the IDM 2.0 spine",
+    description: "Capture client context once on the IDM 2.0 spine (interval data, assets, audit IP) and reuse it across audits, quotes, follow-ups, and Sera conversations",
   },
   {
     icon: MousePointer,
     title: "One-click audit requests",
-    description: "Let customers discover early efficiency insights on their own, then request deeper expert audits with one click",
+    description: "Let customers discover early efficiency insights on their own from IDM 2.0 continuous detection, then request deeper expert audits with one click",
   },
   {
     icon: TrendingUp,
-    title: "Continuous improvement",
-    description: "Turn every delivered audit into data that improves future recommendations",
+    title: "Always-on continuous improvement",
+    description: "Turn every delivered audit into IDM-grade data that powers always-on ECM detection between formal audit cycles and improves future recommendations",
   },
 ];
 
