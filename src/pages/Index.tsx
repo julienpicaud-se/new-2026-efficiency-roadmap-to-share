@@ -56,6 +56,9 @@ const Index = () => {
       <HeroSection />
       <ExecutiveSummary />
       <StrategicContextHighlight />
+      <MarketContextSection />
+      <ClientPainEngagementSection />
+      <CompetitiveLandscapeSection />
       {/* Why */}
       <PlatformShiftSection />
       {/* Who */}
