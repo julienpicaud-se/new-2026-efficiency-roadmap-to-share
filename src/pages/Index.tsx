@@ -67,6 +67,7 @@ const Index = () => {
       <SuccessMetricsSection />
       <MaturityLadderSection />
       <PhasingSection />
+      <StartStopMatrix />
       <IDMVisionSection />
       {/* <DeliveryRoadmapSection /> */}
       <AppendixSection />
