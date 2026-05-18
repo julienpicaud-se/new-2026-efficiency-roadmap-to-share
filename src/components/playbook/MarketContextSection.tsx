@@ -1,4 +1,4 @@
-import { Zap, TrendingUp, Layers, Sparkles, Leaf, ShieldCheck } from "lucide-react";
+import { Zap, TrendingUp, Layers, Sparkles, Leaf, ShieldCheck, Database, Activity } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const forces = [
@@ -32,7 +32,18 @@ const forces = [
     title: "Operational Resilience",
     body: "Efficiency is increasingly tied to resilience and uptime, not only cost, raising the bar on data quality and traceability.",
   },
+  {
+    icon: Activity,
+    title: "Interval Data Everywhere",
+    body: "Sub-hourly meter and submeter data is now standard, but legacy IDM workflows leave it stranded. Customers expect it live inside the efficiency product, not exported to spreadsheets.",
+  },
+  {
+    icon: Database,
+    title: "Agent-Ready Data Expectations",
+    body: "Buyers assume telemetry, asset context, and audit IP are unified so agents like Sera can reason over them. IDM 2.0 is what makes that real inside RA+.",
+  },
 ];
+
 
 export const MarketContextSection = () => {
   const { ref, isVisible } = useScrollAnimation();
