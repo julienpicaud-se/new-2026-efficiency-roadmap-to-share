@@ -28,6 +28,7 @@ import { ExecutiveTakeaway } from "@/components/playbook/ExecutiveTakeaway";
 import { GlossarySection } from "@/components/playbook/GlossarySection";
 import { PhasingSection } from "@/components/playbook/PhasingSection";
 import { IDMVisionSection } from "@/components/playbook/IDMVisionSection";
+import { OperatingModelSection } from "@/components/playbook/OperatingModelSection";
 import { ReadingProgressBar } from "@/components/playbook/ReadingProgressBar";
 import { PresentationMode } from "@/components/playbook/PresentationMode";
 import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
