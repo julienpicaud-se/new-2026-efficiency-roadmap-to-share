@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { appendixPillars, supportingScorecard, capabilityMatrix, intelligenceFlywheel } from "@/data/playbook-data";
-import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Zap, X, Minus, Database, Brain, Settings, Eye, FileText, AlertOctagon, MessageSquare, Building2, BookOpen, Compass, ShieldOff, Lightbulb } from "lucide-react";
+import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Zap, X, Minus, Database, Brain, Settings, Eye, FileText, AlertOctagon, MessageSquare, Building2, BookOpen, Compass, ShieldOff, Lightbulb, BarChart3 } from "lucide-react";
 import { PainInventorySection } from "@/components/playbook/PainInventorySection";
 import { VOCEvidenceSection } from "@/components/playbook/VOCEvidenceSection";
 import { SECorporateBlueprintSection } from "@/components/playbook/SECorporateBlueprintSection";
@@ -8,6 +8,7 @@ import { GlossarySection } from "@/components/playbook/GlossarySection";
 import { MaturityLadderSection } from "@/components/playbook/MaturityLadderSection";
 import { BoundariesSection } from "@/components/playbook/BoundariesSection";
 import { StrategicContextSection } from "@/components/playbook/StrategicContextSection";
+import { CompetitiveLandscapeSection } from "@/components/playbook/CompetitiveLandscapeSection";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
@@ -48,6 +49,7 @@ const APPENDIX_SECTIONS = [
   "maturity-ladder",
   "boundaries",
   "strategic-context",
+  "competitive-landscape",
   "se-corporate-blueprint",
   "pain-inventory",
   "voc-evidence",
@@ -241,6 +243,30 @@ export const AppendixSection = () => {
               <StrategicContextSection />
             </AccordionContent>
           </AccordionItem>
+
+        {/* ============ Competitive Landscape ============ */}
+          <AccordionItem
+            value="competitive-landscape"
+            ref={setItemRef("competitive-landscape")}
+            data-section="competitive-landscape"
+            className={itemClass("competitive-landscape")}
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-primary text-xs font-semibold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                  <BarChart3 className="w-3.5 h-3.5" />
+                  Competitive Landscape
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                  Efficiency Technology Landscape
+                </h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-2 pb-2">
+              <CompetitiveLandscapeSection />
+            </AccordionContent>
+          </AccordionItem>
+
 
 
           <AccordionItem

@@ -36,7 +36,7 @@ import { KeyChallengesGridSection } from "@/components/playbook/KeyChallengesGri
 import { StrategicContextHighlight } from "@/components/playbook/StrategicContextHighlight";
 import { MarketContextSection } from "@/components/playbook/MarketContextSection";
 import { ClientPainEngagementSection } from "@/components/playbook/ClientPainEngagementSection";
-import { CompetitiveLandscapeSection } from "@/components/playbook/CompetitiveLandscapeSection";
+
 import { ReadingProgressBar } from "@/components/playbook/ReadingProgressBar";
 import { PresentationMode } from "@/components/playbook/PresentationMode";
 import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
@@ -62,7 +62,6 @@ const Index = () => {
       <ClientPainEngagementSection />
       {/* Vision */}
       <WhatIfSection />
-      <CompetitiveLandscapeSection />
       {/* Why */}
       <PlatformShiftSection />
       <KeyChallengesSection />

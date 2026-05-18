@@ -98,6 +98,7 @@ const groups: NavGroup[] = [
       { id: "appendix:maturity-ladder", label: "Customer Maturity Ladder" },
       { id: "appendix:boundaries", label: "Where We Stop" },
       { id: "appendix:strategic-context", label: "Why Now, Why This Way" },
+      { id: "appendix:competitive-landscape", label: "Efficiency Technology Landscape" },
       { id: "appendix:se-corporate-blueprint", label: "RA Classic IDM Client" },
       { id: "appendix:pain-inventory", label: "RA Classic Pain Inventory" },
       { id: "appendix:voc-evidence", label: "VOC Evidence" },
