@@ -42,6 +42,26 @@ const challenges = [
       "No shared building data spine across discovery, scoping, proposals, and follow-up",
     ],
   },
+  {
+    icon: Database,
+    color: "sky",
+    title: "IDM 1.0 Stranded",
+    points: [
+      "Interval data lives in a standalone IDM tool, disconnected from the RA+ efficiency workflow",
+      "Field and consultancy work product never reaches the same layer telemetry sits in",
+      "Sera and downstream agents cannot reason over IDM data because it is not agent-ready",
+    ],
+  },
+  {
+    icon: Layers,
+    color: "emerald",
+    title: "No Agent-Ready Spine",
+    points: [
+      "Telemetry, asset context, and audit IP live in separate systems with no shared semantics",
+      "Each engagement re-stitches data instead of pulling from a governed building spine",
+      "Self-serve, hybrid, and fully serviced clients cannot be supported on the same data foundation",
+    ],
+  },
 ];
 
 const colorStyles: Record<string, { border: string; bg: string; iconBg: string; iconText: string }> = {
@@ -69,11 +89,24 @@ const colorStyles: Record<string, { border: string; bg: string; iconBg: string; 
     iconBg: "bg-violet-500/15",
     iconText: "text-violet-400",
   },
+  sky: {
+    border: "border-sky-500/30",
+    bg: "bg-gradient-to-br from-sky-500/10 to-sky-500/5",
+    iconBg: "bg-sky-500/15",
+    iconText: "text-sky-400",
+  },
+  emerald: {
+    border: "border-emerald-500/30",
+    bg: "bg-gradient-to-br from-emerald-500/10 to-emerald-500/5",
+    iconBg: "bg-emerald-500/15",
+    iconText: "text-emerald-400",
+  },
 };
 
 const kpis = [
   { value: "1000s", label: "Legacy audit deliverables waiting to be reactivated", color: "text-rose-400" },
   { value: "Weeks", label: "Typical time to first ECM proposal today", color: "text-amber-400" },
+  { value: "1 IDM", label: "Standalone tool today, re-platformed as the RA+ data spine", color: "text-sky-400" },
   { value: "1 spine", label: "Unified building data target across every service line", color: "text-orange-400" },
 ];
 
