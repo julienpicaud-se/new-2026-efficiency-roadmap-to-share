@@ -52,6 +52,8 @@ const APPENDIX_SECTIONS = [
   "boundaries",
   "strategic-context",
   "competitive-landscape",
+  "data-requirements",
+  "ecm-ingestion-engine",
   "se-corporate-blueprint",
   "pain-inventory",
   "voc-evidence",
