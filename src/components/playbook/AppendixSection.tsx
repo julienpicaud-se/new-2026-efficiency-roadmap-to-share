@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { appendixPillars, supportingScorecard, capabilityMatrix, intelligenceFlywheel } from "@/data/playbook-data";
-import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Zap, X, Minus, Database, Brain, Settings, Eye, FileText, AlertOctagon, MessageSquare, Building2, BookOpen, Compass, ShieldOff, Lightbulb, BarChart3 } from "lucide-react";
+import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Zap, X, Minus, Database, Brain, Settings, Eye, FileText, AlertOctagon, MessageSquare, Building2, BookOpen, Compass, ShieldOff, Lightbulb, BarChart3, ScanText } from "lucide-react";
 import { PainInventorySection } from "@/components/playbook/PainInventorySection";
 import { VOCEvidenceSection } from "@/components/playbook/VOCEvidenceSection";
 import { SECorporateBlueprintSection } from "@/components/playbook/SECorporateBlueprintSection";
@@ -9,6 +9,8 @@ import { MaturityLadderSection } from "@/components/playbook/MaturityLadderSecti
 import { BoundariesSection } from "@/components/playbook/BoundariesSection";
 import { StrategicContextSection } from "@/components/playbook/StrategicContextSection";
 import { CompetitiveLandscapeSection } from "@/components/playbook/CompetitiveLandscapeSection";
+import { DataRequirementsSection } from "@/components/playbook/DataRequirementsSection";
+import { ECMIngestionEngineSection } from "@/components/playbook/ECMIngestionEngineSection";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
