@@ -86,8 +86,8 @@ const Index = () => {
       {/* Delivery */}
       <MaturityLadderSection />
       <PhasingSection />
-      <StartStopMatrix />
       <IDMVisionSection />
+      <StartStopMatrix />
       {/* <DeliveryRoadmapSection /> */}
       {/* Close */}
       <ExecutiveTakeaway />
