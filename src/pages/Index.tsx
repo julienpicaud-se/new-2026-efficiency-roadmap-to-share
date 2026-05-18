@@ -62,6 +62,8 @@ const Index = () => {
       {/* Problem */}
       <KeyChallengesGridSection />
       <KeyChallengesSection />
+      {/* Vision */}
+      <WhatIfSection />
       {/* Why */}
       <PlatformShiftSection />
       {/* Who */}
@@ -78,7 +80,6 @@ const Index = () => {
       <DataRequirementsSection />
       {/* Context */}
       <RegionalJourneyComparison />
-      <WhatIfSection />
       {/* Guardrails */}
       <SuccessMetricsSection />
       {/* Delivery */}
