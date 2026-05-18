@@ -1,11 +1,11 @@
-import { Leaf, TrendingDown, ShieldCheck, ArrowRight } from "lucide-react";
+import { Leaf, TrendingDown, ShieldCheck, ArrowRight, Activity, Database } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const signals = [
   {
     icon: TrendingDown,
     quote: "Our energy bills keep climbing and we cannot tell which sites are worst",
-    response: "Portfolio-wide ECM screening grounded in interval data, surfacing the highest-impact sites and measures first.",
+    response: "Portfolio-wide ECM screening grounded in IDM 2.0 interval data, surfacing the highest-impact sites and measures first.",
   },
   {
     icon: Leaf,
@@ -15,9 +15,20 @@ const signals = [
   {
     icon: ShieldCheck,
     quote: "We do not trust the numbers in our last audit report",
-    response: "Transparent assumptions, reusable audit IP, and M&V feedback loops that make every recommendation traceable.",
+    response: "Transparent assumptions, reusable audit IP, and M&V feedback loops grounded in IDM-grade interval data that make every recommendation traceable.",
+  },
+  {
+    icon: Activity,
+    quote: "Our interval data sits in IDM and never reaches the people making decisions",
+    response: "IDM 2.0 re-platformed inside RA+ so telemetry, asset context, and audit IP flow into the same workflow Energy Managers and Sera already use.",
+  },
+  {
+    icon: Database,
+    quote: "We want to run our own analyses, not wait for a consultant every time",
+    response: "Give Me, Help Me, Do It For Me profiles on one IDM-powered platform, so clients can self-serve, co-pilot, or stay fully serviced as they mature.",
   },
 ];
+
 
 export const ClientPainEngagementSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -38,7 +49,7 @@ export const ClientPainEngagementSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {signals.map((s) => {
             const Icon = s.icon;
             return (
