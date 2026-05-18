@@ -45,6 +45,9 @@ const StatusIcon = ({ status }: { status: string }) => {
 };
 
 const APPENDIX_SECTIONS = [
+  "maturity-ladder",
+  "boundaries",
+  "strategic-context",
   "se-corporate-blueprint",
   "pain-inventory",
   "voc-evidence",
