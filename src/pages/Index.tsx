@@ -33,6 +33,7 @@ import { DataRequirementsSection } from "@/components/playbook/DataRequirementsS
 import { StartStopMatrix } from "@/components/playbook/StartStopMatrix";
 import { KeyObjectivesSection } from "@/components/playbook/KeyObjectivesSection";
 import { KeyChallengesGridSection } from "@/components/playbook/KeyChallengesGridSection";
+import { StrategicContextHighlight } from "@/components/playbook/StrategicContextHighlight";
 import { ReadingProgressBar } from "@/components/playbook/ReadingProgressBar";
 import { PresentationMode } from "@/components/playbook/PresentationMode";
 import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
@@ -51,6 +52,7 @@ const Index = () => {
       />
       <HeroSection />
       <ExecutiveSummary />
+      <StrategicContextHighlight />
       {/* Why */}
       <PlatformShiftSection />
       {/* Who */}
