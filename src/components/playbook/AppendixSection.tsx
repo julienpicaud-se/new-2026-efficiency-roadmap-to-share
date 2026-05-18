@@ -1,10 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { appendixPillars, supportingScorecard, capabilityMatrix, intelligenceFlywheel } from "@/data/playbook-data";
-import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Zap, X, Minus, Database, Brain, Settings, Eye, FileText, AlertOctagon, MessageSquare, Building2, BookOpen } from "lucide-react";
+import { Layers, TrendingUp, Sparkles, Target, CheckCircle2, Zap, X, Minus, Database, Brain, Settings, Eye, FileText, AlertOctagon, MessageSquare, Building2, BookOpen, Compass, ShieldOff, Lightbulb } from "lucide-react";
 import { PainInventorySection } from "@/components/playbook/PainInventorySection";
 import { VOCEvidenceSection } from "@/components/playbook/VOCEvidenceSection";
 import { SECorporateBlueprintSection } from "@/components/playbook/SECorporateBlueprintSection";
 import { GlossarySection } from "@/components/playbook/GlossarySection";
+import { MaturityLadderSection } from "@/components/playbook/MaturityLadderSection";
+import { BoundariesSection } from "@/components/playbook/BoundariesSection";
+import { StrategicContextSection } from "@/components/playbook/StrategicContextSection";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
