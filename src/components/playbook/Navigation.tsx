@@ -70,6 +70,7 @@ const groups: NavGroup[] = [
       { id: "ecm-mapping", label: "Capability Mapping" },
       { id: "regional-journeys", label: "Regional Journeys" },
       { id: "operating-model", label: "Operating Model" },
+      { id: "expert-services", label: "Expert Services" },
     ],
   },
   {

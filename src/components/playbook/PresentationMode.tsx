@@ -25,6 +25,7 @@ const sections = [
   { id: "ecm-mapping", title: "Capability Mapping" },
   { id: "regional-journeys", title: "Regional Journeys" },
   { id: "operating-model", title: "Operating Model" },
+  { id: "expert-services", title: "Expert Services" },
   // Delivery
   { id: "phasing", title: "Phasing" },
   { id: "idm-vision", title: "IDM 2.0 Vision" },
