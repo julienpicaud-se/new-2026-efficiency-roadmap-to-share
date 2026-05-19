@@ -22,8 +22,8 @@ const scenarios = [
   },
   {
     icon: Database,
-    title: "Centralize context on the IDM 2.0 spine",
-    description: "Capture client context once on the IDM 2.0 spine (interval data, assets, ECM history, audit IP) and reuse it across audits, quotes, follow-ups, and Sera conversations",
+    title: "Centralize context on the RA+ spine",
+    description: "Capture client context once on the RA+ spine (interval data, assets, ECM history, audit IP) and reuse it across audits, quotes, follow-ups, and Sera conversations",
   },
   {
     icon: MousePointer,
