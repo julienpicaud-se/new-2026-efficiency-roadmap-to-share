@@ -5,25 +5,36 @@ import { Minimize2, ChevronLeft, ChevronRight, Grid3X3, X, Keyboard } from "luci
 const sections = [
   { id: "hero", title: "Overview" },
   { id: "executive-summary", title: "Executive Summary" },
+  // Problem
+  { id: "strategic-context-highlight", title: "Strategic Context" },
+  { id: "market-context", title: "Market Context" },
+  { id: "key-challenges-grid", title: "Key Challenges" },
+  { id: "client-pain-engagement", title: "Client Pain to Engagement" },
+  // Vision
+  { id: "what-if", title: "What If Tomorrow" },
   { id: "platform-shift", title: "Efficiency Transformation" },
+  { id: "key-challenges", title: "Why Now" },
+  // Audience
   { id: "personas", title: "Personas" },
   { id: "jobs-to-be-done", title: "Jobs to Be Done" },
-  { id: "key-challenges", title: "Why Now" },
-  { id: "strategic-pillars", title: "Strategic Pillars · Qualitative Outcomes" },
+  // Response
+  { id: "strategic-pillars", title: "Strategic Pillars" },
+  { id: "key-objectives", title: "Key Objectives" },
+  // How
   { id: "existing-tools", title: "Technology Landscape" },
-  { id: "ecm-ingestion-engine", title: "Knowledge Engine" },
   { id: "ecm-mapping", title: "Capability Mapping" },
   { id: "regional-journeys", title: "Regional Journeys" },
-  { id: "strategic-context", title: "Strategic Context" },
-  { id: "what-if", title: "What If Tomorrow" },
-  { id: "boundaries", title: "Boundaries & Operating Rules" },
-  { id: "success-metrics", title: "Success Looks Like · Quantitative KPIs" },
-  { id: "maturity-ladder", title: "Maturity Ladder" },
+  { id: "operating-model", title: "Operating Model" },
+  // Delivery
   { id: "phasing", title: "Phasing" },
   { id: "idm-vision", title: "IDM 2.0 Vision" },
+  { id: "success-metrics", title: "Success Metrics" },
+  { id: "start-stop", title: "Start / Stop" },
+  { id: "takeaway", title: "Executive Takeaway" },
+  // Appendix
   { id: "appendix", title: "Appendix" },
-  { id: "takeaway", title: "Takeaway" },
 ];
+
 
 interface PresentationModeProps {
   isActive: boolean;

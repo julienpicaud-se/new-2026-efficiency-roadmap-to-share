@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, Download, Maximize2, ChevronRight, Layers, ChevronDown, FileDown, Map } from "lucide-react";
+import { Menu, Download, Maximize2, ChevronRight, Layers, ChevronDown, Map } from "lucide-react";
 import { exportToPptx } from "@/lib/pptx-export";
 import { domainRoadmaps } from "@/data/domain-roadmaps";
 import {
@@ -15,7 +15,6 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
@@ -25,17 +24,29 @@ import {
 } from "@/components/ui/collapsible";
 
 type NavItem = { id: string; label: string };
-type NavGroup = { label: string; items: NavItem[]; defaultOpen?: boolean };
+type NavGroup = { label: string; items: NavItem[] };
 
+// Flow mirrors src/pages/Index.tsx, grouped into 6 simple sections.
 const topLevel: NavItem[] = [
   { id: "executive-summary", label: "Summary" },
 ];
 
 const groups: NavGroup[] = [
   {
-    label: "Strategy",
+    label: "Problem",
     items: [
+      { id: "strategic-context-highlight", label: "Strategic Context" },
+      { id: "market-context", label: "Market Context" },
+      { id: "key-challenges-grid", label: "Key Challenges" },
+      { id: "client-pain-engagement", label: "Client Pain to Engagement" },
+    ],
+  },
+  {
+    label: "Vision",
+    items: [
+      { id: "what-if", label: "What If Tomorrow" },
       { id: "platform-shift", label: "Efficiency Transformation" },
+      { id: "key-challenges", label: "Why Now" },
     ],
   },
   {
@@ -46,17 +57,10 @@ const groups: NavGroup[] = [
     ],
   },
   {
-    label: "Problem",
-    items: [
-      { id: "key-challenges-grid", label: "Key Challenges" },
-      { id: "key-challenges", label: "Why Now" },
-    ],
-  },
-  {
     label: "Response",
     items: [
-      { id: "key-objectives", label: "Key Objectives" },
       { id: "strategic-pillars", label: "Strategic Pillars" },
+      { id: "key-objectives", label: "Key Objectives" },
     ],
   },
   {
@@ -64,50 +68,24 @@ const groups: NavGroup[] = [
     items: [
       { id: "existing-tools", label: "Technology Landscape" },
       { id: "ecm-mapping", label: "Capability Mapping" },
-      { id: "operating-model", label: "Operating Model" },
-    ],
-  },
-  {
-    label: "Context",
-    items: [
       { id: "regional-journeys", label: "Regional Journeys" },
-      { id: "what-if", label: "What If Tomorrow" },
-    ],
-  },
-  {
-    label: "Guardrails",
-    items: [
-      { id: "success-metrics", label: "Success Metrics" },
+      { id: "operating-model", label: "Operating Model" },
     ],
   },
   {
     label: "Delivery",
     items: [
       { id: "phasing", label: "Phasing" },
-      { id: "start-stop-matrix", label: "Start / Stop Matrix" },
       { id: "idm-vision", label: "IDM 2.0 Vision" },
-      { id: "executive-takeaway", label: "Executive Takeaway" },
+      { id: "success-metrics", label: "Success Metrics" },
+      { id: "start-stop", label: "Start / Stop" },
+      { id: "takeaway", label: "Executive Takeaway" },
     ],
   },
   {
     label: "Appendix",
     items: [
       { id: "appendix", label: "Browse full appendix" },
-      { id: "appendix:maturity-ladder", label: "Customer Maturity Ladder" },
-      { id: "appendix:boundaries", label: "Where We Stop" },
-      { id: "appendix:strategic-context", label: "Why Now, Why This Way" },
-      { id: "appendix:competitive-landscape", label: "Efficiency Technology Landscape" },
-      { id: "appendix:data-requirements", label: "Data Required for Efficiency Capabilities" },
-      { id: "appendix:ecm-ingestion-engine", label: "Efficiency Knowledge Engine" },
-      { id: "appendix:se-corporate-blueprint", label: "RA Classic IDM Client" },
-      { id: "appendix:pain-inventory", label: "RA Classic Pain Inventory" },
-      { id: "appendix:voc-evidence", label: "VOC Evidence" },
-      { id: "appendix:initiatives-by-domain", label: "Initiatives by Domain" },
-      { id: "appendix:strategy-flywheel", label: "Strategy-to-Improvement Flywheel" },
-      { id: "appendix:capability-matrix", label: "Opportunity × Phase Matrix" },
-      { id: "appendix:value-pillar-deep-dive", label: "Value Pillar Deep Dive" },
-      { id: "appendix:supporting-scorecard", label: "Supporting Scorecard" },
-      { id: "appendix:glossary", label: "Glossary" },
     ],
   },
 ];
@@ -146,7 +124,6 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    // Deep link into the Appendix accordion: "appendix:<section-id>"
     if (id.startsWith("appendix:")) {
       const target = id.split(":")[1];
       const appendix = document.getElementById("appendix");
@@ -165,11 +142,7 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
       const navHeight = 80;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - navHeight;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
     setIsMobileMenuOpen(false);
   };
@@ -205,7 +178,7 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
             </div>
           </div>
 
-          {/* Desktop Navigation - Pills with grouped dropdowns */}
+          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-2">
             <div className="flex items-center bg-muted/50 rounded-full p-1 border border-border/30">
               <button
@@ -249,13 +222,11 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                   </DropdownMenu>
                 );
               })}
-
             </div>
           </div>
 
           {/* Right Actions */}
           <div className="flex items-center gap-2">
-            {/* Fullscreen/Present Button */}
             <Button
               variant="ghost"
               size="icon"
@@ -266,7 +237,6 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
               <Maximize2 className="w-4 h-4" />
             </Button>
 
-            {/* Export Button */}
             <Button
               className="hidden sm:flex bg-primary hover:bg-primary/90 text-primary-foreground gap-2 shadow-md shadow-primary/20"
               size="sm"
@@ -280,11 +250,7 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
             {/* Mobile Menu */}
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="lg:hidden"
-                >
+                <Button variant="ghost" size="icon" className="lg:hidden">
                   <Menu size={20} />
                 </Button>
               </SheetTrigger>
@@ -299,7 +265,7 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                     </div>
                   </div>
                 </SheetHeader>
-                
+
                 <div className="flex flex-col gap-1 py-6">
                   <button
                     onClick={() => scrollToSection(topLevel[0].id)}
@@ -316,11 +282,7 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                   {groups.map((group) => {
                     const isActiveGroup = group.items.some((i) => i.id === activeSection);
                     return (
-                      <Collapsible
-                        key={group.label}
-                        defaultOpen={isActiveGroup}
-                        className="mt-2"
-                      >
+                      <Collapsible key={group.label} defaultOpen={isActiveGroup} className="mt-2">
                         <CollapsibleTrigger className="w-full flex items-center justify-between px-4 py-2 text-xs text-muted-foreground uppercase tracking-wider hover:text-foreground group">
                           <span>{group.label}</span>
                           <ChevronDown className="w-4 h-4 opacity-60 transition-transform group-data-[state=open]:rotate-180" />
@@ -345,9 +307,6 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                     );
                   })}
 
-                  {/* Roadmap hidden for now */}
-
-                  {/* Domain Links in Mobile */}
                   <div className="mt-4 pt-4 border-t border-border/50">
                     <p className="px-4 text-xs text-muted-foreground uppercase tracking-wider mb-2">Views</p>
                     <Link
@@ -408,18 +367,6 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                   >
                     <Download className="w-4 h-4" />
                     {isExporting ? "Exporting..." : "Export PPTX"}
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="w-full justify-start gap-2 text-primary border-primary/30 hover:bg-primary/10"
-                    onClick={() => {
-                      setIsMobileMenuOpen(false);
-                      handleExport();
-                    }}
-                    disabled={isExporting}
-                  >
-                    <FileDown className="w-4 h-4" />
-                    {isExporting ? "Exporting..." : "Export All Content"}
                   </Button>
                 </div>
               </SheetContent>
