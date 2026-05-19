@@ -95,8 +95,8 @@ export const WhatIfSection = () => {
                 <span className="text-sm font-medium text-primary">That is Efficiency Transformation</span>
               </div>
               <p className="text-lg text-foreground leading-relaxed max-w-2xl mx-auto">
-                From internal productivity to scalable revenue and in-product efficiency advisory:
-                transforming expert knowledge into scalable product value.
+                IDM 2.0 turns interval data and Schneider's field IP into an agent-ready context layer,
+                taking us from internal productivity to scalable revenue and always-on, in-product efficiency advisory.
               </p>
             </CardContent>
           </Card>
