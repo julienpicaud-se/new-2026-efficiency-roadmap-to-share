@@ -94,10 +94,10 @@ export const ExpertServicesSection = () => {
             Human in the Loop
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
-            Expert Services Layer on the IDM 2.0 Spine
+            Expert Services Layer on the RA+ Spine
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
-            AI executes, humans apply judgment. RA+ and IDM 2.0 run the analytics; Schneider experts step in where validation, interpretation, risk, and executive communication make the difference.
+            AI executes, humans apply judgment. RA+ runs the analytics; Schneider experts step in where validation, interpretation, risk, and executive communication make the difference.
           </p>
         </div>
 
@@ -166,7 +166,7 @@ export const ExpertServicesSection = () => {
         <div className="max-w-6xl mx-auto bg-card rounded-xl border border-border/50 p-6 sm:p-8">
           <div className="flex items-center gap-3 mb-6">
             <MessageSquare className="w-5 h-5 text-primary" />
-            <h3 className="font-semibold text-foreground">Engagement Tiers on One IDM 2.0 Spine</h3>
+            <h3 className="font-semibold text-foreground">Engagement Tiers on One RA+ Spine</h3>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm min-w-[680px]">

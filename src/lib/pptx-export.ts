@@ -290,7 +290,7 @@ export const exportToPptx = async () => {
     addTitle(
       s1,
       "HUMAN IN THE LOOP",
-      "Expert Services Layer on the IDM 2.0 Spine",
+      "Expert Services Layer on the RA+ Spine",
       "AI executes, humans apply judgment. Same IDM 2.0 spine, two ways to consume it.",
     );
     const archetypes = [
