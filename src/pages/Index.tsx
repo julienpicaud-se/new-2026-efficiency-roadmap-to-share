@@ -36,6 +36,7 @@ import { KeyChallengesGridSection } from "@/components/playbook/KeyChallengesGri
 import { StrategicContextHighlight } from "@/components/playbook/StrategicContextHighlight";
 import { MarketContextSection } from "@/components/playbook/MarketContextSection";
 import { ClientPainEngagementSection } from "@/components/playbook/ClientPainEngagementSection";
+import { ExpertServicesSection } from "@/components/playbook/ExpertServicesSection";
 
 import { ReadingProgressBar } from "@/components/playbook/ReadingProgressBar";
 import { PresentationMode } from "@/components/playbook/PresentationMode";
