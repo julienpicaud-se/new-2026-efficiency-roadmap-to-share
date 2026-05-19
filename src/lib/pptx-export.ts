@@ -284,6 +284,90 @@ export const exportToPptx = async () => {
     s.addText(regionalJourneys.designPrinciple, { x: 0.5, y: 5.4, w: 9, h: 0.35, fontSize: 8, italic: true, color: BRAND_GREEN, align: "center", fit: "shrink" });
   };
 
+  const buildExpertServices = () => {
+    // Slide 1: Two client archetypes
+    const s1 = newSlide();
+    addTitle(
+      s1,
+      "HUMAN IN THE LOOP",
+      "Expert Services Layer on the IDM 2.0 Spine",
+      "AI executes, humans apply judgment. Same IDM 2.0 spine, two ways to consume it.",
+    );
+    const archetypes = [
+      {
+        title: "Self-Serve Operator",
+        tagline: "FULL AUTONOMY, AI-DRIVEN",
+        body: "Wants the keys. Runs IDM 2.0 analytics, builds ECM scenarios, and acts on Sera recommendations without waiting for a human. RA+ is their cockpit; expert services are a-la-carte.",
+      },
+      {
+        title: "Guided Decision Client",
+        tagline: "HUMAN IN THE LOOP",
+        body: "Wants a trusted Schneider expert in the room for high-stakes calls. The platform drives the work; the expert validates, interprets, and translates IDM 2.0 outputs into board-ready decisions.",
+      },
+    ];
+    archetypes.forEach((a, i) => {
+      const xPos = 0.5 + i * 4.6;
+      s1.addShape("rect" as PptxGenJS.ShapeType, {
+        x: xPos, y: 1.95, w: 4.45, h: 3.4,
+        fill: { color: CARD_BG }, line: { color: BRAND_GREEN, width: 1 },
+      });
+      s1.addText(a.title, { x: xPos + 0.2, y: 2.05, w: 4.05, h: 0.4, fontSize: 16, bold: true, color: TEXT_WHITE });
+      s1.addText(a.tagline, { x: xPos + 0.2, y: 2.5, w: 4.05, h: 0.3, fontSize: 9, bold: true, color: BRAND_GREEN });
+      s1.addText(a.body, { x: xPos + 0.2, y: 2.85, w: 4.05, h: 2.4, fontSize: 10, color: TEXT_WHITE, fit: "shrink" });
+    });
+
+    // Slide 2: Judgment layer + engagement tiers
+    const s2 = newSlide();
+    addTitle(
+      s2,
+      "JUDGMENT LAYER",
+      "Where Schneider Experts Add Value",
+      "Service advisors become the judgment layer on top of IDM 2.0 and Sera — across four roles, across three engagement tiers.",
+    );
+    const pillars = [
+      { t: "Validation", d: "Pressure-test IDM 2.0 baselines, ECM assumptions, and Sera outputs against engineering and field reality." },
+      { t: "Interpretation", d: "Turn IDM 2.0 telemetry and ECM stacks into a clear portfolio narrative and realistic envelope of action." },
+      { t: "Risk translation", d: "Frame downside, tenant impact, compliance, and execution risk around IDM 2.0 surfaced measures." },
+      { t: "Exec communication", d: "Package IDM 2.0 evidence and Sera reasoning into board-grade recommendations and capital narratives." },
+    ];
+    pillars.forEach((p, i) => {
+      const xPos = 0.5 + i * 2.3;
+      s2.addShape("rect" as PptxGenJS.ShapeType, {
+        x: xPos, y: 1.95, w: 2.2, h: 1.6,
+        fill: { color: CARD_BG }, line: { color: BRAND_GREEN, width: 1 },
+      });
+      s2.addText(p.t, { x: xPos + 0.12, y: 2.02, w: 2.0, h: 0.3, fontSize: 11, bold: true, color: BRAND_GREEN });
+      s2.addText(p.d, { x: xPos + 0.12, y: 2.35, w: 2.0, h: 1.15, fontSize: 7.5, color: TEXT_WHITE, fit: "shrink" });
+    });
+
+    const tiers = [
+      ["Self-Serve", "Self-Serve Operator", "On demand", "Experts a-la-carte", "Full RA+ + IDM 2.0 + Sera"],
+      ["Assisted", "Mixed maturity", "Async + QBRs", "Expert validates IDM 2.0 outputs", "Shared RA+ workspace, annotated IDM 2.0 readouts"],
+      ["Advisory", "Guided Decision Client", "Embedded", "Named expert owns interpretation", "Co-piloted RA+ + IDM 2.0 with expert IP"],
+    ];
+    const tableY = 3.75;
+    const headers = ["Tier", "Best for", "Cadence", "Human role", "Platform / IDM 2.0"];
+    const colWidths = [1.1, 1.7, 1.3, 2.3, 2.8];
+    let xCursor = 0.5;
+    headers.forEach((h, i) => {
+      s2.addText(h, { x: xCursor, y: tableY, w: colWidths[i], h: 0.3, fontSize: 9, bold: true, color: BRAND_GREEN });
+      xCursor += colWidths[i];
+    });
+    tiers.forEach((row, ri) => {
+      xCursor = 0.5;
+      row.forEach((cell, ci) => {
+        s2.addText(cell, {
+          x: xCursor, y: tableY + 0.35 + ri * 0.42, w: colWidths[ci], h: 0.4,
+          fontSize: 8, color: ci === 0 ? TEXT_WHITE : TEXT_MUTED, bold: ci === 0, fit: "shrink",
+        });
+        xCursor += colWidths[ci];
+      });
+    });
+    s2.addText("One IDM 2.0 spine, one RA+ workspace. Clients move between tiers without losing context or model continuity.", {
+      x: 0.5, y: 5.4, w: 9, h: 0.3, fontSize: 8, italic: true, color: BRAND_GREEN, align: "center", fit: "shrink",
+    });
+  };
+
   const buildPhasing = () => {
     const phases = [
       { phase: "Phase 1", title: "IDM Evolution", tagline: "Urgent, no-regret", timing: "MVP Q4 2025 / Q1 2026", summary: "Re-platform IDM into RA+ to drive market differentiation through agentic capabilities, richer context, and SaaS-ready delivery." },
