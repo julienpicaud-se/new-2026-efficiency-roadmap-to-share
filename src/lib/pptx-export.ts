@@ -622,6 +622,7 @@ export const exportToPptx = async () => {
   buildTechnologyLandscape();
   buildCapabilityMapping();
   buildRegionalJourneys();
+  buildExpertServices();
 
   // Delivery
   buildPhasing();
