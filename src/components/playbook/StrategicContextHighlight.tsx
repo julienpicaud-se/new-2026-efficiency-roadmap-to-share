@@ -51,7 +51,7 @@ export const StrategicContextHighlight = () => {
             Strategic Context
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Efficiency value is bottlenecked by knowledge and data, not opportunity
+            Our biggest efficiency lever is unlocking the knowledge and data we already own
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
             Decades of ECM audit IP sit locked inside slide decks, and interval data sits
