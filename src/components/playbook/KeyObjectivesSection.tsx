@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Target, ChevronDown, Zap, Compass, BookOpen, Layers, Database, Activity } from "lucide-react";
+import { Target, ChevronDown, Zap, Compass, BookOpen, Database } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import {
   Collapsible,
@@ -13,7 +13,7 @@ const keyObjectives = [
     id: "O1",
     tag: "Automation",
     tagIcon: Zap,
-    title: "Compress ECM audit cycle time with AI co-pilots",
+    title: "Compress ECM audit cycle time with AI agents",
     description:
       "Shift expert auditors from manual scoping to calibration. Agentic assistants draft ROM estimates, stack measures, and surface assumptions so experts focus on judgment.",
     keyResults: [
@@ -26,12 +26,13 @@ const keyObjectives = [
     id: "O2",
     tag: "Discovery",
     tagIcon: Compass,
-    title: "Surface efficiency opportunities directly inside RA+",
+    title: "Surface always-on efficiency opportunities inside RA+",
     description:
-      "Make early, credible efficiency advice visible in-product so customers see what is possible without waiting for a full audit cycle.",
+      "Make early, credible efficiency advice visible in-product and keep it on between formal audits. Continuous interval-data detection surfaces staging, compressed air, and control ECMs the consultancy team would normally find manually.",
     keyResults: [
       "Ship in-product ECM recommendations with transparent assumptions and confidence levels",
-      "Create measurable pull from RA+ usage into advanced audit projects",
+      "Stand up always-on ECM detection on top of the RA+ interval-data spine",
+      "Generate qualified pull from RA+ discovery into deeper expert audit work",
       "Establish early advisory as a recurring touchpoint, not a one-off engagement",
     ],
   },
@@ -50,42 +51,17 @@ const keyObjectives = [
   },
   {
     id: "O4",
-    tag: "Platform",
-    tagIcon: Layers,
-    title: "Anchor efficiency on a unified building data spine",
-    description:
-      "One resolved view of site, asset, meter, and tariff data shared across discovery, scoping, proposals, and in-product guidance, with no swivel-chair handoffs.",
-    keyResults: [
-      "Reuse building context across audits, quotes, and follow-ups without re-keying",
-      "Eliminate manual reconciliation between RA+, audit tools, and deliverables",
-      "Expose APIs that let every service line draw from the same building record",
-    ],
-  },
-  {
-    id: "O5",
-    tag: "IDM 2.0",
+    tag: "Platform (IDM 2.0)",
     tagIcon: Database,
-    title: "Re-platform IDM as the agent-ready data spine inside RA+",
+    title: "Anchor efficiency on the RA+ / IDM 2.0 data spine",
     description:
-      "Move IDM from a standalone module to a native RA+ capability that blends interval telemetry with the field and consultancy work product only Schneider can bring, exposed to Sera and downstream agents.",
+      "One resolved view of site, asset, meter, tariff, and interval data shared across discovery, scoping, proposals, and in-product guidance. IDM 2.0 runs natively inside RA+ and exposes an agent-ready context layer to Sera and downstream agents.",
     keyResults: [
       "Retire the IDM 1.0 module hop and run interval data natively inside RA+",
+      "Reuse building context across audits, quotes, and follow-ups without re-keying",
       "Expose an enriched, agent-ready context layer (telemetry + asset + ECM + audit IP) to Sera",
       "Cover Give Me, Help Me, and Do It For Me engagement profiles on the same IDM-powered platform",
       "Align IDM 2.0 MVP with SE Corporate as design partner ahead of RA+ go-live",
-    ],
-  },
-  {
-    id: "O6",
-    tag: "Continuous Discovery",
-    tagIcon: Activity,
-    title: "Turn interval data into always-on efficiency discovery",
-    description:
-      "Use the IDM 2.0 spine so RA+ continuously surfaces staging, compressed air, and control ECMs the consultancy team would normally find manually, between formal audit cycles.",
-    keyResults: [
-      "Stand up always-on ECM detection on top of IDM 2.0 interval data",
-      "Lift RA+ stickiness with continuous, in-product efficiency guidance between engagements",
-      "Generate qualified pull from RA+ discovery into deeper expert audit work",
     ],
   },
 ];
