@@ -51,13 +51,13 @@ export const WhatIfSection = () => {
           {/* Section Header */}
           <div className="text-center mb-12 sm:mb-16">
             <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 sm:mb-4 block">
-              The Vision
+              The Vision · Powered by IDM 2.0
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
               What if you could, <span className="text-primary">tomorrow</span>...
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Efficiency Transformation transforms how efficiency teams work and how customers experience value
+              With IDM 2.0 as the interval-data and context spine inside RA+, Efficiency Transformation reshapes how efficiency teams work and how customers experience value
             </p>
           </div>
 
@@ -95,8 +95,8 @@ export const WhatIfSection = () => {
                 <span className="text-sm font-medium text-primary">That is Efficiency Transformation</span>
               </div>
               <p className="text-lg text-foreground leading-relaxed max-w-2xl mx-auto">
-                From internal productivity to scalable revenue and in-product efficiency advisory:
-                transforming expert knowledge into scalable product value.
+                IDM 2.0 turns interval data and Schneider's field IP into an agent-ready context layer,
+                taking us from internal productivity to scalable revenue and always-on, in-product efficiency advisory.
               </p>
             </CardContent>
           </Card>
