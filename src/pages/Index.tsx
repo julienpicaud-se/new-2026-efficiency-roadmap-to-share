@@ -77,6 +77,7 @@ const Index = () => {
       <ECMCapabilityMapping />
       <RegionalJourneyComparison />
       <OperatingModelSection />
+      <ExpertServicesSection />
       {/* Delivery */}
       <PhasingSection />
       <IDMVisionSection />
