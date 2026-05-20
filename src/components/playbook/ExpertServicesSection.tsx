@@ -33,19 +33,19 @@ const judgementPillars = [
     icon: ShieldCheck,
     title: "Validation",
     description:
-      "Experts pressure-test IDM 2.0 baselines, ECM assumptions, and Sera outputs before they become commitments — confirming that what the agent proposes survives engineering and field reality.",
+      "Experts pressure-test IDM 2.0 baselines, ECM assumptions, and Sera outputs before they become commitments · confirming that what the agent proposes survives engineering and field reality.",
   },
   {
     icon: Lightbulb,
     title: "Interpretation",
     description:
-      "Translates IDM 2.0 telemetry, anomaly patterns, and ECM stacks into a clear narrative — what is happening in the portfolio, why it matters, and what the realistic envelope of action looks like.",
+      "Translates IDM 2.0 telemetry, anomaly patterns, and ECM stacks into a clear narrative · what is happening in the portfolio, why it matters, and what the realistic envelope of action looks like.",
   },
   {
     icon: AlertTriangle,
     title: "Risk translation",
     description:
-      "Frames downside, tenant impact, compliance exposure, and execution risk for measures that IDM 2.0 surfaces — so clients see both the upside model and the operational guardrails.",
+      "Frames downside, tenant impact, compliance exposure, and execution risk for measures that IDM 2.0 surfaces · so clients see both the upside model and the operational guardrails.",
   },
   {
     icon: Presentation,
