@@ -13,19 +13,34 @@ import {
 
 const useCases = [
   {
-    icon: Activity,
-    title: "Program Management & M&V",
-    body: "Follow up on actions, track KPIs, run causal analysis across factories, sites, and buildings. IPMVP-aligned savings validation built into the platform.",
+    icon: Target,
+    title: "Prioritization Across the Portfolio",
+    body: "Surface where to act first across sites, systems, and portfolios using WAGES, asset context, and Bureau-enriched insights on the same spine.",
   },
   {
-    icon: Target,
-    title: "Optimization Discovery",
-    body: "Use interval data to surface staging opportunities, compressed air inefficiencies, control re-architecture, and other ECMs the consultancy team would normally find manually.",
+    icon: Sparkles,
+    title: "Automated Insights & KPI Explainability",
+    body: "Generate readouts where each KPI links back to the underlying data, assumptions, and engineering context, so customers see why a number moved, not just that it did.",
+  },
+  {
+    icon: Activity,
+    title: "ECM Detection (with Engineering Judgment)",
+    body: "Detect likely ECM candidates from interval data and asset context. Detection is a starting point, not a proposal. Engineering judgment and site validation remain required to qualify, design, and commit.",
   },
   {
     icon: Workflow,
-    title: "Cross-Functional Data Reuse",
-    body: "Make interval data natively available for sourcing, budgeting, forecasting, and risk management. One source of truth, multiple downstream use cases.",
+    title: "Recurring-Question Workflows",
+    body: "Codify the recurring questions efficiency teams answer (anomalies, baselines, what changed, what to do, what is the risk, who owns it, was it verified) into structured loops inside Sera and IDM.",
+  },
+  {
+    icon: Database,
+    title: "Context Enrichment from Consulting & Bureau",
+    body: "Capture audit findings, Bureau monitoring notes, engineering assumptions, and validation outcomes as first-class data inside IDM so the next workflow inherits the full context.",
+  },
+  {
+    icon: Check,
+    title: "Closed-Loop Validation",
+    body: "Track and verify outcomes using the same underlying data that surfaced the opportunity, IPMVP-aligned, with Bureau in the loop where ongoing monitoring is part of the engagement.",
   },
 ];
 
@@ -33,25 +48,26 @@ const profiles = [
   {
     title: "Give Me",
     subtitle: "Full self-serve",
-    body: "Clients with internal expertise who want to run analyses, configure KPIs, and manage their own program inside RA+.",
+    body: "Clients with internal expertise who want to run analyses, configure KPIs, and manage their own program inside RA+, using the same IDM data and explainability the experts use.",
   },
   {
     title: "Help Me",
     subtitle: "Hybrid",
-    body: "Clients who want platform autonomy for daily work plus targeted Schneider expertise for complex moments.",
+    body: "Clients who want platform autonomy for daily work plus Consulting or Bureau expertise for complex moments (audits, ECM design, validation, change management).",
   },
   {
     title: "Do It For Me",
     subtitle: "Full service",
-    body: "Clients who continue to rely on Schneider for data integration, KPI configuration, analysis, and program management.",
+    body: "Clients who rely on Schneider for data integration, KPI configuration, audit, ECM lifecycle, and program oversight, all running on the same connected RA+ spine.",
   },
 ];
 
 const moatPoints = [
-  "Bring asset, ECM, audit, and energy-flow context into RA+, not just telemetry",
-  "Make field and consultancy work product first-class data inside the platform",
-  "Expose the enriched context to Sera and downstream agents for richer reasoning",
-  "Right to win comes from the combination of data plus expertise, not software alone",
+  "Bring WAGES, asset, ECM, audit, and Bureau context onto one spine, not just telemetry",
+  "Make Consulting and Bureau work product first-class data inside IDM",
+  "Expose the enriched context to Sera so prioritization and explainability are grounded, not generic",
+  "Use the same data end-to-end: from detection to design to validation",
+  "Right to win comes from data plus expertise plus continuous validation, not software alone",
 ];
 
 const principles = [
@@ -95,7 +111,7 @@ export const IDMVisionSection = () => {
             IDM 2.0 Vision
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
-            Re-platform IDM into RA+ as a differentiated, agent-ready capability. Not a lift-and-shift, not a tab, not a faster version of today.
+            Re-platform IDM into RA+ as the trusted, connected foundation for WAGES and contextual data, enriched continuously by Consulting and Bureau, and exposed to Sera for explainable workflows.
           </p>
         </div>
 
@@ -110,7 +126,7 @@ export const IDMVisionSection = () => {
               </span>
             </div>
             <p className="text-lg sm:text-xl text-foreground leading-relaxed max-w-4xl">
-              IDM 2.0 turns interval data into an enriched, agent-ready context layer inside RA+, blending telemetry with the field and consultancy work product that only Schneider can bring.
+              IDM 2.0 is the connected spine that ties WAGES, asset context, audit findings, Bureau insights, and validated outcomes into one explainable system. Sera turns that combined data and context into prioritization, structured execution, and closed-loop validation, with engineering judgment always in the loop for complex calls.
             </p>
           </div>
         </div>
@@ -118,7 +134,7 @@ export const IDMVisionSection = () => {
         {/* Use cases */}
         <div className="mb-16">
           <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-6">Core Use Cases</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {useCases.map((u, i) => {
               const Icon = u.icon;
               return (

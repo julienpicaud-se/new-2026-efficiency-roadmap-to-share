@@ -56,54 +56,54 @@ const sections: Section[] = [
     id: "whats-happening",
     label: "What's Happening",
     title:
-      "Proven CoE expertise, ready to scale through the RA+ platform",
+      "Proven CoE and Bureau capacity, ready to become a digital overlay",
     icon: Activity,
     tone: "muted",
     body:
-      "The Efficiency CoE already delivers trusted advisory, implementation, IDM, and Global Energy Bureau capabilities across public and private sectors (38 people, 428 clients, 195K connected meters, $75M in performance guarantees). The opportunity is to convert that operating strength into a repeatable platform capability inside RA+, with Sera as the unified interface and IDM as the trusted data foundation, so customers are reached earlier, action is guided faster, and continuous improvement becomes the default.",
+      "The Efficiency CoE, Consulting practice, and Global Energy Bureau already deliver trusted advisory, IDM, auditing, implementation, and ongoing monitoring across public and private sectors (38 people, 428 clients, 195K connected meters, $75M in performance guarantees). The opportunity is to turn that human capacity into a digital overlay on top of RA+, so the same expertise enriches IDM, informs Sera, and reaches more customers without scaling the team linearly.",
   },
   {
     num: "02",
     id: "true-problem",
     label: "The True Problem",
-    title: "The issue is not demand, it is repeatability",
+    title: "The issue is connection, not demand",
     icon: AlertTriangle,
     tone: "destructive",
     body:
-      "Customers want clear guidance on what to do next, and our teams have the expertise to answer. The constraint is that interval data, audit knowledge, implementation pathways, and customer context are not yet governed as one reusable product foundation across Strategy, Building View, audit workflows, and customer-facing recommendations.",
+      "Data, context, and execution do not flow through one system. IDM holds WAGES and asset telemetry. Consulting and Bureau hold the engineering context, audit findings, and lifecycle knowledge. Customer workflows live in slides, trackers, and email. Sustainability teams cannot prioritize portfolios with confidence, efficiency teams cannot explain KPIs in context, and customers cannot see why an action is recommended or whether it was validated.",
   },
   {
     num: "03",
     id: "north-star",
     label: "Our North Star",
-    title: "A governed Efficiency CoE capability embedded in RA+",
+    title: "A connected intelligence system on the RA+ spine",
     icon: Compass,
     tone: "primary",
     body:
-      "Energy Efficiency is the focus of this discovery: a governed product inside RA+ that combines IDM as the system of record, expert CoE knowledge, and guided workflows for Energy Managers, Data Ops, Sustainability, and Executives. Asset Planning is a separate adjacent product. Sera is the single interface across both, sequenced so the Energy Manager experience leads.",
+      "IDM becomes the trusted foundation for WAGES and contextual data, enriched continuously by Consulting and Bureau work product. Sera is the interface that turns that combined data and context into prioritization, explainable insights, structured execution, and closed-loop validation, with the same underlying data used to verify outcomes. Asset Planning sits adjacent; the Energy Manager experience leads the sequence.",
   },
   {
     num: "04",
     id: "way-to-win",
     label: "A Pragmatic Way to Win",
-    title: "Start with reusable intelligence, then expand into guided workflows",
+    title: "Connect IDM, expert context, and Sera one workflow at a time",
     icon: Wrench,
     tone: "muted",
     body:
-      "The practical sequence is to finalize the unified efficiency taxonomy, publish a provisional guidance base with SME review, define clean service boundaries, and connect trusted IDM signals to Strategy first. From there, RA+ can introduce Building View, rule-based opportunity surfacing, customer self-service exploration, and platform-native audit outputs.",
+      "Finalize the unified efficiency taxonomy, capture audit and Bureau findings as first-class data inside IDM, and wire Sera into the recurring questions efficiency teams already answer. Start with prioritization and KPI explainability, then layer ECM detection (with engineering judgment and site validation always required), structured execution tied to specific assets, and closed-loop validation using the same data that surfaced the opportunity.",
   },
   {
     num: "05",
     id: "economic-impact",
     label: "Economic Impact",
-    title: "The value case spans productivity, upsell, and recurring revenue",
+    title: "Productivity for our teams, clarity for customers, stickier RA+",
     icon: TrendingUp,
     tone: "secondary",
     body:
-      "This transformation lowers cost to serve by reducing rework and manual slide building, creates better qualified demand for advanced audits, and strengthens RA+ stickiness through continuous efficiency guidance that customers can act on between formal engagements.",
+      "Connecting data, context, and execution reduces rework across Consulting and Bureau, makes recurring customer questions answerable inside the platform, and creates pull for deeper engagements when the system surfaces opportunities customers want to act on. The same data carries through from detection to verification.",
     kpis: [
-      { value: "Faster", label: "Audit throughput" },
-      { value: "Higher", label: "Advanced audit pull" },
+      { value: "Less", label: "Rework across teams" },
+      { value: "Clearer", label: "Customer prioritization" },
       { value: "Stickier", label: "RA+ value proposition" },
     ],
   },
@@ -111,11 +111,11 @@ const sections: Section[] = [
     num: "06",
     id: "strategic-upside",
     label: "Strategic Upside",
-    title: "Efficiency becomes a continuous RA+ operating model",
+    title: "An explainable, closed-loop operating model",
     icon: Rocket,
     tone: "muted",
     body:
-      "The end state is a credible, governed efficiency layer in RA+ that links strategy, design, execution, and continuous improvement. Customers receive contextual recommendations, teams reuse a consistent knowledge base, and expert services are pulled in at the right moments for deeper analysis without turning early guidance into a contractual commitment.",
+      "The end state is a connected system that links data, context, and outcomes across Strategy, Building View, audit workflows, and customer-facing guidance. Customers see why an action is recommended, what evidence supports it, and whether it was verified. Expert services are pulled in for validation, interpretation, and complex calls, never as the only way to get value from the platform.",
   },
 ];
 

@@ -20,16 +20,16 @@ import {
 
 const executiveSummarySlides = [
   {
-    title: "Efficiency CoE expertise is proven, but not yet scaled through RA+",
-    body: "The Efficiency CoE already delivers trusted advisory, implementation, IDM, and Global Energy Bureau capabilities across public and private sectors. The RA+ opportunity is to convert that operating strength into a repeatable platform capability that reaches customers earlier, guides action faster, and supports continuous improvement.",
+    title: "Proven CoE and Bureau capacity, ready to become a digital overlay",
+    body: "Consulting, the Efficiency CoE, and the Global Energy Bureau already deliver trusted audits, IDM, implementation, and ongoing monitoring. The opportunity is to turn that human capacity into a digital overlay on RA+, so the same expertise enriches IDM, informs Sera, and reaches more customers without scaling the team linearly.",
   },
   {
-    title: "A governed Efficiency CoE capability embedded in RA+",
-    body: "The north star is an authoritative efficiency foundation inside RA+ that connects IDM as the trusted interval-data system of record, expert CoE knowledge, and guided workflows. It should power goal-based Strategy recommendations, site-level Building View discovery, structured deliverables, and a clear path from early insight to expert engagement.",
+    title: "The issue is connection, not demand",
+    body: "Data, context, and execution do not flow through one system. IDM holds WAGES. Consulting and Bureau hold engineering context, audit findings, and lifecycle knowledge. Customer workflows live in slides and trackers. The result: weak prioritization, opaque KPIs, and no closed-loop validation.",
   },
   {
-    title: "Efficiency becomes a continuous RA+ operating model",
-    body: "The end state is a credible, governed efficiency layer in RA+ that links strategy, design, execution, and continuous improvement. Customers receive contextual recommendations, teams reuse a consistent knowledge base, and expert services are pulled in at the right moments for deeper analysis without turning early guidance into a contractual commitment.",
+    title: "A connected intelligence system on the RA+ spine",
+    body: "IDM becomes the trusted foundation, enriched continuously by Consulting and Bureau work product. Sera turns that combined data and context into prioritization, explainable insights, structured execution, and closed-loop validation, with engineering judgment in the loop on complex calls.",
   },
 ];
 
@@ -138,11 +138,11 @@ export const exportToPptx = async () => {
 
   const buildWhatIf = () => {
     const whatIfScenarios = [
-      { title: "Show opportunities in minutes", description: "Walk into a first meeting and show site-relevant efficiency opportunities in RA+ within minutes." },
-      { title: "Replace PowerPoint with platform", description: "Replace audit PowerPoint decks with structured, visual, interactive deliverables in the platform." },
-      { title: "Centralize context once", description: "Centralize all client context once on the RA+ spine and reuse it across audits, quotes, and follow-ups." },
-      { title: "One-click audit requests", description: "Let customers discover early efficiency insights, then request deeper expert audits with one click." },
-      { title: "Continuous improvement", description: "Turn every delivered audit into data that improves future recommendations." },
+      { title: "Prioritize across the portfolio", description: "Show where to act first across sites, systems, and portfolios using IDM data plus Consulting and Bureau context." },
+      { title: "Explain every KPI in context", description: "Move from static decks to explainable readouts where each KPI links back to data, assumptions, and engineering context." },
+      { title: "One connected spine for data and context", description: "Capture WAGES, audit findings, and Bureau insights once on the RA+ spine and reuse them across recommendations and verification." },
+      { title: "Answer recurring questions in-platform", description: "Resolve the recurring questions efficiency teams answer today inside Sera, with experts pulled in when judgment is required." },
+      { title: "Carry ECMs through the full lifecycle", description: "Structure ECMs as a lifecycle: detect, feasibility, design, constructability, implementation, verification, all on the same data." },
     ];
     const s = newSlide();
     addTitle(s, "WHAT IF TOMORROW", "Aspirations the Platform Unlocks");
@@ -289,20 +289,20 @@ export const exportToPptx = async () => {
     const s1 = newSlide();
     addTitle(
       s1,
-      "HUMAN IN THE LOOP",
-      "Expert Services Layer on the RA+ Spine",
-      "AI executes, humans apply judgment. Same IDM 2.0 spine, two ways to consume it.",
+      "EXPERTS IN THE SYSTEM",
+      "Consulting & Bureau on the RA+ Spine",
+      "Consulting and the Global Energy Bureau are part of the system, not a layer on top. Same connected spine, two ways to consume it.",
     );
     const archetypes = [
       {
         title: "Self-Serve Operator",
         tagline: "FULL AUTONOMY, AI-DRIVEN",
-        body: "Wants the keys. Runs IDM 2.0 analytics, builds ECM scenarios, and acts on Sera recommendations without waiting for a human. RA+ is their cockpit; expert services are a-la-carte.",
+        body: "Wants the keys. Runs IDM 2.0 analytics, explores ECM candidates, and acts on Sera recommendations directly. Consulting and Bureau available a-la-carte for validation or complex calls.",
       },
       {
         title: "Guided Decision Client",
-        tagline: "HUMAN IN THE LOOP",
-        body: "Wants a trusted Schneider expert in the room for high-stakes calls. The platform drives the work; the expert validates, interprets, and translates IDM 2.0 outputs into board-ready decisions.",
+        tagline: "EXPERTS IN THE SYSTEM",
+        body: "Wants Consulting and Bureau embedded in the workflow. Platform drives day-to-day; experts validate, enrich IDM context, frame risk, and own change management across the ECM lifecycle.",
       },
     ];
     archetypes.forEach((a, i) => {
@@ -316,19 +316,19 @@ export const exportToPptx = async () => {
       s1.addText(a.body, { x: xPos + 0.2, y: 2.85, w: 4.05, h: 2.4, fontSize: 10, color: TEXT_WHITE, fit: "shrink" });
     });
 
-    // Slide 2: Judgment layer + engagement tiers
+    // Slide 2: How experts show up + engagement tiers
     const s2 = newSlide();
     addTitle(
       s2,
-      "JUDGMENT LAYER",
-      "Where Schneider Experts Add Value",
-      "Service advisors become the judgment layer on top of IDM 2.0 and Sera — across four roles, across three engagement tiers.",
+      "HOW EXPERTS SHOW UP",
+      "Consulting & Bureau Across the Lifecycle",
+      "Experts bring data integration, validation, interpretation, and change management into the system, across three engagement tiers on one connected spine.",
     );
     const pillars = [
-      { t: "Validation", d: "Pressure-test IDM 2.0 baselines, ECM assumptions, and Sera outputs against engineering and field reality." },
-      { t: "Interpretation", d: "Turn IDM 2.0 telemetry and ECM stacks into a clear portfolio narrative and realistic envelope of action." },
-      { t: "Risk translation", d: "Frame downside, tenant impact, compliance, and execution risk around IDM 2.0 surfaced measures." },
-      { t: "Exec communication", d: "Package IDM 2.0 evidence and Sera reasoning into board-grade recommendations and capital narratives." },
+      { t: "Data integration & auditing", d: "Bring audit findings, engineering assumptions, and field measurements into IDM as first-class data." },
+      { t: "Validation", d: "Pressure-test baselines, ECM candidates, and Sera outputs. Site validation always required for design and capital." },
+      { t: "Interpretation & risk", d: "Frame portfolio narrative, downside, tenant impact, compliance, and execution risk for decision-makers." },
+      { t: "Change & program oversight", d: "Bureau and Consulting carry change management, monitoring, and program oversight with closed-loop validation." },
     ];
     pillars.forEach((p, i) => {
       const xPos = 0.5 + i * 2.3;
@@ -336,14 +336,14 @@ export const exportToPptx = async () => {
         x: xPos, y: 1.95, w: 2.2, h: 1.6,
         fill: { color: CARD_BG }, line: { color: BRAND_GREEN, width: 1 },
       });
-      s2.addText(p.t, { x: xPos + 0.12, y: 2.02, w: 2.0, h: 0.3, fontSize: 11, bold: true, color: BRAND_GREEN });
-      s2.addText(p.d, { x: xPos + 0.12, y: 2.35, w: 2.0, h: 1.15, fontSize: 7.5, color: TEXT_WHITE, fit: "shrink" });
+      s2.addText(p.t, { x: xPos + 0.12, y: 2.02, w: 2.0, h: 0.3, fontSize: 10, bold: true, color: BRAND_GREEN, fit: "shrink" });
+      s2.addText(p.d, { x: xPos + 0.12, y: 2.4, w: 2.0, h: 1.1, fontSize: 7.5, color: TEXT_WHITE, fit: "shrink" });
     });
 
     const tiers = [
-      ["Self-Serve", "Self-Serve Operator", "On demand", "Experts a-la-carte", "Full RA+ + IDM 2.0 + Sera"],
-      ["Assisted", "Mixed maturity", "Async + QBRs", "Expert validates IDM 2.0 outputs", "Shared RA+ workspace, annotated IDM 2.0 readouts"],
-      ["Advisory", "Guided Decision Client", "Embedded", "Named expert owns interpretation", "Co-piloted RA+ + IDM 2.0 with expert IP"],
+      ["Self-Serve", "Self-Serve Operator", "On demand", "Experts a-la-carte for validation", "Full RA+ + IDM 2.0 + Sera autonomy"],
+      ["Assisted", "Mixed maturity", "Async + recurring", "Experts validate & enrich IDM context", "Shared RA+ workspace, ECM lifecycle tracked"],
+      ["Embedded", "Guided Decision Client", "Embedded", "Consulting + Bureau embedded across lifecycle", "Co-piloted RA+ spine, continuous Bureau monitoring"],
     ];
     const tableY = 3.75;
     const headers = ["Tier", "Best for", "Cadence", "Human role", "Platform / IDM 2.0"];
@@ -363,7 +363,7 @@ export const exportToPptx = async () => {
         xCursor += colWidths[ci];
       });
     });
-    s2.addText("One IDM 2.0 spine, one RA+ workspace. Clients move between tiers without losing context or model continuity.", {
+    s2.addText("One connected spine. Clients move between tiers without losing context. Engineering judgment and site validation remain required for ECM design and capital decisions.", {
       x: 0.5, y: 5.4, w: 9, h: 0.3, fontSize: 8, italic: true, color: BRAND_GREEN, align: "center", fit: "shrink",
     });
   };
@@ -392,29 +392,33 @@ export const exportToPptx = async () => {
 
   const buildIdmVision = () => {
     const idmUseCases = [
-      { title: "Program Management & M&V", body: "Follow up on actions, track KPIs, run causal analysis across factories, sites, and buildings. IPMVP-aligned savings validation built in." },
-      { title: "Optimization Discovery", body: "Use interval data to surface staging opportunities, compressed air inefficiencies, and control re-architecture that consultants find manually today." },
-      { title: "Cross-Functional Data Reuse", body: "Make interval data natively available for sourcing, budgeting, forecasting, and risk management. One source of truth, many use cases." },
+      { title: "Prioritization across the portfolio", body: "Surface where to act first across sites, systems, and portfolios on the same connected spine." },
+      { title: "Automated insights & KPI explainability", body: "Each KPI links back to the data, assumptions, and engineering context that produced it." },
+      { title: "ECM detection (judgment required)", body: "Detect candidates from interval data. Engineering judgment and site validation remain required for design and capital." },
+      { title: "Recurring-question workflows", body: "Codify the recurring questions efficiency teams answer into structured loops inside Sera and IDM." },
+      { title: "Context enrichment from Consulting & Bureau", body: "Audit findings, Bureau monitoring, and validation outcomes captured as first-class data inside IDM." },
+      { title: "Closed-loop validation", body: "Verify outcomes using the same data that surfaced the opportunity. IPMVP-aligned, Bureau in the loop where monitoring applies." },
     ];
     const idmProfiles = [
-      { title: "Give Me", subtitle: "Full self-serve", body: "Internal expertise; runs analyses, configures KPIs, manages programs in RA+." },
-      { title: "Help Me", subtitle: "Hybrid", body: "Platform autonomy plus targeted Schneider expertise for complex moments." },
-      { title: "Do It For Me", subtitle: "Full service", body: "Schneider continues to handle data, KPIs, analysis, and program management." },
+      { title: "Give Me", subtitle: "Full self-serve", body: "Internal expertise; runs analyses, configures KPIs, uses same data and explainability as experts." },
+      { title: "Help Me", subtitle: "Hybrid", body: "Platform autonomy plus Consulting or Bureau for audits, ECM design, validation, change management." },
+      { title: "Do It For Me", subtitle: "Full service", body: "Schneider handles data integration, audit, ECM lifecycle, and program oversight on the same spine." },
     ];
     const s = newSlide();
-    addTitle(s, "IDM 2.0 VISION", "Embedded, Differentiated, Agentic", "Client-autonomy axis: from full self-serve to fully delivered. RA+ supports all three without forcing one path.");
+    addTitle(s, "IDM 2.0 VISION", "Connected, Explainable, Enriched", "IDM 2.0 is the trusted foundation. Consulting and Bureau enrich it. Sera makes it explainable.");
     idmUseCases.forEach((u, i) => {
-      const xPos = 0.5 + i * 3.05;
-      s.addShape("rect" as PptxGenJS.ShapeType, { x: xPos, y: 1.95, w: 2.95, h: 1.5, fill: { color: CARD_BG }, line: { color: BRAND_GREEN, width: 1 } });
-      s.addText(u.title, { x: xPos + 0.15, y: 2.05, w: 2.65, h: 0.3, fontSize: 10, bold: true, color: BRAND_GREEN });
-      s.addText(u.body, { x: xPos + 0.15, y: 2.4, w: 2.65, h: 1.0, fontSize: 7.5, color: TEXT_MUTED, fit: "shrink" });
+      const xPos = 0.5 + (i % 3) * 3.05;
+      const yPos = 1.95 + Math.floor(i / 3) * 1.05;
+      s.addShape("rect" as PptxGenJS.ShapeType, { x: xPos, y: yPos, w: 2.95, h: 0.95, fill: { color: CARD_BG }, line: { color: BRAND_GREEN, width: 1 } });
+      s.addText(u.title, { x: xPos + 0.15, y: yPos + 0.05, w: 2.65, h: 0.28, fontSize: 9, bold: true, color: BRAND_GREEN, fit: "shrink" });
+      s.addText(u.body, { x: xPos + 0.15, y: yPos + 0.33, w: 2.65, h: 0.6, fontSize: 7, color: TEXT_MUTED, fit: "shrink" });
     });
     idmProfiles.forEach((p, i) => {
       const xPos = 0.5 + i * 3.05;
-      s.addShape("rect" as PptxGenJS.ShapeType, { x: xPos, y: 3.6, w: 2.95, h: 1.7, fill: { color: CARD_BG }, line: { color: BRAND_GREEN, width: 1 } });
-      s.addText(p.title, { x: xPos + 0.15, y: 3.7, w: 2.65, h: 0.3, fontSize: 11, bold: true, color: TEXT_WHITE });
-      s.addText(p.subtitle, { x: xPos + 0.15, y: 4.0, w: 2.65, h: 0.25, fontSize: 8, italic: true, color: BRAND_GREEN });
-      s.addText(p.body, { x: xPos + 0.15, y: 4.25, w: 2.65, h: 1.0, fontSize: 7.5, color: TEXT_MUTED, fit: "shrink" });
+      s.addShape("rect" as PptxGenJS.ShapeType, { x: xPos, y: 4.15, w: 2.95, h: 1.4, fill: { color: CARD_BG }, line: { color: BRAND_GREEN, width: 1 } });
+      s.addText(p.title, { x: xPos + 0.15, y: 4.22, w: 2.65, h: 0.3, fontSize: 11, bold: true, color: TEXT_WHITE });
+      s.addText(p.subtitle, { x: xPos + 0.15, y: 4.52, w: 2.65, h: 0.25, fontSize: 8, italic: true, color: BRAND_GREEN });
+      s.addText(p.body, { x: xPos + 0.15, y: 4.77, w: 2.65, h: 0.75, fontSize: 7.5, color: TEXT_MUTED, fit: "shrink" });
     });
   };
 
@@ -485,7 +489,7 @@ export const exportToPptx = async () => {
     const s = newSlide();
     addTitle(s, "EXECUTIVE TAKEAWAY", "Why This, Why Now");
     s.addText(
-      "Efficiency Transformation turns proven CoE expertise into a governed RA+ capability: earlier customer reach, faster guided action, continuous improvement.",
+      "Connect data, context, and execution on one spine. IDM as the trusted foundation, Consulting and Bureau as the digital overlay enriching it, Sera as the explainable interface that closes the loop from prioritization to validation.",
       { x: 0.5, y: 2.0, w: 9, h: 2.5, fontSize: 16, color: TEXT_WHITE, align: "center", fit: "shrink" },
     );
   };

@@ -12,28 +12,28 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const scenarios = [
   {
     icon: Zap,
-    title: "Show ECM opportunities in minutes",
-    description: "Walk into a first meeting and show site-relevant ECMs in RA+ within minutes, ranked against the IDM 2.0 interval data and asset context already on file",
+    title: "Prioritize across the portfolio",
+    description: "Walk into a customer meeting with a clear view of where to act first across sites, systems, and portfolios, grounded in IDM 2.0 data plus the context Consulting and Bureau already hold",
   },
   {
     icon: FileText,
-    title: "Replace PowerPoint with platform",
-    description: "Replace static audit decks with structured, interactive ECM deliverables in the platform, backed by live IDM 2.0 telemetry instead of frozen exports",
+    title: "Explain every KPI in context",
+    description: "Move from static audit decks to explainable readouts where each KPI links back to the data, assumptions, and engineering context that produced it",
   },
   {
     icon: Database,
-    title: "Centralize context on the RA+ spine",
-    description: "Capture client context once on the RA+ spine (interval data, assets, ECM history, audit IP) and reuse it across audits, quotes, follow-ups, and Sera conversations",
+    title: "One connected spine for data and context",
+    description: "Capture WAGES, asset telemetry, audit findings, and Bureau insights once on the RA+ spine and reuse them across recommendations, execution, and verification",
   },
   {
     icon: MousePointer,
-    title: "One-click audit requests",
-    description: "Let customers discover early ECM insights on their own, surfaced by always-on IDM detection, then request deeper expert audits with one click",
+    title: "Answer recurring customer questions inside the platform",
+    description: "Resolve the recurring questions efficiency teams answer today (anomalies, baselines, what changed, what to do next) inside Sera, with experts pulled in when judgment is required",
   },
   {
     icon: TrendingUp,
-    title: "Always-on ECM discovery",
-    description: "Turn every delivered audit into IDM-grade data that fuels continuous ECM detection between formal cycles and sharpens the next recommendation",
+    title: "Carry ECMs through their full lifecycle",
+    description: "Structure ECMs as a lifecycle (detect, feasibility, design, constructability, implementation, verification) where the platform carries the data and engineering context from one stage to the next",
   },
 ];
 
@@ -95,8 +95,7 @@ export const WhatIfSection = () => {
                 <span className="text-sm font-medium text-primary">That is Efficiency Transformation</span>
               </div>
               <p className="text-lg text-foreground leading-relaxed max-w-2xl mx-auto">
-                IDM 2.0 turns interval data and Schneider's field IP into an agent-ready context layer,
-                taking us from internal productivity to scalable revenue and always-on, in-product efficiency advisory.
+                IDM 2.0 holds the trusted data and context. Consulting and Bureau enrich it. Sera connects it to customer workflows. The same data carries through from prioritization to validation, with engineering judgment always in the loop on complex calls.
               </p>
             </CardContent>
           </Card>
