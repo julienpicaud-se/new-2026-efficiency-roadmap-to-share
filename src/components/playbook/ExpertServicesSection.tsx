@@ -1,4 +1,4 @@
-import { UserCog, Sparkles, ShieldCheck, MessageSquare, Lightbulb, AlertTriangle, Presentation, Bot, HeartHandshake } from "lucide-react";
+import { UserCog, Sparkles, ShieldCheck, MessageSquare, Lightbulb, Presentation, Bot, HeartHandshake, Database } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const archetypes = [
@@ -7,51 +7,51 @@ const archetypes = [
     title: "Self-Serve Operator",
     tagline: "FULL AUTONOMY, AI-DRIVEN",
     description:
-      "Wants the keys. Runs IDM 2.0 analytics, builds ECM scenarios, and acts on Sera recommendations without waiting for a human. RA+ is their cockpit; the platform must stand on its own.",
+      "Wants the keys. Runs IDM 2.0 analytics, explores ECM candidates, and acts on Sera recommendations directly. The platform must stand on its own, with the same data and explainability the experts use.",
     bullets: [
-      "Self-directed exploration of IDM 2.0 interval data and benchmarks",
-      "Agent-led scoping, ROM estimates, and what-if scenarios on demand",
-      "Expert services available a-la-carte, never required to make progress",
+      "Self-directed exploration of IDM 2.0 WAGES, asset context, and benchmarks",
+      "Agent-led prioritization, KPI explainability, and recurring-question workflows",
+      "Consulting and Bureau available a-la-carte for validation or complex calls",
     ],
   },
   {
     icon: HeartHandshake,
     title: "Guided Decision Client",
-    tagline: "HUMAN IN THE LOOP",
+    tagline: "EXPERTS IN THE SYSTEM",
     description:
-      "Wants a trusted expert in the room for high-stakes calls. The platform still drives the work, but a Schneider expert validates, interprets, and translates IDM 2.0 outputs into board-ready decisions.",
+      "Wants Consulting and Bureau embedded in the workflow, not just on call. The platform drives the day-to-day; experts validate, enrich context, frame risk, and oversee execution on high-stakes calls.",
     bullets: [
-      "Senior auditor co-pilots IDM 2.0 readouts and ECM trade-offs",
-      "Expert-led risk framing for capital, compliance, and tenant impact",
-      "Recurring advisory cadence tied to the same RA+ workspace and IDM 2.0 spine",
+      "Consulting co-pilots ECM lifecycle decisions inside the same RA+ workspace",
+      "Bureau owns ongoing monitoring, validation, and change-management cadence",
+      "Findings flow back into IDM as enriched context for the next workflow",
     ],
   },
 ];
 
 const judgementPillars = [
   {
+    icon: Database,
+    title: "Data integration & auditing",
+    description:
+      "Consulting and Bureau bring audit findings, engineering assumptions, and field measurements into IDM as first-class data, so the platform reasons on the same context the experts do.",
+  },
+  {
     icon: ShieldCheck,
     title: "Validation",
     description:
-      "Experts pressure-test IDM 2.0 baselines, ECM assumptions, and Sera outputs before they become commitments · confirming that what the agent proposes survives engineering and field reality.",
+      "Experts pressure-test baselines, ECM candidates, and Sera outputs against engineering reality before they become commitments. Site validation remains required for ECM design and capital decisions.",
   },
   {
     icon: Lightbulb,
-    title: "Interpretation",
+    title: "Interpretation & risk translation",
     description:
-      "Translates IDM 2.0 telemetry, anomaly patterns, and ECM stacks into a clear narrative · what is happening in the portfolio, why it matters, and what the realistic envelope of action looks like.",
-  },
-  {
-    icon: AlertTriangle,
-    title: "Risk translation",
-    description:
-      "Frames downside, tenant impact, compliance exposure, and execution risk for measures that IDM 2.0 surfaces · so clients see both the upside model and the operational guardrails.",
+      "Turn IDM signals into a clear portfolio narrative, with downside, tenant impact, compliance exposure, and execution risk framed for capital and operational decisions.",
   },
   {
     icon: Presentation,
-    title: "Executive communication",
+    title: "Change management & program oversight",
     description:
-      "Packages IDM 2.0 evidence and Sera reasoning into board-grade recommendations, capital narratives, and stakeholder talking points that move decisions, not just dashboards.",
+      "Bureau and Consulting carry change management, stakeholder communication, and program oversight across the ECM lifecycle, with closed-loop validation tracked in the platform.",
   },
 ];
 
@@ -60,22 +60,22 @@ const tiers = [
     name: "Self-Serve",
     audience: "Self-Serve Operator",
     cadence: "On demand",
-    human: "Expert services available a-la-carte",
-    platform: "Full RA+ + IDM 2.0 + Sera autonomy",
+    human: "Consulting or Bureau available a-la-carte for validation",
+    platform: "Full RA+ + IDM 2.0 + Sera autonomy on the connected spine",
   },
   {
     name: "Assisted",
     audience: "Mixed maturity",
-    cadence: "Async reviews + QBRs",
-    human: "Expert validates IDM 2.0 outputs and ECM scopes on cadence",
-    platform: "Shared RA+ workspace with annotated IDM 2.0 readouts",
+    cadence: "Async reviews + recurring touchpoints",
+    human: "Experts validate outputs, enrich IDM context, and co-own complex calls",
+    platform: "Shared RA+ workspace with annotated readouts and ECM lifecycle tracking",
   },
   {
-    name: "Advisory",
+    name: "Embedded",
     audience: "Guided Decision Client",
     cadence: "Embedded engagement",
-    human: "Named expert owns interpretation and exec communication",
-    platform: "Co-piloted RA+ + IDM 2.0 spine with expert IP layered in",
+    human: "Consulting + Bureau embedded across audit, ECM lifecycle, validation, and program oversight",
+    platform: "Co-piloted RA+ spine with continuous Bureau monitoring and expert IP layered in",
   },
 ];
 
@@ -91,13 +91,13 @@ export const ExpertServicesSection = () => {
       <div className="container px-4">
         <div className="text-center mb-12 sm:mb-16">
           <span className="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 sm:mb-4 block">
-            Human in the Loop
+            Experts in the System
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
-            Expert Services Layer on the RA+ Spine
+            Consulting & Bureau on the RA+ Spine
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
-            AI executes, humans apply judgment. RA+ runs the analytics; Schneider experts step in where validation, interpretation, risk, and executive communication make the difference.
+            Consulting and the Global Energy Bureau are part of the system, not a layer on top. They enrich IDM with audit and engineering context, validate Sera outputs, frame risk, and own change management and program oversight across the ECM lifecycle.
           </p>
         </div>
 
@@ -141,7 +141,7 @@ export const ExpertServicesSection = () => {
         <div className="max-w-6xl mx-auto mb-12">
           <div className="flex items-center gap-3 mb-6">
             <UserCog className="w-5 h-5 text-primary" />
-            <h3 className="font-semibold text-foreground">Service Advisors as the Judgment Layer</h3>
+            <h3 className="font-semibold text-foreground">How Consulting & Bureau Show Up in the System</h3>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {judgementPillars.map((p) => {
@@ -193,7 +193,7 @@ export const ExpertServicesSection = () => {
             </table>
           </div>
           <p className="text-xs text-muted-foreground italic mt-5">
-            One IDM 2.0 spine, one RA+ workspace. Clients move between tiers without losing context, history, or model continuity.
+            One connected spine. Clients move between tiers without losing context, history, or validation continuity. Engineering judgment and site validation remain required wherever ECM design or capital commitments are at stake.
           </p>
         </div>
       </div>
