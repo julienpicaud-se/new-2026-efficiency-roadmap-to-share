@@ -319,6 +319,30 @@ export const AppendixSection = () => {
             </AccordionContent>
           </AccordionItem>
 
+        {/* ============ ECM Lifecycle Timeline ============ */}
+          <AccordionItem
+            value="ecm-lifecycle"
+            ref={setItemRef("ecm-lifecycle")}
+            data-section="ecm-lifecycle"
+            className={itemClass("ecm-lifecycle")}
+          >
+            <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/30">
+              <div className="text-left">
+                <span className="text-primary text-xs font-semibold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                  <Compass className="w-3.5 h-3.5" />
+                  ECM Lifecycle
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">
+                  Detect to Verification, on the RA+ Spine
+                </h3>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-2 pb-2">
+              <ECMLifecycleTimeline />
+            </AccordionContent>
+          </AccordionItem>
+
+
 
 
 
