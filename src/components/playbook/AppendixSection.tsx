@@ -11,6 +11,7 @@ import { StrategicContextSection } from "@/components/playbook/StrategicContextS
 import { CompetitiveLandscapeSection } from "@/components/playbook/CompetitiveLandscapeSection";
 import { DataRequirementsSection } from "@/components/playbook/DataRequirementsSection";
 import { ECMIngestionEngineSection } from "@/components/playbook/ECMIngestionEngineSection";
+import { ECMLifecycleTimeline } from "@/components/playbook/ECMLifecycleTimeline";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
