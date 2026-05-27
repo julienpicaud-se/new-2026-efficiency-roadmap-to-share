@@ -40,32 +40,6 @@ export const ECMIngestionEngineSection = () => {
         </div>
 
         <div className="max-w-6xl mx-auto space-y-10 sm:space-y-12">
-          {/* ECM Lifecycle */}
-          <div className="bg-card border border-primary/20 rounded-xl p-6">
-            <div className="flex items-center gap-2 mb-1">
-              <Sparkles className="w-5 h-5 text-primary" />
-              <h3 className="text-lg font-semibold text-foreground">
-                ECMs as a Lifecycle, not a Static Output
-              </h3>
-            </div>
-            <p className="text-sm text-muted-foreground mb-5 max-w-3xl">
-              The platform structures and carries the ECM lifecycle. Engineering judgment and site validation remain required at every stage; the system never replaces audits or shortcuts ECM proposals.
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-              {[
-                { stage: "Detect", note: "Surface candidates from IDM data and asset context" },
-                { stage: "Feasibility", note: "Engineering review of applicability and constraints" },
-                { stage: "Design", note: "Detailed design with site-specific validation" },
-                { stage: "Constructability", note: "Implementation planning with field input" },
-                { stage: "Implementation & Verification", note: "Closed-loop validation using the same data" },
-              ].map((s) => (
-                <div key={s.stage} className="bg-muted/40 rounded-lg p-3 border-l-2 border-primary">
-                  <div className="text-xs font-semibold text-primary mb-1">{s.stage}</div>
-                  <div className="text-[11px] text-muted-foreground leading-snug">{s.note}</div>
-                </div>
-              ))}
-            </div>
-          </div>
 
           {/* PPT Extraction Prototype */}
           <div className="max-w-5xl mx-auto">
