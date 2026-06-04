@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, Download, Maximize2, ChevronRight, Layers, ChevronDown, Map } from "lucide-react";
+import { Menu, Download, Maximize2, ChevronRight, Layers, ChevronDown, Map, FileText } from "lucide-react";
 import { exportToPptx } from "@/lib/pptx-export";
 import { domainRoadmaps } from "@/data/domain-roadmaps";
 import {
@@ -159,6 +159,16 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
     }
   };
 
+  const handleExportPdf = () => {
+    const a = document.createElement("a");
+    a.href = "/playbook.pdf";
+    a.download = "playbook.pdf";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  };
+
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -238,15 +248,30 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
               <Maximize2 className="w-4 h-4" />
             </Button>
 
-            <Button
-              className="hidden sm:flex bg-primary hover:bg-primary/90 text-primary-foreground gap-2 shadow-md shadow-primary/20"
-              size="sm"
-              onClick={handleExport}
-              disabled={isExporting}
-            >
-              <Download className="w-4 h-4" />
-              {isExporting ? "Exporting..." : "Export PPTX"}
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  className="hidden sm:flex bg-primary hover:bg-primary/90 text-primary-foreground gap-2 shadow-md shadow-primary/20"
+                  size="sm"
+                  disabled={isExporting}
+                >
+                  <Download className="w-4 h-4" />
+                  {isExporting ? "Exporting..." : "Export"}
+                  <ChevronDown className="w-3.5 h-3.5 opacity-80" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-56 bg-popover">
+                <DropdownMenuItem onClick={handleExport} disabled={isExporting}>
+                  <FileText className="w-4 h-4 mr-2" />
+                  Export PPTX
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={handleExportPdf}>
+                  <FileText className="w-4 h-4 mr-2" />
+                  Export PDF (high fidelity)
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
 
             {/* Mobile Menu */}
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -369,6 +394,18 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
                     <Download className="w-4 h-4" />
                     {isExporting ? "Exporting..." : "Export PPTX"}
                   </Button>
+                  <Button
+                    variant="outline"
+                    className="w-full justify-start gap-2"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      handleExportPdf();
+                    }}
+                  >
+                    <FileText className="w-4 h-4" />
+                    Export PDF (high fidelity)
+                  </Button>
+
                 </div>
               </SheetContent>
             </Sheet>
