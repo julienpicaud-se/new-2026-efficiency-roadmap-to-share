@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, Download, Maximize2, ChevronRight, Layers, ChevronDown, Map } from "lucide-react";
+import { Menu, Download, Maximize2, ChevronRight, Layers, ChevronDown, Map, FileText } from "lucide-react";
 import { exportToPptx } from "@/lib/pptx-export";
 import { domainRoadmaps } from "@/data/domain-roadmaps";
 import {
