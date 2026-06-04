@@ -159,6 +159,16 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
     }
   };
 
+  const handleExportPdf = () => {
+    const a = document.createElement("a");
+    a.href = "/playbook.pdf";
+    a.download = "playbook.pdf";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  };
+
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
