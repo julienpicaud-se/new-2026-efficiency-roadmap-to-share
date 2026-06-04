@@ -160,13 +160,22 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
   };
 
   const handleExportPdf = () => {
-    const a = document.createElement("a");
-    a.href = "/playbook.pdf";
-    a.download = "playbook.pdf";
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
+    // Expand all appendix accordions so they render in the print output
+    document
+      .querySelectorAll<HTMLButtonElement>(
+        '[data-state="closed"][data-radix-collection-item], button[data-state="closed"]'
+      )
+      .forEach((el) => {
+        if (el.closest("nav")) return;
+        const cls = el.className || "";
+        if (/accordion/i.test(cls) || el.getAttribute("aria-controls")) {
+          try { el.click(); } catch {}
+        }
+      });
+    // Give the DOM a moment to expand before printing
+    window.setTimeout(() => window.print(), 400);
   };
+
 
 
   return (
