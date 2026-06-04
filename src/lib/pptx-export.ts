@@ -595,6 +595,35 @@ export const exportToPptx = async () => {
     s.addText(intelligenceFlywheel.keyInsight, { x: 0.5, y: 5.05, w: 9, h: 0.35, fontSize: 8.5, color: TEXT_WHITE, fit: "shrink" });
   };
 
+  const buildEcmLifecycle = () => {
+    const lifecycleStages = [
+      { name: "Detect", status: "In build", oneLiner: "Surface ECM candidates from IDM data and asset context.", ra: "Scans WAGES, asset registers, operating context to rank candidates by signal strength.", ex: "Bureau and Consulting review candidates, discard noise, add site context." },
+      { name: "Feasibility", status: "In build", oneLiner: "Engineering review of applicability, constraints, and value.", ra: "Pulls asset, tariff, baseline data into a structured feasibility view with ranges.", ex: "Engineers assess technical fit, constructability, stakeholder constraints; go / no-go." },
+      { name: "Design", status: "Planned", oneLiner: "Detailed design with site-specific validation.", ra: "Carries assumptions, baselines, and feasibility decisions; tracks changes and rationale.", ex: "Design engineers and consultants own the technical solution and site validation." },
+      { name: "Constructability", status: "Planned", oneLiner: "Implementation planning with field input.", ra: "Captures sequencing, dependencies, and field notes against the asset model.", ex: "Project teams and field engineers validate buildability, safety, downtime." },
+      { name: "Implementation", status: "Planned", oneLiner: "Execute, instrument, and track against the same data.", ra: "Tracks task status, captures as-built changes, instruments against IDM telemetry.", ex: "Delivery teams execute; Bureau watches data and flags drift early." },
+      { name: "Verification", status: "In build", oneLiner: "Closed-loop validation using the same data that detected it.", ra: "Compares post-implementation performance to baseline using IDM data and KPIs.", ex: "Bureau and Consulting interpret results, translate risk, feed lessons back." },
+    ];
+    const s = newSlide();
+    addTitle(s, "APPENDIX · ECM LIFECYCLE", "ECMs as a Lifecycle, not a Static Output", "The platform structures and carries every ECM from detection through verification on the same RA+ spine.");
+    lifecycleStages.forEach((stage, i) => {
+      const xPos = 0.3 + (i % 3) * 3.2;
+      const yPos = 1.95 + Math.floor(i / 3) * 1.75;
+      s.addShape("rect" as PptxGenJS.ShapeType, {
+        x: xPos, y: yPos, w: 3.1, h: 1.65,
+        fill: { color: CARD_BG }, line: { color: BRAND_GREEN, width: 1 },
+      });
+      s.addText(`${i + 1}. ${stage.name}`, { x: xPos + 0.15, y: yPos + 0.08, w: 2.2, h: 0.28, fontSize: 11, bold: true, color: BRAND_GREEN });
+      s.addText(stage.status, { x: xPos + 2.3, y: yPos + 0.1, w: 0.7, h: 0.22, fontSize: 6.5, bold: true, color: ORANGE, align: "right" });
+      s.addText(stage.oneLiner, { x: xPos + 0.15, y: yPos + 0.4, w: 2.85, h: 0.4, fontSize: 7, italic: true, color: TEXT_WHITE, fit: "shrink" });
+      s.addText(`RA+ does: ${stage.ra}`, { x: xPos + 0.15, y: yPos + 0.82, w: 2.85, h: 0.38, fontSize: 6.2, color: BRAND_GREEN, fit: "shrink" });
+      s.addText(`Experts do: ${stage.ex}`, { x: xPos + 0.15, y: yPos + 1.22, w: 2.85, h: 0.38, fontSize: 6.2, color: TEXT_MUTED, fit: "shrink" });
+    });
+    s.addText("Lifecycle guardrails: engineering judgment and site validation required at every stage. Platform carries the lifecycle; it never replaces audits or shortcuts proposals. Same IDM data flows end-to-end.", {
+      x: 0.5, y: 5.5, w: 9, h: 0.3, fontSize: 8, italic: true, color: ORANGE, align: "center", fit: "shrink",
+    });
+  };
+
   const buildThankYou = () => {
     const s = newSlide();
     s.addText("Thank You", { x: 0.5, y: 2, w: 9, h: 1, fontSize: 44, bold: true, color: TEXT_WHITE, align: "center" });
