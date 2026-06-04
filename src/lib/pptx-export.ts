@@ -667,6 +667,7 @@ export const exportToPptx = async () => {
   // Appendix
   addSectionDivider("APPENDIX", "Reference Materials");
   buildKnowledgeEngine();
+  buildEcmLifecycle();
   buildMaturityLadder();
   buildVocEvidence();
   buildSECorporateBlueprint();
