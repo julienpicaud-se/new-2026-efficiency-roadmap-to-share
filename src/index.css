@@ -123,3 +123,28 @@
     @apply opacity-100 translate-y-0;
   }
 }
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 8mm;
+  }
+  html, body {
+    background: hsl(var(--background)) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  body::before { display: none !important; }
+  nav,
+  [data-radix-popper-content-wrapper],
+  [role="dialog"],
+  .no-print { display: none !important; }
+  .section-fade { opacity: 1 !important; transform: none !important; }
+  * { animation: none !important; transition: none !important; }
+  /* Avoid breaking cards in half */
+  section, article, .card, [class*="rounded-"] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
