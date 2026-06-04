@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, Download, Maximize2, ChevronRight, Layers, ChevronDown, Map, FileText } from "lucide-react";
 import { exportToPptx } from "@/lib/pptx-export";
+import playbookPdfAsset from "@/assets/playbook.pdf.asset.json";
 import { domainRoadmaps } from "@/data/domain-roadmaps";
 import {
   Sheet,
