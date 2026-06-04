@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, Download, Maximize2, ChevronRight, Layers, ChevronDown, Map, FileText } from "lucide-react";
 import { exportToPptx } from "@/lib/pptx-export";
+import playbookPdfAsset from "@/assets/playbook.pdf.asset.json";
 import { domainRoadmaps } from "@/data/domain-roadmaps";
 import {
   Sheet,
@@ -160,21 +161,16 @@ export const Navigation = ({ onPresentationMode }: NavigationProps) => {
   };
 
   const handleExportPdf = () => {
-    // Expand all appendix accordions so they render in the print output
-    document
-      .querySelectorAll<HTMLButtonElement>(
-        '[data-state="closed"][data-radix-collection-item], button[data-state="closed"]'
-      )
-      .forEach((el) => {
-        if (el.closest("nav")) return;
-        const cls = el.className || "";
-        if (/accordion/i.test(cls) || el.getAttribute("aria-controls")) {
-          try { el.click(); } catch {}
-        }
-      });
-    // Give the DOM a moment to expand before printing
-    window.setTimeout(() => window.print(), 400);
+    const a = document.createElement("a");
+    a.href = playbookPdfAsset.url;
+    a.download = "playbook.pdf";
+    a.target = "_blank";
+    a.rel = "noopener";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
   };
+
 
 
 
